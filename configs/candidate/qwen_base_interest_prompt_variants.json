@@ -1,0 +1,12 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "adapter_path": null,
+  "data_file": "data/training/candidate_selection_k10/diagnostics/interest_1k_prompt_variants.parquet",
+  "output_dir": "artifacts/candidate-selection-k10/qwen_base_interest_prompt_variants",
+  "run_name": "candidate-k10-qwen-base-interest-prompt-variants",
+  "wandb_project": "cross-interest-generative-sft",
+  "wandb_mode": "online",
+  "batch_size": 32,
+  "checkpoint_size": 256,
+  "max_new_tokens": 32
+}

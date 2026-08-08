@@ -1,0 +1,17 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "adapter_path": null,
+  "data_file": "data/training/candidate_selection_k10/interest_only/dev_10k_expanded.parquet",
+  "output_dir": "artifacts/candidate-selection-k10/qwen3_sampling_interest",
+  "run_name": "candidate-k10-qwen3-sampling-interest",
+  "wandb_project": "cross-interest-generative-sft",
+  "wandb_mode": "disabled",
+  "batch_size": 16,
+  "checkpoint_size": 256,
+  "max_new_tokens": 32,
+  "do_sample": true,
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "seed": 20260808
+}

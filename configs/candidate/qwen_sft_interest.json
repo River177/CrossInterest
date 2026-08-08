@@ -1,0 +1,12 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "adapter_path": "artifacts/amlt/crossinterest-qwen3-scaling-v1/qwen3-interest-10k/sft/final_adapter",
+  "data_file": "data/training/candidate_selection_k10/interest_only/dev_10k_expanded.parquet",
+  "output_dir": "artifacts/candidate-selection-k10/qwen_sft_interest",
+  "run_name": "candidate-k10-qwen-sft10k-interest",
+  "wandb_project": "cross-interest-generative-sft",
+  "wandb_mode": "online",
+  "batch_size": 32,
+  "checkpoint_size": 256,
+  "max_new_tokens": 32
+}

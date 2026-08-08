@@ -1,0 +1,14 @@
+{
+  "instance": "redmond/interactive",
+  "deployment": "gpt-5_2025-08-07",
+  "api_version": "2024-10-21",
+  "reasoning_effort": "medium",
+  "data_file": "data/training/candidate_selection_k10/interest_only/dev_10k_expanded.parquet",
+  "output_dir": "artifacts/candidate-selection-k10/gpt5_interest",
+  "concurrency": 4,
+  "checkpoint_size": 64,
+  "max_attempts": 10,
+  "max_completion_tokens": 4096,
+  "minimum_success_rate": 0.99,
+  "seed": 20260806
+}

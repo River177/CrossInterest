@@ -1,0 +1,1021 @@
+﻿level,rank_within_level,category,parent_path,full_path,item_count,share_within_level_pct,share_of_all_items_pct,direct_item_count,child_count,is_leaf_node
+1,1,Toys & Games,,Toys & Games,786938,98.131489,98.131489,0,221,False
+1,2,Remote & App Controlled Vehicles & Parts,,Remote & App Controlled Vehicles & Parts,10737,1.338908,1.338908,0,1,False
+1,3,Remote & App Controlled Vehicle Parts,,Remote & App Controlled Vehicle Parts,4247,0.529603,0.529603,0,1,False
+2,1,Preschool,Toys & Games,Toys & Games > Preschool,136564,17.029586,17.029586,1699,2,False
+2,2,Games & Accessories,Toys & Games,Toys & Games > Games & Accessories,100240,12.499969,12.499969,2350,13,False
+2,3,Party Supplies,Toys & Games,Toys & Games > Party Supplies,79979,9.973414,9.973414,3381,8,False
+2,4,Toy Figures & Playsets,Toys & Games,Toys & Games > Toy Figures & Playsets,67950,8.473393,8.473393,15041,8,False
+2,5,Remote & App Controlled Vehicles & Parts,Toys & Games,Toys & Games > Remote & App Controlled Vehicles & Parts,55584,6.931347,6.931347,329,7,False
+2,6,Sports & Outdoor Play,Toys & Games,Toys & Games > Sports & Outdoor Play,45075,5.620871,5.620871,327,20,False
+2,7,Arts & Crafts,Toys & Games,Toys & Games > Arts & Crafts,41267,5.146012,5.146012,3979,9,False
+2,8,Puzzles,Toys & Games,Toys & Games > Puzzles,39226,4.891498,4.891498,712,8,False
+2,9,Novelty & Gag Toys,Toys & Games,Toys & Games > Novelty & Gag Toys,38075,4.747968,4.747968,4447,20,False
+2,10,Dolls & Accessories,Toys & Games,Toys & Games > Dolls & Accessories,27852,3.473156,3.473156,178,6,False
+2,11,Stuffed Animals & Plush Toys,Toys & Games,Toys & Games > Stuffed Animals & Plush Toys,25974,3.238968,3.238968,952,8,False
+2,12,Collectible Toys,Toys & Games,Toys & Games > Collectible Toys,25668,3.200810,3.200810,355,4,False
+2,13,Dress Up & Pretend Play,Toys & Games,Toys & Games > Dress Up & Pretend Play,22929,2.859256,2.859256,775,12,False
+2,14,Learning & Education,Toys & Games,Toys & Games > Learning & Education,19542,2.436895,2.436895,1584,12,False
+2,15,Building Toys,Toys & Games,Toys & Games > Building Toys,17541,2.187370,2.187370,1225,6,False
+2,16,Baby & Toddler Toys,Toys & Games,Toys & Games > Baby & Toddler Toys,11495,1.433431,1.433431,867,11,False
+2,17,Remote & App Controlled Vehicle Parts,Remote & App Controlled Vehicles & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,10737,1.338908,1.338908,0,2,False
+2,18,Kids' Electronics,Toys & Games,Toys & Games > Kids' Electronics,10441,1.301997,1.301997,4105,9,False
+2,19,Vehicles,Toys & Games,Toys & Games > Vehicles,8841,1.102476,1.102476,1203,21,False
+2,20,Power Plant & Driveline Systems,Remote & App Controlled Vehicle Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,4247,0.529603,0.529603,0,4,False
+2,21,STEM Toys,Toys & Games,Toys & Games > STEM Toys,3775,0.470744,0.470744,0,3,False
+2,22,Puppets & Puppet Theaters,Toys & Games,Toys & Games > Puppets & Puppet Theaters,2566,0.319981,0.319981,61,5,False
+2,23,"Tricycles, Scooters & Wagons",Toys & Games,"Toys & Games > Tricycles, Scooters & Wagons",2385,0.297410,0.297410,96,7,False
+2,24,Action Figures,Toys & Games,Toys & Games > Action Figures,1073,0.133804,0.133804,1073,0,True
+2,25,Santa App,Toys & Games,Toys & Games > Santa App,497,0.061976,0.061976,497,0,True
+2,26,Radio & Remote Control,Toys & Games,Toys & Games > Radio & Remote Control,478,0.059607,0.059607,478,0,True
+2,27,Kids' Birthdays,Toys & Games,Toys & Games > Kids' Birthdays,340,0.042398,0.042398,0,52,False
+2,28,Deals,Toys & Games,Toys & Games > Deals,228,0.028432,0.028432,228,0,True
+2,29,Adzinia Toys Node,Toys & Games,Toys & Games > Adzinia Toys Node,180,0.022446,0.022446,180,0,True
+2,30,Toys & Games Outlet,Toys & Games,Toys & Games > Toys & Games Outlet,109,0.013592,0.013592,109,0,True
+2,31,Hasbro,Toys & Games,Toys & Games > Hasbro,75,0.009353,0.009353,0,3,False
+2,32,Santa App Brands,Toys & Games,Toys & Games > Santa App Brands,60,0.007482,0.007482,0,15,False
+2,33,Birthday Party Supplies,Toys & Games,Toys & Games > Birthday Party Supplies,59,0.007357,0.007357,59,0,True
+2,34,DynamicContent Test,Toys & Games,Toys & Games > DynamicContent Test,42,0.005237,0.005237,42,0,True
+2,35,Transformers: Dark of the Moon,Toys & Games,Toys & Games > Transformers: Dark of the Moon,42,0.005237,0.005237,0,5,False
+2,36,Adult Party Games,Toys & Games,Toys & Games > Adult Party Games,41,0.005113,0.005113,41,0,True
+2,37,Amazon Exclusive Toys,Toys & Games,Toys & Games > Amazon Exclusive Toys,33,0.004115,0.004115,32,1,False
+2,38,Customers' Most-Loved: Toys,Toys & Games,Toys & Games > Customers' Most-Loved: Toys,33,0.004115,0.004115,33,0,True
+2,39,V4 Customers Keep It - 30%,Toys & Games,Toys & Games > V4 Customers Keep It - 30%,27,0.003367,0.003367,27,0,True
+2,40,Diamond Select,Toys & Games,Toys & Games > Diamond Select,25,0.003118,0.003118,25,0,True
+2,41,The Official Twilight Merchandise Store,Toys & Games,Toys & Games > The Official Twilight Merchandise Store,24,0.002993,0.002993,0,4,False
+2,42,"New Year, New You- Toy Storage Solutions & Kids Furniture",Toys & Games,"Toys & Games > New Year, New You- Toy Storage Solutions & Kids Furniture",23,0.002868,0.002868,23,0,True
+2,43,Toys & Games Editors' Picks,Toys & Games,Toys & Games > Toys & Games Editors' Picks,22,0.002743,0.002743,1,6,False
+2,44,Fisher-Price Baby,Toys & Games,Toys & Games > Fisher-Price Baby,20,0.002494,0.002494,20,0,True
+2,45,Teenage Mutant Ninja Turtles,Toys & Games,Toys & Games > Teenage Mutant Ninja Turtles,20,0.002494,0.002494,20,0,True
+2,46,Special Needs Toys,Toys & Games,Toys & Games > Special Needs Toys,16,0.001995,0.001995,16,0,True
+2,47,Toys and Games Under $10,Toys & Games,Toys & Games > Toys and Games Under $10,15,0.001871,0.001871,15,0,True
+2,48,V4 Customers Keep It - 50%,Toys & Games,Toys & Games > V4 Customers Keep It - 50%,15,0.001871,0.001871,15,0,True
+2,49,Action Figure Pre-Orders,Toys & Games,Toys & Games > Action Figure Pre-Orders,14,0.001746,0.001746,14,0,True
+2,50,Bakugan,Toys & Games,Toys & Games > Bakugan,14,0.001746,0.001746,0,3,False
+2,51,LEGO Store,Toys & Games,Toys & Games > LEGO Store,14,0.001746,0.001746,1,7,False
+2,52,Toys & Games Accessories,Toys & Games,Toys & Games > Toys & Games Accessories,14,0.001746,0.001746,14,0,True
+2,53,Customers' Most-Loved Toys,Toys & Games,Toys & Games > Customers' Most-Loved Toys,13,0.001621,0.001621,13,0,True
+2,54,Star Wars,Toys & Games,Toys & Games > Star Wars,13,0.001621,0.001621,13,0,True
+2,55,Lionel Racing,Toys & Games,Toys & Games > Lionel Racing,10,0.001247,0.001247,0,1,False
+2,56,My Little Pony Brand Page,Toys & Games,Toys & Games > My Little Pony Brand Page,10,0.001247,0.001247,10,0,True
+2,57,Transformers,Toys & Games,Toys & Games > Transformers,10,0.001247,0.001247,0,5,False
+2,58,Father's Day in Toys & Games,Toys & Games,Toys & Games > Father's Day in Toys & Games,9,0.001122,0.001122,9,0,True
+2,59,Shop holiday toys from Nickelodeon,Toys & Games,Toys & Games > Shop holiday toys from Nickelodeon,9,0.001122,0.001122,9,0,True
+2,60,Fisher-Price Preschool,Toys & Games,Toys & Games > Fisher-Price Preschool,8,0.000998,0.000998,8,0,True
+2,61,Batman vs Superman: Dawn of Justice,Toys & Games,Toys & Games > Batman vs Superman: Dawn of Justice,7,0.000873,0.000873,7,0,True
+2,62,Save on Select Toys & Games from Moose,Toys & Games,Toys & Games > Save on Select Toys & Games from Moose,7,0.000873,0.000873,7,0,True
+2,63,Amazon Character Store,Toys & Games,Toys & Games > Amazon Character Store,6,0.000748,0.000748,6,0,True
+2,64,Limited Time Offer on Toys & Games,Toys & Games,Toys & Games > Limited Time Offer on Toys & Games,6,0.000748,0.000748,6,0,True
+2,65,Melissa & Doug,Toys & Games,Toys & Games > Melissa & Doug,6,0.000748,0.000748,6,0,True
+2,66,Melissa & Doug Arts and Crafts,Toys & Games,Toys & Games > Melissa & Doug Arts and Crafts,6,0.000748,0.000748,6,0,True
+2,67,Toys & Games Comic Con,Toys & Games,Toys & Games > Toys & Games Comic Con,6,0.000748,0.000748,6,0,True
+2,68,Dice Games,Toys & Games,Toys & Games > Dice Games,5,0.000624,0.000624,5,0,True
+2,69,Fisher-Price,Toys & Games,Toys & Games > Fisher-Price,5,0.000624,0.000624,5,0,True
+2,70,Handpicked Board Games,Toys & Games,Toys & Games > Handpicked Board Games,5,0.000624,0.000624,5,0,True
+2,71,Save on Games,Toys & Games,Toys & Games > Save on Games,5,0.000624,0.000624,5,0,True
+2,72,Save up to 30% on select 3Doodler pens,Toys & Games,Toys & Games > Save up to 30% on select 3Doodler pens,5,0.000624,0.000624,5,0,True
+2,73,Toys & Board Games,Toys & Games,Toys & Games > Toys & Board Games,5,0.000624,0.000624,5,0,True
+2,74,"Buy Two, Get One Free - Action Figures & Dolls",Toys & Games,"Toys & Games > Buy Two, Get One Free - Action Figures & Dolls",4,0.000499,0.000499,4,0,True
+2,75,Comic-Con Favorites From Mattel & Fisher-Price,Toys & Games,Toys & Games > Comic-Con Favorites From Mattel & Fisher-Price,4,0.000499,0.000499,4,0,True
+2,76,Costumes by Hasbro,Toys & Games,Toys & Games > Costumes by Hasbro,4,0.000499,0.000499,4,0,True
+2,77,FD Funko,Toys & Games,Toys & Games > FD Funko,4,0.000499,0.000499,4,0,True
+2,78,Halloween Decorations,Toys & Games,Toys & Games > Halloween Decorations,4,0.000499,0.000499,4,0,True
+2,79,Kids Toys & Games,Toys & Games,Toys & Games > Kids Toys & Games,4,0.000499,0.000499,4,0,True
+2,80,Kids Vampire Costumes,Toys & Games,Toys & Games > Kids Vampire Costumes,4,0.000499,0.000499,4,0,True
+2,81,My Little Pony Guardians of Harmony,Toys & Games,Toys & Games > My Little Pony Guardians of Harmony,4,0.000499,0.000499,4,0,True
+2,82,Paw Patrol Party Supplies,Toys & Games,Toys & Games > Paw Patrol Party Supplies,4,0.000499,0.000499,4,0,True
+2,83,Pre-order Collectible Toys,Toys & Games,Toys & Games > Pre-order Collectible Toys,4,0.000499,0.000499,4,0,True
+2,84,Save on Funko,Toys & Games,Toys & Games > Save on Funko,4,0.000499,0.000499,4,0,True
+2,85,Toys & Games Back to School,Toys & Games,Toys & Games > Toys & Games Back to School,4,0.000499,0.000499,4,0,True
+2,86,Arts & Crafts Collection,Toys & Games,Toys & Games > Arts & Crafts Collection,3,0.000374,0.000374,3,0,True
+2,87,Back to School in Toys & Games,Toys & Games,Toys & Games > Back to School in Toys & Games,3,0.000374,0.000374,3,0,True
+2,88,Discover action figure gifts,Toys & Games,Toys & Games > Discover action figure gifts,3,0.000374,0.000374,3,0,True
+2,89,Disney Deal of the Day Toys,Toys & Games,Toys & Games > Disney Deal of the Day Toys,3,0.000374,0.000374,3,0,True
+2,90,Frustration-Free Packaging: Toys & Games - US,Toys & Games,Toys & Games > Frustration-Free Packaging: Toys & Games - US,3,0.000374,0.000374,3,0,True
+2,91,Green Toys Deal of the Day,Toys & Games,Toys & Games > Green Toys Deal of the Day,3,0.000374,0.000374,3,0,True
+2,92,Hobby Rockets,Toys & Games,Toys & Games > Hobby Rockets,3,0.000374,0.000374,3,0,True
+2,93,Introducing Kuu Kuu Harajuku from Mattel,Toys & Games,Toys & Games > Introducing Kuu Kuu Harajuku from Mattel,3,0.000374,0.000374,3,0,True
+2,94,Nerf 2,Toys & Games,Toys & Games > Nerf 2,3,0.000374,0.000374,3,0,True
+2,95,New Rogue One: A Star Wars Story,Toys & Games,Toys & Games > New Rogue One: A Star Wars Story,3,0.000374,0.000374,3,0,True
+2,96,Quick Gifts,Toys & Games,Toys & Games > Quick Gifts,3,0.000374,0.000374,3,0,True
+2,97,Save 20% off of furniture from Melissa & Doug,Toys & Games,Toys & Games > Save 20% off of furniture from Melissa & Doug,3,0.000374,0.000374,3,0,True
+2,98,Save on Arts & Crafts Toys,Toys & Games,Toys & Games > Save on Arts & Crafts Toys,3,0.000374,0.000374,3,0,True
+2,99,Save on Preschool Toys and Accessories,Toys & Games,Toys & Games > Save on Preschool Toys and Accessories,3,0.000374,0.000374,0,2,False
+2,100,Save on Select Advent Calendars,Toys & Games,Toys & Games > Save on Select Advent Calendars,3,0.000374,0.000374,3,0,True
+2,101,Shop all the toys of Comic-Con,Toys & Games,Toys & Games > Shop all the toys of Comic-Con,3,0.000374,0.000374,3,0,True
+2,102,Teenage Mutant Ninja Turtles 2,Toys & Games,Toys & Games > Teenage Mutant Ninja Turtles 2,3,0.000374,0.000374,3,0,True
+2,103,Teenage Mutant Ninja Turtles Promotion,Toys & Games,Toys & Games > Teenage Mutant Ninja Turtles Promotion,3,0.000374,0.000374,3,0,True
+2,104,Toys & Games markdown center,Toys & Games,Toys & Games > Toys & Games markdown center,3,0.000374,0.000374,3,0,True
+2,105,Easter Gifts in Toys & Games,Toys & Games,Toys & Games > Easter Gifts in Toys & Games,2,0.000249,0.000249,2,0,True
+2,106,Easter Toys Deal,Toys & Games,Toys & Games > Easter Toys Deal,2,0.000249,0.000249,2,0,True
+2,107,Featured Items: 25% off Select Toys & Games,Toys & Games,Toys & Games > Featured Items: 25% off Select Toys & Games,2,0.000249,0.000249,2,0,True
+2,108,Games Event,Toys & Games,Toys & Games > Games Event,2,0.000249,0.000249,0,1,False
+2,109,Halloween,Toys & Games,Toys & Games > Halloween,2,0.000249,0.000249,2,0,True
+2,110,Hobby Model Kits,Toys & Games,Toys & Games > Hobby Model Kits,2,0.000249,0.000249,2,0,True
+2,111,Holy Stone,Toys & Games,Toys & Games > Holy Stone,2,0.000249,0.000249,2,0,True
+2,112,LEGO Gifts for Adults,Toys & Games,Toys & Games > LEGO Gifts for Adults,2,0.000249,0.000249,2,0,True
+2,113,Last Minute Deals: Marvel,Toys & Games,Toys & Games > Last Minute Deals: Marvel,2,0.000249,0.000249,2,0,True
+2,114,Lionel,Toys & Games,Toys & Games > Lionel,2,0.000249,0.000249,0,2,False
+2,115,Lowest of the Season Sale,Toys & Games,Toys & Games > Lowest of the Season Sale,2,0.000249,0.000249,2,0,True
+2,116,Mattel & Fisher-Price Deal of the Day,Toys & Games,Toys & Games > Mattel & Fisher-Price Deal of the Day,2,0.000249,0.000249,2,0,True
+2,117,Melissa & Doug Outdoor Play,Toys & Games,Toys & Games > Melissa & Doug Outdoor Play,2,0.000249,0.000249,2,0,True
+2,118,Melissa & Doug Puzzles,Toys & Games,Toys & Games > Melissa & Doug Puzzles,2,0.000249,0.000249,2,0,True
+2,119,"New Arrivals from Barbie, Hot Wheels & more!",Toys & Games,"Toys & Games > New Arrivals from Barbie, Hot Wheels & more!",2,0.000249,0.000249,2,0,True
+2,120,Power Wheels Items June,Toys & Games,Toys & Games > Power Wheels Items June,2,0.000249,0.000249,2,0,True
+2,121,Save on Batman,Toys & Games,Toys & Games > Save on Batman,2,0.000249,0.000249,2,0,True
+2,122,Save on Doc McStuffins,Toys & Games,Toys & Games > Save on Doc McStuffins,2,0.000249,0.000249,2,0,True
+2,123,Save on Learning Toys,Toys & Games,Toys & Games > Save on Learning Toys,2,0.000249,0.000249,2,0,True
+2,124,Save on Power Rangers,Toys & Games,Toys & Games > Save on Power Rangers,2,0.000249,0.000249,2,0,True
+2,125,Save on Select Disney Toys,Toys & Games,Toys & Games > Save on Select Disney Toys,2,0.000249,0.000249,2,0,True
+2,126,Save on Toy Vehicles,Toys & Games,Toys & Games > Save on Toy Vehicles,2,0.000249,0.000249,2,0,True
+2,127,Save on Transformers,Toys & Games,Toys & Games > Save on Transformers,2,0.000249,0.000249,2,0,True
+2,128,Sneak Peak at New Toys for Girls,Toys & Games,Toys & Games > Sneak Peak at New Toys for Girls,2,0.000249,0.000249,2,0,True
+2,129,Spend $20 on WWE Toys and Save $5,Toys & Games,Toys & Games > Spend $20 on WWE Toys and Save $5,2,0.000249,0.000249,2,0,True
+2,130,Spring Outlet Action Figures & Playsets,Toys & Games,Toys & Games > Spring Outlet Action Figures & Playsets,2,0.000249,0.000249,2,0,True
+2,131,Star Wars Top Trumps Promotion,Toys & Games,Toys & Games > Star Wars Top Trumps Promotion,2,0.000249,0.000249,2,0,True
+2,132,Thomas & Friends,Toys & Games,Toys & Games > Thomas & Friends,2,0.000249,0.000249,1,1,False
+2,133,Toys $5 Store,Toys & Games,Toys & Games > Toys $5 Store,2,0.000249,0.000249,2,0,True
+2,134,Toys & Games Easter Event,Toys & Games,Toys & Games > Toys & Games Easter Event,2,0.000249,0.000249,2,0,True
+2,135,Toys and Games Markdown Center,Toys & Games,Toys & Games > Toys and Games Markdown Center,2,0.000249,0.000249,2,0,True
+2,136,Trolls,Toys & Games,Toys & Games > Trolls,2,0.000249,0.000249,2,0,True
+2,137,Up to 50% Off Select Outdoor Toys,Toys & Games,Toys & Games > Up to 50% Off Select Outdoor Toys,2,0.000249,0.000249,2,0,True
+2,138,Valentine's Day for Preschoolers by Hasbro,Toys & Games,Toys & Games > Valentine's Day for Preschoolers by Hasbro,2,0.000249,0.000249,2,0,True
+2,139,White Elephant Deals,Toys & Games,Toys & Games > White Elephant Deals,2,0.000249,0.000249,2,0,True
+2,140,deals on favorite Movie toys,Toys & Games,Toys & Games > deals on favorite Movie toys,2,0.000249,0.000249,2,0,True
+2,141,ALEX Brand Store,Toys & Games,Toys & Games > ALEX Brand Store,1,0.000125,0.000125,1,0,True
+2,142,April: Beyblade,Toys & Games,Toys & Games > April: Beyblade,1,0.000125,0.000125,1,0,True
+2,143,Blaze & the Monster Machines,Toys & Games,Toys & Games > Blaze & the Monster Machines,1,0.000125,0.000125,1,0,True
+2,144,Clay & Dough,Toys & Games,Toys & Games > Clay & Dough,1,0.000125,0.000125,1,0,True
+2,145,Crayola Easter 2018,Toys & Games,Toys & Games > Crayola Easter 2018,1,0.000125,0.000125,1,0,True
+2,146,Deal  Star Wars X-Wing Games,Toys & Games,Toys & Games > Deal  Star Wars X-Wing Games,1,0.000125,0.000125,1,0,True
+2,147,Deal of the Day: Indoor Play Toys,Toys & Games,Toys & Games > Deal of the Day: Indoor Play Toys,1,0.000125,0.000125,1,0,True
+2,148,Disney Descendants,Toys & Games,Toys & Games > Disney Descendants,1,0.000125,0.000125,1,0,True
+2,149,Disney Pixar Cars,Toys & Games,Toys & Games > Disney Pixar Cars,1,0.000125,0.000125,1,0,True
+2,150,Disney Princess Promo,Toys & Games,Toys & Games > Disney Princess Promo,1,0.000125,0.000125,1,0,True
+2,151,Fashion Doll Summer Sale,Toys & Games,Toys & Games > Fashion Doll Summer Sale,1,0.000125,0.000125,1,0,True
+2,152,Fast & Furious 8,Toys & Games,Toys & Games > Fast & Furious 8,1,0.000125,0.000125,1,0,True
+2,153,Favorite toys from Hot Wheels,Toys & Games,Toys & Games > Favorite toys from Hot Wheels,1,0.000125,0.000125,1,0,True
+2,154,Featured Easter toys from Moose,Toys & Games,Toys & Games > Featured Easter toys from Moose,1,0.000125,0.000125,1,0,True
+2,155,Green Monday Deal of the Day,Toys & Games,Toys & Games > Green Monday Deal of the Day,1,0.000125,0.000125,1,0,True
+2,156,"HRP - RC Accessories, Servos, & Paint",Toys & Games,"Toys & Games > HRP - RC Accessories, Servos, & Paint",1,0.000125,0.000125,1,0,True
+2,157,Happy School Year - 14 Years & Up,Toys & Games,Toys & Games > Happy School Year - 14 Years & Up,1,0.000125,0.000125,1,0,True
+2,158,Indoor Toys from Hasbro,Toys & Games,Toys & Games > Indoor Toys from Hasbro,1,0.000125,0.000125,1,0,True
+2,159,Intex Deal of the Day,Toys & Games,Toys & Games > Intex Deal of the Day,1,0.000125,0.000125,1,0,True
+2,160,June - Beyblade Burst,Toys & Games,Toys & Games > June - Beyblade Burst,1,0.000125,0.000125,1,0,True
+2,161,"K'NEX, Tinkertoy & Lincoln Log toys",Toys & Games,"Toys & Games > K'NEX, Tinkertoy & Lincoln Log toys",1,0.000125,0.000125,1,0,True
+2,162,Kids Witch Costumes,Toys & Games,Toys & Games > Kids Witch Costumes,1,0.000125,0.000125,1,0,True
+2,163,Let Loose with Dr. Seuss,Toys & Games,Toys & Games > Let Loose with Dr. Seuss,1,0.000125,0.000125,1,0,True
+2,164,Marvel Toys,Toys & Games,Toys & Games > Marvel Toys,1,0.000125,0.000125,1,0,True
+2,165,Melissa & Doug Classic Toys,Toys & Games,Toys & Games > Melissa & Doug Classic Toys,1,0.000125,0.000125,1,0,True
+2,166,Monster High Promo,Toys & Games,Toys & Games > Monster High Promo,1,0.000125,0.000125,1,0,True
+2,167,New Fall Toys 2013,Toys & Games,Toys & Games > New Fall Toys 2013,1,0.000125,0.000125,1,0,True
+2,168,New Mattel Fall,Toys & Games,Toys & Games > New Mattel Fall,1,0.000125,0.000125,1,0,True
+2,169,New from Minecraft,Toys & Games,Toys & Games > New from Minecraft,1,0.000125,0.000125,1,0,True
+2,170,Nickelodeon,Toys & Games,Toys & Games > Nickelodeon,1,0.000125,0.000125,1,0,True
+2,171,Other Plush & Accessories,Toys & Games,Toys & Games > Other Plush & Accessories,1,0.000125,0.000125,1,0,True
+2,172,Playdoh Deal of the Day,Toys & Games,Toys & Games > Playdoh Deal of the Day,1,0.000125,0.000125,1,0,True
+2,173,PowerWheels Deal of the Day,Toys & Games,Toys & Games > PowerWheels Deal of the Day,1,0.000125,0.000125,1,0,True
+2,174,Redcat Toys,Toys & Games,Toys & Games > Redcat Toys,1,0.000125,0.000125,1,0,True
+2,175,Save 25% on select Power Wheels,Toys & Games,Toys & Games > Save 25% on select Power Wheels,1,0.000125,0.000125,1,0,True
+2,176,Save 25% on select new toys from Hasbro,Toys & Games,Toys & Games > Save 25% on select new toys from Hasbro,1,0.000125,0.000125,1,0,True
+2,177,Save on Dolls & Playsets,Toys & Games,Toys & Games > Save on Dolls & Playsets,1,0.000125,0.000125,1,0,True
+2,178,Save on Favorite Characters Toys and Accesories,Toys & Games,Toys & Games > Save on Favorite Characters Toys and Accesories,1,0.000125,0.000125,1,0,True
+2,179,Save on Hobby Toys,Toys & Games,Toys & Games > Save on Hobby Toys,1,0.000125,0.000125,1,0,True
+2,180,Save on Hot Wheels,Toys & Games,Toys & Games > Save on Hot Wheels,1,0.000125,0.000125,1,0,True
+2,181,Save on Kids Sport Toys,Toys & Games,Toys & Games > Save on Kids Sport Toys,1,0.000125,0.000125,1,0,True
+2,182,Save on Kids Tents & Sleeping Bags,Toys & Games,Toys & Games > Save on Kids Tents & Sleeping Bags,1,0.000125,0.000125,1,0,True
+2,183,Save on Little Tikes,Toys & Games,Toys & Games > Save on Little Tikes,1,0.000125,0.000125,1,0,True
+2,184,Save on Monster High,Toys & Games,Toys & Games > Save on Monster High,1,0.000125,0.000125,1,0,True
+2,185,"Save on Nap Mats, Backpacks & Sleeping Bags",Toys & Games,"Toys & Games > Save on Nap Mats, Backpacks & Sleeping Bags",1,0.000125,0.000125,1,0,True
+2,186,Save on Outdoor Toys,Toys & Games,Toys & Games > Save on Outdoor Toys,1,0.000125,0.000125,1,0,True
+2,187,Save on Select Frozen Toys,Toys & Games,Toys & Games > Save on Select Frozen Toys,1,0.000125,0.000125,1,0,True
+2,188,Save on Select Mega Bloks,Toys & Games,Toys & Games > Save on Select Mega Bloks,1,0.000125,0.000125,1,0,True
+2,189,Save on Select Pretend Play Outfits,Toys & Games,Toys & Games > Save on Select Pretend Play Outfits,1,0.000125,0.000125,1,0,True
+2,190,Save on Select STEM and Learning Toys,Toys & Games,Toys & Games > Save on Select STEM and Learning Toys,1,0.000125,0.000125,1,0,True
+2,191,Save on Select Toys,Toys & Games,Toys & Games > Save on Select Toys,1,0.000125,0.000125,1,0,True
+2,192,Save on Sesame Street,Toys & Games,Toys & Games > Save on Sesame Street,1,0.000125,0.000125,1,0,True
+2,193,Save on Star Wars Toys & Games,Toys & Games,Toys & Games > Save on Star Wars Toys & Games,1,0.000125,0.000125,1,0,True
+2,194,Save on TMNT,Toys & Games,Toys & Games > Save on TMNT,1,0.000125,0.000125,1,0,True
+2,195,Save on Venom Batteris & Accessories,Toys & Games,Toys & Games > Save on Venom Batteris & Accessories,1,0.000125,0.000125,1,0,True
+2,196,Save on select Arts & Crafts kits,Toys & Games,Toys & Games > Save on select Arts & Crafts kits,1,0.000125,0.000125,1,0,True
+2,197,Save on select Play Vehicles,Toys & Games,Toys & Games > Save on select Play Vehicles,1,0.000125,0.000125,1,0,True
+2,198,Save on select Stuffed Animals and Plush toys,Toys & Games,Toys & Games > Save on select Stuffed Animals and Plush toys,1,0.000125,0.000125,1,0,True
+2,199,Save up to 30% on kid's headphones,Toys & Games,Toys & Games > Save up to 30% on kid's headphones,1,0.000125,0.000125,1,0,True
+2,200,"Save up to 30% on select  Shopkins, Little Live Pets, and more",Toys & Games,"Toys & Games > Save up to 30% on select  Shopkins, Little Live Pets, and more",1,0.000125,0.000125,1,0,True
+2,201,Save up to 38% on Select Pikmi Pops Toys,Toys & Games,Toys & Games > Save up to 38% on Select Pikmi Pops Toys,1,0.000125,0.000125,1,0,True
+2,202,Save up to 40% on select outdoor toys,Toys & Games,Toys & Games > Save up to 40% on select outdoor toys,1,0.000125,0.000125,1,0,True
+2,203,Save up to 50% on Alex Brands favorites,Toys & Games,Toys & Games > Save up to 50% on Alex Brands favorites,1,0.000125,0.000125,1,0,True
+2,204,Save up to 50% on Funko Pop and more,Toys & Games,Toys & Games > Save up to 50% on Funko Pop and more,1,0.000125,0.000125,1,0,True
+2,205,Shakira & More,Toys & Games,Toys & Games > Shakira & More,1,0.000125,0.000125,1,0,True
+2,206,Spend & Save on Select Thomas & Friends Items,Toys & Games,Toys & Games > Spend & Save on Select Thomas & Friends Items,1,0.000125,0.000125,1,0,True
+2,207,Spring Outlet Outdoor Toys,Toys & Games,Toys & Games > Spring Outlet Outdoor Toys,1,0.000125,0.000125,1,0,True
+2,208,Star Wars Toys & Games Deals,Toys & Games,Toys & Games > Star Wars Toys & Games Deals,1,0.000125,0.000125,1,0,True
+2,209,Star Wars Vehicles & Playsets,Toys & Games,Toys & Games > Star Wars Vehicles & Playsets,1,0.000125,0.000125,1,0,True
+2,210,Stocking Stuffers Under $10,Toys & Games,Toys & Games > Stocking Stuffers Under $10,1,0.000125,0.000125,1,0,True
+2,211,Stuffed Toys,Toys & Games,Toys & Games > Stuffed Toys,1,0.000125,0.000125,1,0,True
+2,212,The Games We Love,Toys & Games,Toys & Games > The Games We Love,1,0.000125,0.000125,1,0,True
+2,213,Throw a Star Wars party,Toys & Games,Toys & Games > Throw a Star Wars party,1,0.000125,0.000125,1,0,True
+2,214,Toys & Games Christmas Store,Toys & Games,Toys & Games > Toys & Games Christmas Store,1,0.000125,0.000125,1,0,True
+2,215,Toys Earth Day,Toys & Games,Toys & Games > Toys Earth Day,1,0.000125,0.000125,1,0,True
+2,216,Toys: For 2-Year-Olds,Toys & Games,Toys & Games > Toys: For 2-Year-Olds,1,0.000125,0.000125,1,0,True
+2,217,Toys: For Outside,Toys & Games,Toys & Games > Toys: For Outside,1,0.000125,0.000125,1,0,True
+2,218,Transformer Tuesday,Toys & Games,Toys & Games > Transformer Tuesday,1,0.000125,0.000125,1,0,True
+2,219,Up to 50% Off Select Ravensburger Puzzles and Games,Toys & Games,Toys & Games > Up to 50% Off Select Ravensburger Puzzles and Games,1,0.000125,0.000125,1,0,True
+2,220,Up to 80% Off Batman Dress-Up,Toys & Games,Toys & Games > Up to 80% Off Batman Dress-Up,1,0.000125,0.000125,1,0,True
+2,221,VTech,Toys & Games,Toys & Games > VTech,1,0.000125,0.000125,0,1,False
+2,222,Wish list essentials from Fisher-Price,Toys & Games,Toys & Games > Wish list essentials from Fisher-Price,1,0.000125,0.000125,1,0,True
+2,223,deals on favorite Cartoon toys,Toys & Games,Toys & Games > deals on favorite Cartoon toys,1,0.000125,0.000125,1,0,True
+3,1,Pre-Kindergarten Toys,Toys & Games > Preschool,Toys & Games > Preschool > Pre-Kindergarten Toys,124846,16.537953,15.568347,38844,9,False
+3,2,Card Games,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Card Games,48580,6.435238,6.057946,3821,3,False
+3,3,Action Figures,Toys & Games > Toy Figures & Playsets,Toys & Games > Toy Figures & Playsets > Action Figures,45847,6.073206,5.717140,45847,0,True
+3,4,Decorations,Toys & Games > Party Supplies,Toys & Games > Party Supplies > Decorations,42704,5.656863,5.325206,4292,3,False
+3,5,Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,35506,4.703367,4.427613,7893,11,False
+3,6,Jigsaw Puzzles,Toys & Games > Puzzles,Toys & Games > Puzzles > Jigsaw Puzzles,30286,4.011890,3.776677,30286,0,True
+3,7,Board Games,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Board Games,26451,3.503880,3.298450,26451,0,True
+3,8,Party Favors,Toys & Games > Party Supplies,Toys & Games > Party Supplies > Party Favors,18423,2.440436,2.297356,8499,1,False
+3,9,Craft Kits,Toys & Games > Arts & Crafts,Toys & Games > Arts & Crafts > Craft Kits,15141,2.005680,1.888089,2128,12,False
+3,10,Pools & Water Toys,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,15090,1.998924,1.881729,1302,10,False
+3,11,"Statues, Bobbleheads & Busts",Toys & Games > Collectible Toys,"Toys & Games > Collectible Toys > Statues, Bobbleheads & Busts",14349,1.900766,1.789326,3171,2,False
+3,12,Dress-Up Accessories,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories,12561,1.663916,1.566362,1447,8,False
+3,13,Stickers,Toys & Games > Arts & Crafts,Toys & Games > Arts & Crafts > Stickers,11759,1.557677,1.466352,11759,0,True
+3,14,Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,11647,1.542841,1.452386,4296,15,False
+3,15,Building Sets,Toys & Games > Building Toys,Toys & Games > Building Toys > Building Sets,11435,1.514758,1.425949,11435,0,True
+3,16,Dolls,Toys & Games > Dolls & Accessories,Toys & Games > Dolls & Accessories > Dolls,10540,1.396200,1.314342,10540,0,True
+3,17,Game Accessories,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Game Accessories,10107,1.338842,1.260347,1269,4,False
+3,18,Toddler Toys,Toys & Games > Preschool,Toys & Games > Preschool > Toddler Toys,10019,1.327185,1.249373,0,11,False
+3,19,Plush Figures,Toys & Games > Stuffed Animals & Plush Toys,Toys & Games > Stuffed Animals & Plush Toys > Plush Figures,9246,1.224788,1.152980,9246,0,True
+3,20,Collectible Display & Storage,Toys & Games > Collectible Toys,Toys & Games > Collectible Toys > Collectible Display & Storage,8358,1.107158,1.042246,89,6,False
+3,21,Stuffed Animals & Teddy Bears,Toys & Games > Stuffed Animals & Plush Toys,Toys & Games > Stuffed Animals & Plush Toys > Stuffed Animals & Teddy Bears,7656,1.014166,0.954706,7656,0,True
+3,22,Quadcopters & Multirotors,Toys & Games > Remote & App Controlled Vehicles & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Quadcopters & Multirotors,7146,0.946608,0.891109,7146,0,True
+3,23,Dollhouse Accessories,Toys & Games > Dolls & Accessories,Toys & Games > Dolls & Accessories > Dollhouse Accessories,6832,0.905013,0.851953,362,2,False
+3,24,Drawing & Painting Supplies,Toys & Games > Arts & Crafts,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,6771,0.896933,0.844346,148,10,False
+3,25,Power Plant & Driveline Systems,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,6632,0.878520,0.827013,0,5,False
+3,26,Early Development & Activity Toys,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys,6476,0.857855,0.807560,306,8,False
+3,27,Party Tableware,Toys & Games > Party Supplies,Toys & Games > Party Supplies > Party Tableware,6342,0.840105,0.790850,211,3,False
+3,28,Gag Toys & Practical Jokes,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Gag Toys & Practical Jokes,6004,0.795331,0.748701,6004,0,True
+3,29,Doll Accessories,Toys & Games > Dolls & Accessories,Toys & Games > Dolls & Accessories > Doll Accessories,5849,0.774798,0.729373,2850,6,False
+3,30,Fidget Toys,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys,5734,0.759565,0.715032,110,8,False
+3,31,Science Kits & Toys,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Science Kits & Toys,5373,0.711744,0.670015,5373,0,True
+3,32,Brain Teasers,Toys & Games > Puzzles,Toys & Games > Puzzles > Brain Teasers,5255,0.696113,0.655301,2656,2,False
+3,33,Casino Equipment,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Casino Equipment,5211,0.690285,0.649814,124,10,False
+3,34,Blasters & Foam Play,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Blasters & Foam Play,5127,0.679157,0.639339,1339,4,False
+3,35,Miniatures,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Miniatures,4564,0.604579,0.569133,4564,0,True
+3,36,Magic Kits & Accessories,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Magic Kits & Accessories,4473,0.592524,0.557785,4473,0,True
+3,37,Plush Pillows,Toys & Games > Stuffed Animals & Plush Toys,Toys & Games > Stuffed Animals & Plush Toys > Plush Pillows,4144,0.548943,0.516758,4144,0,True
+3,38,Vehicle Bodies & Scale Accessories,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories,4105,0.543776,0.511895,0,1,False
+3,39,Costumes,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Costumes,3997,0.529470,0.498428,3997,0,True
+3,40,Play Sets & Playground Equipment,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment,3590,0.475556,0.447674,210,8,False
+3,41,Playsets,Toys & Games > Toy Figures & Playsets,Toys & Games > Toy Figures & Playsets > Playsets,3398,0.450122,0.423732,3398,0,True
+3,42,Toy Sports,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Toy Sports,3326,0.440585,0.414754,338,7,False
+3,43,Playsets,Toys & Games > Dolls & Accessories,Toys & Games > Dolls & Accessories > Playsets,3182,0.421509,0.396797,3182,0,True
+3,44,Bubbles,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Bubbles,3085,0.408660,0.384701,471,2,False
+3,45,Money Banks,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Money Banks,3042,0.402964,0.379339,3042,0,True
+3,46,Musical Instruments,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Musical Instruments,2985,0.395413,0.372231,149,5,False
+3,47,Vehicle Playsets,Toys & Games > Vehicles,Toys & Games > Vehicles > Vehicle Playsets,2556,0.338585,0.318734,959,2,False
+3,48,Figures,Toys & Games > Building Toys,Toys & Games > Building Toys > Figures,2505,0.331829,0.312375,2505,0,True
+3,49,Kites & Wind Spinners,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Kites & Wind Spinners,2479,0.328385,0.309132,22,3,False
+3,50,Centerpieces,Toys & Games > Party Supplies,Toys & Games > Party Supplies > Centerpieces,2450,0.324544,0.305516,2450,0,True
+3,51,Sandboxes & Beach Toys,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Sandboxes & Beach Toys,2413,0.319642,0.300902,16,3,False
+3,52,Headwear,Toys & Games > Party Supplies,Toys & Games > Party Supplies > Headwear,2337,0.309575,0.291425,2337,0,True
+3,53,Reading & Writing,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Reading & Writing,2333,0.309045,0.290926,46,3,False
+3,54,Electronic Learning Toys,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Electronic Learning Toys,2199,0.291295,0.274216,1031,4,False
+3,55,Plug & Play Video Games,Toys & Games > Kids' Electronics,Toys & Games > Kids' Electronics > Plug & Play Video Games,2163,0.286526,0.269727,2163,0,True
+3,56,Electric Motors & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts,2158,0.285863,0.269103,0,1,False
+3,57,Collectible Postage Stamps,Toys & Games > Collectible Toys,Toys & Games > Collectible Toys > Collectible Postage Stamps,2100,0.278180,0.261871,2100,0,True
+3,58,Technology & Engineering,Toys & Games > STEM Toys,Toys & Games > STEM Toys > Technology & Engineering,2029,0.268775,0.253017,3,7,False
+3,59,Tablecovers,Toys & Games > Party Supplies,Toys & Games > Party Supplies > Tablecovers,2015,0.266921,0.251271,2015,0,True
+3,60,Slime & Putty Toys,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Slime & Putty Toys,1962,0.259900,0.244662,1962,0,True
+3,61,Electronic Pets,Toys & Games > Kids' Electronics,Toys & Games > Kids' Electronics > Electronic Pets,1924,0.254866,0.239924,1924,0,True
+3,62,Tile Games,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Tile Games,1793,0.237513,0.223588,1793,0,True
+3,63,Storage & Accessories,Toys & Games > Building Toys,Toys & Games > Building Toys > Storage & Accessories,1766,0.233936,0.220221,1766,0,True
+3,64,Kitchen Toys,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Kitchen Toys,1738,0.230227,0.216729,205,6,False
+3,65,Piñatas,Toys & Games > Party Supplies,Toys & Games > Party Supplies > Piñatas,1738,0.230227,0.216729,1738,0,True
+3,66,Drawing & Writing Boards,Toys & Games > Arts & Crafts,Toys & Games > Arts & Crafts > Drawing & Writing Boards,1731,0.229300,0.215856,39,4,False
+3,67,Plush Puppets,Toys & Games > Stuffed Animals & Plush Toys,Toys & Games > Stuffed Animals & Plush Toys > Plush Puppets,1722,0.228108,0.214734,1722,0,True
+3,68,Science,Toys & Games > STEM Toys,Toys & Games > STEM Toys > Science,1641,0.217378,0.204633,1,14,False
+3,69,Play Figure Vehicles,Toys & Games > Toy Figures & Playsets,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,1618,0.214331,0.201765,595,14,False
+3,70,Gaming Tops,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Gaming Tops,1413,0.187176,0.176202,1413,0,True
+3,71,Hand Puppets,Toys & Games > Puppets & Puppet Theaters,Toys & Games > Puppets & Puppet Theaters > Hand Puppets,1405,0.186116,0.175204,1405,0,True
+3,72,Bath Toys,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Bath Toys,1360,0.180155,0.169593,1360,0,True
+3,73,Flash Cards,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Flash Cards,1353,0.179228,0.168720,1353,0,True
+3,74,Finger Boards & Finger Bikes,Toys & Games > Vehicles,Toys & Games > Vehicles > Finger Boards & Finger Bikes,1341,0.177638,0.167223,41,2,False
+3,75,Yo-yos,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Yo-yos,1332,0.176446,0.166101,1332,0,True
+3,76,Nature Exploration Toys,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Nature Exploration Toys,1321,0.174989,0.164729,1321,0,True
+3,77,Cars & Race Cars,Toys & Games > Vehicles,Toys & Games > Vehicles > Cars & Race Cars,1296,0.171677,0.161612,1296,0,True
+3,78,Plush Interactive Toy Figures,Toys & Games > Stuffed Animals & Plush Toys,Toys & Games > Stuffed Animals & Plush Toys > Plush Interactive Toy Figures,1288,0.170617,0.160614,1288,0,True
+3,79,Fortune Telling Toys,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Fortune Telling Toys,1263,0.167306,0.157497,1263,0,True
+3,80,"Slot Cars, Race Tracks & Accessories",Toys & Games > Vehicles,"Toys & Games > Vehicles > Slot Cars, Race Tracks & Accessories",1227,0.162537,0.153007,178,3,False
+3,81,Optics,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Optics,1217,0.161212,0.151760,27,4,False
+3,82,Inflatable Bouncers,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Inflatable Bouncers,1203,0.159358,0.150015,1203,0,True
+3,83,Handheld Games,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Handheld Games,1183,0.156708,0.147521,1183,0,True
+3,84,Flying Toys,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Flying Toys,1153,0.152734,0.143780,50,2,False
+3,85,Bean Bags & Footbags,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Bean Bags & Footbags,1110,0.147038,0.138417,160,2,False
+3,86,Geographic Globes,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Geographic Globes,1094,0.144919,0.136422,1094,0,True
+3,87,Dollhouses,Toys & Games > Dolls & Accessories,Toys & Games > Dolls & Accessories > Dollhouses,1062,0.140680,0.132432,1062,0,True
+3,88,3-D Puzzles,Toys & Games > Puzzles,Toys & Games > Puzzles > 3-D Puzzles,1062,0.140680,0.132432,1062,0,True
+3,89,Money & Banking,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Money & Banking,1047,0.138693,0.130561,1047,0,True
+3,90,Transmissions & Differentials,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Transmissions & Differentials,965,0.127830,0.120336,0,3,False
+3,91,Animals,Toys & Games > Toy Figures & Playsets,Toys & Games > Toy Figures & Playsets > Animals,951,0.125976,0.118590,951,0,True
+3,92,Fitness Equipment,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Fitness Equipment,919,0.121737,0.114600,919,0,True
+3,93,Magnetic & Felt Playboards,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Magnetic & Felt Playboards,894,0.118425,0.111482,894,0,True
+3,94,Ball Pits & Accessories,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Ball Pits & Accessories,870,0.115246,0.108489,8,2,False
+3,95,Puzzle Accessories,Toys & Games > Puzzles,Toys & Games > Puzzles > Puzzle Accessories,863,0.114319,0.107616,863,0,True
+3,96,Finger Puppets,Toys & Games > Puppets & Puppet Theaters,Toys & Games > Puppets & Puppet Theaters > Finger Puppets,862,0.114186,0.107492,862,0,True
+3,97,Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,796,0.105444,0.099262,0,12,False
+3,98,Ride-On Parts & Accessories,"Toys & Games > Tricycles, Scooters & Wagons","Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories",785,0.103986,0.097890,11,2,False
+3,99,Squeeze Toys,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Squeeze Toys,767,0.101602,0.095645,767,0,True
+3,100,Walkie Talkies,Toys & Games > Kids' Electronics,Toys & Games > Kids' Electronics > Walkie Talkies,759,0.100542,0.094648,759,0,True
+3,101,Wind-Up Toys,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Wind-Up Toys,759,0.100542,0.094648,759,0,True
+3,102,Travel Games,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Travel Games,746,0.098820,0.093027,746,0,True
+3,103,Pogo Sticks & Hoppers,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Pogo Sticks & Hoppers,733,0.097098,0.091405,40,2,False
+3,104,Magnets & Magnetic Toys,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Magnets & Magnetic Toys,729,0.096568,0.090907,729,0,True
+3,105,Rattles & Plush Rings,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Rattles & Plush Rings,726,0.096171,0.090532,726,0,True
+3,106,Solar Power Kits,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Solar Power Kits,712,0.094316,0.088787,712,0,True
+3,107,Nesting Dolls,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Nesting Dolls,708,0.093787,0.088288,708,0,True
+3,108,Slumber Bags,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Slumber Bags,696,0.092197,0.086791,696,0,True
+3,109,Clay & Dough,Toys & Games > Arts & Crafts,Toys & Games > Arts & Crafts > Clay & Dough,688,0.091137,0.085794,688,0,True
+3,110,Kids' Tricycles,"Toys & Games > Tricycles, Scooters & Wagons","Toys & Games > Tricycles, Scooters & Wagons > Kids' Tricycles",677,0.089680,0.084422,677,0,True
+3,111,Robots,Toys & Games > Remote & App Controlled Vehicles & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Robots,657,0.087031,0.081928,657,0,True
+3,112,Play Tents & Tunnels,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Play Tents & Tunnels,610,0.080805,0.076067,610,0,True
+3,113,Musical Toys,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Musical Toys,605,0.080142,0.075444,605,0,True
+3,114,Trucks,Toys & Games > Vehicles,Toys & Games > Vehicles > Trucks,599,0.079348,0.074696,599,0,True
+3,115,Noisemakers,Toys & Games > Party Supplies,Toys & Games > Party Supplies > Noisemakers,589,0.078023,0.073449,589,0,True
+3,116,Personal Video Players & Accessories,Toys & Games > Kids' Electronics,Toys & Games > Kids' Electronics > Personal Video Players & Accessories,587,0.077758,0.073199,587,0,True
+3,117,Dinosaurs & Prehistoric Creatures,Toys & Games > Toy Figures & Playsets,Toys & Games > Toy Figures & Playsets > Dinosaurs & Prehistoric Creatures,587,0.077758,0.073199,587,0,True
+3,118,Stacking Games,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Stacking Games,546,0.072327,0.068086,546,0,True
+3,119,Play Tools,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Play Tools,536,0.071002,0.066839,536,0,True
+3,120,Dice Games,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Dice Games,519,0.068750,0.064720,519,0,True
+3,121,Puzzle Play Mats,Toys & Games > Puzzles,Toys & Games > Puzzles > Puzzle Play Mats,514,0.068088,0.064096,514,0,True
+3,122,Juggling Sets,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Juggling Sets,509,0.067426,0.063473,509,0,True
+3,123,Trading Cards & Accessories,Toys & Games > Collectible Toys,Toys & Games > Collectible Toys > Trading Cards & Accessories,506,0.067028,0.063098,5,2,False
+3,124,Medical Kits,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Medical Kits,505,0.066896,0.062974,505,0,True
+3,125,DVD Games,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > DVD Games,505,0.066896,0.062974,505,0,True
+3,126,Novelty Spinning Tops,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Novelty Spinning Tops,503,0.066631,0.062724,503,0,True
+3,127,Floor Games,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Floor Games,489,0.064776,0.060978,489,0,True
+3,128,Plush Purses,Toys & Games > Stuffed Animals & Plush Toys,Toys & Games > Stuffed Animals & Plush Toys > Plush Purses,480,0.063584,0.059856,480,0,True
+3,129,Printing & Stamping,Toys & Games > Arts & Crafts,Toys & Games > Arts & Crafts > Printing & Stamping,474,0.062789,0.059108,474,0,True
+3,130,Car Seat & Stroller Toys,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Car Seat & Stroller Toys,473,0.062657,0.058983,473,0,True
+3,131,Stacking Blocks,Toys & Games > Building Toys,Toys & Games > Building Toys > Stacking Blocks,461,0.061067,0.057487,461,0,True
+3,132,Balls,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Balls,448,0.059345,0.055866,448,0,True
+3,133,Marble Games,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Marble Games,441,0.058418,0.054993,441,0,True
+3,134,Marble Runs,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Marble Runs,432,0.057226,0.053871,432,0,True
+3,135,Prisms & Kaleidoscopes,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Prisms & Kaleidoscopes,405,0.053649,0.050504,405,0,True
+3,136,Aprons & Smocks,Toys & Games > Arts & Crafts,Toys & Games > Arts & Crafts > Aprons & Smocks,385,0.051000,0.048010,385,0,True
+3,137,Dance Mats,Toys & Games > Kids' Electronics,Toys & Games > Kids' Electronics > Dance Mats,368,0.048748,0.045890,368,0,True
+3,138,Karaoke Machines,Toys & Games > Kids' Electronics,Toys & Games > Kids' Electronics > Karaoke Machines,355,0.047026,0.044269,355,0,True
+3,139,Stuffed Animal Clothing & Accessories,Toys & Games > Stuffed Animals & Plush Toys,Toys & Games > Stuffed Animals & Plush Toys > Stuffed Animal Clothing & Accessories,351,0.046496,0.043770,152,2,False
+3,140,Game Collections,Toys & Games > Games & Accessories,Toys & Games > Games & Accessories > Game Collections,347,0.045966,0.043271,347,0,True
+3,141,Executive Desk Toys,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Executive Desk Toys,340,0.045039,0.042398,340,0,True
+3,142,Suspension Systems & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts,328,0.043449,0.040902,0,4,False
+3,143,Spy Gadgets,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Spy Gadgets,313,0.041462,0.039031,313,0,True
+3,144,Easels,Toys & Games > Arts & Crafts,Toys & Games > Arts & Crafts > Easels,289,0.038283,0.036038,289,0,True
+3,145,Shops & Accessories,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Shops & Accessories,287,0.038018,0.035789,37,2,False
+3,146,Viewfinders,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Viewfinders,276,0.036561,0.034417,276,0,True
+3,147,Balance Bikes,"Toys & Games > Tricycles, Scooters & Wagons","Toys & Games > Tricycles, Scooters & Wagons > Balance Bikes",265,0.035104,0.033046,265,0,True
+3,148,People,Toys & Games > Toy Figures & Playsets,Toys & Games > Toy Figures & Playsets > People,263,0.034839,0.032796,263,0,True
+3,149,Pegged Puzzles,Toys & Games > Puzzles,Toys & Games > Puzzles > Pegged Puzzles,246,0.032587,0.030676,246,0,True
+3,150,Electric Vehicles,"Toys & Games > Tricycles, Scooters & Wagons","Toys & Games > Tricycles, Scooters & Wagons > Electric Vehicles",244,0.032322,0.030427,244,0,True
+3,151,Floor Puzzles,Toys & Games > Puzzles,Toys & Games > Puzzles > Floor Puzzles,234,0.030997,0.029180,234,0,True
+3,152,Train Tracks,Toys & Games > Remote & App Controlled Vehicles & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Train Tracks,214,0.028348,0.026686,214,0,True
+3,153,Paper & Magnetic Dolls,Toys & Games > Dolls & Accessories,Toys & Games > Dolls & Accessories > Paper & Magnetic Dolls,209,0.027686,0.026062,9,2,False
+3,154,Vanities,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Vanities,202,0.026758,0.025189,202,0,True
+3,155,Fantastic Creatures,Toys & Games > Toy Figures & Playsets,Toys & Games > Toy Figures & Playsets > Fantastic Creatures,201,0.026626,0.025065,201,0,True
+3,156,Indoor Climbers & Play Structures,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Indoor Climbers & Play Structures,200,0.026493,0.024940,200,0,True
+3,157,Gardening Tools,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Gardening Tools,196,0.025963,0.024441,196,0,True
+3,158,Construction Vehicles,Toys & Games > Vehicles,Toys & Games > Vehicles > Construction Vehicles,167,0.022122,0.020825,8,4,False
+3,159,Purses,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Purses,156,0.020665,0.019453,156,0,True
+3,160,Spinning Tops,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Spinning Tops,153,0.020267,0.019079,153,0,True
+3,161,Pretend Phones & Smartphones,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Pretend Phones & Smartphones,147,0.019473,0.018331,147,0,True
+3,162,Rock Tumblers,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Rock Tumblers,146,0.019340,0.018206,146,0,True
+3,163,Plush Toy & Blanket Sets,Toys & Games > Stuffed Animals & Plush Toys,Toys & Games > Stuffed Animals & Plush Toys > Plush Toy & Blanket Sets,135,0.017883,0.016835,135,0,True
+3,164,Push Ride-Ons,"Toys & Games > Tricycles, Scooters & Wagons","Toys & Games > Tricycles, Scooters & Wagons > Push Ride-Ons",132,0.017486,0.016460,132,0,True
+3,165,Playhouses,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Playhouses,123,0.016293,0.015338,123,0,True
+3,166,Pull-Along Wagons,"Toys & Games > Tricycles, Scooters & Wagons","Toys & Games > Tricycles, Scooters & Wagons > Pull-Along Wagons",123,0.016293,0.015338,123,0,True
+3,167,Novelty Coins,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Novelty Coins,121,0.016028,0.015089,121,0,True
+3,168,Math,Toys & Games > STEM Toys,Toys & Games > STEM Toys > Math,105,0.013909,0.013094,0,2,False
+3,169,Mirrors,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Mirrors,103,0.013644,0.012844,103,0,True
+3,170,Storytelling Toys,Toys & Games > Kids' Electronics,Toys & Games > Kids' Electronics > Storytelling Toys,95,0.012584,0.011847,95,0,True
+3,171,Marionettes,Toys & Games > Puppets & Puppet Theaters,Toys & Games > Puppets & Puppet Theaters > Marionettes,93,0.012319,0.011597,93,0,True
+3,172,Tractors,Toys & Games > Vehicles,Toys & Games > Vehicles > Tractors,89,0.011790,0.011098,89,0,True
+3,173,Trains & Trams,Toys & Games > Vehicles,Toys & Games > Vehicles > Trains & Trams,88,0.011657,0.010974,88,0,True
+3,174,Ventriloquist,Toys & Games > Puppets & Puppet Theaters,Toys & Games > Puppets & Puppet Theaters > Ventriloquist,86,0.011392,0.010724,86,0,True
+3,175,Buses,Toys & Games > Vehicles,Toys & Games > Vehicles > Buses,86,0.011392,0.010724,86,0,True
+3,176,Housekeeping,Toys & Games > Dress Up & Pretend Play,Toys & Games > Dress Up & Pretend Play > Housekeeping,84,0.011127,0.010475,84,0,True
+3,177,Kickball & Playground Balls,Toys & Games > Sports & Outdoor Play,Toys & Games > Sports & Outdoor Play > Kickball & Playground Balls,84,0.011127,0.010475,84,0,True
+3,178,Detective & Spy,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Detective & Spy,83,0.010995,0.010350,83,0,True
+3,179,MP3 Players,Toys & Games > Kids' Electronics,Toys & Games > Kids' Electronics > MP3 Players,80,0.010597,0.009976,80,0,True
+3,180,Rocking Horses & Animals,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Rocking Horses & Animals,79,0.010465,0.009851,79,0,True
+3,181,Gear Sets,Toys & Games > Building Toys,Toys & Games > Building Toys > Gear Sets,78,0.010332,0.009727,78,0,True
+3,182,Magnetic Building,Toys & Games > Building Toys,Toys & Games > Building Toys > Magnetic Building,71,0.009405,0.008854,71,0,True
+3,183,Airplanes,Toys & Games > Vehicles,Toys & Games > Vehicles > Airplanes,68,0.009008,0.008480,68,0,True
+3,184,Oil & Lubricants,Toys & Games > Remote & App Controlled Vehicles & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Oil & Lubricants,65,0.008610,0.008106,65,0,True
+3,185,Pedal Vehicles,"Toys & Games > Tricycles, Scooters & Wagons","Toys & Games > Tricycles, Scooters & Wagons > Pedal Vehicles",63,0.008345,0.007856,63,0,True
+3,186,Puppet Theaters,Toys & Games > Puppets & Puppet Theaters,Toys & Games > Puppets & Puppet Theaters > Puppet Theaters,59,0.007816,0.007357,59,0,True
+3,187,Sudoku Puzzles,Toys & Games > Puzzles,Toys & Games > Puzzles > Sudoku Puzzles,54,0.007153,0.006734,54,0,True
+3,188,Adhesives,Toys & Games > Arts & Crafts,Toys & Games > Arts & Crafts > Adhesives,50,0.006623,0.006235,50,0,True
+3,189,Littlest Pet Shop,Toys & Games > Hasbro,Toys & Games > Hasbro > Littlest Pet Shop,49,0.006491,0.006110,0,4,False
+3,190,Buildings & Scenery,Toys & Games > Toy Figures & Playsets,Toys & Games > Toy Figures & Playsets > Buildings & Scenery,44,0.005829,0.005487,1,3,False
+3,191,Action Figures 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Action Figures 12-15,42,0.005564,0.005237,42,0,True
+3,192,"Cars, Trains, and Planes 12-15",Toys & Games > Kids' Birthdays,"Toys & Games > Kids' Birthdays > Cars, Trains, and Planes 12-15",35,0.004636,0.004365,35,0,True
+3,193,Habitats,Toys & Games > Learning & Education,Toys & Games > Learning & Education > Habitats,31,0.004106,0.003866,31,0,True
+3,194,Boats,Toys & Games > Vehicles,Toys & Games > Vehicles > Boats,27,0.003577,0.003367,27,0,True
+3,195,Helicopters,Toys & Games > Vehicles,Toys & Games > Vehicles > Helicopters,25,0.003312,0.003118,25,0,True
+3,196,HTL Santa App 2013,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > HTL Santa App 2013,22,0.002914,0.002743,22,0,True
+3,197,Beyblade,Toys & Games > Hasbro,Toys & Games > Hasbro > Beyblade,21,0.002782,0.002619,0,6,False
+3,198,Arts & Crafts 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Arts & Crafts 8-11,21,0.002782,0.002619,21,0,True
+3,199,Fuel,Toys & Games > Remote & App Controlled Vehicles & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Fuel,20,0.002649,0.002494,20,0,True
+3,200,Motorcycles,Toys & Games > Vehicles,Toys & Games > Vehicles > Motorcycles,19,0.002517,0.002369,19,0,True
+3,201,Arts & Crafts 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Arts & Crafts 5-7,18,0.002384,0.002245,18,0,True
+3,202,Ambulances,Toys & Games > Vehicles,Toys & Games > Vehicles > Ambulances,17,0.002252,0.002120,17,0,True
+3,203,Action Figures 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Action Figures 5-7,16,0.002119,0.001995,16,0,True
+3,204,9 to 11 Years,Toys & Games > Transformers: Dark of the Moon,Toys & Games > Transformers: Dark of the Moon > 9 to 11 Years,15,0.001987,0.001871,15,0,True
+3,205,"Cars, Trains, and Planes 5-7",Toys & Games > Kids' Birthdays,"Toys & Games > Kids' Birthdays > Cars, Trains, and Planes 5-7",14,0.001855,0.001746,14,0,True
+3,206,Superheroes 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Superheroes 12-15,14,0.001855,0.001746,14,0,True
+3,207,Building 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Building 5-7,12,0.001590,0.001496,12,0,True
+3,208,Action Figures 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Action Figures 8-11,11,0.001457,0.001372,11,0,True
+3,209,MECHTECH,Toys & Games > Transformers: Dark of the Moon,Toys & Games > Transformers: Dark of the Moon > MECHTECH,11,0.001457,0.001372,11,0,True
+3,210,Action Racing Collectibles,Toys & Games > Lionel Racing,Toys & Games > Lionel Racing > Action Racing Collectibles,10,0.001325,0.001247,0,7,False
+3,211,Action Figures & Cards,Toys & Games > Bakugan,Toys & Games > Bakugan > Action Figures & Cards,9,0.001192,0.001122,9,0,True
+3,212,"Cars, Trains, and Planes 8-11",Toys & Games > Kids' Birthdays,"Toys & Games > Kids' Birthdays > Cars, Trains, and Planes 8-11",9,0.001192,0.001122,9,0,True
+3,213,Learning & Science 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Learning & Science 5-7,8,0.001060,0.000998,8,0,True
+3,214,Rockets,Toys & Games > Vehicles,Toys & Games > Vehicles > Rockets,8,0.001060,0.000998,8,0,True
+3,215,Spaceships,Toys & Games > Vehicles,Toys & Games > Vehicles > Spaceships,8,0.001060,0.000998,8,0,True
+3,216,Building 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Building 8-11,7,0.000927,0.000873,7,0,True
+3,217,Learning & Science 0-2,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Learning & Science 0-2,7,0.000927,0.000873,7,0,True
+3,218,Puzzles 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Puzzles 5-7,7,0.000927,0.000873,7,0,True
+3,219,Superheroes 2-4,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Superheroes 2-4,7,0.000927,0.000873,7,0,True
+3,220,Marvel  2013,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Marvel  2013,7,0.000927,0.000873,7,0,True
+3,221,Bags,Toys & Games > The Official Twilight Merchandise Store,Toys & Games > The Official Twilight Merchandise Store > Bags,7,0.000927,0.000873,7,0,True
+3,222,Collectibles,Toys & Games > The Official Twilight Merchandise Store,Toys & Games > The Official Twilight Merchandise Store > Collectibles,7,0.000927,0.000873,7,0,True
+3,223,Best Toys of the Month Action Toys & Vehicles,Toys & Games > Toys & Games Editors' Picks,Toys & Games > Toys & Games Editors' Picks > Best Toys of the Month Action Toys & Vehicles,7,0.000927,0.000873,7,0,True
+3,224,6 to 8 Years,Toys & Games > Transformers: Dark of the Moon,Toys & Games > Transformers: Dark of the Moon > 6 to 8 Years,7,0.000927,0.000873,7,0,True
+3,225,Action Figures 2-4,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Action Figures 2-4,6,0.000795,0.000748,6,0,True
+3,226,Outdoor 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Outdoor 12-15,6,0.000795,0.000748,6,0,True
+3,227,Superheroes 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Superheroes 5-7,6,0.000795,0.000748,6,0,True
+3,228,Best Toys of the Month Building,Toys & Games > Toys & Games Editors' Picks,Toys & Games > Toys & Games Editors' Picks > Best Toys of the Month Building,6,0.000795,0.000748,6,0,True
+3,229,Alternators,Toys & Games > Transformers,Toys & Games > Transformers > Alternators,6,0.000795,0.000748,6,0,True
+3,230,Stick Horses,Toys & Games > Baby & Toddler Toys,Toys & Games > Baby & Toddler Toys > Stick Horses,5,0.000662,0.000624,5,0,True
+3,231,Transformers: Revenge of the Fallen,Toys & Games > Hasbro,Toys & Games > Hasbro > Transformers: Revenge of the Fallen,5,0.000662,0.000624,5,0,True
+3,232,Building 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Building 12-15,5,0.000662,0.000624,5,0,True
+3,233,"Cars, Trains, and Planes 0-2",Toys & Games > Kids' Birthdays,"Toys & Games > Kids' Birthdays > Cars, Trains, and Planes 0-2",5,0.000662,0.000624,5,0,True
+3,234,Learning & Science 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Learning & Science 8-11,5,0.000662,0.000624,5,0,True
+3,235,Outdoor 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Outdoor 5-7,5,0.000662,0.000624,5,0,True
+3,236,Princesses 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Princesses 5-7,5,0.000662,0.000624,5,0,True
+3,237,Puzzles 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Puzzles 12-15,5,0.000662,0.000624,5,0,True
+3,238,Puzzles 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Puzzles 8-11,5,0.000662,0.000624,5,0,True
+3,239,Tablets & Accessories,Toys & Games > Kids' Electronics,Toys & Games > Kids' Electronics > Tablets & Accessories,5,0.000662,0.000624,1,2,False
+3,240,Architecture,Toys & Games > LEGO Store,Toys & Games > LEGO Store > Architecture,5,0.000662,0.000624,5,0,True
+3,241,Accessories,Toys & Games > The Official Twilight Merchandise Store,Toys & Games > The Official Twilight Merchandise Store > Accessories,5,0.000662,0.000624,5,0,True
+3,242,Jewelry,Toys & Games > The Official Twilight Merchandise Store,Toys & Games > The Official Twilight Merchandise Store > Jewelry,5,0.000662,0.000624,5,0,True
+3,243,Action Figures,Toys & Games > Transformers: Dark of the Moon,Toys & Games > Transformers: Dark of the Moon > Action Figures,5,0.000662,0.000624,5,0,True
+3,244,Arts & Crafts 2-4,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Arts & Crafts 2-4,4,0.000530,0.000499,4,0,True
+3,245,"Cars, Trains, and Planes 2-4",Toys & Games > Kids' Birthdays,"Toys & Games > Kids' Birthdays > Cars, Trains, and Planes 2-4",4,0.000530,0.000499,4,0,True
+3,246,Dinosaurs & Animals 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Dinosaurs & Animals 5-7,4,0.000530,0.000499,4,0,True
+3,247,Outdoor 0-2,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Outdoor 0-2,4,0.000530,0.000499,4,0,True
+3,248,Monster High,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Monster High,4,0.000530,0.000499,4,0,True
+3,249,Best Toys of the Month Games,Toys & Games > Toys & Games Editors' Picks,Toys & Games > Toys & Games Editors' Picks > Best Toys of the Month Games,4,0.000530,0.000499,4,0,True
+3,250,ROBOPOWER,Toys & Games > Transformers: Dark of the Moon,Toys & Games > Transformers: Dark of the Moon > ROBOPOWER,4,0.000530,0.000499,4,0,True
+3,251,ATVs,Toys & Games > Vehicles,Toys & Games > Vehicles > ATVs,4,0.000530,0.000499,4,0,True
+3,252,Armored Fighting Vehicles,Toys & Games > Vehicles,Toys & Games > Vehicles > Armored Fighting Vehicles,4,0.000530,0.000499,4,0,True
+3,253,Crawlers,Toys & Games > Vehicles,Toys & Games > Vehicles > Crawlers,4,0.000530,0.000499,4,0,True
+3,254,Submarines,Toys & Games > Vehicles,Toys & Games > Vehicles > Submarines,4,0.000530,0.000499,4,0,True
+3,255,BakuRack & Launcher,Toys & Games > Bakugan,Toys & Games > Bakugan > BakuRack & Launcher,3,0.000397,0.000374,3,0,True
+3,256,Arts & Crafts 0-2,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Arts & Crafts 0-2,3,0.000397,0.000374,3,0,True
+3,257,Dinosaurs & Animals 2-4,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Dinosaurs & Animals 2-4,3,0.000397,0.000374,3,0,True
+3,258,Dolls 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Dolls 12-15,3,0.000397,0.000374,3,0,True
+3,259,Outdoor 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Outdoor 8-11,3,0.000397,0.000374,3,0,True
+3,260,Pretend Play 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Pretend Play 12-15,3,0.000397,0.000374,3,0,True
+3,261,Pretend Play 2-4,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Pretend Play 2-4,3,0.000397,0.000374,3,0,True
+3,262,Pretend Play 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Pretend Play 8-11,3,0.000397,0.000374,3,0,True
+3,263,Princesses 2-4,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Princesses 2-4,3,0.000397,0.000374,3,0,True
+3,264,Superheroes 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Superheroes 8-11,3,0.000397,0.000374,3,0,True
+3,265,Drinking Games,Toys & Games > Novelty & Gag Toys,Toys & Games > Novelty & Gag Toys > Drinking Games,3,0.000397,0.000374,3,0,True
+3,266,Disney Jr 2013,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Disney Jr 2013,3,0.000397,0.000374,3,0,True
+3,267,Nick 2013,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Nick 2013,3,0.000397,0.000374,3,0,True
+3,268,Nickelodeon,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Nickelodeon,3,0.000397,0.000374,3,0,True
+3,269,Playskool,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Playskool,3,0.000397,0.000374,3,0,True
+3,270,Star Wars 2013,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Star Wars 2013,3,0.000397,0.000374,3,0,True
+3,271,Battle Packs & Boosters,Toys & Games > Bakugan,Toys & Games > Bakugan > Battle Packs & Boosters,2,0.000265,0.000249,2,0,True
+3,272,Trivia,Toys & Games > Games Event,Toys & Games > Games Event > Trivia,2,0.000265,0.000249,2,0,True
+3,273,Action Figures 0-2,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Action Figures 0-2,2,0.000265,0.000249,2,0,True
+3,274,Pretend Play 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Pretend Play 5-7,2,0.000265,0.000249,2,0,True
+3,275,Chima,Toys & Games > LEGO Store,Toys & Games > LEGO Store > Chima,2,0.000265,0.000249,2,0,True
+3,276,LEGO Friends,Toys & Games > LEGO Store,Toys & Games > LEGO Store > LEGO Friends,2,0.000265,0.000249,2,0,True
+3,277,Disney,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Disney,2,0.000265,0.000249,2,0,True
+3,278,Disney Princess 2013,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Disney Princess 2013,2,0.000265,0.000249,2,0,True
+3,279,Hasbro Girls,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Hasbro Girls,2,0.000265,0.000249,2,0,True
+3,280,Lego,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Lego,2,0.000265,0.000249,2,0,True
+3,281,Marvel,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Marvel,2,0.000265,0.000249,2,0,True
+3,282,Infant and Toddler,Toys & Games > Save on Preschool Toys and Accessories,Toys & Games > Save on Preschool Toys and Accessories > Infant and Toddler,2,0.000265,0.000249,2,0,True
+3,283,Best Toys of the Month Arts & Crafts,Toys & Games > Toys & Games Editors' Picks,Toys & Games > Toys & Games Editors' Picks > Best Toys of the Month Arts & Crafts,2,0.000265,0.000249,2,0,True
+3,284,Favorite Characters,Toys & Games > Amazon Exclusive Toys,Toys & Games > Amazon Exclusive Toys > Favorite Characters,1,0.000132,0.000125,1,0,True
+3,285,Arts & Crafts 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Arts & Crafts 12-15,1,0.000132,0.000125,1,0,True
+3,286,Dinosaurs & Animals 0-2,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Dinosaurs & Animals 0-2,1,0.000132,0.000125,1,0,True
+3,287,Dinosaurs & Animals 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Dinosaurs & Animals 12-15,1,0.000132,0.000125,1,0,True
+3,288,Dinosaurs & Animals 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Dinosaurs & Animals 8-11,1,0.000132,0.000125,1,0,True
+3,289,Dolls 5-7,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Dolls 5-7,1,0.000132,0.000125,1,0,True
+3,290,Dolls 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Dolls 8-11,1,0.000132,0.000125,1,0,True
+3,291,Learning & Science 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Learning & Science 12-15,1,0.000132,0.000125,1,0,True
+3,292,Outdoor 2-4,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Outdoor 2-4,1,0.000132,0.000125,1,0,True
+3,293,Princesses 12-15,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Princesses 12-15,1,0.000132,0.000125,1,0,True
+3,294,Princesses 8-11,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Princesses 8-11,1,0.000132,0.000125,1,0,True
+3,295,Puzzles 0-2,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Puzzles 0-2,1,0.000132,0.000125,1,0,True
+3,296,Superheroes 0-2,Toys & Games > Kids' Birthdays,Toys & Games > Kids' Birthdays > Superheroes 0-2,1,0.000132,0.000125,1,0,True
+3,297,Cars 2,Toys & Games > LEGO Store,Toys & Games > LEGO Store > Cars 2,1,0.000132,0.000125,1,0,True
+3,298,Creator,Toys & Games > LEGO Store,Toys & Games > LEGO Store > Creator,1,0.000132,0.000125,1,0,True
+3,299,SpongeBob,Toys & Games > LEGO Store,Toys & Games > LEGO Store > SpongeBob,1,0.000132,0.000125,1,0,True
+3,300,Star Wars,Toys & Games > LEGO Store,Toys & Games > LEGO Store > Star Wars,1,0.000132,0.000125,1,0,True
+3,301,Lionel Add Ons & Accessories,Toys & Games > Lionel,Toys & Games > Lionel > Lionel Add Ons & Accessories,1,0.000132,0.000125,1,0,True
+3,302,Lionel Gear,Toys & Games > Lionel,Toys & Games > Lionel > Lionel Gear,1,0.000132,0.000125,1,0,True
+3,303,Hasbro Games,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Hasbro Games,1,0.000132,0.000125,1,0,True
+3,304,Vtech 2013,Toys & Games > Santa App Brands,Toys & Games > Santa App Brands > Vtech 2013,1,0.000132,0.000125,1,0,True
+3,305,Pretend Play,Toys & Games > Save on Preschool Toys and Accessories,Toys & Games > Save on Preschool Toys and Accessories > Pretend Play,1,0.000132,0.000125,1,0,True
+3,306,Engines,Toys & Games > Thomas & Friends,Toys & Games > Thomas & Friends > Engines,1,0.000132,0.000125,1,0,True
+3,307,Best Toys of the Month Preschool,Toys & Games > Toys & Games Editors' Picks,Toys & Games > Toys & Games Editors' Picks > Best Toys of the Month Preschool,1,0.000132,0.000125,1,0,True
+3,308,Best Toys of the Month Sports & Outdoor,Toys & Games > Toys & Games Editors' Picks,Toys & Games > Toys & Games Editors' Picks > Best Toys of the Month Sports & Outdoor,1,0.000132,0.000125,1,0,True
+3,309,Classic Voyager,Toys & Games > Transformers,Toys & Games > Transformers > Classic Voyager,1,0.000132,0.000125,1,0,True
+3,310,Cybertron Mini-Con,Toys & Games > Transformers,Toys & Games > Transformers > Cybertron Mini-Con,1,0.000132,0.000125,1,0,True
+3,311,Cybertron Scout Class,Toys & Games > Transformers,Toys & Games > Transformers > Cybertron Scout Class,1,0.000132,0.000125,1,0,True
+3,312,Cybertron Supreme Class,Toys & Games > Transformers,Toys & Games > Transformers > Cybertron Supreme Class,1,0.000132,0.000125,1,0,True
+3,313,Licensed,Toys & Games > VTech,Toys & Games > VTech > Licensed,1,0.000132,0.000125,1,0,True
+3,314,Hovercrafts,Toys & Games > Vehicles,Toys & Games > Vehicles > Hovercrafts,1,0.000132,0.000125,1,0,True
+4,1,Collectible Card Games,Toys & Games > Games & Accessories > Card Games,Toys & Games > Games & Accessories > Card Games > Collectible Card Games,36282,9.306537,4.524380,6157,5,False
+4,2,Activity,Toys & Games > Preschool > Pre-Kindergarten Toys,Toys & Games > Preschool > Pre-Kindergarten Toys > Activity,28121,7.213195,3.506700,1,5,False
+4,3,Balloons,Toys & Games > Party Supplies > Decorations,Toys & Games > Party Supplies > Decorations > Balloons,24133,6.190250,3.009395,24133,0,True
+4,4,Pretend Play,Toys & Games > Preschool > Pre-Kindergarten Toys,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play,19305,4.951841,2.407341,0,7,False
+4,5,Stuffed Animals & Toys,Toys & Games > Preschool > Pre-Kindergarten Toys,Toys & Games > Preschool > Pre-Kindergarten Toys > Stuffed Animals & Toys,13994,3.589540,1.745057,13994,0,True
+4,6,Banners,Toys & Games > Party Supplies > Decorations,Toys & Games > Party Supplies > Decorations > Banners,10305,2.643290,1.285038,10305,0,True
+4,7,Multi-Item Party Favor Packs,Toys & Games > Party Supplies > Party Favors,Toys & Games > Party Supplies > Party Favors > Multi-Item Party Favor Packs,9924,2.545562,1.237527,9924,0,True
+4,8,Art & Creativity,Toys & Games > Preschool > Pre-Kindergarten Toys,Toys & Games > Preschool > Pre-Kindergarten Toys > Art & Creativity,8255,2.117454,1.029402,8255,0,True
+4,9,Dice & Accessories,Toys & Games > Games & Accessories > Game Accessories,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories,6985,1.791692,0.871032,231,5,False
+4,10,Statues,"Toys & Games > Collectible Toys > Statues, Bobbleheads & Busts","Toys & Games > Collectible Toys > Statues, Bobbleheads & Busts > Statues",6273,1.609060,0.782246,6273,0,True
+4,11,Puzzles,Toys & Games > Preschool > Pre-Kindergarten Toys,Toys & Games > Preschool > Pre-Kindergarten Toys > Puzzles,6270,1.608290,0.781872,6270,0,True
+4,12,Card Storage & Display,Toys & Games > Collectible Toys > Collectible Display & Storage,Toys & Games > Collectible Toys > Collectible Display & Storage > Card Storage & Display,6214,1.593926,0.774888,500,4,False
+4,13,Remote & App Controlled Vehicle Batteries,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Remote & App Controlled Vehicle Batteries,6068,1.556476,0.756682,6068,0,True
+4,14,Learning,Toys & Games > Preschool > Pre-Kindergarten Toys,Toys & Games > Preschool > Pre-Kindergarten Toys > Learning,6007,1.540829,0.749075,5935,2,False
+4,15,Standard Playing Card Decks,Toys & Games > Games & Accessories > Card Games,Toys & Games > Games & Accessories > Card Games > Standard Playing Card Decks,5845,1.499275,0.728874,5845,0,True
+4,16,Wheels & Tires,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires,5845,1.499275,0.728874,59,7,False
+4,17,Power Plant & Driveline Systems,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,5679,1.456695,0.708174,57,9,False
+4,18,Jewelry,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry,4962,1.272781,0.618763,396,6,False
+4,19,Bobbleheads,"Toys & Games > Collectible Toys > Statues, Bobbleheads & Busts","Toys & Games > Collectible Toys > Statues, Bobbleheads & Busts > Bobbleheads",4905,1.258160,0.611655,4905,0,True
+4,20,Sorting & Stacking Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys > Sorting & Stacking Toys,4498,1.153762,0.560902,4498,0,True
+4,21,Pool Rafts & Inflatable Ride-ons,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Pool Rafts & Inflatable Ride-ons,4441,1.139141,0.553795,4441,0,True
+4,22,Vehicle Scale Accessories,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories > Vehicle Scale Accessories,4105,1.052956,0.511895,4105,0,True
+4,23,Cake & Cupcake Toppers,Toys & Games > Party Supplies > Decorations,Toys & Games > Party Supplies > Decorations > Cake & Cupcake Toppers,3974,1.019353,0.495559,27,2,False
+4,24,Décor,Toys & Games > Dolls & Accessories > Dollhouse Accessories,Toys & Games > Dolls & Accessories > Dollhouse Accessories > Décor,3824,0.980878,0.476854,3824,0,True
+4,25,Pretend Play,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Pretend Play,3258,0.835695,0.406274,0,4,False
+4,26,Plates,Toys & Games > Party Supplies > Party Tableware,Toys & Games > Party Supplies > Party Tableware > Plates,3097,0.794398,0.386197,3097,0,True
+4,27,Cars,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Cars,3037,0.779008,0.378715,3037,0,True
+4,28,Vehicle Bodies & Scale Accessories,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories,2962,0.759770,0.369363,388,7,False
+4,29,Paper Craft,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Paper Craft,2958,0.758744,0.368864,2958,0,True
+4,30,Masks,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Masks,2919,0.748740,0.364000,2919,0,True
+4,31,Suspension Systems & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts,2835,0.727193,0.353526,50,3,False
+4,32,Servos & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts,2672,0.685383,0.333199,24,8,False
+4,33,Furniture,Toys & Games > Dolls & Accessories > Dollhouse Accessories,Toys & Games > Dolls & Accessories > Dollhouse Accessories > Furniture,2646,0.678714,0.329957,2646,0,True
+4,34,Dedicated Deck Card Games,Toys & Games > Games & Accessories > Card Games,Toys & Games > Games & Accessories > Card Games > Dedicated Deck Card Games,2632,0.675123,0.328211,2632,0,True
+4,35,Bubble Makers,Toys & Games > Sports & Outdoor Play > Bubbles,Toys & Games > Sports & Outdoor Play > Bubbles > Bubble Makers,2469,0.633312,0.307885,2469,0,True
+4,36,Pool Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Pool Toys,2411,0.618435,0.300653,67,4,False
+4,37,Bath Toys,Toys & Games > Preschool > Pre-Kindergarten Toys,Toys & Games > Preschool > Pre-Kindergarten Toys > Bath Toys,2337,0.599454,0.291425,2337,0,True
+4,38,Foam Blasters,Toys & Games > Sports & Outdoor Play > Blasters & Foam Play,Toys & Games > Sports & Outdoor Play > Blasters & Foam Play > Foam Blasters,2274,0.583294,0.283569,2274,0,True
+4,39,Poker Equipment,Toys & Games > Games & Accessories > Casino Equipment,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment,2206,0.565851,0.275089,196,6,False
+4,40,Fidget Blocks,Toys & Games > Novelty & Gag Toys > Fidget Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys > Fidget Blocks,2203,0.565082,0.274715,2203,0,True
+4,41,Complete Motors,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts > Complete Motors,2158,0.553539,0.269103,2158,0,True
+4,42,Kites,Toys & Games > Sports & Outdoor Play > Kites & Wind Spinners,Toys & Games > Sports & Outdoor Play > Kites & Wind Spinners > Kites,1961,0.503008,0.244537,1961,0,True
+4,43,Jewelry,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Jewelry,1875,0.480948,0.233813,1875,0,True
+4,44,Beach Toys,Toys & Games > Sports & Outdoor Play > Sandboxes & Beach Toys,Toys & Games > Sports & Outdoor Play > Sandboxes & Beach Toys > Beach Toys,1859,0.476844,0.231818,1859,0,True
+4,45,Trucks,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Trucks,1771,0.454271,0.220844,1771,0,True
+4,46,Pop Fidget Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys > Pop Fidget Toys,1758,0.450937,0.219223,1758,0,True
+4,47,Game Pieces,Toys & Games > Games & Accessories > Game Accessories,Toys & Games > Games & Accessories > Game Accessories > Game Pieces,1690,0.433495,0.210744,1690,0,True
+4,48,Radios & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts,1679,0.430673,0.209372,98,5,False
+4,49,Cups,Toys & Games > Party Supplies > Party Tableware,Toys & Games > Party Supplies > Party Tableware > Cups,1630,0.418104,0.203262,1630,0,True
+4,50,Activity,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Activity,1630,0.418104,0.203262,1,7,False
+4,51,Battery Chargers,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Battery Chargers,1576,0.404253,0.196528,1576,0,True
+4,52,Stuffed Animals & Toys,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Stuffed Animals & Toys,1508,0.386810,0.188048,1508,0,True
+4,53,Squirt Guns,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Squirt Guns,1476,0.378602,0.184058,1476,0,True
+4,54,Headwear,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Headwear,1466,0.376037,0.182811,610,4,False
+4,55,Clothing & Accessories Sets,Toys & Games > Dolls & Accessories > Doll Accessories,Toys & Games > Dolls & Accessories > Doll Accessories > Clothing & Accessories Sets,1422,0.364751,0.177324,1422,0,True
+4,56,Bingo Equipment,Toys & Games > Games & Accessories > Casino Equipment,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment,1414,0.362699,0.176326,76,5,False
+4,57,Napkins,Toys & Games > Party Supplies > Party Tableware,Toys & Games > Party Supplies > Party Tableware > Napkins,1404,0.360134,0.175079,1404,0,True
+4,58,Crayons,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Crayons,1402,0.359621,0.174830,1402,0,True
+4,59,Paint-By-Number Kits,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Paint-By-Number Kits,1371,0.351669,0.170964,1371,0,True
+4,60,Puzzle Boxes,Toys & Games > Puzzles > Brain Teasers,Toys & Games > Puzzles > Brain Teasers > Puzzle Boxes,1368,0.350900,0.170590,1368,0,True
+4,61,Building Toys,Toys & Games > STEM Toys > Technology & Engineering,Toys & Games > STEM Toys > Technology & Engineering > Building Toys,1337,0.342948,0.166724,1337,0,True
+4,62,Doodle & Scribbler Boards,Toys & Games > Arts & Crafts > Drawing & Writing Boards,Toys & Games > Arts & Crafts > Drawing & Writing Boards > Doodle & Scribbler Boards,1290,0.330892,0.160864,1290,0,True
+4,63,Makeup,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Makeup,1289,0.330636,0.160739,1289,0,True
+4,64,Play Set Attachments,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments,1282,0.328840,0.159866,32,5,False
+4,65,Drums & Percussion,Toys & Games > Learning & Education > Musical Instruments,Toys & Games > Learning & Education > Musical Instruments > Drums & Percussion,1259,0.322941,0.156998,1259,0,True
+4,66,Transmissions & Differentials,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Transmissions & Differentials,1231,0.315758,0.153506,19,1,False
+4,67,Assembly & Disentanglement Puzzles,Toys & Games > Puzzles > Brain Teasers,Toys & Games > Puzzles > Brain Teasers > Assembly & Disentanglement Puzzles,1231,0.315758,0.153506,1231,0,True
+4,68,Skateboards,Toys & Games > Vehicles > Finger Boards & Finger Bikes,Toys & Games > Vehicles > Finger Boards & Finger Bikes > Skateboards,1226,0.314476,0.152883,1226,0,True
+4,69,Sprinklers,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Sprinklers,1217,0.312167,0.151760,1217,0,True
+4,70,Paints,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Paints,1210,0.310372,0.150887,191,3,False
+4,71,Kiddie Pools,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Kiddie Pools,1181,0.302933,0.147271,1181,0,True
+4,72,Play & Swing Sets,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play & Swing Sets,1176,0.301651,0.146648,1176,0,True
+4,73,Fidget Spinners,Toys & Games > Novelty & Gag Toys > Fidget Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys > Fidget Spinners,1162,0.298060,0.144902,1162,0,True
+4,74,Art & Creativity,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Art & Creativity,1148,0.294468,0.143156,1148,0,True
+4,75,Wood,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Wood,1124,0.288312,0.140163,1124,0,True
+4,76,Music & Sound,Toys & Games > Preschool > Pre-Kindergarten Toys,Toys & Games > Preschool > Pre-Kindergarten Toys > Music & Sound,1096,0.281130,0.136672,1096,0,True
+4,77,"Diaries, Journals & Notebooks",Toys & Games > Learning & Education > Reading & Writing,"Toys & Games > Learning & Education > Reading & Writing > Diaries, Journals & Notebooks",1093,0.280361,0.136298,1093,0,True
+4,78,Electric Speed Controllers,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Speed Controllers,1084,0.278052,0.135175,1084,0,True
+4,79,Sand Art,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Sand Art,1073,0.275231,0.133804,1073,0,True
+4,80,Pencil Erasers,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Pencil Erasers,1065,0.273178,0.132806,1065,0,True
+4,81,Felt Kits,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Felt Kits,1054,0.270357,0.131434,1054,0,True
+4,82,Paint with Water Kits,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Paint with Water Kits,1050,0.269331,0.130935,1050,0,True
+4,83,Beach Balls,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Beach Balls,1034,0.265227,0.128940,1034,0,True
+4,84,Train Sets,Toys & Games > Vehicles > Vehicle Playsets,Toys & Games > Vehicles > Vehicle Playsets > Train Sets,1025,0.262918,0.127818,1025,0,True
+4,85,Toy Balls,Toys & Games > Sports & Outdoor Play > Toy Sports,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Balls,968,0.248297,0.120710,73,3,False
+4,86,Water Balloons,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Water Balloons,900,0.230855,0.112230,900,0,True
+4,87,Toy Basketball,Toys & Games > Sports & Outdoor Play > Toy Sports,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Basketball,872,0.223673,0.108739,872,0,True
+4,88,Pianos & Keyboards,Toys & Games > Learning & Education > Musical Instruments,Toys & Games > Learning & Education > Musical Instruments > Pianos & Keyboards,830,0.212900,0.103501,830,0,True
+4,89,Mosaics,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Mosaics,818,0.209822,0.102005,818,0,True
+4,90,Boats,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Boats,814,0.208796,0.101506,814,0,True
+4,91,Magnetic Letters & Words,Toys & Games > Learning & Education > Reading & Writing,Toys & Games > Learning & Education > Reading & Writing > Magnetic Letters & Words,795,0.203922,0.099137,795,0,True
+4,92,Drawing,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Drawing,790,0.202639,0.098513,790,0,True
+4,93,Coloring Pens & Markers,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Coloring Pens & Markers,784,0.201100,0.097765,784,0,True
+4,94,Combustion Engines & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,766,0.196483,0.095521,27,3,False
+4,95,Push & Pull Toys,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Push & Pull Toys,756,0.193918,0.094274,756,0,True
+4,96,Carrying Cases,Toys & Games > Collectible Toys > Collectible Display & Storage,Toys & Games > Collectible Toys > Collectible Display & Storage > Carrying Cases,736,0.188788,0.091779,736,0,True
+4,97,Foam Ammunition,Toys & Games > Sports & Outdoor Play > Blasters & Foam Play,Toys & Games > Sports & Outdoor Play > Blasters & Foam Play > Foam Ammunition,732,0.187762,0.091281,732,0,True
+4,98,Learning,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Learning,728,0.186736,0.090782,723,3,False
+4,99,Electric Motors & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts,716,0.183658,0.089285,0,3,False
+4,100,Sewing,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Sewing,709,0.181862,0.088413,709,0,True
+4,101,Bean Bag Game Sets,Toys & Games > Sports & Outdoor Play > Bean Bags & Footbags,Toys & Games > Sports & Outdoor Play > Bean Bags & Footbags > Bean Bag Game Sets,673,0.172628,0.083923,673,0,True
+4,102,Telescopes,Toys & Games > Learning & Education > Optics,Toys & Games > Learning & Education > Optics > Telescopes,672,0.172372,0.083799,672,0,True
+4,103,Display Cases,Toys & Games > Collectible Toys > Collectible Display & Storage,Toys & Games > Collectible Toys > Collectible Display & Storage > Display Cases,657,0.168524,0.081928,657,0,True
+4,104,Chalk,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Chalk,653,0.167498,0.081429,653,0,True
+4,105,Learning Systems,Toys & Games > Learning & Education > Electronic Learning Toys,Toys & Games > Learning & Education > Electronic Learning Toys > Learning Systems,649,0.166472,0.080931,649,0,True
+4,106,Clothing,Toys & Games > Dolls & Accessories > Doll Accessories,Toys & Games > Dolls & Accessories > Doll Accessories > Clothing,644,0.165190,0.080307,644,0,True
+4,107,Slot Cars,"Toys & Games > Vehicles > Slot Cars, Race Tracks & Accessories","Toys & Games > Vehicles > Slot Cars, Race Tracks & Accessories > Slot Cars",621,0.159290,0.077439,621,0,True
+4,108,Electronic,Toys & Games > Preschool > Pre-Kindergarten Toys,Toys & Games > Preschool > Pre-Kindergarten Toys > Electronic,617,0.158264,0.076940,0,4,False
+4,109,Helicopters,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Helicopters,616,0.158007,0.076815,616,0,True
+4,110,Toy Parachute Figures,Toys & Games > Novelty & Gag Toys > Flying Toys,Toys & Games > Novelty & Gag Toys > Flying Toys > Toy Parachute Figures,615,0.157751,0.076691,615,0,True
+4,111,Foam Blaster Sets,Toys & Games > Sports & Outdoor Play > Blasters & Foam Play,Toys & Games > Sports & Outdoor Play > Blasters & Foam Play > Foam Blaster Sets,615,0.157751,0.076691,615,0,True
+4,112,Lighting,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Lighting,603,0.154673,0.075194,603,0,True
+4,113,Motor Vehicles,Toys & Games > Vehicles > Vehicle Playsets,Toys & Games > Vehicles > Vehicle Playsets > Motor Vehicles,572,0.146721,0.071329,572,0,True
+4,114,Ride-On Replacement Parts,"Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories","Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories > Ride-On Replacement Parts",564,0.144669,0.070331,564,0,True
+4,115,Cooking & Baking Kits,Toys & Games > Dress Up & Pretend Play > Kitchen Toys,Toys & Games > Dress Up & Pretend Play > Kitchen Toys > Cooking & Baking Kits,556,0.142617,0.069333,556,0,True
+4,116,Baby Floats,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Baby Floats,548,0.140565,0.068336,548,0,True
+4,117,Ball Pits,Toys & Games > Sports & Outdoor Play > Ball Pits & Accessories,Toys & Games > Sports & Outdoor Play > Ball Pits & Accessories > Ball Pits,534,0.136974,0.066590,534,0,True
+4,118,Colored Pencils,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Colored Pencils,503,0.129022,0.062724,503,0,True
+4,119,Airplane Construction Kits,Toys & Games > Novelty & Gag Toys > Flying Toys,Toys & Games > Novelty & Gag Toys > Flying Toys > Airplane Construction Kits,488,0.125175,0.060854,488,0,True
+4,120,Cards & Equipment,Toys & Games > Games & Accessories > Casino Equipment,Toys & Games > Games & Accessories > Casino Equipment > Cards & Equipment,485,0.124405,0.060480,11,2,False
+4,121,Microscopes,Toys & Games > Learning & Education > Optics,Toys & Games > Learning & Education > Optics > Microscopes,480,0.123123,0.059856,480,0,True
+4,122,Guitars & Strings,Toys & Games > Learning & Education > Musical Instruments,Toys & Games > Learning & Education > Musical Instruments > Guitars & Strings,476,0.122097,0.059357,476,0,True
+4,123,Crawlers,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Crawlers,474,0.121584,0.059108,474,0,True
+4,124,Coin Collecting Storage,Toys & Games > Collectible Toys > Collectible Display & Storage,Toys & Games > Collectible Toys > Collectible Display & Storage > Coin Collecting Storage,468,0.120045,0.058360,468,0,True
+4,125,Airplanes & Jets,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Airplanes & Jets,461,0.118249,0.057487,461,0,True
+4,126,Hoppers,Toys & Games > Sports & Outdoor Play > Pogo Sticks & Hoppers,Toys & Games > Sports & Outdoor Play > Pogo Sticks & Hoppers > Hoppers,457,0.117223,0.056988,457,0,True
+4,127,Play Food,Toys & Games > Dress Up & Pretend Play > Kitchen Toys,Toys & Games > Dress Up & Pretend Play > Kitchen Toys > Play Food,441,0.113119,0.054993,441,0,True
+4,128,Bath Toys,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Bath Toys,435,0.111580,0.054245,435,0,True
+4,129,Differentials,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Transmissions & Differentials,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Transmissions & Differentials > Differentials,433,0.111067,0.053995,433,0,True
+4,130,Gear Boxes,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Transmissions & Differentials,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Transmissions & Differentials > Gear Boxes,433,0.111067,0.053995,433,0,True
+4,131,Cars,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Cars,432,0.110810,0.053871,432,0,True
+4,132,Pencils,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Pencils,422,0.108245,0.052624,422,0,True
+4,133,Students Scissors,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Students Scissors,415,0.106450,0.051751,415,0,True
+4,134,Handwriting Aids,Toys & Games > Learning & Education > Reading & Writing,Toys & Games > Learning & Education > Reading & Writing > Handwriting Aids,399,0.102346,0.049755,399,0,True
+4,135,Activity Cubes,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys > Activity Cubes,381,0.097729,0.047511,381,0,True
+4,136,Music & Sound,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Music & Sound,381,0.097729,0.047511,381,0,True
+4,137,Sandboxes,Toys & Games > Sports & Outdoor Play > Sandboxes & Beach Toys,Toys & Games > Sports & Outdoor Play > Sandboxes & Beach Toys > Sandboxes,375,0.096190,0.046763,375,0,True
+4,138,Push & Pull Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys > Push & Pull Toys,370,0.094907,0.046139,370,0,True
+4,139,Toy Football,Toys & Games > Sports & Outdoor Play > Toy Sports,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Football,367,0.094138,0.045765,367,0,True
+4,140,Trading Cards,Toys & Games > Collectible Toys > Trading Cards & Accessories,Toys & Games > Collectible Toys > Trading Cards & Accessories > Trading Cards,351,0.090033,0.043770,30,1,False
+4,141,Furniture,Toys & Games > Dolls & Accessories > Doll Accessories,Toys & Games > Dolls & Accessories > Doll Accessories > Furniture,346,0.088751,0.043146,346,0,True
+4,142,RC Linkages,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > RC Linkages,330,0.084647,0.041151,330,0,True
+4,143,Parts & Hardware,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Parts & Hardware,330,0.084647,0.041151,330,0,True
+4,144,Ball Pit Balls,Toys & Games > Sports & Outdoor Play > Ball Pits & Accessories,Toys & Games > Sports & Outdoor Play > Ball Pits & Accessories > Ball Pit Balls,328,0.084134,0.040902,328,0,True
+4,145,Race Tracks,"Toys & Games > Vehicles > Slot Cars, Race Tracks & Accessories","Toys & Games > Vehicles > Slot Cars, Race Tracks & Accessories > Race Tracks",322,0.082595,0.040154,322,0,True
+4,146,Lawn Water Slides,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Lawn Water Slides,317,0.081312,0.039530,317,0,True
+4,147,Strollers,Toys & Games > Dolls & Accessories > Doll Accessories,Toys & Games > Dolls & Accessories > Doll Accessories > Strollers,310,0.079517,0.038657,310,0,True
+4,148,Hammering & Pounding Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys > Hammering & Pounding Toys,304,0.077978,0.037909,304,0,True
+4,149,Kitchen Playsets,Toys & Games > Dress Up & Pretend Play > Kitchen Toys,Toys & Games > Dress Up & Pretend Play > Kitchen Toys > Kitchen Playsets,299,0.076695,0.037285,299,0,True
+4,150,Playground Fitness Equipment,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Playground Fitness Equipment,279,0.071565,0.034791,279,0,True
+4,151,Footbags,Toys & Games > Sports & Outdoor Play > Bean Bags & Footbags,Toys & Games > Sports & Outdoor Play > Bean Bags & Footbags > Footbags,277,0.071052,0.034542,277,0,True
+4,152,Toy Soccer,Toys & Games > Sports & Outdoor Play > Toy Sports,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Soccer,265,0.067974,0.033046,265,0,True
+4,153,Basketball & Volleyball Sets,Toys & Games > Sports & Outdoor Play > Pools & Water Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Basketball & Volleyball Sets,263,0.067461,0.032796,263,0,True
+4,154,Toy Baseball,Toys & Games > Sports & Outdoor Play > Toy Sports,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Baseball,260,0.066691,0.032422,260,0,True
+4,155,Wands,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Wands,259,0.066435,0.032297,259,0,True
+4,156,Casino Prize Wheels,Toys & Games > Games & Accessories > Casino Equipment,Toys & Games > Games & Accessories > Casino Equipment > Casino Prize Wheels,258,0.066178,0.032173,258,0,True
+4,157,Dice,Toys & Games > Games & Accessories > Casino Equipment,Toys & Games > Games & Accessories > Casino Equipment > Dice,254,0.065152,0.031674,254,0,True
+4,158,Electronic Early Development Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys > Electronic Early Development Toys,252,0.064639,0.031425,252,0,True
+4,159,Kite Accessories,Toys & Games > Sports & Outdoor Play > Kites & Wind Spinners,Toys & Games > Sports & Outdoor Play > Kites & Wind Spinners > Kite Accessories,252,0.064639,0.031425,252,0,True
+4,160,Multi-Item Fidget Toy Packs,Toys & Games > Novelty & Gag Toys > Fidget Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys > Multi-Item Fidget Toy Packs,250,0.064126,0.031175,250,0,True
+4,161,Wind Spinners,Toys & Games > Sports & Outdoor Play > Kites & Wind Spinners,Toys & Games > Sports & Outdoor Play > Kites & Wind Spinners > Wind Spinners,244,0.062587,0.030427,244,0,True
+4,162,Magnetic & Mechanical Drawing Boards,Toys & Games > Arts & Crafts > Drawing & Writing Boards,Toys & Games > Arts & Crafts > Drawing & Writing Boards > Magnetic & Mechanical Drawing Boards,242,0.062074,0.030177,242,0,True
+4,163,Pogo Sticks,Toys & Games > Sports & Outdoor Play > Pogo Sticks & Hoppers,Toys & Games > Sports & Outdoor Play > Pogo Sticks & Hoppers > Pogo Sticks,236,0.060535,0.029429,236,0,True
+4,164,Learning System Cartridges,Toys & Games > Learning & Education > Electronic Learning Toys,Toys & Games > Learning & Education > Electronic Learning Toys > Learning System Cartridges,233,0.059766,0.029055,233,0,True
+4,165,Toy Golf,Toys & Games > Sports & Outdoor Play > Toy Sports,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Golf,219,0.056175,0.027309,219,0,True
+4,166,Archaeology & Paleontology,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Archaeology & Paleontology,215,0.055149,0.026811,215,0,True
+4,167,Chemistry,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Chemistry,212,0.054379,0.026436,212,0,True
+4,168,Ride-On Accessories,"Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories","Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories > Ride-On Accessories",210,0.053866,0.026187,182,4,False
+4,169,Game Table Accessories,Toys & Games > Games & Accessories > Casino Equipment,Toys & Games > Games & Accessories > Casino Equipment > Game Table Accessories,209,0.053610,0.026062,209,0,True
+4,170,Starters & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Starters & Parts,206,0.052840,0.025688,206,0,True
+4,171,Nature Exploration Toys,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Nature Exploration Toys,202,0.051814,0.025189,202,0,True
+4,172,Shock Springs,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts > Shock Springs,197,0.050532,0.024566,197,0,True
+4,173,Clothing,Toys & Games > Stuffed Animals & Plush Toys > Stuffed Animal Clothing & Accessories,Toys & Games > Stuffed Animals & Plush Toys > Stuffed Animal Clothing & Accessories > Clothing,196,0.050275,0.024441,196,0,True
+4,174,Meteorology,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Meteorology,192,0.049249,0.023942,192,0,True
+4,175,RC Turnbuckles & Pro-Links,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > RC Turnbuckles & Pro-Links,191,0.048993,0.023818,191,0,True
+4,176,Teaching Clocks,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys > Teaching Clocks,190,0.048736,0.023693,190,0,True
+4,177,Robotics,Toys & Games > STEM Toys > Technology & Engineering,Toys & Games > STEM Toys > Technology & Engineering > Robotics,184,0.047197,0.022945,184,0,True
+4,178,Wigs,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Wigs,183,0.046941,0.022820,183,0,True
+4,179,Physics,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Physics,180,0.046171,0.022446,180,0,True
+4,180,Electronics & Circuitry,Toys & Games > STEM Toys > Technology & Engineering,Toys & Games > STEM Toys > Technology & Engineering > Electronics & Circuitry,176,0.045145,0.021947,176,0,True
+4,181,Geology & Earth Sciences,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Geology & Earth Sciences,175,0.044888,0.021823,175,0,True
+4,182,Magnets,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Magnets,173,0.044375,0.021573,173,0,True
+4,183,Magnetic Dress-up Dolls,Toys & Games > Dolls & Accessories > Paper & Magnetic Dolls,Toys & Games > Dolls & Accessories > Paper & Magnetic Dolls > Magnetic Dress-up Dolls,169,0.043349,0.021074,169,0,True
+4,184,Clutch Bells,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Clutch Bells,168,0.043093,0.020950,168,0,True
+4,185,Vests,Toys & Games > Sports & Outdoor Play > Blasters & Foam Play,Toys & Games > Sports & Outdoor Play > Blasters & Foam Play > Vests,167,0.042836,0.020825,167,0,True
+4,186,Accessories,Toys & Games > Learning & Education > Musical Instruments,Toys & Games > Learning & Education > Musical Instruments > Accessories,165,0.042323,0.020576,165,0,True
+4,187,Sand & Water Tables,Toys & Games > Sports & Outdoor Play > Sandboxes & Beach Toys,Toys & Games > Sports & Outdoor Play > Sandboxes & Beach Toys > Sand & Water Tables,163,0.041810,0.020326,163,0,True
+4,188,Paintbrushes,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Paintbrushes,161,0.041297,0.020077,161,0,True
+4,189,Shoes,Toys & Games > Dolls & Accessories > Doll Accessories,Toys & Games > Dolls & Accessories > Doll Accessories > Shoes,155,0.039758,0.019329,155,0,True
+4,190,Figure Display Stands,Toys & Games > Collectible Toys > Collectible Display & Storage,Toys & Games > Collectible Toys > Collectible Display & Storage > Figure Display Stands,154,0.039502,0.019204,154,0,True
+4,191,Shopping Carts,Toys & Games > Dress Up & Pretend Play > Shops & Accessories,Toys & Games > Dress Up & Pretend Play > Shops & Accessories > Shopping Carts,154,0.039502,0.019204,154,0,True
+4,192,Books,Toys & Games > Learning & Education > Electronic Learning Toys,Toys & Games > Learning & Education > Electronic Learning Toys > Books,152,0.038989,0.018954,152,0,True
+4,193,Blocks,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Blocks,151,0.038732,0.018830,53,3,False
+4,194,Model Kits,Toys & Games > STEM Toys > Technology & Engineering,Toys & Games > STEM Toys > Technology & Engineering > Model Kits,151,0.038732,0.018830,151,0,True
+4,195,Stickers & Sticker Collections,Toys & Games > Collectible Toys > Trading Cards & Accessories,Toys & Games > Collectible Toys > Trading Cards & Accessories > Stickers & Sticker Collections,150,0.038476,0.018705,150,0,True
+4,196,Game Mats & Boards,Toys & Games > Games & Accessories > Game Accessories,Toys & Games > Games & Accessories > Game Accessories > Game Mats & Boards,147,0.037706,0.018331,147,0,True
+4,197,Bubble Solution,Toys & Games > Sports & Outdoor Play > Bubbles,Toys & Games > Sports & Outdoor Play > Bubbles > Bubble Solution,145,0.037193,0.018082,145,0,True
+4,198,Scrapbooking,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Scrapbooking,136,0.034885,0.016959,136,0,True
+4,199,Freestanding Slides,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Freestanding Slides,136,0.034885,0.016959,136,0,True
+4,200,Interactive Charts,Toys & Games > Learning & Education > Electronic Learning Toys,Toys & Games > Learning & Education > Electronic Learning Toys > Interactive Charts,134,0.034372,0.016710,134,0,True
+4,201,Real-Food Appliances,Toys & Games > Dress Up & Pretend Play > Kitchen Toys,Toys & Games > Dress Up & Pretend Play > Kitchen Toys > Real-Food Appliances,128,0.032833,0.015962,128,0,True
+4,202,Complete Engines,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Complete Engines,123,0.031550,0.015338,123,0,True
+4,203,Vehicles,Toys & Games > Dolls & Accessories > Doll Accessories,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles,122,0.031294,0.015213,1,7,False
+4,204,Dry Erase Boards,Toys & Games > Arts & Crafts > Drawing & Writing Boards,Toys & Games > Arts & Crafts > Drawing & Writing Boards > Dry Erase Boards,119,0.030524,0.014839,119,0,True
+4,205,Trucks,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Trucks,110,0.028216,0.013717,110,0,True
+4,206,Wind & Brass,Toys & Games > Learning & Education > Musical Instruments,Toys & Games > Learning & Education > Musical Instruments > Wind & Brass,106,0.027190,0.013218,106,0,True
+4,207,Fidget Rings,Toys & Games > Novelty & Gag Toys > Fidget Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys > Fidget Rings,106,0.027190,0.013218,106,0,True
+4,208,Race Sets,"Toys & Games > Vehicles > Slot Cars, Race Tracks & Accessories","Toys & Games > Vehicles > Slot Cars, Race Tracks & Accessories > Race Sets",106,0.027190,0.013218,106,0,True
+4,209,Transmissions,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Transmissions & Differentials,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Transmissions & Differentials > Transmissions,99,0.025394,0.012345,99,0,True
+4,210,Abacuses,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys > Abacuses,98,0.025138,0.012221,98,0,True
+4,211,Zipline Kits,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Zipline Kits,98,0.025138,0.012221,98,0,True
+4,212,Cash Registers,Toys & Games > Dress Up & Pretend Play > Shops & Accessories,Toys & Games > Dress Up & Pretend Play > Shops & Accessories > Cash Registers,96,0.024625,0.011971,96,0,True
+4,213,Tea Sets,Toys & Games > Dress Up & Pretend Play > Kitchen Toys,Toys & Games > Dress Up & Pretend Play > Kitchen Toys > Tea Sets,95,0.024368,0.011847,95,0,True
+4,214,Excavators,Toys & Games > Vehicles > Construction Vehicles,Toys & Games > Vehicles > Construction Vehicles > Excavators,93,0.023855,0.011597,93,0,True
+4,215,Simple Dimple Fidget Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys > Simple Dimple Fidget Toys,92,0.023599,0.011472,92,0,True
+4,216,Biology,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Biology,88,0.022572,0.010974,88,0,True
+4,217,Electronic Learning Toys,Toys & Games > STEM Toys > Technology & Engineering,Toys & Games > STEM Toys > Technology & Engineering > Electronic Learning Toys,85,0.021803,0.010600,85,0,True
+4,218,Blackjack Equipment,Toys & Games > Games & Accessories > Casino Equipment,Toys & Games > Games & Accessories > Casino Equipment > Blackjack Equipment,81,0.020777,0.010101,5,3,False
+4,219,Fuel System Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Fuel System Parts,80,0.020520,0.009976,80,0,True
+4,220,Glow Plugs & Spark Plugs,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Glow Plugs & Spark Plugs,79,0.020264,0.009851,79,0,True
+4,221,Bead Mazes,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys,Toys & Games > Baby & Toddler Toys > Early Development & Activity Toys > Bead Mazes,77,0.019751,0.009602,77,0,True
+4,222,Roulette Equipment,Toys & Games > Games & Accessories > Casino Equipment,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment,75,0.019238,0.009353,2,5,False
+4,223,Anatomy,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Anatomy,75,0.019238,0.009353,75,0,True
+4,224,Bikes,Toys & Games > Vehicles > Finger Boards & Finger Bikes,Toys & Games > Vehicles > Finger Boards & Finger Bikes > Bikes,74,0.018981,0.009228,74,0,True
+4,225,Coding & Programming,Toys & Games > STEM Toys > Technology & Engineering,Toys & Games > STEM Toys > Technology & Engineering > Coding & Programming,72,0.018468,0.008978,72,0,True
+4,226,Motorcycles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Motorcycles,72,0.018468,0.008978,72,0,True
+4,227,Shock Shafts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts > Shock Shafts,71,0.018212,0.008854,71,0,True
+4,228,Freestanding Climbers,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Freestanding Climbers,66,0.016929,0.008230,66,0,True
+4,229,Markers & Buttons,Toys & Games > Games & Accessories > Casino Equipment,Toys & Games > Games & Accessories > Casino Equipment > Markers & Buttons,64,0.016416,0.007981,64,0,True
+4,230,Tractors,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Tractors,63,0.016160,0.007856,63,0,True
+4,231,Botany,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Botany,61,0.015647,0.007607,61,0,True
+4,232,Shock Caps & Seals,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts > Shock Caps & Seals,57,0.014621,0.007108,57,0,True
+4,233,Arithmetic & Math,Toys & Games > STEM Toys > Math,Toys & Games > STEM Toys > Math > Arithmetic & Math,57,0.014621,0.007108,57,0,True
+4,234,Flower Pressing,Toys & Games > Arts & Crafts > Craft Kits,Toys & Games > Arts & Crafts > Craft Kits > Flower Pressing,55,0.014108,0.006859,55,0,True
+4,235,Armored Fighting Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Armored Fighting Vehicles,53,0.013595,0.006609,53,0,True
+4,236,Trains,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Trains,53,0.013595,0.006609,53,0,True
+4,237,Helicopters,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Helicopters,49,0.012569,0.006110,49,0,True
+4,238,Counting,Toys & Games > STEM Toys > Math,Toys & Games > STEM Toys > Math > Counting,48,0.012312,0.005986,48,0,True
+4,239,Exhaust Systems & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Exhaust Systems & Parts,47,0.012056,0.005861,47,0,True
+4,240,Fidget Pads,Toys & Games > Novelty & Gag Toys > Fidget Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys > Fidget Pads,47,0.012056,0.005861,47,0,True
+4,241,Airplanes,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Airplanes,47,0.012056,0.005861,47,0,True
+4,242,Construction Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Construction Vehicles,47,0.012056,0.005861,47,0,True
+4,243,Chalkboards,Toys & Games > Arts & Crafts > Drawing & Writing Boards,Toys & Games > Arts & Crafts > Drawing & Writing Boards > Chalkboards,41,0.010517,0.005113,41,0,True
+4,244,Craps Equipment,Toys & Games > Games & Accessories > Casino Equipment,Toys & Games > Games & Accessories > Casino Equipment > Craps Equipment,41,0.010517,0.005113,3,3,False
+4,245,Buses,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Buses,41,0.010517,0.005113,41,0,True
+4,246,Stamp Albums,Toys & Games > Collectible Toys > Collectible Display & Storage,Toys & Games > Collectible Toys > Collectible Display & Storage > Stamp Albums,40,0.010260,0.004988,40,0,True
+4,247,Garages,Toys & Games > Toy Figures & Playsets > Buildings & Scenery,Toys & Games > Toy Figures & Playsets > Buildings & Scenery > Garages,40,0.010260,0.004988,40,0,True
+4,248,Construction Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Construction Vehicles,38,0.009747,0.004739,0,3,False
+4,249,Toy Hockey,Toys & Games > Sports & Outdoor Play > Toy Sports,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Hockey,37,0.009491,0.004614,37,0,True
+4,250,Engine Mounts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Engine Mounts,35,0.008978,0.004365,35,0,True
+4,251,Cranes,Toys & Games > Vehicles > Construction Vehicles,Toys & Games > Vehicles > Construction Vehicles > Cranes,32,0.008208,0.003990,32,0,True
+4,252,Paper Dolls,Toys & Games > Dolls & Accessories > Paper & Magnetic Dolls,Toys & Games > Dolls & Accessories > Paper & Magnetic Dolls > Paper Dolls,31,0.007952,0.003866,31,0,True
+4,253,Astronomy,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Astronomy,31,0.007952,0.003866,31,0,True
+4,254,Bulldozers,Toys & Games > Vehicles > Construction Vehicles,Toys & Games > Vehicles > Construction Vehicles > Bulldozers,29,0.007439,0.003616,29,0,True
+4,255,Hair Decoration,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Hair Decoration,25,0.006413,0.003118,25,0,True
+4,256,ATVs,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > ATVs,25,0.006413,0.003118,25,0,True
+4,257,All Products,Toys & Games > Hasbro > Littlest Pet Shop,Toys & Games > Hasbro > Littlest Pet Shop > All Products,23,0.005900,0.002868,23,0,True
+4,258,Rockets,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Rockets,23,0.005900,0.002868,23,0,True
+4,259,Microscope Accessories,Toys & Games > Learning & Education > Optics,Toys & Games > Learning & Education > Optics > Microscope Accessories,22,0.005643,0.002743,22,0,True
+4,260,Submarines,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Submarines,22,0.005643,0.002743,22,0,True
+4,261,Pets,Toys & Games > Hasbro > Littlest Pet Shop,Toys & Games > Hasbro > Littlest Pet Shop > Pets,21,0.005387,0.002619,21,0,True
+4,262,Trains,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Trains,21,0.005387,0.002619,21,0,True
+4,263,Geography,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Geography,21,0.005387,0.002619,21,0,True
+4,264,Rockets,Toys & Games > STEM Toys > Technology & Engineering,Toys & Games > STEM Toys > Technology & Engineering > Rockets,21,0.005387,0.002619,21,0,True
+4,265,Boats,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Boats,21,0.005387,0.002619,21,0,True
+4,266,Buses,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Buses,20,0.005130,0.002494,20,0,True
+4,267,Electronic Learning Toys & Systems,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Electronic Learning Toys & Systems,18,0.004617,0.002245,6,2,False
+4,268,Armored Fighting Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Armored Fighting Vehicles,17,0.004361,0.002120,17,0,True
+4,269,Carburetors & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Carburetors & Parts,16,0.004104,0.001995,16,0,True
+4,270,Gaskets & O-Rings,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Gaskets & O-Rings,16,0.004104,0.001995,16,0,True
+4,271,Game Master Screens,Toys & Games > Games & Accessories > Game Accessories,Toys & Games > Games & Accessories > Game Accessories > Game Master Screens,16,0.004104,0.001995,16,0,True
+4,272,Telescope Accessories,Toys & Games > Learning & Education > Optics,Toys & Games > Learning & Education > Optics > Telescope Accessories,16,0.004104,0.001995,16,0,True
+4,273,Hovercrafts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Hovercrafts,16,0.004104,0.001995,16,0,True
+4,274,Connecting Rods & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Connecting Rods & Parts,15,0.003848,0.001871,15,0,True
+4,275,Cookware,Toys & Games > Dress Up & Pretend Play > Kitchen Toys,Toys & Games > Dress Up & Pretend Play > Kitchen Toys > Cookware,14,0.003591,0.001746,14,0,True
+4,276,Motorcycles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Motorcycles,14,0.003591,0.001746,14,0,True
+4,277,Forensic Science,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Forensic Science,14,0.003591,0.001746,14,0,True
+4,278,Teeter Totters,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Teeter Totters,13,0.003335,0.001621,13,0,True
+4,279,Makeup & Jewelry Sets,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Makeup & Jewelry Sets,11,0.002822,0.001372,11,0,True
+4,280,Crayon Sharpeners,Toys & Games > Arts & Crafts > Drawing & Painting Supplies,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Crayon Sharpeners,8,0.002052,0.000998,8,0,True
+4,281,Flight Gyroscopes & Governors,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Flight Gyroscopes & Governors,8,0.002052,0.000998,8,0,True
+4,282,Pistons & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Pistons & Parts,7,0.001796,0.000873,7,0,True
+4,283,Scooters,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Scooters,7,0.001796,0.000873,7,0,True
+4,284,Electronic Tops,Toys & Games > Hasbro > Beyblade,Toys & Games > Hasbro > Beyblade > Electronic Tops,6,0.001539,0.000748,6,0,True
+4,285,Infinity Cubes,Toys & Games > Novelty & Gag Toys > Fidget Toys,Toys & Games > Novelty & Gag Toys > Fidget Toys > Infinity Cubes,6,0.001539,0.000748,6,0,True
+4,286,Puzzles,Toys & Games > Preschool > Toddler Toys,Toys & Games > Preschool > Toddler Toys > Puzzles,6,0.001539,0.000748,6,0,True
+4,287,Tops,Toys & Games > Hasbro > Beyblade,Toys & Games > Hasbro > Beyblade > Tops,5,0.001283,0.000624,5,0,True
+4,288,Ambulances,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Ambulances,5,0.001283,0.000624,5,0,True
+4,289,Ambulances,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles,Toys & Games > Toy Figures & Playsets > Play Figure Vehicles > Ambulances,5,0.001283,0.000624,5,0,True
+4,290,Skid Steers,Toys & Games > Vehicles > Construction Vehicles,Toys & Games > Vehicles > Construction Vehicles > Skid Steers,5,0.001283,0.000624,5,0,True
+4,291,Crankshafts & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Crankshafts & Parts,4,0.001026,0.000499,4,0,True
+4,292,Shock Pistons,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts,Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts > Shock Pistons,3,0.000770,0.000374,3,0,True
+4,293,Faceoff Tops,Toys & Games > Hasbro > Beyblade,Toys & Games > Hasbro > Beyblade > Faceoff Tops,3,0.000770,0.000374,3,0,True
+4,294,Gear,Toys & Games > Hasbro > Beyblade,Toys & Games > Hasbro > Beyblade > Gear,3,0.000770,0.000374,3,0,True
+4,295,Electronics,Toys & Games > Hasbro > Littlest Pet Shop,Toys & Games > Hasbro > Littlest Pet Shop > Electronics,3,0.000770,0.000374,3,0,True
+4,296,Accessories for Tablets,Toys & Games > Kids' Electronics > Tablets & Accessories,Toys & Games > Kids' Electronics > Tablets & Accessories > Accessories for Tablets,3,0.000770,0.000374,3,0,True
+4,297,Jimmie Johnson,Toys & Games > Lionel Racing > Action Racing Collectibles,Toys & Games > Lionel Racing > Action Racing Collectibles > Jimmie Johnson,3,0.000770,0.000374,3,0,True
+4,298,Accessories,Toys & Games > Stuffed Animals & Plush Toys > Stuffed Animal Clothing & Accessories,Toys & Games > Stuffed Animals & Plush Toys > Stuffed Animal Clothing & Accessories > Accessories,3,0.000770,0.000374,3,0,True
+4,299,Stadiums,Toys & Games > Hasbro > Beyblade,Toys & Games > Hasbro > Beyblade > Stadiums,2,0.000513,0.000249,2,0,True
+4,300,Storage,Toys & Games > Hasbro > Beyblade,Toys & Games > Hasbro > Beyblade > Storage,2,0.000513,0.000249,2,0,True
+4,301,Playsets,Toys & Games > Hasbro > Littlest Pet Shop,Toys & Games > Hasbro > Littlest Pet Shop > Playsets,2,0.000513,0.000249,2,0,True
+4,302,"Dale Earnhardt, Jr.",Toys & Games > Lionel Racing > Action Racing Collectibles,"Toys & Games > Lionel Racing > Action Racing Collectibles > Dale Earnhardt, Jr.",2,0.000513,0.000249,2,0,True
+4,303,Castles,Toys & Games > Toy Figures & Playsets > Buildings & Scenery,Toys & Games > Toy Figures & Playsets > Buildings & Scenery > Castles,2,0.000513,0.000249,2,0,True
+4,304,Tablets,Toys & Games > Kids' Electronics > Tablets & Accessories,Toys & Games > Kids' Electronics > Tablets & Accessories > Tablets,1,0.000257,0.000125,1,0,True
+4,305,Austin Dillon,Toys & Games > Lionel Racing > Action Racing Collectibles,Toys & Games > Lionel Racing > Action Racing Collectibles > Austin Dillon,1,0.000257,0.000125,1,0,True
+4,306,Danica Patrick,Toys & Games > Lionel Racing > Action Racing Collectibles,Toys & Games > Lionel Racing > Action Racing Collectibles > Danica Patrick,1,0.000257,0.000125,1,0,True
+4,307,Denny Hamlin,Toys & Games > Lionel Racing > Action Racing Collectibles,Toys & Games > Lionel Racing > Action Racing Collectibles > Denny Hamlin,1,0.000257,0.000125,1,0,True
+4,308,Kyle Busch,Toys & Games > Lionel Racing > Action Racing Collectibles,Toys & Games > Lionel Racing > Action Racing Collectibles > Kyle Busch,1,0.000257,0.000125,1,0,True
+4,309,Tony Stewart,Toys & Games > Lionel Racing > Action Racing Collectibles,Toys & Games > Lionel Racing > Action Racing Collectibles > Tony Stewart,1,0.000257,0.000125,1,0,True
+4,310,Microscopes & Optics,Toys & Games > STEM Toys > Science,Toys & Games > STEM Toys > Science > Microscopes & Optics,1,0.000257,0.000125,1,0,True
+4,311,Train Stations,Toys & Games > Toy Figures & Playsets > Buildings & Scenery,Toys & Games > Toy Figures & Playsets > Buildings & Scenery > Train Stations,1,0.000257,0.000125,1,0,True
+5,1,Singles,Toys & Games > Games & Accessories > Card Games > Collectible Card Games,Toys & Games > Games & Accessories > Card Games > Collectible Card Games > Singles,23331,16.813196,2.909385,23331,0,True
+5,2,Dolls & Dollhouses,Toys & Games > Preschool > Pre-Kindergarten Toys > Activity,Toys & Games > Preschool > Pre-Kindergarten Toys > Activity > Dolls & Dollhouses,11844,8.535232,1.476952,11844,0,True
+5,3,Role Play & Dress Up,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play > Role Play & Dress Up,9239,6.657971,1.152107,9239,0,True
+5,4,"Cars, Trucks, Boats & Planes",Toys & Games > Preschool > Pre-Kindergarten Toys > Activity,"Toys & Games > Preschool > Pre-Kindergarten Toys > Activity > Cars, Trucks, Boats & Planes",6767,4.876555,0.843848,6767,0,True
+5,5,Building Sets,Toys & Games > Preschool > Pre-Kindergarten Toys > Activity,Toys & Games > Preschool > Pre-Kindergarten Toys > Activity > Building Sets,5710,4.114841,0.712039,5710,0,True
+5,6,Toy Figure Playsets,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play > Toy Figure Playsets,5564,4.009628,0.693833,5564,0,True
+5,7,Role Playing Dice,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories > Role Playing Dice,3983,2.870300,0.496682,3983,0,True
+5,8,Decks & Sets,Toys & Games > Games & Accessories > Card Games > Collectible Card Games,Toys & Games > Games & Accessories > Card Games > Collectible Card Games > Decks & Sets,3971,2.861652,0.495185,3971,0,True
+5,9,Cake Toppers,Toys & Games > Party Supplies > Decorations > Cake & Cupcake Toppers,Toys & Games > Party Supplies > Decorations > Cake & Cupcake Toppers > Cake Toppers,3272,2.357926,0.408020,3272,0,True
+5,10,Role Play & Dress Up,Toys & Games > Preschool > Toddler Toys > Pretend Play,Toys & Games > Preschool > Toddler Toys > Pretend Play > Role Play & Dress Up,2935,2.115071,0.365996,2935,0,True
+5,11,Protective Sleeves,Toys & Games > Collectible Toys > Collectible Display & Storage > Card Storage & Display,Toys & Games > Collectible Toys > Collectible Display & Storage > Card Storage & Display > Protective Sleeves,2737,1.972385,0.341305,2737,0,True
+5,12,Outdoor Play,Toys & Games > Preschool > Pre-Kindergarten Toys > Activity,Toys & Games > Preschool > Pre-Kindergarten Toys > Activity > Outdoor Play,2692,1.939956,0.335693,2692,0,True
+5,13,Propellers,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Propellers,2626,1.892394,0.327463,2626,0,True
+5,14,Standard Game Dice,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories > Standard Game Dice,2468,1.778534,0.307761,2468,0,True
+5,15,Kitchen Sets & Play Food,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play > Kitchen Sets & Play Food,2430,1.751149,0.303022,2430,0,True
+5,16,Bracelets,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry > Bracelets,2239,1.613508,0.279204,2239,0,True
+5,17,Booster Packs,Toys & Games > Games & Accessories > Card Games > Collectible Card Games,Toys & Games > Games & Accessories > Card Games > Collectible Card Games > Booster Packs,1865,1.343989,0.232566,1865,0,True
+5,18,Servos,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts > Servos,1558,1.122753,0.194283,1558,0,True
+5,19,Necklaces,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry > Necklaces,1523,1.097531,0.189919,1523,0,True
+5,20,Albums,Toys & Games > Collectible Toys > Collectible Display & Storage > Card Storage & Display,Toys & Games > Collectible Toys > Collectible Display & Storage > Card Storage & Display > Albums,1478,1.065102,0.184307,1478,0,True
+5,21,Cases,Toys & Games > Collectible Toys > Collectible Display & Storage > Card Storage & Display,Toys & Games > Collectible Toys > Collectible Display & Storage > Card Storage & Display > Cases,1445,1.041321,0.180192,1445,0,True
+5,22,Tires,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires > Tires,1341,0.966375,0.167223,1341,0,True
+5,23,Shock Kits,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts > Shock Kits,1314,0.946918,0.163856,1314,0,True
+5,24,Axles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Axles,1262,0.909445,0.157372,1262,0,True
+5,25,Tools & Toolsets,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play > Tools & Toolsets,1244,0.896473,0.155127,1244,0,True
+5,26,Car & Truck Bodies,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories > Car & Truck Bodies,1220,0.879178,0.152134,1220,0,True
+5,27,Gears,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Transmissions & Differentials,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Transmissions & Differentials > Gears,1212,0.873413,0.151137,1212,0,True
+5,28,Tire & Wheel Sets,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires > Tire & Wheel Sets,1143,0.823689,0.142533,1143,0,True
+5,29,Trains & Train Sets,Toys & Games > Preschool > Pre-Kindergarten Toys > Activity,Toys & Games > Preschool > Pre-Kindergarten Toys > Activity > Trains & Train Sets,1107,0.797746,0.138043,1107,0,True
+5,30,Wheel Hubs,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires > Wheel Hubs,1105,0.796305,0.137794,1105,0,True
+5,31,Swim Rings,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Pool Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Pool Toys > Swim Rings,1044,0.752346,0.130187,1044,0,True
+5,32,Rotor Shafts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Rotor Shafts,1027,0.740095,0.128067,1027,0,True
+5,33,Poker Chips,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Chips,1001,0.721358,0.124825,1001,0,True
+5,34,A-Arms,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts > A-Arms,938,0.675958,0.116969,938,0,True
+5,35,Wheels,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires > Wheels,909,0.655060,0.113353,909,0,True
+5,36,Swings,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments > Swings,865,0.623352,0.107866,865,0,True
+5,37,Car & Truck Bumpers,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories > Car & Truck Bumpers,843,0.607498,0.105122,843,0,True
+5,38,Hats,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Headwear,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Headwear > Hats,842,0.606777,0.104998,842,0,True
+5,39,Playground Balls,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Balls,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Balls > Playground Balls,780,0.562097,0.097266,780,0,True
+5,40,Playmats,Toys & Games > Games & Accessories > Card Games > Collectible Card Games,Toys & Games > Games & Accessories > Card Games > Collectible Card Games > Playmats,748,0.539037,0.093276,748,0,True
+5,41,Aircraft Landing Gear,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires > Aircraft Landing Gear,737,0.531110,0.091904,737,0,True
+5,42,Cupcake Toppers,Toys & Games > Party Supplies > Decorations > Cake & Cupcake Toppers,Toys & Games > Party Supplies > Decorations > Cake & Cupcake Toppers > Cupcake Toppers,675,0.486430,0.084173,675,0,True
+5,43,Bearings,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Bearings,654,0.471297,0.081554,654,0,True
+5,44,Dive Rings & Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Pool Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Pool Toys > Dive Rings & Toys,630,0.454002,0.078561,630,0,True
+5,45,Radio Transmitters,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts > Radio Transmitters,599,0.431662,0.074696,599,0,True
+5,46,Rings,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry > Rings,598,0.430941,0.074571,598,0,True
+5,47,Radio Receivers,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts > Radio Receivers,558,0.402116,0.069583,558,0,True
+5,48,Sway Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Suspension Systems & Parts > Sway Parts,533,0.384100,0.066465,533,0,True
+5,49,Accessories,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires > Accessories,514,0.370408,0.064096,514,0,True
+5,50,Mechanics,Toys & Games > Preschool > Toddler Toys > Activity,Toys & Games > Preschool > Toddler Toys > Activity > Mechanics,461,0.332214,0.057487,461,0,True
+5,51,Card Shufflers,Toys & Games > Games & Accessories > Casino Equipment > Cards & Equipment,Toys & Games > Games & Accessories > Casino Equipment > Cards & Equipment > Card Shufflers,455,0.327890,0.056739,455,0,True
+5,52,Outdoor Play,Toys & Games > Preschool > Toddler Toys > Activity,Toys & Games > Preschool > Toddler Toys > Activity > Outdoor Play,450,0.324287,0.056115,450,0,True
+5,53,Bingo Sets,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment > Bingo Sets,433,0.312036,0.053995,433,0,True
+5,54,Bingo Cards,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment > Bingo Cards,415,0.299065,0.051751,415,0,True
+5,55,Tempera & Poster Paint,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Paints,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Paints > Tempera & Poster Paint,406,0.292579,0.050628,406,0,True
+5,56,Watercolor Paint,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Paints,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Paints > Watercolor Paint,384,0.276725,0.047885,384,0,True
+5,57,Electric Motors & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts,369,0.265915,0.046014,369,0,True
+5,58,Swim Noodles,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Pool Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Pool Toys > Swim Noodles,363,0.261591,0.045266,363,0,True
+5,59,Video & DVD Players,Toys & Games > Preschool > Pre-Kindergarten Toys > Electronic,Toys & Games > Preschool > Pre-Kindergarten Toys > Electronic > Video & DVD Players,359,0.258709,0.044767,359,0,True
+5,60,Gyms & Tables,Toys & Games > Preschool > Toddler Toys > Activity,Toys & Games > Preschool > Toddler Toys > Activity > Gyms & Tables,359,0.258709,0.044767,359,0,True
+5,61,Poker Sets,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Sets,355,0.255826,0.044269,355,0,True
+5,62,Gardening,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play > Gardening,343,0.247179,0.042772,343,0,True
+5,63,Non Sports,Toys & Games > Collectible Toys > Trading Cards & Accessories > Trading Cards,Toys & Games > Collectible Toys > Trading Cards & Accessories > Trading Cards > Non Sports,321,0.231325,0.040029,0,3,False
+5,64,Heat Sinks,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts > Heat Sinks,311,0.224118,0.038782,311,0,True
+5,65,Servo Plugs & Wires,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts > Servo Plugs & Wires,310,0.223398,0.038657,310,0,True
+5,66,Inflatable Water Slides,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Pool Toys,Toys & Games > Sports & Outdoor Play > Pools & Water Toys > Pool Toys > Inflatable Water Slides,307,0.221236,0.038283,307,0,True
+5,67,Servo Horns,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts > Servo Horns,297,0.214029,0.037036,297,0,True
+5,68,Bingo Daubers,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment > Bingo Daubers,295,0.212588,0.036787,295,0,True
+5,69,Radio Antennas,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts > Radio Antennas,292,0.210426,0.036413,292,0,True
+5,70,Motor Mounts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts > Motor Mounts,280,0.201779,0.034916,280,0,True
+5,71,"Dishes, Pots, Pans & Tea Sets",Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play,"Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play > Dishes, Pots, Pans & Tea Sets",276,0.198896,0.034417,276,0,True
+5,72,Poker Tables,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Tables,245,0.176556,0.030552,245,0,True
+5,73,"Cars, Trucks, Boats & Planes",Toys & Games > Preschool > Toddler Toys > Activity,"Toys & Games > Preschool > Toddler Toys > Activity > Cars, Trucks, Boats & Planes",236,0.170070,0.029429,236,0,True
+5,74,Servo Mounts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts > Servo Mounts,230,0.165747,0.028681,230,0,True
+5,75,Finger Paint,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Paints,Toys & Games > Arts & Crafts > Drawing & Painting Supplies > Paints > Finger Paint,229,0.165026,0.028556,229,0,True
+5,76,Poker Table Tops,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Table Tops,226,0.162864,0.028182,226,0,True
+5,77,Electronic Learning Toys & Systems,Toys & Games > Preschool > Pre-Kindergarten Toys > Electronic,Toys & Games > Preschool > Pre-Kindergarten Toys > Electronic > Electronic Learning Toys & Systems,222,0.159982,0.027683,222,0,True
+5,78,Rotors,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Rotors,221,0.159261,0.027559,221,0,True
+5,79,Climber Attachments,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments > Climber Attachments,220,0.158540,0.027434,220,0,True
+5,80,Toy Figure Playsets,Toys & Games > Preschool > Toddler Toys > Pretend Play,Toys & Games > Preschool > Toddler Toys > Pretend Play > Toy Figure Playsets,219,0.157820,0.027309,219,0,True
+5,81,Counters,Toys & Games > Games & Accessories > Card Games > Collectible Card Games,Toys & Games > Games & Accessories > Card Games > Collectible Card Games > Counters,210,0.151334,0.026187,210,0,True
+5,82,Housekeeping,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play,Toys & Games > Preschool > Pre-Kindergarten Toys > Pretend Play > Housekeeping,209,0.150613,0.026062,209,0,True
+5,83,Car & Truck Body Clips,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories > Car & Truck Body Clips,192,0.138362,0.023942,192,0,True
+5,84,Wings,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories > Wings,190,0.136921,0.023693,190,0,True
+5,85,Earrings,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry > Earrings,188,0.135480,0.023444,188,0,True
+5,86,Bingo Chips,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment > Bingo Chips,177,0.127553,0.022072,177,0,True
+5,87,Servo Arms,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts > Servo Arms,163,0.117464,0.020326,163,0,True
+5,88,Poker Chip Cases & Trays,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Chip Cases & Trays,152,0.109537,0.018954,7,3,False
+5,89,Transmitter & Receiver Sets,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts > Transmitter & Receiver Sets,130,0.093683,0.016211,130,0,True
+5,90,Cooling Fans,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Electric Motors & Parts > Cooling Fans,125,0.090080,0.015588,125,0,True
+5,91,Dice Cups,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories > Dice Cups,117,0.084315,0.014590,117,0,True
+5,92,Dice Bags & Boxes,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories > Dice Bags & Boxes,114,0.082153,0.014216,114,0,True
+5,93,Fuselages,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories > Fuselages,110,0.079270,0.013717,110,0,True
+5,94,Ring & Trapeze Attachments,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments > Ring & Trapeze Attachments,97,0.069902,0.012096,97,0,True
+5,95,Kitchen Sets & Play Food,Toys & Games > Preschool > Toddler Toys > Pretend Play,Toys & Games > Preschool > Toddler Toys > Pretend Play > Kitchen Sets & Play Food,91,0.065578,0.011348,91,0,True
+5,96,Trains & Train Sets,Toys & Games > Preschool > Toddler Toys > Activity,Toys & Games > Preschool > Toddler Toys > Activity > Trains & Train Sets,88,0.063416,0.010974,88,0,True
+5,97,Wood,Toys & Games > Preschool > Toddler Toys > Blocks,Toys & Games > Preschool > Toddler Toys > Blocks > Wood,76,0.054768,0.009477,76,0,True
+5,98,Dice Trays,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories,Toys & Games > Games & Accessories > Game Accessories > Dice & Accessories > Dice Trays,72,0.051886,0.008978,72,0,True
+5,99,Kickballs,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Balls,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Balls > Kickballs,70,0.050445,0.008729,70,0,True
+5,100,Cars,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles > Cars,66,0.047562,0.008230,66,0,True
+5,101,Air Filters,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Air Filters,65,0.046841,0.008106,65,0,True
+5,102,Servo Gears,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts > Servo Gears,57,0.041076,0.007108,57,0,True
+5,103,Screwdowns,Toys & Games > Collectible Toys > Collectible Display & Storage > Card Storage & Display,Toys & Games > Collectible Toys > Collectible Display & Storage > Card Storage & Display > Screwdowns,54,0.038914,0.006734,54,0,True
+5,104,Blackjack Sets,Toys & Games > Games & Accessories > Casino Equipment > Blackjack Equipment,Toys & Games > Games & Accessories > Casino Equipment > Blackjack Equipment > Blackjack Sets,54,0.038914,0.006734,54,0,True
+5,105,Brakes,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Brakes,49,0.035311,0.006110,49,0,True
+5,106,Dodgeballs,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Balls,Toys & Games > Sports & Outdoor Play > Toy Sports > Toy Balls > Dodgeballs,45,0.032429,0.005612,45,0,True
+5,107,Slide Attachments,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments > Slide Attachments,41,0.029546,0.005113,41,0,True
+5,108,Reading & Writing,Toys & Games > Preschool > Pre-Kindergarten Toys > Learning,Toys & Games > Preschool > Pre-Kindergarten Toys > Learning > Reading & Writing,40,0.028826,0.004988,40,0,True
+5,109,Tire Foam Inserts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Wheels & Tires > Tire Foam Inserts,37,0.026664,0.004614,37,0,True
+5,110,Drive Pulleys,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Drive Pulleys,34,0.024502,0.004240,34,0,True
+5,111,Cameras,Toys & Games > Preschool > Pre-Kindergarten Toys > Electronic,Toys & Games > Preschool > Pre-Kindergarten Toys > Electronic > Cameras,33,0.023781,0.004115,33,0,True
+5,112,Counting & Math,Toys & Games > Preschool > Pre-Kindergarten Toys > Learning,Toys & Games > Preschool > Pre-Kindergarten Toys > Learning > Counting & Math,32,0.023060,0.003990,32,0,True
+5,113,Poker Layouts,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Layouts,31,0.022340,0.003866,31,0,True
+5,114,Roulette Sets,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment > Roulette Sets,31,0.022340,0.003866,31,0,True
+5,115,Dollhouse Sets,Toys & Games > Preschool > Toddler Toys > Activity,Toys & Games > Preschool > Toddler Toys > Activity > Dollhouse Sets,29,0.020898,0.003616,29,0,True
+5,116,Bushings,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Bushings,27,0.019457,0.003367,27,0,True
+5,117,Glider Attachments,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments,Toys & Games > Sports & Outdoor Play > Play Sets & Playground Equipment > Play Set Attachments > Glider Attachments,27,0.019457,0.003367,27,0,True
+5,118,Excavators,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Construction Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Construction Vehicles > Excavators,26,0.018737,0.003242,26,0,True
+5,119,Servo Bearings,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts > Servo Bearings,25,0.018016,0.003118,25,0,True
+5,120,Heat Sinks,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts,Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Combustion Engines & Parts > Heat Sinks,20,0.014413,0.002494,20,0,True
+5,121,Roulette Accessories,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment > Roulette Accessories,20,0.014413,0.002494,20,0,True
+5,122,Cut Cards,Toys & Games > Games & Accessories > Casino Equipment > Cards & Equipment,Toys & Games > Games & Accessories > Casino Equipment > Cards & Equipment > Cut Cards,19,0.013692,0.002369,19,0,True
+5,123,Craps Tables,Toys & Games > Games & Accessories > Casino Equipment > Craps Equipment,Toys & Games > Games & Accessories > Casino Equipment > Craps Equipment > Craps Tables,19,0.013692,0.002369,19,0,True
+5,124,Bingo Balls,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment,Toys & Games > Games & Accessories > Casino Equipment > Bingo Equipment > Bingo Balls,18,0.012971,0.002245,18,0,True
+5,125,Roulette Wheels,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment > Roulette Wheels,18,0.012971,0.002245,18,0,True
+5,126,Stickers & Decals,"Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories > Ride-On Accessories","Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories > Ride-On Accessories > Stickers & Decals",17,0.012251,0.002120,17,0,True
+5,127,Blackjack Layouts,Toys & Games > Games & Accessories > Casino Equipment > Blackjack Equipment,Toys & Games > Games & Accessories > Casino Equipment > Blackjack Equipment > Blackjack Layouts,15,0.010810,0.001871,15,0,True
+5,128,Car & Truck Spoilers,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories > Car & Truck Spoilers,15,0.010810,0.001871,15,0,True
+5,129,Scooters,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles > Scooters,14,0.010089,0.001746,14,0,True
+5,130,Plastic,Toys & Games > Preschool > Toddler Toys > Blocks,Toys & Games > Preschool > Toddler Toys > Blocks > Plastic,14,0.010089,0.001746,14,0,True
+5,131,Bicycles,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles > Bicycles,13,0.009368,0.001621,13,0,True
+5,132,Trucks,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles > Trucks,13,0.009368,0.001621,13,0,True
+5,133,Cash Registers,Toys & Games > Preschool > Toddler Toys > Pretend Play,Toys & Games > Preschool > Toddler Toys > Pretend Play > Cash Registers,13,0.009368,0.001621,13,0,True
+5,134,Jewelry Sets,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry > Jewelry Sets,12,0.008648,0.001496,12,0,True
+5,135,Craps Layouts,Toys & Games > Games & Accessories > Casino Equipment > Craps Equipment,Toys & Games > Games & Accessories > Casino Equipment > Craps Equipment > Craps Layouts,11,0.007927,0.001372,11,0,True
+5,136,Bulldozers,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Construction Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Construction Vehicles > Bulldozers,11,0.007927,0.001372,11,0,True
+5,137,Cartridges,Toys & Games > Preschool > Toddler Toys > Electronic Learning Toys & Systems,Toys & Games > Preschool > Toddler Toys > Electronic Learning Toys & Systems > Cartridges,9,0.006486,0.001122,9,0,True
+5,138,Boats,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles > Boats,8,0.005765,0.000998,8,0,True
+5,139,Craps Sets,Toys & Games > Games & Accessories > Casino Equipment > Craps Equipment,Toys & Games > Games & Accessories > Casino Equipment > Craps Equipment > Craps Sets,8,0.005765,0.000998,8,0,True
+5,140,Foam,Toys & Games > Preschool > Toddler Toys > Blocks,Toys & Games > Preschool > Toddler Toys > Blocks > Foam,8,0.005765,0.000998,8,0,True
+5,141,Servo Cases,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Servos & Parts > Servo Cases,8,0.005765,0.000998,8,0,True
+5,142,Traffic Lights,"Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories > Ride-On Accessories","Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories > Ride-On Accessories > Traffic Lights",8,0.005765,0.000998,8,0,True
+5,143,Helmets,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Headwear,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Headwear > Helmets,7,0.005044,0.000873,7,0,True
+5,144,Blackjack Tables,Toys & Games > Games & Accessories > Casino Equipment > Blackjack Equipment,Toys & Games > Games & Accessories > Casino Equipment > Blackjack Equipment > Blackjack Tables,7,0.005044,0.000873,7,0,True
+5,145,Drive Belts & Chains,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Power Plant & Driveline Systems > Drive Belts & Chains,7,0.005044,0.000873,7,0,True
+5,146,Airplanes,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles > Airplanes,6,0.004324,0.000748,6,0,True
+5,147,Headbands,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Headwear,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Headwear > Headbands,6,0.004324,0.000748,6,0,True
+5,148,Buttons & Badges,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Jewelry > Buttons & Badges,6,0.004324,0.000748,6,0,True
+5,149,Playsets,Toys & Games > Preschool > Toddler Toys > Activity,Toys & Games > Preschool > Toddler Toys > Activity > Playsets,6,0.004324,0.000748,6,0,True
+5,150,Ship & Submarine Hulls,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Vehicle Bodies & Scale Accessories > Ship & Submarine Hulls,4,0.002883,0.000499,4,0,True
+5,151,Roulette Tables,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment > Roulette Tables,3,0.002162,0.000374,3,0,True
+5,152,Music & MP3 Players,Toys & Games > Preschool > Pre-Kindergarten Toys > Electronic,Toys & Games > Preschool > Pre-Kindergarten Toys > Electronic > Music & MP3 Players,3,0.002162,0.000374,3,0,True
+5,153,Systems,Toys & Games > Preschool > Toddler Toys > Electronic Learning Toys & Systems,Toys & Games > Preschool > Toddler Toys > Electronic Learning Toys & Systems > Systems,3,0.002162,0.000374,3,0,True
+5,154,Counting & Math,Toys & Games > Preschool > Toddler Toys > Learning,Toys & Games > Preschool > Toddler Toys > Learning > Counting & Math,2,0.001441,0.000249,2,0,True
+5,155,Hand & Eye Coordination,Toys & Games > Preschool > Toddler Toys > Learning,Toys & Games > Preschool > Toddler Toys > Learning > Hand & Eye Coordination,2,0.001441,0.000249,2,0,True
+5,156,Radio Crystals,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicle Parts > Radios & Parts > Radio Crystals,2,0.001441,0.000249,2,0,True
+5,157,Trailers,"Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories > Ride-On Accessories","Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories > Ride-On Accessories > Trailers",2,0.001441,0.000249,2,0,True
+5,158,Motorcycles,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles,Toys & Games > Dolls & Accessories > Doll Accessories > Vehicles > Motorcycles,1,0.000721,0.000125,1,0,True
+5,159,Circlets,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Headwear,Toys & Games > Dress Up & Pretend Play > Dress-Up Accessories > Headwear > Circlets,1,0.000721,0.000125,1,0,True
+5,160,Roulette Layouts,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment,Toys & Games > Games & Accessories > Casino Equipment > Roulette Equipment > Roulette Layouts,1,0.000721,0.000125,1,0,True
+5,161,Reading & Writing,Toys & Games > Preschool > Toddler Toys > Learning,Toys & Games > Preschool > Toddler Toys > Learning > Reading & Writing,1,0.000721,0.000125,1,0,True
+5,162,Cranes,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Construction Vehicles,Toys & Games > Remote & App Controlled Vehicles & Parts > Remote & App Controlled Vehicles > Construction Vehicles > Cranes,1,0.000721,0.000125,1,0,True
+5,163,Traffic Signs,"Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories > Ride-On Accessories","Toys & Games > Tricycles, Scooters & Wagons > Ride-On Parts & Accessories > Ride-On Accessories > Traffic Signs",1,0.000721,0.000125,1,0,True
+6,1,Boxes,Toys & Games > Collectible Toys > Trading Cards & Accessories > Trading Cards > Non Sports,Toys & Games > Collectible Toys > Trading Cards & Accessories > Trading Cards > Non Sports > Boxes,135,28.969957,0.016835,135,0,True
+6,2,Trays & Racks,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Chip Cases & Trays,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Chip Cases & Trays > Trays & Racks,95,20.386266,0.011847,95,0,True
+6,3,Packs,Toys & Games > Collectible Toys > Trading Cards & Accessories > Trading Cards > Non Sports,Toys & Games > Collectible Toys > Trading Cards & Accessories > Trading Cards > Non Sports > Packs,93,19.957082,0.011597,93,0,True
+6,4,Singles,Toys & Games > Collectible Toys > Trading Cards & Accessories > Trading Cards > Non Sports,Toys & Games > Collectible Toys > Trading Cards & Accessories > Trading Cards > Non Sports > Singles,93,19.957082,0.011597,93,0,True
+6,5,Cases,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Chip Cases & Trays,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Chip Cases & Trays > Cases,45,9.656652,0.005612,45,0,True
+6,6,Carousels,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Chip Cases & Trays,Toys & Games > Games & Accessories > Casino Equipment > Poker Equipment > Poker Chip Cases & Trays > Carousels,5,1.072961,0.000624,5,0,True

@@ -1,0 +1,17 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "adapter_path": "artifacts/sft/qwen3-8b-behavior-1k/final_adapter",
+  "eval_file": "data/training/sft_experiments/eval/behavior_only/dev_10k_grouped.parquet",
+  "retained_interests_file": "data/training/generative_new_interest_balanced_200_h50/retained_interests.parquet",
+  "output_dir": "artifacts/beam/qwen3-8b-behavior-1k",
+  "run_name": "qwen3-8b-behavior-1k-seed42-beam10k",
+  "wandb_project": "cross-interest-generative-sft",
+  "wandb_mode": "online",
+  "enable_thinking": false,
+  "batch_size": 2,
+  "checkpoint_size": 64,
+  "num_beams": 32,
+  "top_k": 20,
+  "max_new_tokens": 32,
+  "cutoffs": [1, 5, 10, 20]
+}

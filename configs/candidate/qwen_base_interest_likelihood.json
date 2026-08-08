@@ -1,0 +1,7 @@
+{
+  "model_name": "Qwen/Qwen3-8B",
+  "data_file": "data/training/candidate_selection_k10/diagnostics/interest_1k_frequency_matched.parquet",
+  "output_dir": "artifacts/candidate-selection-k10/qwen_base_interest_likelihood",
+  "batch_size": 16,
+  "max_seq_length": 2048
+}

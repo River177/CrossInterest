@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "new-interest-dataset"
+version = "0.1.0"
+description = "Build a simplified new-interest dataset from reclassified MINDlarge."
+requires-python = ">=3.10"
+dependencies = [
+  "pyarrow>=16",
+]
+
+[project.scripts]
+build-new-interest-dataset = "new_interest.build_dataset:main"
+build-generative-new-interest-dataset = "new_interest.build_generative_dataset:main"
+build-sft-subsets = "new_interest.build_sft_subsets:main"
+build-candidate-selection = "new_interest.build_candidate_selection:main"
+build-grpo-datasets = "new_interest.build_grpo_dataset:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

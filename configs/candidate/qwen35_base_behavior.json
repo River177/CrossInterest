@@ -1,0 +1,12 @@
+{
+  "model_name": "Qwen/Qwen3.5-9B",
+  "adapter_path": null,
+  "data_file": "data/training/candidate_selection_k10/behavior_only/dev_10k_expanded.parquet",
+  "output_dir": "artifacts/candidate-selection-k10/qwen35_base_behavior",
+  "run_name": "candidate-k10-qwen35-base-behavior",
+  "wandb_project": "cross-interest-generative-sft",
+  "wandb_mode": "online",
+  "batch_size": 4,
+  "checkpoint_size": 128,
+  "max_new_tokens": 32
+}

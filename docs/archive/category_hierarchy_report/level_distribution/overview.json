@@ -1,0 +1,71 @@
+{
+  "total_items": 801922,
+  "levels": [
+    {
+      "level": 1,
+      "reached_items": 801922,
+      "share_all_pct": 100.0,
+      "unique_labels": 3,
+      "path_nodes": 3,
+      "reused_labels": 0,
+      "top1_pct": 98.13148909744339,
+      "top5_pct": 100.0,
+      "top10_pct": 100.0
+    },
+    {
+      "level": 2,
+      "reached_items": 801922,
+      "share_all_pct": 100.0,
+      "unique_labels": 223,
+      "path_nodes": 223,
+      "reused_labels": 0,
+      "top1_pct": 17.029586418629243,
+      "top5_pct": 54.90770922857834,
+      "top10_pct": 78.78721371904001
+    },
+    {
+      "level": 3,
+      "reached_items": 754906,
+      "share_all_pct": 94.13708565172175,
+      "unique_labels": 312,
+      "path_nodes": 314,
+      "reused_labels": 2,
+      "top1_pct": 16.537953069653703,
+      "top5_pct": 39.40729044410827,
+      "top10_pct": 53.36810145898959
+    },
+    {
+      "level": 4,
+      "reached_items": 389855,
+      "share_all_pct": 48.61507727684239,
+      "unique_labels": 287,
+      "path_nodes": 311,
+      "reused_labels": 24,
+      "top1_pct": 9.30653704582473,
+      "top5_pct": 32.89197265650049,
+      "top10_pct": 44.03816803683421
+    },
+    {
+      "level": 5,
+      "reached_items": 138766,
+      "share_all_pct": 17.30417671544115,
+      "unique_labels": 154,
+      "path_nodes": 163,
+      "reused_labels": 9,
+      "top1_pct": 16.813196316100484,
+      "top5_pct": 43.33554328870184,
+      "top10_pct": 57.80450542640128
+    },
+    {
+      "level": 6,
+      "reached_items": 466,
+      "share_all_pct": 0.05811038978853304,
+      "unique_labels": 6,
+      "path_nodes": 6,
+      "reused_labels": 0,
+      "top1_pct": 28.96995708154507,
+      "top5_pct": 98.92703862660944,
+      "top10_pct": 100.0
+    }
+  ]
+}
