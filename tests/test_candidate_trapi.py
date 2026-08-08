@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from types import SimpleNamespace
 
-from new_interest.evaluate_candidate_trapi import (
+from new_interest.evaluation.evaluate_candidate_trapi import (
     _call_one,
     _is_retryable,
     _pilot_records,

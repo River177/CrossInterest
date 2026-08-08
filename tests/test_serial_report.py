@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from new_interest.report_serial_experiments import build_report
+from new_interest.experiments.report_serial_experiments import build_report
 
 
 def test_build_report_writes_comparison_files(tmp_path: Path) -> None:

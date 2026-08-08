@@ -6,11 +6,11 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from new_interest.build_candidate_selection import (
+from new_interest.data.build_candidate_selection import (
     build_candidate_selection,
 )
-from new_interest.build_generative_dataset import RETAINED_INTEREST_SCHEMA
-from new_interest.build_sft_subsets import GROUPED_EVAL_SCHEMA
+from new_interest.data.build_generative_dataset import RETAINED_INTEREST_SCHEMA
+from new_interest.data.build_sft_subsets import GROUPED_EVAL_SCHEMA
 
 
 def _grouped_row(

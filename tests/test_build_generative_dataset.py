@@ -8,8 +8,8 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 import pytest
 
-from new_interest.build_dataset import DATASET_SCHEMA
-from new_interest.build_generative_dataset import (
+from new_interest.data.build_dataset import DATASET_SCHEMA
+from new_interest.data.build_generative_dataset import (
     GENERATIVE_SCHEMA,
     _sampling_priority,
     _target_selection_priority,

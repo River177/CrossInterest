@@ -6,8 +6,8 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from new_interest.build_generative_dataset import GENERATIVE_SCHEMA
-from new_interest.build_grpo_dataset import (
+from new_interest.data.build_generative_dataset import GENERATIVE_SCHEMA
+from new_interest.data.build_grpo_dataset import (
     COT_INSTRUCTION,
     build_grpo_datasets,
 )

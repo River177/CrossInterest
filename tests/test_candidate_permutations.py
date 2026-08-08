@@ -5,7 +5,7 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from new_interest.build_candidate_permutations import build_permutations
+from new_interest.data.build_candidate_permutations import build_permutations
 
 
 def test_permutations_preserve_candidate_set_and_answer(

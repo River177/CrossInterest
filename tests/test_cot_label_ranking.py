@@ -8,10 +8,10 @@ import pytest
 import torch
 from transformers import GPT2Config, GPT2LMHeadModel
 
-from new_interest.aggregate_cot_label_results import (
+from new_interest.evaluation.aggregate_cot_label_results import (
     aggregate_prediction_shards,
 )
-from new_interest.evaluate_cot_label_ranking import (
+from new_interest.evaluation.evaluate_cot_label_ranking import (
     _write_rows_atomically,
     build_reasoning_prefix,
     compute_all_metrics,
@@ -296,7 +296,7 @@ def test_map_script_resolves_adapter_and_task(
     fake_python.chmod(0o755)
     script = (
         Path(__file__).parents[1]
-        / "scripts/run_qwen_cot_label_eval_map.sh"
+        / "scripts/amlt/evaluation/run_qwen_cot_label_eval_map.sh"
     )
     environment = {
         **os.environ,
@@ -353,7 +353,7 @@ def test_map_script_builds_disjoint_dev10k_shard(
     fake_python.chmod(0o755)
     script = (
         Path(__file__).parents[1]
-        / "scripts/run_qwen_cot_label_eval_map.sh"
+        / "scripts/amlt/evaluation/run_qwen_cot_label_eval_map.sh"
     )
     subprocess.run(
         ["bash", str(script), "full", "2", "4"],

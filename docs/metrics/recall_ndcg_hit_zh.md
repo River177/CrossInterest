@@ -6,7 +6,7 @@
 实际实现位于：
 
 ```text
-src/new_interest/metrics.py
+src/new_interest/evaluation/metrics.py
 ```
 
 评估对象为 grouped Dev10K：
@@ -467,11 +467,7 @@ Hit@20 高于 Recall@20，是因为多答案 impression 中命中一个主题就
 
 ## 13. 实现位置
 
-- 指标实现：
-  [`src/new_interest/metrics.py`](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/metrics.py)
-- Beam 生成：
-  [`src/new_interest/evaluate_beam.py`](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/evaluate_beam.py)
-- 受限 token trie：
-  [`src/new_interest/constrained_beam.py`](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/constrained_beam.py)
-- Dev10K：
-  [`data/training/sft_experiments/eval/interest_only/dev_10k_grouped.parquet`](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/eval/interest_only/dev_10k_grouped.parquet)
+- 指标实现：[`src/new_interest/evaluation/metrics.py`](../../src/new_interest/evaluation/metrics.py)
+- Beam 生成：[`src/new_interest/evaluation/evaluate_beam.py`](../../src/new_interest/evaluation/evaluate_beam.py)
+- 受限 token trie：[`src/new_interest/evaluation/constrained_beam.py`](../../src/new_interest/evaluation/constrained_beam.py)
+- Dev10K：[`data/training/sft_experiments/eval/interest_only/dev_10k_grouped.parquet`](../../data/training/sft_experiments/eval/interest_only/dev_10k_grouped.parquet)

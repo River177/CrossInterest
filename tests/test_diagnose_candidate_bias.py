@@ -5,7 +5,7 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from new_interest.diagnose_candidate_bias import diagnose
+from new_interest.evaluation.diagnose_candidate_bias import diagnose
 
 
 def test_diagnose_catches_below_random_position_bias(

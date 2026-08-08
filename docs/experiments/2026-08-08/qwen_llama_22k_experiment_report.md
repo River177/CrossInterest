@@ -250,9 +250,9 @@ max_new_tokens: 32
 指标由确定性 Python 代码计算，不使用 LLM Judge：
 
 ```text
-src/new_interest/metrics.py
-src/new_interest/constrained_beam.py
-src/new_interest/evaluate_beam.py
+src/new_interest/evaluation/metrics.py
+src/new_interest/evaluation/constrained_beam.py
+src/new_interest/evaluation/evaluate_beam.py
 ```
 
 ### 3.4 评估程序（无 LLM Judge）
@@ -436,20 +436,20 @@ Interest-only 均明显优于 Behavior-only。
 
 ### 本机数据与代码
 
-- [22K Behavior](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/train/behavior_only/22k.parquet)
-- [22K Interest](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/train/interest_only/22k.parquet)
-- [SFT metadata](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/metadata.json)
-- [Qwen Interest config](/Users/river/Documents/MSRA/Rec/CrossInterest/configs/sft/experiments/qwen3_interest_22k.yaml)
-- [Qwen Behavior config](/Users/river/Documents/MSRA/Rec/CrossInterest/configs/sft/experiments/qwen3_behavior_22k.yaml)
-- [Llama Interest config](/Users/river/Documents/MSRA/Rec/CrossInterest/configs/sft/experiments/llama31_interest_22k.yaml)
-- [Llama Behavior config](/Users/river/Documents/MSRA/Rec/CrossInterest/configs/sft/experiments/llama31_behavior_22k.yaml)
-- [AMLT config](/Users/river/Documents/MSRA/Rec/CrossInterest/configs/amlt/qwen_llama_22k.yaml)
-- [Token audits](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/gcr/token-audit-22k)
-- [四条件 CSV](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/22k-results/comparison/qwen_llama_22k_results.csv)
-- [四条件 JSON](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/22k-results/comparison/qwen_llama_22k_results.json)
-- [Qwen/Llama Feeds metrics root](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/amlt/22k-results/crossinterest-qwen-llama-22k-v1)
-- [Llama Behavior metrics](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/gcr/22k/llama31-behavior/beam/metrics.json)
-- [结果收集器](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/report_22k_results.py)
+- [22K Behavior](../../../data/training/sft_experiments/train/behavior_only/22k.parquet)
+- [22K Interest](../../../data/training/sft_experiments/train/interest_only/22k.parquet)
+- [SFT metadata](../../../data/training/sft_experiments/metadata.json)
+- [Qwen Interest config](../../../configs/sft/experiments/qwen3_interest_22k.yaml)
+- [Qwen Behavior config](../../../configs/sft/experiments/qwen3_behavior_22k.yaml)
+- [Llama Interest config](../../../configs/sft/experiments/llama31_interest_22k.yaml)
+- [Llama Behavior config](../../../configs/sft/experiments/llama31_behavior_22k.yaml)
+- [AMLT config](../../../configs/amlt/archive/sft-beam/qwen_llama_22k.yaml)
+- [Token audits](../../../artifacts/gcr/token-audit-22k)
+- [四条件 CSV](../../../artifacts/22k-results/comparison/qwen_llama_22k_results.csv)
+- [四条件 JSON](../../../artifacts/22k-results/comparison/qwen_llama_22k_results.json)
+- [Qwen/Llama Feeds metrics root](../../../artifacts/amlt/22k-results/crossinterest-qwen-llama-22k-v1)
+- [Llama Behavior metrics](../../../artifacts/gcr/22k/llama31-behavior/beam/metrics.json)
+- [结果收集器](../../../src/new_interest/experiments/report_22k_results.py)
 
 本机没有保存 checkpoint 或 adapter 权重。
 

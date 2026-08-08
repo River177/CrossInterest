@@ -307,9 +307,9 @@ New topic: <canonical subcategory>
 所有结果由确定性 Python 评估器计算：
 
 ```text
-src/new_interest/metrics.py
-src/new_interest/constrained_beam.py
-src/new_interest/evaluate_beam.py
+src/new_interest/evaluation/metrics.py
+src/new_interest/evaluation/constrained_beam.py
+src/new_interest/evaluation/evaluate_beam.py
 ```
 
 对 impression `u`，正确集合为 `G_u`，Top-K 预测为 `P_u@K`：
@@ -536,55 +536,53 @@ Behavior-only best: 10K
 
 K=10 候选选择扩展实验见：
 
-```text
-docs/candidate_selection_experiment_report.md
-```
+[K=10 候选主题选择扩展实验](../2026-08-08/candidate_selection_experiment_report.md)
 
 ### 5.1 数据构造
 
-- [原始数据](/Users/river/Documents/MSRA/Rec/CrossInterest/data/raw/MINDlarge_reclassified)
-- [新主题 Train](/Users/river/Documents/MSRA/Rec/CrossInterest/data/processed/new_interest/train.parquet)
-- [新主题 Dev](/Users/river/Documents/MSRA/Rec/CrossInterest/data/processed/new_interest/dev.parquet)
-- [Balanced metadata](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/generative_new_interest_balanced_200_h50/metadata.json)
-- [保留类别](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/generative_new_interest_balanced_200_h50/retained_interests.parquet)
-- [Train 采样清单](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/generative_new_interest_balanced_200_h50/selected_train_samples.parquet)
+- [原始数据](../../../data/raw/MINDlarge_reclassified)
+- [新主题 Train](../../../data/processed/new_interest/train.parquet)
+- [新主题 Dev](../../../data/processed/new_interest/dev.parquet)
+- [Balanced metadata](../../../data/training/generative_new_interest_balanced_200_h50/metadata.json)
+- [保留类别](../../../data/training/generative_new_interest_balanced_200_h50/retained_interests.parquet)
+- [Train 采样清单](../../../data/training/generative_new_interest_balanced_200_h50/selected_train_samples.parquet)
 
 ### 5.2 SFT 数据
 
-- [SFT metadata](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/metadata.json)
-- [SFT statistics](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/statistics.json)
-- [子集清单](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/subset_manifest.parquet)
-- [Behavior Train](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/train/behavior_only)
-- [Interest Train](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/train/interest_only)
-- [Behavior Dev](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/eval/behavior_only)
-- [Interest Dev](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/eval/interest_only)
+- [SFT metadata](../../../data/training/sft_experiments/metadata.json)
+- [SFT statistics](../../../data/training/sft_experiments/statistics.json)
+- [子集清单](../../../data/training/sft_experiments/subset_manifest.parquet)
+- [Behavior Train](../../../data/training/sft_experiments/train/behavior_only)
+- [Interest Train](../../../data/training/sft_experiments/train/interest_only)
+- [Behavior Dev](../../../data/training/sft_experiments/eval/behavior_only)
+- [Interest Dev](../../../data/training/sft_experiments/eval/interest_only)
 
 ### 5.3 代码与配置
 
-- [训练代码](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/train_sft.py)
-- [Completion-only 数据处理](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/sft_data.py)
-- [Beam 评估](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/evaluate_beam.py)
-- [Token trie](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/constrained_beam.py)
-- [指标](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/metrics.py)
-- [SFT 配置](/Users/river/Documents/MSRA/Rec/CrossInterest/configs/sft/qwen3_8b_lora.yaml)
-- [Beam 配置](/Users/river/Documents/MSRA/Rec/CrossInterest/configs/beam)
-- [AMLT 六训练配置](/Users/river/Documents/MSRA/Rec/CrossInterest/configs/amlt/qwen3_8b_scaling.yaml)
-- [Beam recovery 配置](/Users/river/Documents/MSRA/Rec/CrossInterest/configs/amlt/qwen3_beam_map.yaml)
-- [Full Dev 配置](/Users/river/Documents/MSRA/Rec/CrossInterest/configs/amlt/qwen3_full_beam_map.yaml)
+- [训练代码](../../../src/new_interest/training/train_sft.py)
+- [Completion-only 数据处理](../../../src/new_interest/training/sft_data.py)
+- [Beam 评估](../../../src/new_interest/evaluation/evaluate_beam.py)
+- [Token trie](../../../src/new_interest/evaluation/constrained_beam.py)
+- [指标](../../../src/new_interest/evaluation/metrics.py)
+- [SFT 配置](../../../configs/sft/qwen3_8b_lora.yaml)
+- [Beam 配置](../../../configs/beam)
+- [AMLT 六训练配置](../../../configs/amlt/archive/sft-beam/qwen3_8b_scaling.yaml)
+- [Beam recovery 配置](../../../configs/amlt/archive/sft-beam/qwen3_beam_map.yaml)
+- [Full Dev 配置](../../../configs/amlt/archive/sft-beam/qwen3_full_beam_map.yaml)
 
 ### 5.4 本机结果
 
 训练 adapter 与 checkpoint 只保存在 AMLT Blob/GCR，不保存在本机。
 
-- [Beam 结果根目录](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1)
-- [Interest 1K metrics](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-interest-1k/beam/metrics.json)
-- [Interest 5K metrics](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-interest-5k/beam/metrics.json)
-- [Interest 10K metrics](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-interest-10k/beam/metrics.json)
-- [Behavior 1K metrics](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-behavior-1k/beam/metrics.json)
-- [Behavior 5K metrics](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-behavior-5k/beam/metrics.json)
-- [Behavior 10K metrics](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-behavior-10k/beam/metrics.json)
-- [六实验对比 CSV](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/qwen3_dev10k_comparison.csv)
-- [六实验对比 JSON](/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/qwen3_dev10k_comparison.json)
+- [Beam 结果根目录](../../../artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1)
+- [Interest 1K metrics](../../../artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-interest-1k/beam/metrics.json)
+- [Interest 5K metrics](../../../artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-interest-5k/beam/metrics.json)
+- [Interest 10K metrics](../../../artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-interest-10k/beam/metrics.json)
+- [Behavior 1K metrics](../../../artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-behavior-1k/beam/metrics.json)
+- [Behavior 5K metrics](../../../artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-behavior-5k/beam/metrics.json)
+- [Behavior 10K metrics](../../../artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/beam-eval-v2-qwen3-behavior-10k/beam/metrics.json)
+- [六实验对比 CSV](../../../artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/qwen3_dev10k_comparison.csv)
+- [六实验对比 JSON](../../../artifacts/amlt/beam-eval-v2-crossinterest-qwen3-scaling-v1/qwen3_dev10k_comparison.json)
 
 ### 5.5 远程实验
 

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 
-from new_interest.grpo_reward import (
+from new_interest.training.grpo_reward import (
     compute_score,
     extract_final_answer,
     is_structured_exact,

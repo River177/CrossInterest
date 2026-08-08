@@ -33,8 +33,8 @@ jobs:
       - cd $$AMLT_CODE_DIR
       - mkdir -p /mnt/default/huggingface-cache /scratch/pip_cache
       - >-
-        bash scripts/install_training_worker_deps.sh &&
-        bash scripts/run_qwen_cot_label_eval_map.sh smoke
+        bash scripts/amlt/evaluation/install_training_worker_deps.sh &&
+        bash scripts/amlt/evaluation/run_qwen_cot_label_eval_map.sh smoke
 
   - name: cot-label-eval-s0
     sku: 80G1-A100
@@ -53,8 +53,8 @@ jobs:
       - cd $$AMLT_CODE_DIR
       - mkdir -p /mnt/default/huggingface-cache /scratch/pip_cache
       - >-
-        bash scripts/install_training_worker_deps.sh &&
-        bash scripts/run_qwen_cot_label_eval_map.sh full 0 4
+        bash scripts/amlt/evaluation/install_training_worker_deps.sh &&
+        bash scripts/amlt/evaluation/run_qwen_cot_label_eval_map.sh full 0 4
 
   - name: cot-label-eval-s1
     sku: 80G1-A100
@@ -73,8 +73,8 @@ jobs:
       - cd $$AMLT_CODE_DIR
       - mkdir -p /mnt/default/huggingface-cache /scratch/pip_cache
       - >-
-        bash scripts/install_training_worker_deps.sh &&
-        bash scripts/run_qwen_cot_label_eval_map.sh full 1 4
+        bash scripts/amlt/evaluation/install_training_worker_deps.sh &&
+        bash scripts/amlt/evaluation/run_qwen_cot_label_eval_map.sh full 1 4
 
   - name: cot-label-eval-s2
     sku: 80G1-A100
@@ -93,8 +93,8 @@ jobs:
       - cd $$AMLT_CODE_DIR
       - mkdir -p /mnt/default/huggingface-cache /scratch/pip_cache
       - >-
-        bash scripts/install_training_worker_deps.sh &&
-        bash scripts/run_qwen_cot_label_eval_map.sh full 2 4
+        bash scripts/amlt/evaluation/install_training_worker_deps.sh &&
+        bash scripts/amlt/evaluation/run_qwen_cot_label_eval_map.sh full 2 4
 
   - name: cot-label-eval-s3
     sku: 80G1-A100
@@ -113,5 +113,5 @@ jobs:
       - cd $$AMLT_CODE_DIR
       - mkdir -p /mnt/default/huggingface-cache /scratch/pip_cache
       - >-
-        bash scripts/install_training_worker_deps.sh &&
-        bash scripts/run_qwen_cot_label_eval_map.sh full 3 4
+        bash scripts/amlt/evaluation/install_training_worker_deps.sh &&
+        bash scripts/amlt/evaluation/run_qwen_cot_label_eval_map.sh full 3 4

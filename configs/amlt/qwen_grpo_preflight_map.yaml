@@ -32,7 +32,7 @@ jobs:
       - export TOKENIZERS_PARALLELISM=false
       - export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
       - >-
-        python -m new_interest.preflight_grpo_rewards
+        python -m new_interest.evaluation.preflight_grpo_rewards
         --adapter-path $$AMLT_MAP_INPUT_DIR/sft/final_adapter
         --data-path data/training/grpo_experiments/interest_only/1k.parquet
         --output-dir $$AMLT_OUTPUT_DIR/preflight

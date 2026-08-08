@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from new_interest.metrics import (
+from new_interest.evaluation.metrics import (
     evaluate_outputs,
     evaluate_ranked_outputs,
     parse_prediction,

@@ -1,6 +1,7 @@
 # Local datasets and generated experiment outputs
-data/
-artifacts/
+/data/
+/artifacts/
+legacy/**/raw_*/
 
 # Generated presentation files
 slides/output/
@@ -13,6 +14,7 @@ __pycache__/
 .ruff_cache/
 .coverage
 htmlcov/
+*.egg-info/
 
 # Local environments and credentials
 .venv/

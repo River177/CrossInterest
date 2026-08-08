@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from new_interest.run_serial_experiments import (
+from new_interest.experiments.run_serial_experiments import (
     EXPERIMENTS,
     _beam_script,
     _best_experiment,

@@ -12,11 +12,11 @@ dependencies = [
 ]
 
 [project.scripts]
-build-new-interest-dataset = "new_interest.build_dataset:main"
-build-generative-new-interest-dataset = "new_interest.build_generative_dataset:main"
-build-sft-subsets = "new_interest.build_sft_subsets:main"
-build-candidate-selection = "new_interest.build_candidate_selection:main"
-build-grpo-datasets = "new_interest.build_grpo_dataset:main"
+build-new-interest-dataset = "new_interest.data.build_dataset:main"
+build-generative-new-interest-dataset = "new_interest.data.build_generative_dataset:main"
+build-sft-subsets = "new_interest.data.build_sft_subsets:main"
+build-candidate-selection = "new_interest.data.build_candidate_selection:main"
+build-grpo-datasets = "new_interest.data.build_grpo_dataset:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

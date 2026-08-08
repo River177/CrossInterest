@@ -1,0 +1,20 @@
+manifest_version: 1
+kind: artifact
+name: ""
+destination: "artifacts/<repository-relative-path>"
+source:
+  uri: "" # Unknown until supplied by an authorized artifact owner.
+  experiment_id: ""
+  retrieved_at: ""
+identity:
+  model: ""
+  adapter_or_checkpoint: ""
+  data_hashes: {}
+  resolved_config: ""
+contents:
+  description: ""
+  files: []
+verification:
+  sha256: {}
+  status: "not_verified"
+notes: ""

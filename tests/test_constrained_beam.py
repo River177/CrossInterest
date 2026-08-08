@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 
-from new_interest.constrained_beam import (
+from new_interest.evaluation.constrained_beam import (
     TokenTrie,
     build_response_trie,
     decode_ranked_sequences,

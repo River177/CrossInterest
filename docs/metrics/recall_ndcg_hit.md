@@ -6,7 +6,7 @@ metrics used in the current novel-topic prediction experiments.
 The implementation is located at:
 
 ```text
-src/new_interest/metrics.py
+src/new_interest/evaluation/metrics.py
 ```
 
 The evaluation data are the grouped Dev10K datasets:
@@ -482,11 +482,7 @@ only receives partial credit.
 
 ## 13. Implementation and Data Paths
 
-- Metric implementation:
-  [`src/new_interest/metrics.py`](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/metrics.py)
-- Beam generation:
-  [`src/new_interest/evaluate_beam.py`](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/evaluate_beam.py)
-- Constrained token trie:
-  [`src/new_interest/constrained_beam.py`](/Users/river/Documents/MSRA/Rec/CrossInterest/src/new_interest/constrained_beam.py)
-- Dev10K:
-  [`data/training/sft_experiments/eval/interest_only/dev_10k_grouped.parquet`](/Users/river/Documents/MSRA/Rec/CrossInterest/data/training/sft_experiments/eval/interest_only/dev_10k_grouped.parquet)
+- Metric implementation: [`src/new_interest/evaluation/metrics.py`](../../src/new_interest/evaluation/metrics.py)
+- Beam generation: [`src/new_interest/evaluation/evaluate_beam.py`](../../src/new_interest/evaluation/evaluate_beam.py)
+- Constrained token trie: [`src/new_interest/evaluation/constrained_beam.py`](../../src/new_interest/evaluation/constrained_beam.py)
+- Dev10K: [`data/training/sft_experiments/eval/interest_only/dev_10k_grouped.parquet`](../../data/training/sft_experiments/eval/interest_only/dev_10k_grouped.parquet)

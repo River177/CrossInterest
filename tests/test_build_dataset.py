@@ -7,7 +7,7 @@ from pathlib import Path
 import pyarrow.parquet as pq
 import pytest
 
-from new_interest.build_dataset import build_dataset
+from new_interest.data.build_dataset import build_dataset
 
 
 def _news_row(

@@ -7,13 +7,13 @@ from pathlib import Path
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from new_interest.build_dataset import DATASET_SCHEMA
-from new_interest.build_generative_dataset import (
+from new_interest.data.build_dataset import DATASET_SCHEMA
+from new_interest.data.build_generative_dataset import (
     GENERATIVE_SCHEMA,
     RETAINED_INTEREST_SCHEMA,
     SELECTED_TRAIN_SCHEMA,
 )
-from new_interest.build_sft_subsets import build_sft_subsets
+from new_interest.data.build_sft_subsets import build_sft_subsets
 
 
 def _history() -> list[dict[str, str]]:

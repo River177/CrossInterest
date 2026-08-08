@@ -40,6 +40,6 @@ jobs:
       - >-
         python -m pip install --user --no-warn-script-location
         -r requirements-verl.lock
-      - source scripts/prepare_writable_verl.sh
+      - source scripts/amlt/grpo/prepare_writable_verl.sh
       - python -c "import torch, transformers, vllm, verl; print(torch.__version__, transformers.__version__, vllm.__version__, verl.__version__)"
-      - bash scripts/run_qwen_grpo_map_job.sh auto 1k full
+      - bash scripts/amlt/grpo/run_qwen_grpo_map_job.sh auto 1k full

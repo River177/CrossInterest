@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 
-from new_interest.sft_data import (
+from new_interest.training.sft_data import (
     CompletionOnlyCollator,
     tokenize_training_example,
 )

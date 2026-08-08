@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-import new_interest.report_candidate_results as report
+import new_interest.experiments.report_candidate_results as report
 
 
 def test_candidate_report_supports_partial_results(

@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from new_interest.report_22k_results import collect_results
+from new_interest.experiments.report_22k_results import collect_results
 
 
 def test_collect_results_reports_missing_and_complete(tmp_path: Path) -> None:

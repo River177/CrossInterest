@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from new_interest.candidate_metrics import (
+from new_interest.evaluation.candidate_metrics import (
     evaluate_candidate_outputs,
     parse_candidate_output,
 )

@@ -156,7 +156,7 @@ prediction.strip() == "New topic: <answer_category>"
 本实验不使用 LLM Judge，所有指标由确定性代码计算：
 
 ```text
-src/new_interest/candidate_metrics.py
+src/new_interest/evaluation/candidate_metrics.py
 ```
 
 ### 3.4 真实测试样例
@@ -295,10 +295,10 @@ docs/experiments/2026-08-08/qwen_base_interest_bias_diagnosis.md
 
 ### 代码与配置
 
-- [candidate builder](../../../src/new_interest/build_candidate_selection.py)
-- [candidate metrics](../../../src/new_interest/candidate_metrics.py)
-- [Qwen evaluator](../../../src/new_interest/evaluate_candidate_qwen.py)
-- [TRAPI evaluator](../../../src/new_interest/evaluate_candidate_trapi.py)
+- [candidate builder](../../../src/new_interest/data/build_candidate_selection.py)
+- [candidate metrics](../../../src/new_interest/evaluation/candidate_metrics.py)
+- [Qwen evaluator](../../../src/new_interest/evaluation/evaluate_candidate_qwen.py)
+- [TRAPI evaluator](../../../src/new_interest/evaluation/evaluate_candidate_trapi.py)
 - [candidate configs](../../../configs/candidate)
 
 ### 结果
@@ -320,7 +320,7 @@ Qwen3.5 远程 AMLT 记录：
 
 - Experiment：`candidate-qwen35-base-v1`
 - Jobs：`qwen35-base-behavior`、`qwen35-base-interest`
-- Config：`configs/amlt/candidate_qwen35_base.yaml`
+- Config：`configs/amlt/archive/candidate/candidate_qwen35_base.yaml`
 - Behavior metrics：`artifacts/candidate-selection-k10/amlt/candidate-qwen35-base-v1/qwen35-base-behavior/evaluation/metrics.json`
 - Interest metrics：`artifacts/candidate-selection-k10/amlt/candidate-qwen35-base-v1/qwen35-base-interest/evaluation/metrics.json`
 
@@ -332,7 +332,7 @@ Sampling 远程 AMLT 记录：
 - Qwen3 Behavior 首次 Job：`qwen3-sampling-behavior`，节点异常卡住后取消
 - Qwen3 Behavior 重试 Experiment：`candidate-qwen3-sampling-behavior-v2`
 - Qwen3 Behavior 重试 Job：`qwen3-sampling-behavior`
-- Config：`configs/amlt/candidate_qwen_sampling.yaml`
+- Config：`configs/amlt/archive/candidate/candidate_qwen_sampling.yaml`
 - Qwen3 Behavior metrics：`artifacts/candidate-selection-k10/amlt/candidate-qwen3-sampling-behavior-v2/qwen3-sampling-behavior/evaluation/metrics.json`
 - Qwen3 Interest metrics：`artifacts/candidate-selection-k10/amlt/candidate-qwen-sampling-v1/qwen3-sampling-interest/evaluation/metrics.json`
 - Qwen3.5 Behavior metrics：`artifacts/candidate-selection-k10/amlt/candidate-qwen-sampling-v1/qwen35-sampling-behavior/evaluation/metrics.json`

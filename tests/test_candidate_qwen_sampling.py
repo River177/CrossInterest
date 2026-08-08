@@ -4,7 +4,7 @@ from types import SimpleNamespace
 
 import torch
 
-from new_interest.evaluate_candidate_qwen import generate_outputs
+from new_interest.evaluation.evaluate_candidate_qwen import generate_outputs
 
 
 class _Tokenizer:

@@ -1,0 +1,18 @@
+manifest_version: 1
+kind: data
+name: ""
+destination: "data/<repository-relative-path>"
+source:
+  uri: "" # Unknown until supplied by an authorized data owner.
+  owner: ""
+  retrieved_at: ""
+contents:
+  description: ""
+  files: []
+verification:
+  sha256: {} # Map repository-relative file paths to known hashes.
+  status: "not_verified"
+provenance:
+  upstream_version: "unknown"
+  license_or_terms: "unknown"
+  notes: ""
