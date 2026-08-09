@@ -36,6 +36,12 @@ def test_console_script_targets_resolve() -> None:
         "build-sft-subsets",
         "build-candidate-selection",
         "build-grpo-datasets",
+        "build-grpo-acceptable-targets",
+        "generate-cot-teacher",
+        "build-cot-sft-datasets",
+        "evaluate-cot-accuracy",
+        "aggregate-cot-accuracy",
+        "compare-paired-accuracy",
     }
     for target in scripts.values():
         module_name, attribute = target.split(":", maxsplit=1)

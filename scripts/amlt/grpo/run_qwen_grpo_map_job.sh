@@ -4,6 +4,7 @@ set -euo pipefail
 TASK_TYPE="$1"
 SIZE="$2"
 MODE="${3:-full}"
+VARIANT="${4:-legacy}"
 
 if [[ "$TASK_TYPE" == "auto" ]]; then
   case "${AMLT_MAP_INPUT_JOB_NAME:?AMLT_MAP_INPUT_JOB_NAME is required}" in
@@ -42,10 +43,24 @@ export PROJECT_DIR="$AMLT_CODE_DIR"
 export VERL_RUNTIME_DIR="${VERL_RUNTIME_DIR:-$HOME/verl-runtime}"
 export PYTHONPATH="$VERL_RUNTIME_DIR:$AMLT_CODE_DIR/src${PYTHONPATH:+:$PYTHONPATH}"
 export MODEL_PATH="Qwen/Qwen3-8B"
-export LORA_ADAPTER_PATH="$AMLT_MAP_INPUT_DIR/sft/final_adapter"
+case "$VARIANT" in
+  legacy)
+    ADAPTER_RELATIVE_PATH="sft/final_adapter"
+    RUN_VARIANT="sft22k"
+    ;;
+  correctness)
+    ADAPTER_RELATIVE_PATH="cot_sft/final_adapter"
+    RUN_VARIANT="cot-sft${SIZE}-acceptable"
+    ;;
+  *)
+    echo "Unsupported GRPO variant: $VARIANT" >&2
+    exit 2
+    ;;
+esac
+export LORA_ADAPTER_PATH="$AMLT_MAP_INPUT_DIR/$ADAPTER_RELATIVE_PATH"
 export TRAIN_FILE="$AMLT_CODE_DIR/data/training/grpo_experiments/$TASK_TYPE/$SIZE.parquet"
 export OUTPUT_DIR="$AMLT_OUTPUT_DIR/grpo"
-export EXPERIMENT_NAME="qwen3-${SHORT_TASK}-sft22k-grpo${SIZE}-cot"
+export EXPERIMENT_NAME="qwen3-${SHORT_TASK}-${RUN_VARIANT}-grpo${SIZE}-cot"
 export CHECKPOINT_DIR="/scratch/crossinterest-grpo/$EXPERIMENT_NAME/checkpoints"
 export N_GPUS=4
 export TRAIN_BATCH_SIZE=32

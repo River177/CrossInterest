@@ -17,6 +17,12 @@ build-generative-new-interest-dataset = "new_interest.data.build_generative_data
 build-sft-subsets = "new_interest.data.build_sft_subsets:main"
 build-candidate-selection = "new_interest.data.build_candidate_selection:main"
 build-grpo-datasets = "new_interest.data.build_grpo_dataset:main"
+build-grpo-acceptable-targets = "new_interest.data.build_acceptable_target_sets:main"
+generate-cot-teacher = "new_interest.data.generate_cot_teacher:main"
+build-cot-sft-datasets = "new_interest.data.build_cot_sft_dataset:main"
+evaluate-cot-accuracy = "new_interest.evaluation.evaluate_cot_accuracy:main"
+aggregate-cot-accuracy = "new_interest.evaluation.aggregate_accuracy_results:main"
+compare-paired-accuracy = "new_interest.evaluation.compare_paired_accuracy:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -37,10 +37,22 @@ def _set_seed(seed: int) -> None:
     torch.cuda.manual_seed_all(seed)
 
 
+def _resolve_adapter_path(
+    config: dict[str, Any],
+) -> Path | None:
+    value = config.get("adapter_path")
+    if value is None:
+        return None
+    path = Path(str(value))
+    if not (path / "adapter_model.safetensors").is_file():
+        raise FileNotFoundError(f"Input adapter not found: {path}")
+    return path
+
+
 def train(config: dict[str, Any]) -> dict[str, object]:
     import torch
     import wandb
-    from peft import LoraConfig, get_peft_model
+    from peft import LoraConfig, PeftModel, get_peft_model
     from transformers import (
         AutoModelForCausalLM,
         AutoTokenizer,
@@ -51,6 +63,7 @@ def train(config: dict[str, Any]) -> dict[str, object]:
     seed = int(config.get("seed", 42))
     _set_seed(seed)
     model_name = str(config["model_name"])
+    adapter_path = _resolve_adapter_path(config)
     train_file = Path(config["train_file"])
     output_dir = Path(config["output_dir"])
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -97,15 +110,22 @@ def train(config: dict[str, Any]) -> dict[str, object]:
         trust_remote_code=False,
     )
     model.config.use_cache = False
-    lora = LoraConfig(
-        r=int(config.get("lora_r", 16)),
-        lora_alpha=int(config.get("lora_alpha", 32)),
-        lora_dropout=float(config.get("lora_dropout", 0.05)),
-        target_modules=config.get("target_modules", "all-linear"),
-        task_type="CAUSAL_LM",
-        bias="none",
-    )
-    model = get_peft_model(model, lora)
+    if adapter_path is not None:
+        model = PeftModel.from_pretrained(
+            model,
+            adapter_path,
+            is_trainable=True,
+        )
+    else:
+        lora = LoraConfig(
+            r=int(config.get("lora_r", 16)),
+            lora_alpha=int(config.get("lora_alpha", 32)),
+            lora_dropout=float(config.get("lora_dropout", 0.05)),
+            target_modules=config.get("target_modules", "all-linear"),
+            task_type="CAUSAL_LM",
+            bias="none",
+        )
+        model = get_peft_model(model, lora)
     model.enable_input_require_grads()
     model.print_trainable_parameters()
 
@@ -167,6 +187,11 @@ def train(config: dict[str, Any]) -> dict[str, object]:
 
     summary = {
         "model_name": model_name,
+        "input_adapter": (
+            str(adapter_path.resolve())
+            if adapter_path is not None
+            else None
+        ),
         "train_file": str(train_file.resolve()),
         "train_samples": len(dataset),
         "seed": seed,
@@ -201,6 +226,7 @@ def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Run LoRA SFT.")
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--train-file", type=Path)
+    parser.add_argument("--adapter-path", type=Path)
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--run-name")
     parser.add_argument("--max-samples", type=int)
@@ -217,6 +243,7 @@ def main() -> None:
     config = _load_config(args.config)
     for key in (
         "train_file",
+        "adapter_path",
         "output_dir",
         "run_name",
         "max_samples",

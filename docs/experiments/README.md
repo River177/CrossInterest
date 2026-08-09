@@ -17,5 +17,9 @@
 - [Qwen3-8B Base Interest 低于随机诊断](2026-08-08/qwen_base_interest_bias_diagnosis.md)
 - [Qwen3-8B 与 Llama-3.1-8B 22K 跨模型实验](2026-08-08/qwen_llama_22k_experiment_report.md)
 
-共索引本目录下 6 个 Markdown 报告。运行所引用的 `data/` 和 `artifacts/`
+## 2026-08-09
+
+- [Qwen3-8B SFT22K vs GRPO1K CoT 条件标签排序](2026-08-09/qwen3_sft22k_grpo1k_cot_label_ranking_report.md)
+
+共索引本目录下 7 个 Markdown 报告。运行所引用的 `data/` 和 `artifacts/`
 可能未随 Git 提供；恢复方式见 [数据与产物说明](../artifacts.md)。

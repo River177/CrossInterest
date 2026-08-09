@@ -54,7 +54,8 @@ def run_preflight(
     all_one_groups = 0
     total_positive = 0
     total_nonzero = 0
-    total_exact_answers = 0
+    total_correct_answers = 0
+    total_strict_correct = 0
     total_reward = 0.0
     total_structured = 0
     constant_partial_groups = 0
@@ -124,12 +125,45 @@ def run_preflight(
                 parse_structured_output(completion) is not None
                 for completion in group
             ]
+            acceptable = {
+                str(value)
+                for value in row["extra_info"][
+                    "acceptable_subcategories"
+                ]
+            }
+            retained = {
+                str(value)
+                for value in row["extra_info"]["retained_subcategories"]
+            }
+            history = {
+                str(value)
+                for value in row["extra_info"]["history_subcategories"]
+            }
+            labels = []
+            for completion in group:
+                answer = extract_final_answer(completion)
+                labels.append(
+                    answer.removeprefix("New topic: ")
+                    if answer is not None
+                    else None
+                )
+            correct = [
+                label is not None
+                and label in acceptable
+                and label in retained
+                and label not in history
+                for label in labels
+            ]
             positive = sum(reward == 1.0 for reward in rewards)
             total_positive += positive
             total_nonzero += sum(reward > 0.0 for reward in rewards)
-            total_exact_answers += sum(
-                extract_final_answer(completion) == ground_truth
-                for completion in group
+            total_correct_answers += sum(correct)
+            total_strict_correct += sum(
+                is_correct and is_structured
+                for is_correct, is_structured in zip(
+                    correct,
+                    structured,
+                )
             )
             total_reward += sum(rewards)
             total_structured += sum(structured)
@@ -158,7 +192,10 @@ def run_preflight(
                         row["extra_info"]["source_sample_id"]
                     ),
                     "ground_truth": ground_truth,
+                    "acceptable_subcategories": sorted(acceptable),
                     "completions": group,
+                    "parsed_labels": labels,
+                    "correct": correct,
                     "rewards": rewards,
                     "structured": structured,
                     "response_token_lengths": token_lengths,
@@ -183,8 +220,12 @@ def run_preflight(
         "positive_completion_rate": total_positive / total_completions,
         "nonzero_completions": total_nonzero,
         "nonzero_completion_rate": total_nonzero / total_completions,
-        "exact_answer_completions": total_exact_answers,
-        "exact_answer_rate": total_exact_answers / total_completions,
+        "correct_answer_completions": total_correct_answers,
+        "correct_answer_rate": total_correct_answers / total_completions,
+        "strict_correct_completions": total_strict_correct,
+        "strict_correct_rate": total_strict_correct / total_completions,
+        "correctness_reward_mass": 0.8 * total_correct_answers,
+        "format_bonus_reward_mass": 0.2 * total_strict_correct,
         "mean_reward": total_reward / total_completions,
         "structured_completions": total_structured,
         "structured_cot_rate": total_structured / total_completions,
@@ -201,6 +242,13 @@ def run_preflight(
         ),
         "p95_response_tokens": percentile(0.95),
         "max_response_tokens": max(response_lengths),
+        "truncated_completions": sum(
+            length >= max_new_tokens for length in response_lengths
+        ),
+        "truncation_rate": sum(
+            length >= max_new_tokens for length in response_lengths
+        )
+        / total_completions,
         "runtime_seconds": time.time() - started_at,
         "model_name": model_name,
         "adapter_path": str(adapter_path),
@@ -224,7 +272,7 @@ def run_preflight(
 
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Preflight exact GRPO reward sparsity."
+        description="Preflight correctness-gated GRPO reward sparsity."
     )
     parser.add_argument("--model-name", default="Qwen/Qwen3-8B")
     parser.add_argument("--adapter-path", type=Path, required=True)
