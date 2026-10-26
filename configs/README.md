@@ -8,7 +8,14 @@ normally override config values, which is preferable for smoke runs.
 | `sft/` | `python -m new_interest.training.train_sft` | Qwen3/Llama LoRA recipes and fixed 22K experiment variants |
 | `beam/` | `python -m new_interest.evaluation.evaluate_beam` | Model, task, adapter, grouped Dev, beam, and output settings |
 | `candidate/` | Candidate evaluators | Base/SFT, sampling, likelihood, permutation, frequency-matched, and prompt variants |
-| `amlt/` | `amlt` | Active remote jobs; completed definitions are under `amlt/archive/` |
+| `amlt/` | `amlt` | Mainline launch references and required preparation templates; historical definitions are under `amlt/archive/` |
+
+The 2026-10-26 cleanup retained 25 launch references/templates and moved 165
+historical definitions to `amlt/archive/2026-10-26/`. Their `code.local_dir`
+values still resolve to the same repository or frozen-bundle roots. Placement
+in `amlt/` does not mean a job is running. See the
+[path mapping](../manifests/repository_archive_20261026.json) for older report
+and manifest references, which preserve original submitted paths.
 
 Canonical configs may point at full ignored datasets, online W&B, Hugging Face
 models, and A100 targets. For local validation, use `--max-samples` or

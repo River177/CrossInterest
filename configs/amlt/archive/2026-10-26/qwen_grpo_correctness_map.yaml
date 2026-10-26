@@ -1,0 +1,127 @@
+description: Qwen3 CoT-SFT to correctness-gated acceptable-set GRPO
+
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+
+code:
+  local_dir: $CONFIG_DIR/../../../..
+
+target:
+  service: sing
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+
+jobs:
+  - name: correctness-grpo-1k-smoke
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        WANDB_API_KEY: $WANDB_API_KEY
+        DATASET_MOUNT_BLOCK_BASED_CACHE_ENABLED: "true"
+        PIP_CACHE_DIR: /mnt/default/pip_cache
+        HF_HOME: /scratch/hf_cache
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p /scratch/hf_cache /mnt/default/pip_cache
+      - export PROJECT_DIR=$$AMLT_CODE_DIR
+      - export WANDB_PROJECT=cross-interest-generative-grpo-correctness
+      - python -m pip install --user --upgrade pip
+      - >-
+        python -m pip install --user
+        --index-url https://download.pytorch.org/whl/cu126
+        torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0
+      - >-
+        python -m pip install --user --no-warn-script-location
+        -r requirements-verl.lock
+      - source scripts/amlt/grpo/prepare_writable_verl.sh
+      - bash scripts/amlt/grpo/run_qwen_grpo_map_job.sh auto 1k smoke correctness
+
+  - name: correctness-grpo-1k
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        WANDB_API_KEY: $WANDB_API_KEY
+        DATASET_MOUNT_BLOCK_BASED_CACHE_ENABLED: "true"
+        PIP_CACHE_DIR: /mnt/default/pip_cache
+        HF_HOME: /scratch/hf_cache
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p /scratch/hf_cache /mnt/default/pip_cache
+      - export PROJECT_DIR=$$AMLT_CODE_DIR
+      - export WANDB_PROJECT=cross-interest-generative-grpo-correctness
+      - python -m pip install --user --upgrade pip
+      - >-
+        python -m pip install --user
+        --index-url https://download.pytorch.org/whl/cu126
+        torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0
+      - >-
+        python -m pip install --user --no-warn-script-location
+        -r requirements-verl.lock
+      - source scripts/amlt/grpo/prepare_writable_verl.sh
+      - bash scripts/amlt/grpo/run_qwen_grpo_map_job.sh auto 1k full correctness
+
+  - name: correctness-grpo-5k-smoke
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        WANDB_API_KEY: $WANDB_API_KEY
+        DATASET_MOUNT_BLOCK_BASED_CACHE_ENABLED: "true"
+        PIP_CACHE_DIR: /mnt/default/pip_cache
+        HF_HOME: /scratch/hf_cache
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p /scratch/hf_cache /mnt/default/pip_cache
+      - export PROJECT_DIR=$$AMLT_CODE_DIR
+      - export WANDB_PROJECT=cross-interest-generative-grpo-correctness
+      - python -m pip install --user --upgrade pip
+      - >-
+        python -m pip install --user
+        --index-url https://download.pytorch.org/whl/cu126
+        torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0
+      - >-
+        python -m pip install --user --no-warn-script-location
+        -r requirements-verl.lock
+      - source scripts/amlt/grpo/prepare_writable_verl.sh
+      - bash scripts/amlt/grpo/run_qwen_grpo_map_job.sh auto 5k smoke correctness
+
+  - name: correctness-grpo-5k
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        WANDB_API_KEY: $WANDB_API_KEY
+        DATASET_MOUNT_BLOCK_BASED_CACHE_ENABLED: "true"
+        PIP_CACHE_DIR: /mnt/default/pip_cache
+        HF_HOME: /scratch/hf_cache
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p /scratch/hf_cache /mnt/default/pip_cache
+      - export PROJECT_DIR=$$AMLT_CODE_DIR
+      - export WANDB_PROJECT=cross-interest-generative-grpo-correctness
+      - python -m pip install --user --upgrade pip
+      - >-
+        python -m pip install --user
+        --index-url https://download.pytorch.org/whl/cu126
+        torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0
+      - >-
+        python -m pip install --user --no-warn-script-location
+        -r requirements-verl.lock
+      - source scripts/amlt/grpo/prepare_writable_verl.sh
+      - bash scripts/amlt/grpo/run_qwen_grpo_map_job.sh auto 5k full correctness

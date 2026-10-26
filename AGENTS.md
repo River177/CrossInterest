@@ -4,6 +4,7 @@
 
 - This is one Python 3.10+ `src/` package. `pyproject.toml` installs only the local data-building dependency (`pyarrow`); it is not a complete experiment environment.
 - Use `python -m pip install -e .` for local dataset work. GPU training/Qwen3 evaluation uses the exact pins in `requirements-training-worker.txt`; Qwen3.5 uses the separate, incompatible `requirements-qwen35-worker.txt` (Transformers 5.x rather than 4.x).
+- CIR→NI, Text125/Token125, and joint-alignment frozen workers use `requirements-cir-worker.txt`. Keep their model revision, numerical settings, and internal bundle manifests intact; the consolidated `src/` tree is for development, not a replacement for a historical frozen bundle.
 - GRPO does not use either worker file. Its AMLT jobs install CUDA PyTorch, then `requirements-verl.lock`, then source `scripts/amlt/grpo/prepare_writable_verl.sh`; that script unpacks and patches `vendor/verl-safegrpo-0.7.0.dev.zip` and requires `PROJECT_DIR`.
 
 ## Package Layout
@@ -18,6 +19,7 @@
 - Full unit suite: `pytest -q`. Pytest already adds `src` through `pyproject.toml`.
 - Focused test: `pytest -q tests/test_build_dataset.py` or select a collected node ID with `pytest -q path/to/test.py::test_name`.
 - Tests are CPU/local; Torch-dependent cases skip when Torch is unavailable. There is no configured lint, formatter, or static typecheck command.
+- Run `python scripts/check_repository.py` before committing. It checks Git candidates for large outputs/credential patterns and verifies archive hashes and AMLT code roots.
 
 ## Data Pipeline
 
@@ -29,7 +31,7 @@
 
 ## Experiment Boundaries
 
-- `configs/sft/` drives LoRA training, `configs/beam/` constrained ranking, `configs/candidate/` K=10 evaluation, and active remote jobs live directly in `configs/amlt/`; completed definitions are under `configs/amlt/archive/`. Matching active wrappers live in `scripts/amlt/`, while completed wrappers are under `scripts/archive/amlt/`.
+- `configs/sft/` drives LoRA training, `configs/beam/` constrained ranking, and `configs/candidate/` K=10 evaluation. `configs/amlt/` retains mainline launch references and templates used by preparation scripts; it does not indicate running jobs. Historical definitions are under `configs/amlt/archive/`, with archived workers under `scripts/archive/amlt/`. Use `manifests/repository_archive_20261026.json` to resolve original submitted paths; preserve paths and hashes inside frozen bundles and historical receipts.
 - Moving an archived AMLT YAML changes `$CONFIG_DIR`; keep `code.local_dir` resolving to the repository root. Treat each YAML, its wrapper, injected AMLT variables, and job-name parsing as one interface.
 - CLI path/run arguments override config values; prefer overrides for smoke runs instead of editing canonical configs.
 - Canonical configs commonly target full datasets, online W&B, Hugging Face models, and A100 jobs. For local smoke checks pass `--max-samples` or `--max-examples` and `--wandb-mode disabled`; do not run a config unchanged merely to validate code.
@@ -39,6 +41,7 @@
 
 ## Outputs And Reports
 
+- Keep large experiment artifacts on persistent remote storage. Do not download model weights, checkpoints, optimizer states, full predictions, or result archives to this Mac unless the user explicitly asks for those files. Run full artifact verification remotely and retain only compact metrics, reports, manifests, hashes, and restoration pointers locally. Deliberately pruned local artifacts must not trigger automatic re-downloads.
 - `artifacts/` contains experiment outputs, including offline W&B runs; `docs/experiments/YYYY-MM-DD/` contains the human reports and `docs/experiments/README.md` is their index.
 - `data/`, `artifacts/`, generated slide outputs, and `legacy/toys_and_games/raw_meta_Toys_and_Games/` are intentionally ignored. Record known restoration details in `manifests/`; never commit credentials, signed URLs, or large local data.
 - `legacy/toys_and_games/` is unrelated historical material. Active code, configs, and documentation must not depend on it.

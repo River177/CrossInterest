@@ -1,0 +1,24 @@
+[
+  {
+    "input": "behavior_only",
+    "supported_classes": 101,
+    "retained_label_space": 110,
+    "target_occurrences": 12164,
+    "macro_class_recall_at_10": 0.14286066538462722,
+    "macro_class_ndcg_at_10": 0.07306387333284875,
+    "min_class_support": 1,
+    "max_class_support": 1361,
+    "prediction_path": "artifacts/beam/qwen35-9b-behavior-22k/qwen35-22k-beam-20260811-v1/qwen35-beam-dev10k-qwen35-behavior-22k/beam/beam_predictions.parquet"
+  },
+  {
+    "input": "interest_only",
+    "supported_classes": 101,
+    "retained_label_space": 110,
+    "target_occurrences": 12164,
+    "macro_class_recall_at_10": 0.17743769634069967,
+    "macro_class_ndcg_at_10": 0.08893589232278354,
+    "min_class_support": 1,
+    "max_class_support": 1361,
+    "prediction_path": "artifacts/beam/qwen35-9b-interest-22k/qwen35-22k-beam-20260811-v1/qwen35-beam-dev10k-qwen35-interest-22k/beam/beam_predictions.parquet"
+  }
+]

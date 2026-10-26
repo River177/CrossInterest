@@ -1,0 +1,19 @@
+{
+  "model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "adapter_path": null,
+  "data_file": "data/training/candidate_selection_k10/behavior_only/dev_10k_expanded.parquet",
+  "output_dir": "artifacts/candidate-selection-k10/llama31_sampling_behavior",
+  "run_name": "candidate-k10-llama31-sampling-behavior",
+  "wandb_project": "cross-interest-generative-sft",
+  "wandb_mode": "disabled",
+  "batch_size": 4,
+  "checkpoint_size": 128,
+  "max_new_tokens": 32,
+  "enable_thinking": false,
+  "do_sample": true,
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "seed": 20260808
+}

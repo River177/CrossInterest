@@ -1,0 +1,204 @@
+{
+  "conditions": [
+    {
+      "condition_id": "gemini36_behavior_minimal",
+      "model": "Gemini 3.6 Flash",
+      "input": "behavior_only",
+      "thinking_reasoning": "minimal",
+      "decoding": "sampling T=0.7 top_p=0.8",
+      "metrics_path": "artifacts/candidate-selection-k10/gemini36_flash_behavior/metrics.json",
+      "source_experiment": "copilot-api",
+      "source_job": "local-full"
+    },
+    {
+      "condition_id": "gemini36_interest_minimal",
+      "model": "Gemini 3.6 Flash",
+      "input": "interest_only",
+      "thinking_reasoning": "minimal",
+      "decoding": "sampling T=0.7 top_p=0.8",
+      "metrics_path": "artifacts/candidate-selection-k10/gemini36_flash_interest/metrics.json",
+      "source_experiment": "copilot-api",
+      "source_job": "local-full"
+    },
+    {
+      "condition_id": "llama31_behavior_sampling",
+      "model": "Llama-3.1-8B-Instruct",
+      "input": "behavior_only",
+      "thinking_reasoning": "none",
+      "decoding": "sampling T=0.7 top_p=0.8 top_k=20",
+      "metrics_path": "artifacts/candidate-selection-k10/amlt/candidate-llama-sampling-v1/llama31-sampling-behavior/evaluation/metrics.json",
+      "source_experiment": "candidate-llama-sampling-v1",
+      "source_job": "llama31-sampling-behavior"
+    },
+    {
+      "condition_id": "llama31_interest_sampling",
+      "model": "Llama-3.1-8B-Instruct",
+      "input": "interest_only",
+      "thinking_reasoning": "none",
+      "decoding": "sampling T=0.7 top_p=0.8 top_k=20",
+      "metrics_path": "artifacts/candidate-selection-k10/amlt/candidate-llama-sampling-v1/llama31-sampling-interest/evaluation/metrics.json",
+      "source_experiment": "candidate-llama-sampling-v1",
+      "source_job": "llama31-sampling-interest"
+    },
+    {
+      "condition_id": "qwen3_behavior_greedy",
+      "model": "Qwen3-8B",
+      "input": "behavior_only",
+      "thinking_reasoning": "disabled",
+      "decoding": "greedy",
+      "metrics_path": "artifacts/candidate-selection-k10/amlt/candidate-k10-qwen-base-v2/candidate-base-behavior/evaluation/metrics.json",
+      "source_experiment": "candidate-k10-qwen-base-v2",
+      "source_job": "candidate-base-behavior"
+    },
+    {
+      "condition_id": "qwen3_interest_greedy",
+      "model": "Qwen3-8B",
+      "input": "interest_only",
+      "thinking_reasoning": "disabled",
+      "decoding": "greedy",
+      "metrics_path": "artifacts/candidate-selection-k10/amlt/candidate-k10-qwen-base-v2/candidate-base-interest/evaluation/metrics.json",
+      "source_experiment": "candidate-k10-qwen-base-v2",
+      "source_job": "candidate-base-interest"
+    },
+    {
+      "condition_id": "qwen3_behavior_sampling",
+      "model": "Qwen3-8B",
+      "input": "behavior_only",
+      "thinking_reasoning": "disabled",
+      "decoding": "sampling T=0.7 top_p=0.8 top_k=20",
+      "metrics_path": "artifacts/candidate-selection-k10/amlt/candidate-qwen3-sampling-behavior-v2/qwen3-sampling-behavior/evaluation/metrics.json",
+      "source_experiment": "candidate-qwen3-sampling-behavior-v2",
+      "source_job": "qwen3-sampling-behavior"
+    },
+    {
+      "condition_id": "qwen3_interest_sampling",
+      "model": "Qwen3-8B",
+      "input": "interest_only",
+      "thinking_reasoning": "disabled",
+      "decoding": "sampling T=0.7 top_p=0.8 top_k=20",
+      "metrics_path": "artifacts/candidate-selection-k10/amlt/candidate-qwen-sampling-v1/qwen3-sampling-interest/evaluation/metrics.json",
+      "source_experiment": "candidate-qwen-sampling-v1",
+      "source_job": "qwen3-sampling-interest"
+    },
+    {
+      "condition_id": "qwen35_behavior_greedy",
+      "model": "Qwen3.5-9B",
+      "input": "behavior_only",
+      "thinking_reasoning": "disabled",
+      "decoding": "greedy",
+      "metrics_path": "artifacts/candidate-selection-k10/amlt/candidate-qwen35-base-v1/qwen35-base-behavior/evaluation/metrics.json",
+      "source_experiment": "candidate-qwen35-base-v1",
+      "source_job": "qwen35-base-behavior"
+    },
+    {
+      "condition_id": "qwen35_interest_greedy",
+      "model": "Qwen3.5-9B",
+      "input": "interest_only",
+      "thinking_reasoning": "disabled",
+      "decoding": "greedy",
+      "metrics_path": "artifacts/candidate-selection-k10/amlt/candidate-qwen35-base-v1/qwen35-base-interest/evaluation/metrics.json",
+      "source_experiment": "candidate-qwen35-base-v1",
+      "source_job": "qwen35-base-interest"
+    },
+    {
+      "condition_id": "qwen35_behavior_official_nonthinking",
+      "model": "Qwen3.5-9B",
+      "input": "behavior_only",
+      "thinking_reasoning": "disabled",
+      "decoding": "official sampling T=0.7 top_p=0.8 top_k=20 presence=1.5",
+      "metrics_path": "artifacts/candidate-selection-k10/amlt/candidate-qwen35-nonthinking-v1/qwen35-nonthinking-behavior/evaluation/metrics.json",
+      "source_experiment": "candidate-qwen35-nonthinking-v1",
+      "source_job": "qwen35-nonthinking-behavior"
+    },
+    {
+      "condition_id": "qwen35_interest_official_nonthinking",
+      "model": "Qwen3.5-9B",
+      "input": "interest_only",
+      "thinking_reasoning": "disabled",
+      "decoding": "official sampling T=0.7 top_p=0.8 top_k=20 presence=1.5",
+      "metrics_path": "artifacts/candidate-selection-k10/amlt/candidate-qwen35-nonthinking-v1/qwen35-nonthinking-interest/evaluation/metrics.json",
+      "source_experiment": "candidate-qwen35-nonthinking-v1",
+      "source_job": "qwen35-nonthinking-interest"
+    },
+    {
+      "condition_id": "gpt5_behavior_none",
+      "model": "GPT-5",
+      "input": "behavior_only",
+      "thinking_reasoning": "none",
+      "decoding": "single generation",
+      "metrics_path": "artifacts/candidate-selection-k10/gpt5_none_behavior/metrics.json",
+      "source_experiment": "TRAPI redmond/interactive",
+      "source_job": "gpt-5_2025-08-07"
+    },
+    {
+      "condition_id": "gpt5_interest_none",
+      "model": "GPT-5",
+      "input": "interest_only",
+      "thinking_reasoning": "none",
+      "decoding": "single generation",
+      "metrics_path": "artifacts/candidate-selection-k10/gpt5_none_interest/metrics.json",
+      "source_experiment": "TRAPI redmond/interactive",
+      "source_job": "gpt-5_2025-08-07"
+    },
+    {
+      "condition_id": "gpt5_behavior_medium",
+      "model": "GPT-5",
+      "input": "behavior_only",
+      "thinking_reasoning": "medium",
+      "decoding": "single generation",
+      "metrics_path": "artifacts/candidate-selection-k10/gpt5_behavior/full/metrics.json",
+      "source_experiment": "TRAPI redmond/interactive",
+      "source_job": "gpt-5_2025-08-07"
+    },
+    {
+      "condition_id": "gpt5_interest_medium",
+      "model": "GPT-5",
+      "input": "interest_only",
+      "thinking_reasoning": "medium",
+      "decoding": "single generation",
+      "metrics_path": "artifacts/candidate-selection-k10/gpt5_interest/full/metrics.json",
+      "source_experiment": "TRAPI redmond/interactive",
+      "source_job": "gpt-5_2025-08-07"
+    },
+    {
+      "condition_id": "gpt56_behavior_none",
+      "model": "GPT-5.6 Sol",
+      "input": "behavior_only",
+      "thinking_reasoning": "none",
+      "decoding": "single generation",
+      "metrics_path": "artifacts/candidate-selection-k10/gpt56_none_behavior/metrics.json",
+      "source_experiment": "TRAPI redmond/interactive",
+      "source_job": "gpt-5.6-sol_2026-07-09"
+    },
+    {
+      "condition_id": "gpt56_interest_none",
+      "model": "GPT-5.6 Sol",
+      "input": "interest_only",
+      "thinking_reasoning": "none",
+      "decoding": "single generation",
+      "metrics_path": "artifacts/candidate-selection-k10/gpt56_none_interest/metrics.json",
+      "source_experiment": "TRAPI redmond/interactive",
+      "source_job": "gpt-5.6-sol_2026-07-09"
+    },
+    {
+      "condition_id": "gpt56_behavior_medium",
+      "model": "GPT-5.6 Sol",
+      "input": "behavior_only",
+      "thinking_reasoning": "medium",
+      "decoding": "single generation",
+      "metrics_path": "artifacts/candidate-selection-k10/gpt56_behavior/full/metrics.json",
+      "source_experiment": "TRAPI redmond/interactive",
+      "source_job": "gpt-5.6-sol_2026-07-09"
+    },
+    {
+      "condition_id": "gpt56_interest_medium",
+      "model": "GPT-5.6 Sol",
+      "input": "interest_only",
+      "thinking_reasoning": "medium",
+      "decoding": "single generation",
+      "metrics_path": "artifacts/candidate-selection-k10/gpt56_interest/full/metrics.json",
+      "source_experiment": "TRAPI redmond/interactive",
+      "source_job": "gpt-5.6-sol_2026-07-09"
+    }
+  ]
+}

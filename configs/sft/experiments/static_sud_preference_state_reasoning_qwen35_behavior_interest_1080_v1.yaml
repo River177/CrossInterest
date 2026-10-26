@@ -1,0 +1,35 @@
+model_name: Qwen/Qwen3.5-9B
+model_revision: c202236235762e1c871ad0ccb60c8ee5ba337b9a
+adapter_path: /mnt/output/projects/sft4safety/amlt-results/7212029499.70786-e4538499-b9a2/sft/final_adapter
+train_file: data/training/preference_state_reasoning_sft_gpt55_qwen35_behavior_interest_1080_v1/train.parquet
+semantic_id_token_mapping_file: data/training/sft_static_user_disjoint_semantic_id_token_200_h50_behavior_interest_scaling_v1/interest_token_mapping.parquet
+semantic_id_token_count: 108
+semantic_id_loss_scope: full_vocabulary
+semantic_reload_reference_samples: 4
+output_dir: artifacts/preference-state-reasoning-sft/qwen35-behavior-interest-1080/sft
+run_name: preference-state-reasoning-qwen35-behavior-interest-1080-seed42
+wandb_mode: disabled
+enable_thinking: true
+max_seq_length: 2304
+epochs: 2
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 0.00001
+weight_decay: 0.01
+warmup_ratio: 0.03
+lr_scheduler_type: cosine
+max_grad_norm: 1.0
+gradient_checkpointing_use_reentrant: false
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules: all-linear
+forbidden_trainable_module_substrings:
+  - vision
+  - visual
+optim: adamw_torch_fused
+logging_steps: 1
+save_total_limit: 2
+save_strategy: epoch
+dataloader_num_workers: 2
+seed: 42

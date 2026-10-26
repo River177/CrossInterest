@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-26",
+  "scope": "local source consolidation and archival, no GPU training or remote access verification",
+  "python": "3.13.12",
+  "test_environment": ".venv system-site-packages plus isolated peft==0.18.0",
+  "full_suite": {
+    "passed": 1628,
+    "skipped": 8,
+    "seconds": 61.89
+  },
+  "source_only_checkout_suite": {
+    "passed": 1623,
+    "skipped": 13,
+    "seconds": 53.0,
+    "ignored_experiment_directories_included": false
+  },
+  "final_package_and_mainline_focused_tests": 29,
+  "final_artifact_independence_focused_tests": 15,
+  "archived_amlt_configs": 165,
+  "archived_workers": 45,
+  "retained_amlt_configs": 25,
+  "retained_workers": 30,
+  "python_syntax": {
+    "src": 227,
+    "scripts": 80,
+    "runtime_overrides": 2
+  },
+  "shell_syntax": 97,
+  "config_parsing": {
+    "json": 130,
+    "yaml": 285
+  },
+  "handoff_frozen_file_hashes_verified": 1843,
+  "handoff_archive_sha256": "47167a27719bd6c1ef6284170d44f2d192d49c50ce78c4c32825d70e5322a075",
+  "missing_historical_code_roots": [
+    "artifacts/rho-student-20260916/bundle-full-v1"
+  ],
+  "local_backup": "artifacts/repository-integration-20261026/before-source.tar.gz",
+  "test_logs": "artifacts/repository-integration-20261026/"
+}

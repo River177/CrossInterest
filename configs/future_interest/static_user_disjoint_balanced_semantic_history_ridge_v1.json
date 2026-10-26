@@ -1,0 +1,17 @@
+{
+  "rule_version": "static-user-disjoint-balanced-semantic-history-ridge-v1",
+  "dataset_dir": "data/processed/new_interest_static_user_disjoint_v1",
+  "semantic_benchmark_dir": "data/processed/new_interest_static_user_disjoint_semantic_users_v1",
+  "embedding_dir": "artifacts/future-novel-interest/static-user-disjoint-semantic-v1/embeddings",
+  "output_dir": "artifacts/future-novel-interest/static-user-disjoint-balanced-semantic-history-ridge-v1",
+  "seed": 20260815,
+  "k": 10,
+  "ridge_alphas": [0.01, 0.03, 0.1, 0.3, 1.0, 3.0, 10.0, 30.0, 100.0, 300.0, 1000.0],
+  "class_balance_betas": [0.0, 0.25, 0.5, 0.75, 1.0],
+  "selection": {
+    "best_recall_tolerance_absolute": 0.002,
+    "constraint": "Tune Interest-Macro Recall@10 must be at least Global and within 0.2 percentage points of the best grid Recall@10",
+    "objective": "maximize Tune Interest-Macro NDCG@10 on the Pareto frontier",
+    "tie_break": "higher Recall@10, then smaller beta, then smaller alpha"
+  }
+}

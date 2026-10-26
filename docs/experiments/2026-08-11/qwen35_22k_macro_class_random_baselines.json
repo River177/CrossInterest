@@ -1,0 +1,20 @@
+{
+  "behavior_only": {
+    "supported_classes": 101,
+    "macro_class_random_excluding_history_recall_at_10": 0.10373994293357501,
+    "macro_class_random_excluding_history_ndcg_at_10": 0.04713485864485969,
+    "macro_class_random_all_110_recall_at_10": 0.09090909090909091,
+    "macro_class_random_all_110_ndcg_at_10": 0.04130508489171224,
+    "impression_mean_candidate_space": 98.8626,
+    "macro_class_mean_inverse_candidate_space": 0.0103739942933575
+  },
+  "interest_only": {
+    "supported_classes": 101,
+    "macro_class_random_excluding_history_recall_at_10": 0.10373994293357501,
+    "macro_class_random_excluding_history_ndcg_at_10": 0.04713485864485969,
+    "macro_class_random_all_110_recall_at_10": 0.09090909090909091,
+    "macro_class_random_all_110_ndcg_at_10": 0.04130508489171224,
+    "impression_mean_candidate_space": 98.8626,
+    "macro_class_mean_inverse_candidate_space": 0.0103739942933575
+  }
+}

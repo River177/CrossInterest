@@ -1,0 +1,53 @@
+description: Wang et al. Stage-A MIND balanced-transition single-A100 smoke for Qwen3.5-9B and Qwen2-1.5B with fresh adapter reload, free generation, and exhaustive label ranking
+
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+    - python -c "import torch; print(torch.__version__, torch.version.cuda)"
+    - nvidia-smi
+
+code:
+  local_dir: $CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_0902_v1
+
+target:
+  service: singularity
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+
+jobs:
+  - name: qwen35-mind-balanced-smoke
+    sku: 80G1-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-wang-stage-a-qwen35
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh &&
+        bash scripts/amlt/sft/run_wang_stage_a.sh qwen35 smoke mind balanced
+
+  - name: qwen2-mind-balanced-smoke
+    sku: 80G1-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-wang-stage-a-qwen2
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_training_worker_deps.sh &&
+        bash scripts/amlt/sft/run_wang_stage_a.sh qwen2 smoke mind balanced

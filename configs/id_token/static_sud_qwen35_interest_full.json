@@ -1,0 +1,14 @@
+{
+  "model_name": "Qwen/Qwen3.5-9B",
+  "adapter_path": "artifacts/static-sud-semantic-id-token/qwen35-interest/sft/final_adapter",
+  "eval_file": "data/training/sft_static_user_disjoint_semantic_id_token_200_h50_v1/eval/interest_only/dev_full_grouped.parquet",
+  "interest_token_mapping_file": "data/training/sft_static_user_disjoint_semantic_id_token_200_h50_v1/interest_token_mapping.parquet",
+  "semantic_id_token_count": 108,
+  "output_dir": "artifacts/static-sud-semantic-id-token/qwen35-interest/eval",
+  "run_name": "static-sud-semantic-id-qwen35-interest-21600-seed42-full",
+  "enable_thinking": false,
+  "batch_size": 8,
+  "checkpoint_size": 256,
+  "top_k": 20,
+  "cutoffs": [1, 5, 10, 20]
+}

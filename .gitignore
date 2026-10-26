@@ -1,6 +1,11 @@
 # Local datasets and generated experiment outputs
 /data/
 /artifacts/
+/amlt_inputs/
+/outputs/
+/tmp/
+/.codex_tmp/
+/.vscode/
 legacy/**/raw_*/
 
 # Generated presentation files
@@ -22,6 +27,7 @@ venv/
 .env
 .env.*
 !.env.example
+.amltconfig
 
 # OS and editor state
 .DS_Store

@@ -1,0 +1,81 @@
+{
+  "status": "data_ready_independently_audited",
+  "scope": "data_only",
+  "training_submitted": false,
+  "parent_manifest": "manifests/mind_cir_ni_direct_20260929_v1.json",
+  "dataset_root": "data/training/mind_cir_ni_direct_repeated_20260929_v1",
+  "report": "docs/experiments/2026-09-29/mind_cir_ni_direct_repeated_data.md",
+  "paired_rows": 4870,
+  "paired_users": 4870,
+  "selection_rule": "Original selected CIR target has >=2 category occurrences in H50; synchronize original NI subset by source ID.",
+  "reselect_target": false,
+  "deduplicate_news_for_frequency": false,
+  "same_template": "original NI",
+  "standalone_training": true,
+  "following_NI_finetuning": false,
+  "training_classes": {
+    "cir_as_ni": 98,
+    "original_ni_paired": 108
+  },
+  "evaluation_candidates": 108,
+  "full_dev_unchanged": true,
+  "singleton_pairs_removed": 12401,
+  "pairs_with_only_one_distinct_target_news_id": 117,
+  "files": {
+    "data/training/mind_cir_ni_direct_repeated_20260929_v1/dev_full_grouped.parquet": "c05b20033ce0d1a0c2d4b7bb97ca0cd6b7cffb7f198a7265cce9e54046b665fd",
+    "data/training/mind_cir_ni_direct_repeated_20260929_v1/metadata.json": "9bc1354b9c4f5475cb4a0905e1d5c57a5bd51f9064db13b86feb1d531e92f60b",
+    "data/training/mind_cir_ni_direct_repeated_20260929_v1/selection_manifest.parquet": "1ba77958c2c5be9c2029c0c865492326bf8c15e6f7f313bc37f5ba305f50c0ad",
+    "data/training/mind_cir_ni_direct_repeated_20260929_v1/statistics.json": "821a34f77029aa7a03ed504a20033d8a87a858841c351553e5798255de94ee53",
+    "data/training/mind_cir_ni_direct_repeated_20260929_v1/pairs.parquet": "bc34f3d80faa8a1951cb6570323f06fe92d8c64fa5d50c3dea36fcb58026442c",
+    "data/training/mind_cir_ni_direct_repeated_20260929_v1/cir_as_ni.parquet": "19ea7a6a24d9f599ace2bc36f9a678e4201bd224c7fe60a33d0c37d58701659c",
+    "data/training/mind_cir_ni_direct_repeated_20260929_v1/original_ni_paired.parquet": "0a506a0b98427f7f9065945c29041ee57760321866396d408502d626f3c34ead",
+    "data/training/mind_cir_ni_direct_repeated_20260929_v1/interest_token_mapping.parquet": "45397451ac2ae2e64d8156b2b47be3f454cc309a8d30a83bc23c2d3267653a0a",
+    "artifacts/mind-cir-ni-direct-repeated-20260929/independent_readback.json": "909fade7dfc7d6e7e68c945088a3b2fc6e7473ad30a172b08a0a51698678dcb7",
+    "artifacts/mind-cir-ni-direct-repeated-20260929/filter_readback.json": "cc107fe09e33c948261a80a67a60484886362cfd6fceb5439e6c789073d48682",
+    "artifacts/mind-cir-ni-direct-repeated-20260929/token_audit.json": "d38b52dccf894f9604ff68e3a952b45e1889c0bad192581aedadcf420efe22ec",
+    "artifacts/mind-cir-ni-direct-repeated-20260929/audit_data.py": "e3b7ae4f0565b9e691e2044093ee9b9f6353ffc66dfe195eb4b6a422be623967"
+  },
+  "builder_sha256": "3f5af75e013b74d7089f951416821808f9d48968ebd08be429dd54c7ba41c143",
+  "tests": "23 passed",
+  "token_audit": {
+    "status": "passed",
+    "tokenizer_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "tokenizer_files": {
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c",
+      "chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    },
+    "enable_thinking": false,
+    "max_seq_length": 2048,
+    "truncation": false,
+    "arms": {
+      "cir_as_ni": {
+        "rows": 4870,
+        "sum_input_tokens": 3588586,
+        "mean_input_tokens": 736.8759753593429,
+        "max_tokens": 1525,
+        "min_tokens": 185,
+        "supervised_tokens_counts": {
+          "3": 4870
+        },
+        "over_2048": 0,
+        "parquet_sha256": "19ea7a6a24d9f599ace2bc36f9a678e4201bd224c7fe60a33d0c37d58701659c"
+      },
+      "original_ni_paired": {
+        "rows": 4870,
+        "sum_input_tokens": 4000605,
+        "mean_input_tokens": 821.4794661190965,
+        "max_tokens": 1564,
+        "min_tokens": 237,
+        "supervised_tokens_counts": {
+          "3": 4870
+        },
+        "over_2048": 0,
+        "parquet_sha256": "0a506a0b98427f7f9065945c29041ee57760321866396d408502d626f3c34ead"
+      }
+    },
+    "token_ratio_cir_to_original_ni": 0.8970108271123992
+  }
+}

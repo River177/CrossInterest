@@ -1,0 +1,7 @@
+scope,task,mode,samples,set_accuracy_at_1,strict_set_accuracy_at_1,strict_format_rate,valid_label_rate,novelty_compliance_rate,truncation_rate,mean_response_tokens
+dev128,behavior,cot,128,0.015625,0.015625,0.9921875,0.859375,0.703125,0.0078125,74.0390625
+dev128,behavior,no_cot,128,0.0234375,0.0234375,1.0,1.0,0.78125,0.0,6.9765625
+dev128,interest,cot,128,0.0078125,0.0078125,1.0,0.96875,0.953125,0.0,87.5859375
+dev128,interest,no_cot,128,0.046875,0.046875,1.0,1.0,1.0,0.0,6.96875
+dev10k,interest,cot,10000,0.0206,0.0206,0.9981,0.9711,0.9497,0.0014,88.6452
+dev10k,interest,no_cot,10000,0.0339,0.0339,1.0,0.9996,0.9992,0.0,6.855

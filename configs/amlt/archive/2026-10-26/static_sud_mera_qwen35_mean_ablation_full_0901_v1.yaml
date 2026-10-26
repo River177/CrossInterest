@@ -1,0 +1,133 @@
+description: Seven remaining Qwen3.5 pure-mean MeRA ablations across SID-to-SID and Behavior+Interest-to-SID, 21,600 rows, three epochs, four GPUs per job, and full 31,392-impression Dev evaluation
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+    - python -c "import torch; print(torch.__version__, torch.version.cuda)"
+    - nvidia-smi
+code:
+  local_dir: $CONFIG_DIR/../../../../amlt_inputs/mera_gnip_qwen35_mean_ablation_0901_v1
+target:
+  service: sing
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+jobs:
+  - name: qwen35-mera-sid-mean-vanilla-full
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35-semantic-id
+        MERA_GNIP_ABLATION_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh && bash scripts/amlt/sft/run_mera_gnip_ablation.sh full sid vanilla
+  - name: qwen35-mera-sid-mean-structure-full
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35-semantic-id
+        MERA_GNIP_ABLATION_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh && bash scripts/amlt/sft/run_mera_gnip_ablation.sh full sid structure
+  - name: qwen35-mera-sid-mean-collaborative-full
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35-semantic-id
+        MERA_GNIP_ABLATION_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh && bash scripts/amlt/sft/run_mera_gnip_ablation.sh full sid collaborative
+  - name: qwen35-mera-bi-mean-vanilla-full
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35-semantic-id
+        MERA_GNIP_ABLATION_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh && bash scripts/amlt/sft/run_mera_gnip_ablation.sh full behavior-interest vanilla
+  - name: qwen35-mera-bi-mean-structure-full
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35-semantic-id
+        MERA_GNIP_ABLATION_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh && bash scripts/amlt/sft/run_mera_gnip_ablation.sh full behavior-interest structure
+  - name: qwen35-mera-bi-mean-collaborative-full
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35-semantic-id
+        MERA_GNIP_ABLATION_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh && bash scripts/amlt/sft/run_mera_gnip_ablation.sh full behavior-interest collaborative
+  - name: qwen35-mera-bi-mean-full-full
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35-semantic-id
+        MERA_GNIP_ABLATION_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh && bash scripts/amlt/sft/run_mera_gnip_ablation.sh full behavior-interest full

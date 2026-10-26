@@ -1,0 +1,30 @@
+description: CPU-only Text125/Token125 full checkpoint hashes, independently recomputed
+  Full Dev metrics and paired-user comparison; no model training.
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+target:
+  service: singularity
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../artifacts/mind-history-token-20260930/analysis-bundle-v1
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+jobs:
+- name: history-token-paired-analysis
+  sku: 5C3
+  sla_tier: Basic
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - export CUDA_VISIBLE_DEVICES="" OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+  - python -m pip install --user --no-warn-script-location numpy==2.2.6 pyarrow==20.0.0
+  - export PYTHONPATH=$$AMLT_CODE_DIR/src$${PYTHONPATH:+:$$PYTHONPATH}
+  - python run_analysis.py

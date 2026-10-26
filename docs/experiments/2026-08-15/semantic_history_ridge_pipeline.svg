@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="950" viewBox="0 0 1600 950" role="img" aria-labelledby="title desc">
+  <title id="title">Semantic History Ridge pipeline</title>
+  <desc id="desc">Static Train learns a multi-output ridge mapping from pooled History-title embeddings to centered new-interest labels. User-disjoint Dev scores ten candidates with the learned semantic residual and selects the maximum.</desc>
+  <defs>
+    <marker id="arrow-blue" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#4C78A8"/></marker>
+    <marker id="arrow-green" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#4F9D69"/></marker>
+    <marker id="arrow-purple" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#7A5AA6"/></marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; fill: #172B4D; }
+      .lane-title { font-size: 18px; font-weight: 600; }
+      .node-title { font-size: 16px; font-weight: 600; }
+      .body { font-size: 14px; }
+      .small { font-size: 13px; fill: #42526E; }
+      .edge { fill: none; stroke-width: 2.2; }
+    </style>
+  </defs>
+  <rect width="1600" height="950" fill="#FFFFFF"/>
+  <text x="800" y="38" text-anchor="middle" font-size="25" font-weight="600">Semantic History Ridge — Static User-Disjoint K=10 Candidate Select</text>
+
+  <rect x="35" y="65" width="1530" height="390" rx="14" fill="#F4F8FF" stroke="#4C78A8" stroke-width="2"/>
+  <text x="60" y="98" class="lane-title" fill="#25476A">A. Static Train：学习 History 语义与新兴趣之间的线性关联</text>
+
+  <g transform="translate(65 135)">
+    <rect width="205" height="105" rx="12" fill="#EAF2FF" stroke="#4C78A8" stroke-width="2"/>
+    <text x="102.5" y="28" text-anchor="middle" class="node-title">完整原始 Behavior History</text>
+    <text x="102.5" y="54" text-anchor="middle" class="body">新闻标题序列</text>
+    <text x="102.5" y="82" text-anchor="middle" class="small">不追加 impression · 不截断</text>
+  </g>
+  <g transform="translate(310 135)">
+    <rect width="205" height="105" rx="12" fill="#EAF2FF" stroke="#4C78A8" stroke-width="2"/>
+    <text x="102.5" y="26" text-anchor="middle" class="node-title">冻结标题编码器</text>
+    <text x="102.5" y="52" text-anchor="middle" class="body">all-MiniLM-L6-v2 · 384D</text>
+    <text x="102.5" y="78" text-anchor="middle" class="small">逐标题 L2 normalize</text>
+  </g>
+  <g transform="translate(555 135)">
+    <rect width="205" height="105" rx="12" fill="#EAF2FF" stroke="#4C78A8" stroke-width="2"/>
+    <text x="102.5" y="30" text-anchor="middle" class="node-title">用户级聚合</text>
+    <text x="102.5" y="56" text-anchor="middle" class="body">标题向量 mean pooling</text>
+    <text x="102.5" y="80" text-anchor="middle" class="small">再次 L2 normalize</text>
+  </g>
+  <g transform="translate(805 145)">
+    <ellipse cx="85" cy="42" rx="85" ry="42" fill="#DCE9FA" stroke="#4C78A8" stroke-width="2"/>
+    <text x="85" y="37" text-anchor="middle" class="node-title">History embedding</text>
+    <text x="85" y="61" text-anchor="middle" class="body">xᵤ ∈ ℝ³⁸⁴</text>
+  </g>
+
+  <g transform="translate(555 285)">
+    <rect width="205" height="78" rx="12" fill="#FFF4E5" stroke="#E6953B" stroke-width="2"/>
+    <text x="102.5" y="29" text-anchor="middle" class="node-title">每用户唯一 Train target</text>
+    <text x="102.5" y="55" text-anchor="middle" class="body">新兴趣类别</text>
+  </g>
+  <g transform="translate(805 287)">
+    <ellipse cx="85" cy="38" rx="85" ry="38" fill="#FFE9CC" stroke="#E6953B" stroke-width="2"/>
+    <text x="85" y="34" text-anchor="middle" class="node-title">124 维 one-hot</text>
+    <text x="85" y="57" text-anchor="middle" class="body">zᵤ</text>
+  </g>
+
+  <g transform="translate(1015 205)">
+    <rect width="150" height="105" rx="12" fill="#F2EDFA" stroke="#7A5AA6" stroke-width="2"/>
+    <text x="75" y="27" text-anchor="middle" class="node-title">中心化</text>
+    <text x="75" y="56" text-anchor="middle" class="body">xᵤ − x̄</text>
+    <text x="75" y="82" text-anchor="middle" class="body">zᵤ − z̄</text>
+  </g>
+  <g transform="translate(1210 182)">
+    <rect width="270" height="145" rx="12" fill="#F2EDFA" stroke="#7A5AA6" stroke-width="2"/>
+    <text x="135" y="29" text-anchor="middle" class="node-title">多输出 Ridge 回归</text>
+    <text x="135" y="66" text-anchor="middle" class="body">W = (X̃ᵀX̃ + αI)⁻¹X̃ᵀZ̃</text>
+    <text x="135" y="101" text-anchor="middle" class="body">α = 10</text>
+    <text x="135" y="126" text-anchor="middle" class="small">学习 History 引起的类别偏移</text>
+  </g>
+  <g transform="translate(1250 350)">
+    <rect width="190" height="62" rx="12" fill="#E8F5EE" stroke="#4F9D69" stroke-width="2"/>
+    <text x="95" y="25" text-anchor="middle" class="node-title">冻结模型参数</text>
+    <text x="95" y="47" text-anchor="middle" class="body">W 与 Train 均值 x̄</text>
+  </g>
+  <rect x="65" y="386" width="1090" height="48" rx="9" fill="#FFFFFF" stroke="#9AA9BC" stroke-dasharray="6 5"/>
+  <text x="610" y="406" text-anchor="middle" class="small">Train-only：469,643 fit · 58,518 tune · 59,026 internal holdout；以 Interest Macro 选择 α</text>
+  <text x="610" y="424" text-anchor="middle" class="small">参数确定后，用全部 587,187 个 Static Train 用户重新拟合</text>
+
+  <path d="M270 187 H310" class="edge" stroke="#4C78A8" marker-end="url(#arrow-blue)"/>
+  <path d="M515 187 H555" class="edge" stroke="#4C78A8" marker-end="url(#arrow-blue)"/>
+  <path d="M760 187 H805" class="edge" stroke="#4C78A8" marker-end="url(#arrow-blue)"/>
+  <path d="M760 324 H805" class="edge" stroke="#E6953B" marker-end="url(#arrow-purple)"/>
+  <path d="M975 187 H995 V235 H1015" class="edge" stroke="#7A5AA6" marker-end="url(#arrow-purple)"/>
+  <path d="M975 325 H995 V280 H1015" class="edge" stroke="#7A5AA6" marker-end="url(#arrow-purple)"/>
+  <path d="M1165 257 H1210" class="edge" stroke="#7A5AA6" marker-end="url(#arrow-purple)"/>
+  <path d="M1345 327 V350" class="edge" stroke="#4F9D69" marker-end="url(#arrow-green)"/>
+
+  <rect x="35" y="485" width="1530" height="420" rx="14" fill="#F4FBF7" stroke="#4F9D69" stroke-width="2"/>
+  <text x="60" y="518" class="lane-title" fill="#254E34">B. User-disjoint Dev：在同一组 10 个候选中选择 1 个兴趣</text>
+  <g transform="translate(65 565)">
+    <rect width="195" height="85" rx="12" fill="#E8F5EE" stroke="#4F9D69" stroke-width="2"/>
+    <text x="97.5" y="31" text-anchor="middle" class="node-title">未见 Dev 用户</text>
+    <text x="97.5" y="57" text-anchor="middle" class="body">完整原始 History 标题</text>
+  </g>
+  <g transform="translate(300 565)">
+    <rect width="195" height="85" rx="12" fill="#E8F5EE" stroke="#4F9D69" stroke-width="2"/>
+    <text x="97.5" y="31" text-anchor="middle" class="node-title">同一个冻结编码器</text>
+    <text x="97.5" y="57" text-anchor="middle" class="body">+ 同一个 mean pooling</text>
+  </g>
+  <g transform="translate(535 570)">
+    <ellipse cx="82.5" cy="38" rx="82.5" ry="38" fill="#D9EFDF" stroke="#4F9D69" stroke-width="2"/>
+    <text x="82.5" y="34" text-anchor="middle" class="node-title">Dev embedding</text>
+    <text x="82.5" y="57" text-anchor="middle" class="body">xᵤ ∈ ℝ³⁸⁴</text>
+  </g>
+  <g transform="translate(535 720)">
+    <rect width="205" height="85" rx="12" fill="#FFF4E5" stroke="#E6953B" stroke-width="2"/>
+    <text x="102.5" y="31" text-anchor="middle" class="node-title">K=10 Candidate Set</text>
+    <text x="102.5" y="58" text-anchor="middle" class="body">1 个正确兴趣 + 9 个负例</text>
+  </g>
+  <g transform="translate(800 615)">
+    <rect width="285" height="150" rx="12" fill="#F2EDFA" stroke="#7A5AA6" stroke-width="2"/>
+    <text x="142.5" y="31" text-anchor="middle" class="node-title">逐候选计算 History 语义分数</text>
+    <text x="142.5" y="72" text-anchor="middle" class="body">r(u,y) = (xᵤ − x̄)ᵀWᵧ</text>
+    <text x="142.5" y="108" text-anchor="middle" class="body">只比较 y ∈ Cᵤ</text>
+    <text x="142.5" y="133" text-anchor="middle" class="small">不加入 Global Popularity</text>
+  </g>
+  <g transform="translate(1140 630)">
+    <rect width="205" height="120" rx="12" fill="#EAF2FF" stroke="#4C78A8" stroke-width="2"/>
+    <text x="102.5" y="31" text-anchor="middle" class="node-title">Candidate Select</text>
+    <text x="102.5" y="70" text-anchor="middle" class="body">ŷᵤ = argmax r(u,y)</text>
+    <text x="102.5" y="94" text-anchor="middle" class="small">y ∈ Cᵤ</text>
+  </g>
+  <g transform="translate(1390 640)">
+    <rect width="145" height="100" rx="12" fill="#D9EFDF" stroke="#4F9D69" stroke-width="2"/>
+    <text x="72.5" y="28" text-anchor="middle" class="node-title">输出一个兴趣</text>
+    <text x="72.5" y="56" text-anchor="middle" class="body">New topic:</text>
+    <text x="72.5" y="78" text-anchor="middle" class="small">&lt;candidate&gt;</text>
+  </g>
+  <rect x="800" y="820" width="735" height="62" rx="9" fill="#FFFFFF" stroke="#9AA9BC" stroke-dasharray="6 5"/>
+  <text x="1167.5" y="844" text-anchor="middle" class="body">Uniform Dev：Interest Macro Accuracy 18.19% · Micro Accuracy 35.28%</text>
+  <text x="1167.5" y="866" text-anchor="middle" class="small">监督式线性关联；不是开放式生成，也不等同于纯个性化因果效应</text>
+
+  <path d="M260 607 H300" class="edge" stroke="#4F9D69" marker-end="url(#arrow-green)"/>
+  <path d="M495 607 H535" class="edge" stroke="#4F9D69" marker-end="url(#arrow-green)"/>
+  <path d="M700 607 H760 V660 H800" class="edge" stroke="#7A5AA6" marker-end="url(#arrow-purple)"/>
+  <path d="M740 762 H770 V720 H800" class="edge" stroke="#E6953B" marker-end="url(#arrow-purple)"/>
+  <path d="M1085 690 H1140" class="edge" stroke="#4C78A8" marker-end="url(#arrow-blue)"/>
+  <path d="M1345 690 H1390" class="edge" stroke="#4F9D69" marker-end="url(#arrow-green)"/>
+  <path d="M1345 412 V475 H1090 V615" class="edge" stroke="#4F9D69" stroke-dasharray="7 6" marker-end="url(#arrow-green)"/>
+  <text x="1220" y="474" class="small" fill="#254E34">复用冻结 W 与 x̄</text>
+</svg>

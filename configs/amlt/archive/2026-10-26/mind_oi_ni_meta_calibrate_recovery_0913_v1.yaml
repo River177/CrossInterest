@@ -1,0 +1,38 @@
+description: 'Complete the two remaining original calibration candidates independently after the sequential job was evicted and canceled. Preserve alpha-0 and the unchanged accepted single-GPU numerical core. Each candidate uses the original initialization, Train-only validation, and 27 updates; separate dispatcher provenance binds this orchestration change.'
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+  - nvidia-smi
+target:
+  service: singularity
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../../../artifacts/mind-oi-ni-meta-20260913/bundle-calibration-recovery-v1
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+jobs:
+- name: qwen35-2b-exact-meta-calibrate-alpha1
+  sku: 80G1-A100
+  sla_tier: Standard
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash scripts/amlt/sft/run_oi_ni_meta_calibration_arm.sh 1
+- name: qwen35-2b-exact-meta-calibrate-alpha2
+  sku: 80G1-A100
+  sla_tier: Standard
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash scripts/amlt/sft/run_oi_ni_meta_calibration_arm.sh 2

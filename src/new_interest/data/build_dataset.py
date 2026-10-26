@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
 import hashlib
 import json
 import logging
@@ -11,16 +10,19 @@ from collections import Counter
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterator
 
 import pyarrow as pa
 import pyarrow.parquet as pq
 
+from new_interest.data.mind_io import (
+    NewsCatalog,
+    iter_behavior_events,
+    load_news_catalog,
+)
 from new_interest.infrastructure.paths import portable_path
 
 LOGGER = logging.getLogger(__name__)
 
-BEHAVIOR_TIME_FORMAT = "%m/%d/%Y %I:%M:%S %p"
 RULE_VERSION = "clicked-interest-absent-from-history-v1"
 OUTPUT_FILES = (
     "train.parquet",
@@ -29,15 +31,6 @@ OUTPUT_FILES = (
     "statistics.json",
     "metadata.json",
 )
-
-
-@dataclass(frozen=True)
-class NewsRecord:
-    news_id: str
-    category: str
-    subcategory: str
-    title: str
-    interest_id: int
 
 
 @dataclass(frozen=True)
@@ -123,88 +116,11 @@ class BatchedParquetWriter:
         self._writer.close()
 
 
-def _clean_news_field(value: str) -> str:
-    if value.startswith('"'):
-        value = value[1:]
-    if value.endswith('"'):
-        value = value[:-1]
-    return value.replace('""', '"')
-
-
-def _read_news_rows(path: Path) -> Iterator[list[str]]:
-    with path.open(encoding="utf-8", newline="") as handle:
-        for line_number, line in enumerate(handle, start=1):
-            row = line.rstrip("\r\n").split("\t")
-            if len(row) != 8:
-                raise ValueError(
-                    f"{path}: expected 8 tab-separated fields at physical "
-                    f"line {line_number}, got {len(row)}"
-                )
-            yield [_clean_news_field(value) for value in row]
-
-
-def _load_news(
-    input_dir: Path,
-) -> tuple[dict[str, NewsRecord], list[tuple[str, str]], dict[str, int]]:
-    raw_news: dict[str, tuple[str, str, str]] = {}
-    split_rows: dict[str, int] = {}
-
-    for split in ("train", "dev"):
-        path = input_dir / split / "news.tsv"
-        rows = 0
-        for row in _read_news_rows(path):
-            news_id, category, subcategory, title = row[0], row[1], row[2], row[3]
-            previous = raw_news.get(news_id)
-            if previous is not None and previous[:2] != (category, subcategory):
-                raise ValueError(
-                    f"Inconsistent interest labels for {news_id}: "
-                    f"{previous[:2]} vs {(category, subcategory)}"
-                )
-            if previous is None:
-                raw_news[news_id] = (category, subcategory, title)
-            rows += 1
-        split_rows[split] = rows
-
-    interests = sorted(
-        {(category, subcategory) for category, subcategory, _ in raw_news.values()}
-    )
-    interest_to_id = {
-        interest: interest_id for interest_id, interest in enumerate(interests)
-    }
-    news = {
-        news_id: NewsRecord(
-            news_id=news_id,
-            category=category,
-            subcategory=subcategory,
-            title=title,
-            interest_id=interest_to_id[(category, subcategory)],
-        )
-        for news_id, (category, subcategory, title) in raw_news.items()
-    }
-    return news, interests, split_rows
-
-
-def _lookup_news(
-    news: dict[str, NewsRecord],
-    news_id: str,
-    context: str,
-) -> NewsRecord:
-    try:
-        return news[news_id]
-    except KeyError as error:
-        raise ValueError(f"Unknown news ID {news_id!r} in {context}") from error
-
-
-def _parse_time(value: str) -> datetime:
-    return datetime.strptime(value, BEHAVIOR_TIME_FORMAT)
-
-
 def _build_split(
     split: str,
     input_dir: Path,
     output_path: Path,
-    news: dict[str, NewsRecord],
-    interests: list[tuple[str, str]],
+    catalog: NewsCatalog,
     batch_size: int,
 ) -> tuple[dict[str, object], Counter[int], Counter[int]]:
     writer = BatchedParquetWriter(output_path, DATASET_SCHEMA, batch_size)
@@ -212,119 +128,82 @@ def _build_split(
     target_counts: Counter[int] = Counter()
     history_lengths: Counter[int] = Counter()
     target_news_lengths: Counter[int] = Counter()
-    path = input_dir / split / "behaviors.tsv"
-
     try:
-        with path.open(encoding="utf-8", newline="") as handle:
-            reader = csv.reader(handle, delimiter="\t")
-            for row in reader:
-                if len(row) != 5:
-                    raise ValueError(
-                        f"{path}: expected 5 columns, got {len(row)} "
-                        f"at CSV record {reader.line_num}"
-                    )
-                impression_id, user_id, raw_time, raw_history, raw_impressions = row
-                counters["behavior_rows"] += 1
+        for event in iter_behavior_events(input_dir, (split,), catalog):
+            impression_id = event.impression_id
+            user_id = event.user_id
+            counters["behavior_rows"] += 1
 
-                history: list[dict[str, str]] = []
-                history_interests: set[int] = set()
-                for news_id in raw_history.split():
-                    record = _lookup_news(
-                        news,
-                        news_id,
-                        f"{split} impression {impression_id} history",
-                    )
-                    history_interests.add(record.interest_id)
-                    history.append(
-                        {
-                            "news_id": record.news_id,
-                            "category": record.category,
-                            "subcategory": record.subcategory,
-                            "title": record.title,
-                        }
-                    )
-                if not history:
-                    raise ValueError(
-                        f"{split} impression {impression_id} has empty history"
-                    )
+            history: list[dict[str, str]] = []
+            history_interests: set[int] = set()
+            for news_id in event.history_news_ids:
+                record = catalog.news[news_id]
+                history_interests.add(record.interest_id)
+                history.append(
+                    {
+                        "news_id": record.news_id,
+                        "category": record.category,
+                        "subcategory": record.subcategory,
+                        "title": record.title,
+                    }
+                )
 
-                positive_news: dict[int, list[str]] = {}
-                seen_positive_news: dict[int, set[str]] = {}
-                for token in raw_impressions.split():
-                    if "-" not in token:
-                        raise ValueError(
-                            f"Missing click label in {split} impression "
-                            f"{impression_id}: {token}"
-                        )
-                    news_id, label = token.rsplit("-", 1)
-                    if label not in {"0", "1"}:
-                        raise ValueError(
-                            f"Unexpected label {label!r} in {split} "
-                            f"impression {impression_id}"
-                        )
-                    if label == "0":
-                        continue
-                    record = _lookup_news(
-                        news,
-                        news_id,
-                        f"{split} impression {impression_id}",
-                    )
-                    target_list = positive_news.setdefault(record.interest_id, [])
-                    target_seen = seen_positive_news.setdefault(
-                        record.interest_id, set()
-                    )
-                    if news_id not in target_seen:
-                        target_list.append(news_id)
-                        target_seen.add(news_id)
+            positive_news: dict[int, list[str]] = {}
+            seen_positive_news: dict[int, set[str]] = {}
+            for news_id in event.clicked_news_ids:
+                record = catalog.news[news_id]
+                target_list = positive_news.setdefault(record.interest_id, [])
+                target_seen = seen_positive_news.setdefault(
+                    record.interest_id,
+                    set(),
+                )
+                if news_id not in target_seen:
+                    target_list.append(news_id)
+                    target_seen.add(news_id)
 
-                counters["distinct_positive_interests"] += len(positive_news)
-                new_targets = [
-                    (interest_id, target_news_ids)
-                    for interest_id, target_news_ids in positive_news.items()
-                    if interest_id not in history_interests
-                ]
-                if new_targets:
-                    counters["eligible_behavior_rows"] += 1
+            counters["distinct_positive_interests"] += len(positive_news)
+            new_targets = [
+                (interest_id, target_news_ids)
+                for interest_id, target_news_ids in positive_news.items()
+                if interest_id not in history_interests
+            ]
+            if new_targets:
+                counters["eligible_behavior_rows"] += 1
 
-                timestamp = _parse_time(raw_time)
-                for interest_id, target_news_ids in new_targets:
-                    category, subcategory = interests[interest_id]
-                    writer.append(
-                        {
-                            "sample_id": f"{split}:{impression_id}:{interest_id}",
-                            "split": split,
-                            "impression_id": impression_id,
-                            "user_id": user_id,
-                            "timestamp": timestamp,
-                            "history": history,
-                            "target_interest": {
-                                "category": category,
-                                "subcategory": subcategory,
-                            },
-                            "target_news": [
-                                {
-                                    "news_id": news_id,
-                                    "title": _lookup_news(
-                                        news,
-                                        news_id,
-                                        f"{split} impression {impression_id}",
-                                    ).title,
-                                }
-                                for news_id in target_news_ids
-                            ],
-                        }
-                    )
-                    target_counts[interest_id] += 1
-                    history_lengths[len(history)] += 1
-                    target_news_lengths[len(target_news_ids)] += 1
-                    counters["samples"] += 1
+            for interest_id, target_news_ids in new_targets:
+                category, subcategory = catalog.interests[interest_id]
+                writer.append(
+                    {
+                        "sample_id": f"{split}:{impression_id}:{interest_id}",
+                        "split": split,
+                        "impression_id": impression_id,
+                        "user_id": user_id,
+                        "timestamp": event.timestamp,
+                        "history": history,
+                        "target_interest": {
+                            "category": category,
+                            "subcategory": subcategory,
+                        },
+                        "target_news": [
+                            {
+                                "news_id": news_id,
+                                "title": catalog.news[news_id].title,
+                            }
+                            for news_id in target_news_ids
+                        ],
+                    }
+                )
+                target_counts[interest_id] += 1
+                history_lengths[len(history)] += 1
+                target_news_lengths[len(target_news_ids)] += 1
+                counters["samples"] += 1
 
-                if counters["behavior_rows"] % 250_000 == 0:
-                    LOGGER.info(
-                        "Processed %s %s behavior rows",
-                        f"{counters['behavior_rows']:,}",
-                        split,
-                    )
+            if counters["behavior_rows"] % 250_000 == 0:
+                LOGGER.info(
+                    "Processed %s %s behavior rows",
+                    f"{counters['behavior_rows']:,}",
+                    split,
+                )
     finally:
         writer.close()
 
@@ -337,10 +216,11 @@ def _build_split(
     stats = {
         **dict(sorted(counters.items())),
         "target_interest_counts": {
-            f"{interests[interest_id][0]} / {interests[interest_id][1]}": count
+            f"{catalog.interests[interest_id][0]} / "
+            f"{catalog.interests[interest_id][1]}": count
             for interest_id, count in sorted(
                 target_counts.items(),
-                key=lambda item: (-item[1], interests[item[0]]),
+                key=lambda item: (-item[1], catalog.interests[item[0]]),
             )
         },
         "history_length": _distribution_summary(history_lengths),
@@ -449,7 +329,7 @@ def build_dataset(
     _ensure_output_available(output_dir, overwrite)
 
     LOGGER.info("Loading news metadata and interest vocabulary")
-    news, interests, news_rows = _load_news(input_dir)
+    catalog = load_news_catalog(input_dir)
 
     with tempfile.TemporaryDirectory(
         prefix=".new-interest-output-",
@@ -464,14 +344,16 @@ def build_dataset(
                 split,
                 input_dir,
                 staging / f"{split}.parquet",
-                news,
-                interests,
+                catalog,
                 batch_size,
             )
             split_stats[split] = stats
             sample_counts[split] = int(stats["samples"])
 
-        _write_vocabulary(staging / "interest_vocabulary.parquet", interests)
+        _write_vocabulary(
+            staging / "interest_vocabulary.parquet",
+            catalog.interests,
+        )
 
         statistics = {
             "rule_version": RULE_VERSION,
@@ -516,9 +398,9 @@ def build_dataset(
                     else None
                 ),
             },
-            "news_rows": news_rows,
-            "unique_news": len(news),
-            "interest_count": len(interests),
+            "news_rows": catalog.news_rows,
+            "unique_news": len(catalog.news),
+            "interest_count": len(catalog.interests),
             "supervised_splits": ["train", "dev"],
             "test_exclusion_reason": (
                 "MIND test impressions do not contain -1/-0 click labels."

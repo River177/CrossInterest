@@ -1,0 +1,12 @@
+{
+  "train_file": "data/training/sft_static_user_disjoint_semantic_id_token_200_h50_behavior_interest_scaling_v1/train/behavior_interest/21600.parquet",
+  "mapping_file": "data/training/sft_static_user_disjoint_semantic_id_token_200_h50_behavior_interest_scaling_v1/interest_token_mapping.parquet",
+  "vocabulary_file": "data/processed/new_interest_static_user_disjoint_v1/interest_vocabulary.parquet",
+  "output_dir": "artifacts/preference-state-teacher/gpt55-behavior-interest-21600/preview-v2",
+  "deployment": "gpt-5.5_2026-04-24",
+  "reasoning_effort": "none",
+  "per_class": 10,
+  "max_samples": 12,
+  "concurrency": 4,
+  "timeout_seconds": 180
+}

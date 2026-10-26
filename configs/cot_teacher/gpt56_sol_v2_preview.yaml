@@ -1,0 +1,14 @@
+selection_path: artifacts/cot_teacher/gpt56_sol_v2_preview/selection.parquet
+output_dir: artifacts/cot_teacher/gpt56_sol_v2_preview
+metadata_path: artifacts/cot_teacher/gpt56_sol_v2_preview/teacher_metadata.json
+
+instance: redmond/interactive
+deployment: gpt-5.6-sol_2026-07-09
+api_version: "2024-10-21"
+scope: api://trapi/.default
+
+max_completion_tokens: 256
+max_attempts: 3
+concurrency: 4
+shard_size: 20
+retry_failed_on_resume: true

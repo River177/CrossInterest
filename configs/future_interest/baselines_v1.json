@@ -1,0 +1,32 @@
+{
+  "rule_version": "future-interest-baselines-v1",
+  "benchmark_dir": "data/processed/future_novel_interest_users_v1",
+  "artifact_dir": "artifacts/future-novel-interest/baselines-v1",
+  "cutoffs": [1, 5, 10, 20],
+  "bootstrap": {
+    "reference_baseline": "global_popularity",
+    "replicates": 2000,
+    "seed": 20260812,
+    "confidence": 0.95
+  },
+  "statistical": {
+    "alpha": 1.0
+  },
+  "embedding": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "device": null,
+    "batch_size": 256,
+    "metric": "cosine"
+  },
+  "multilabel": {
+    "epochs": 30,
+    "learning_rate": 0.01,
+    "weight_decay": 0.0001,
+    "patience": 3,
+    "batch_size": 2048,
+    "seed": 20260812,
+    "device": "auto",
+    "prior_alpha": 1.0
+  }
+}

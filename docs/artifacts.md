@@ -5,6 +5,11 @@ outputs under `slides/output/` are also ignored. A clone therefore contains the
 builders, configs, reports, and manifest templates, but not necessarily the
 inputs or outputs needed to reproduce a reported run.
 
+Local staging/readback trees `amlt_inputs/`, `outputs/`, `tmp/`, and
+`.codex_tmp/` are also ignored. They remain on disk after the October 2026
+cleanup; ignored frozen runtime copies must not replace versioned source
+provenance. See the [current repository guide](repository.md).
+
 ## Conventions
 
 - `data/raw/`: externally prepared source datasets.
@@ -16,8 +21,10 @@ inputs or outputs needed to reproduce a reported run.
 
 ## Restore
 
-No canonical storage URI is recorded in this repository. Obtain an authorized
-source from the project owner, then:
+Some experiment-specific manifests record real remote result prefixes and
+hashes, including Text125/Token125 and joint alignment. Other inputs (including
+raw MIND in this checkout) still need an authorized source. Consult the
+specific experiment's restoration record, then:
 
 1. Copy or download the required tree to the exact repository-relative path.
 2. Verify checksums and sizes supplied by that source.

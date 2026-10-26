@@ -37,6 +37,12 @@ INTEREST_PROMPT_TEMPLATE = """The topic categories associated with the news item
 
 Based on this sequence of topic categories, predict a new topic category that I am likely to be interested in next. The predicted category should not appear in the sequence above. Begin your response with "New topic: " and provide only the category name after it."""
 
+BEHAVIOR_INTEREST_PROMPT_TEMPLATE = """The headlines and corresponding topic categories of the news items I recently viewed, in chronological order, are listed below. Each item is formatted as "[Topic category] Headline":
+
+{history}
+
+Based on both the headlines and their topic categories, predict a new topic category that I am likely to be interested in next. The predicted category should not appear among the topic categories in my viewing history. Begin your response with "New topic: " and provide only the category name after it."""
+
 BASE_OUTPUT_RELATIVE_PATHS = (
     Path("behavior_only/train.parquet"),
     Path("behavior_only/dev.parquet"),
@@ -267,6 +273,30 @@ def _format_prompt(task_type: str, items: list[str]) -> str:
         else INTEREST_PROMPT_TEMPLATE
     )
     return template.format(history=_format_numbered_history(items))
+
+
+def _format_behavior_interest_prompt(
+    history: list[dict[str, object]],
+) -> str:
+    if not history:
+        raise ValueError("behavior-interest history must be non-empty")
+    items: list[str] = []
+    for index, item in enumerate(history, start=1):
+        if not isinstance(item, dict):
+            raise ValueError(
+                f"behavior-interest history item {index} must be a mapping"
+            )
+        title = str(item.get("title", ""))
+        subcategory = str(item.get("subcategory", ""))
+        if not title or not subcategory:
+            raise ValueError(
+                f"behavior-interest history item {index} requires a "
+                "non-empty title and subcategory"
+            )
+        items.append(f"[{subcategory}] {title}")
+    return BEHAVIOR_INTEREST_PROMPT_TEMPLATE.format(
+        history=_format_numbered_history(items)
+    )
 
 
 def _make_row(

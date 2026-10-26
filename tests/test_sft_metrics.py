@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import pytest
+
 from new_interest.evaluation.metrics import (
     evaluate_outputs,
     evaluate_ranked_outputs,
@@ -99,4 +101,45 @@ def test_ranked_recall_and_ndcg() -> None:
         "B": 0.0,
         "C": 0.0,
     }
+    assert metrics["supported_interest_count"] == 3
+    assert metrics["interest_macro_recall_at_1"] == pytest.approx(1 / 3)
+    assert metrics["interest_macro_recall_at_3"] == 1.0
+    assert metrics["per_class_ndcg"]["1"] == {
+        "A": 1.0,
+        "B": 0.0,
+        "C": 0.0,
+    }
+    expected_macro_ndcg_at_3 = (
+        1.0 + 1.0 / 2.0 + 1.0 / 1.584962500721156
+    ) / 3.0
+    assert metrics["interest_macro_ndcg_at_3"] == pytest.approx(
+        expected_macro_ndcg_at_3
+    )
+    assert metrics["unique_top1_labels"] == 2
+    assert metrics["max_top1_label_count"] == 1
+    assert metrics["max_top1_label_share"] == 0.5
+    assert metrics["normalized_top1_label_entropy"] > 0.0
+    assert metrics["top1_label_counts"] == {"A": 1, "X": 1}
     assert details[0]["ranked_labels"] == ["A", "X", "B"]
+
+
+def test_ranked_metrics_report_noncollapsed_top1_distribution() -> None:
+    records = [
+        _record("1", ["A"], []),
+        _record("2", ["B"], []),
+        _record("3", ["C"], []),
+    ]
+    ranked = [
+        [{"label": "A", "score": 0.9}],
+        [{"label": "B", "score": 0.9}],
+        [{"label": "A", "score": 0.9}],
+    ]
+    metrics, _ = evaluate_ranked_outputs(
+        records,
+        ranked,
+        cutoffs=(1,),
+    )
+    assert metrics["unique_top1_labels"] == 2
+    assert metrics["max_top1_label_count"] == 2
+    assert metrics["max_top1_label_share"] == 2 / 3
+    assert 0.0 < metrics["normalized_top1_label_entropy"] < 1.0

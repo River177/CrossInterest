@@ -1,0 +1,28 @@
+description: Continue formal H-GRPO from independently accepted H100 to675, preserving
+  optimizer/RNG/data cursor and original SFT reference; full31392 Dev.
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+  - nvidia-smi
+target:
+  service: singularity
+  name: Recall
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-full-H-v1
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+jobs:
+- name: qwen35-2b-h-grpo-continue675
+  sku: 80G4-A100
+  sla_tier: Premium
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash scripts/amlt/grpo/run_short_think_grpo_full.sh 675 projects/sft4safety/amlt-results/7210648325.62485-13941f81-9bc1/attempts/20260914T102226Z-a798f413/checkpoint-100

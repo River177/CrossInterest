@@ -1,0 +1,176 @@
+{
+  "name": "Commerce and general sequential recommendation datasets",
+  "kind": "Comparative dataset audit",
+  "venue_year": "Public releases and challenges, 2015-2024; availability rechecked 2026-08-19",
+  "official_sources": {
+    "Amazon Reviews 2023": [
+      "https://amazon-reviews-2023.github.io/",
+      "https://arxiv.org/abs/2403.03952"
+    ],
+    "H&M Personalized Fashion Recommendations": [
+      "https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations/data",
+      "https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations/overview"
+    ],
+    "dunnhumby The Complete Journey": [
+      "https://www.dunnhumby.com/source-files/"
+    ],
+    "Instacart Online Grocery Shopping 2017": [
+      "https://www.instacart.com/datasets/grocery-shopping-2017",
+      "https://tech.instacart.com/3-million-instacart-orders-open-sourced-d40d29ead6f2"
+    ],
+    "Retailrocket e-commerce": [
+      "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset"
+    ],
+    "Taobao UserBehavior": [
+      "https://tianchi.aliyun.com/dataset/649"
+    ],
+    "Ali-CCP": [
+      "https://tianchi.aliyun.com/dataset/408"
+    ],
+    "Yelp Open Dataset": [
+      "https://business.yelp.com/data/resources/open-dataset/"
+    ],
+    "Steam Video Game and Bundle Data": [
+      "https://cseweb.ucsd.edu/~jmcauley/datasets.html#steam_data"
+    ],
+    "Tenrec": [
+      "https://github.com/yuangh-x/2022-NIPS-Tenrec",
+      "https://proceedings.neurips.cc/paper_files/paper/2022/hash/4ad4fc1528374422dd7a69dea9e72948-Abstract-Datasets_and_Benchmarks.html"
+    ],
+    "session-only group": [
+      "https://recsys.acm.org/recsys15/challenge/",
+      "https://competitions.codalab.org/competitions/11161"
+    ],
+    "JD/JData and Ta-Feng": "[uncertain] No currently downloadable, owner-controlled release page with complete terms and schema was verified in this pass; third-party mirrors were not treated as authoritative."
+  },
+  "release_and_license": {
+    "Amazon Reviews 2023": "Direct category-level review and metadata links plus Hugging Face access are live. The project page does not state a dataset-wide open-source license; users must inspect source/host terms before redistribution [uncertain].",
+    "H&M": "The official Kaggle competition page is live, but downloading requires a Kaggle account and acceptance of competition rules. Reuse or redistribution beyond the competition terms is not established here [uncertain].",
+    "dunnhumby": "The official Source Files page is live and exposes The Complete Journey through a gated download form for classroom and academic-research use. A standalone redistribution license was not visible on the landing page [uncertain].",
+    "Instacart": "The original Instacart dataset URL returned a 404 on 2026-08-19 and the official technical blog was blocked behind its current host. Kaggle/community copies exist, but current owner-authorized availability and redistribution terms are [uncertain].",
+    "Retailrocket": "The Kaggle owner page remains the principal distribution route. Account/login requirements and the currently displayed license could not be read without authentication [uncertain].",
+    "Taobao UserBehavior and Ali-CCP": "Official Tianchi landing pages are live. Download typically requires an Alibaba/Tianchi account and acceptance of platform dataset terms; dataset-specific redistribution permission is [uncertain].",
+    "Yelp": "Live official educational-use download; current page offers one compressed TAR containing five JSON files and documentation. Use is governed by Yelp's dataset agreement, not a permissive software license.",
+    "Steam": "UCSD-hosted Version 1 and Version 2 review/item-metadata download links were live when checked. No explicit dataset license was shown on the page [uncertain].",
+    "Tenrec": "Author GitHub repository and NeurIPS paper are public; the repository provides Google Drive/Baidu download routes. Exact per-file data license and current link completeness are [uncertain].",
+    "Yoochoose, Diginetica, JD/JData, Ta-Feng": "Historical challenge or mirror availability is fragmented; a current primary-source download plus clear reusable license was not verified [uncertain]."
+  },
+  "input_history": "For the long-history candidates, use chronologically earlier user/household purchases or reviews: Amazon review events, H&M transactions, dunnhumby baskets, and Instacart order-product rows. Retailrocket and Taobao provide shorter view/cart/purchase streams. Yelp supplies dated reviews, Steam supplies dated reviews and ownership/play signals, and Ali-CCP supplies display-click-conversion rows. Yoochoose and Diginetica identify sessions rather than durable users.",
+  "prediction_target": "Recommended CrossInterest target: the first future adoption of a product category or semantic concept absent from that user or household's frozen history, with item-level future events retained as evidence. Use purchase as the preferred target in H&M, dunnhumby, Instacart, Retailrocket, Taobao and Ta-Feng; review/rating is only a consumption proxy in Amazon/Yelp/Steam. Ali-CCP is better for exposed click/conversion prediction than long-horizon interest onset. Session sets only support next-click or next-buy within a session.",
+  "novel_interest_definition": "Define Y_new(u) from a frozen taxonomy mapping: future leaf category, product type, aisle/department, or semantic cluster not present in H(u). Report item novelty separately from category novelty. Do not call a newly observed item a new interest when its category already appears in history. For opaque category IDs, novelty is identifier-level only and cannot support semantic claims.",
+  "novelty_granularity_and_reference_window": "Amazon can support product, leaf-category and ancestor-category novelty over a multi-year prefix; H&M supports article, product-type, product-group, garment-group, section and department variants over a fixed historical window; dunnhumby supports product and commodity/subcommodity levels; Instacart supports product, aisle and department over prior orders. Retailrocket has category-tree IDs; Taobao has one opaque category ID; Yelp has flat business categories and geography; Steam has genres/tags. Freeze a pre-cutoff history window and compute novelty at every available hierarchy level.",
+  "interest_onset_definition": "Preferred onset is first future purchase in H&M, dunnhumby, Instacart, Retailrocket, Taobao or Ta-Feng, not first view. For Amazon/Yelp/Steam, first dated review or recommendation is a weaker positive proxy. Retailrocket and Taobao permit a funnel audit in which first view, cart, purchase and later repeat are separate labels. Ali-CCP onset is an exposed click or conversion within its logging window, not durable adoption.",
+  "is_direct_match": {
+    "Amazon Reviews 2023": "Dataset-only, strong adjacent match: long, semantic histories but review-only positives and no impressions.",
+    "H&M": "Dataset-only, strong direct construction candidate: stable customers, dated purchases and rich product taxonomy; no exposures or inventory snapshots.",
+    "dunnhumby": "Dataset-only, strong direct construction candidate at household level: dense two-year full-store baskets and marketing-contact fields.",
+    "Instacart": "Dataset-only, strong task structure but weaker current reproducibility because the owner download is no longer live.",
+    "Retailrocket and Taobao": "Dataset-only robustness matches for short-window emerging-category behavior, not primary long-term interest benchmarks.",
+    "Ali-CCP": "Auxiliary exposure dataset; useful for MNAR/exposed-negative sensitivity, weak for semantic novel-interest prediction.",
+    "Yelp, Steam, Tenrec, Ta-Feng": "Adjacent robustness datasets with domain- or release-specific limitations.",
+    "Yoochoose and Diginetica": "Not a match for user-history-to-future-interest: session identifiers do not establish longitudinal user identity.",
+    "JD/JData": "Potentially adjacent multi-action commerce data, but reject until an owner-controlled, accessible release and exact schema are verified [uncertain]."
+  },
+  "persistence_signal": "H&M, dunnhumby and Instacart can test repeated purchase of the new category in later baskets; Amazon can test later reviews in the same new category but observes only reviewed purchases. Retailrocket and Taobao have multi-action signals yet short windows. Yelp is too sparse for most users; session datasets cannot measure persistence beyond one session. A minimum design should distinguish one-off onset, repeated category adoption, and repeat-item replenishment.",
+  "method": "No source dataset natively defines future novel interest. Build deterministic per-user temporal cutoffs, freeze item-to-taxonomy mappings using only information available at the cutoff, generate category-level Y_new, and evaluate category generation/ranking plus item retrieval. Compare popularity, global category transition, user-conditioned co-occurrence, sequential recommenders and semantic/LLM encoders. Use the same-user temporal split for forecasting and a user-disjoint split for generalization.",
+  "evaluation_protocol": "Primary: select users with adequate pre-cutoff history and future support; predict all first future categories absent from H(u); use recall/precision/NDCG at category level plus exact-set and calibration metrics, and separately score sustained targets repeated in a later persistence window. Candidate-aware datasets should restrict negatives to contemporaneously available or exposed items; otherwise report full-catalog ranking and sampled-negative results separately. Never randomly split events across time. Evaluate repeat-versus-explore as disjoint strata and retain one row per user for user-level bootstrap confidence intervals.",
+  "generalization_axis": "Evaluate temporal future for seen users, user-disjoint held-out users, cold items inside known categories, and truly new-to-user categories. Amazon spans the broadest calendar interval; H&M and grocery datasets expose seasonality; Retailrocket/Taobao mainly test short-horizon temporal shift. Category-cold evaluation is only meaningful when taxonomy semantics are non-opaque.",
+  "exposure_handling": "None of Amazon, H&M, dunnhumby, Instacart, Yelp, Steam or Taobao records full impression slates. Retailrocket records observed views but not all rendered recommendations. Ali-CCP records impression-level samples with click and conversion labels, but slate position, serving policy and randomized propensities are not established in the public schema [uncertain]. Marketing-contact history in dunnhumby is partial treatment information, not item-level exposure. Therefore unobserved items are unlabeled/MNAR, not true negatives.",
+  "main_findings_and_limits": "Best primary candidates are H&M, Amazon Reviews 2023 and dunnhumby, for complementary reasons: H&M has rich fashion taxonomy and purchase timestamps; Amazon has unmatched scale, duration and text; dunnhumby has dense full-store baskets and two-year household coverage. Instacart has an excellent order/aisle schema but its official release is no longer reproducibly reachable. Retailrocket and Taobao are useful short-window robustness checks. Ali-CCP helps exposure sensitivity but has opaque semantics. Session-only benchmarks must be rejected for longitudinal interest claims. Across all choices, first observed category is not necessarily first lifetime interest because histories are left-censored and exposure is missing.",
+  "scale": {
+    "Amazon Reviews 2023": "571.54 million reviews, 54.51 million users, 48.19 million reviewed items, 33 domains, May 1996-September 2023.",
+    "H&M": "Approximately 31.8 million dated transactions, 1.37 million customers and 105.5 thousand articles from September 2018 to September 2020 [uncertain: exact counts should be recomputed from the accepted Kaggle files].",
+    "dunnhumby": "2,500 frequent-shopping households, all in-store purchases over two years; the official page describes millions of rows but does not publish exact transaction/product counts on the landing page.",
+    "Instacart": "Over 3 million orders from more than 200,000 users, about 50,000 products and roughly 30 million order-product rows [uncertain: original owner page is now unavailable].",
+    "Retailrocket": "About 2.76 million events from about 1.41 million visitor IDs on about 235 thousand items over roughly 4.5 months [uncertain: recompute from current download].",
+    "Taobao UserBehavior": "100,150,807 events from 987,994 users on 4,162,024 items and 9,439 category IDs across 2017-11-25 to 2017-12-03 [uncertain: counts are widely documented but the live Tianchi page did not render its schema server-side].",
+    "Yelp": "6,990,280 reviews, 150,346 businesses, 11 metropolitan areas and 200,100 pictures on the current official page.",
+    "Steam": "7,793,069 reviews, 2,567,538 users, 15,474 items and 615 bundles on the UCSD page.",
+    "Ali-CCP, Tenrec, JD/JData, Ta-Feng, session group": "Large benchmark releases exist, but exact current-file counts were not used as selection evidence here [uncertain]."
+  },
+  "stable_user_identity": {
+    "strong": "Amazon reviewer IDs, H&M customer IDs, dunnhumby household IDs, Instacart user IDs and Steam users persist across multiple events; note that dunnhumby is household, not person.",
+    "window-limited": "Retailrocket visitor IDs and Taobao user IDs are stable inside their short capture windows but may reflect cookies/devices or sampling.",
+    "sparse_or_task_misaligned": "Yelp user IDs persist, but reviews are sparse and geographically constrained; Ali-CCP user IDs repeat within ad logs but are intended for conversion prediction.",
+    "absent": "Yoochoose and Diginetica primarily expose session IDs, so cross-session user history is unavailable.",
+    "uncertain": "Tenrec sub-datasets differ in identity and temporal fields; JD/JData and Ta-Feng continuity must be reverified from the exact acquired files [uncertain]."
+  },
+  "timestamps_and_order": "Amazon supplies second-or-finer interaction timestamps. H&M supplies transaction dates. dunnhumby supplies week/day and basket/transaction timing in its files. Instacart provides order_number and days_since_prior_order rather than a public absolute calendar. Retailrocket and Taobao supply Unix timestamps. Yelp supplies review dates and dated check-ins. Steam reviews have posted dates/timestamps, but ownership/play records are not uniformly timestamped. Yoochoose/Diginetica supply event time within sessions. Exact timestamp fields vary across Tenrec/JD/Ta-Feng releases [uncertain].",
+  "left_censoring_and_history_coverage": "Amazon's 27-year range is longest but includes only review writers and may miss earlier offline/online purchases. H&M observes only two years; dunnhumby intentionally samples frequent households and observes all purchases only at one retailer; Instacart exposes a bounded sequence (commonly 4-100 orders) without earlier lifetime history. Retailrocket and Taobao are severely left-censored by 4.5-month and 9-day windows. A target should be called 'newly observed in dataset history,' never a lifetime-new interest; run sensitivity analyses with minimum history length and burn-in periods.",
+  "item_semantics": {
+    "Amazon": "Titles, descriptions, features, price, images, brand/store and hierarchical category lists, with some metadata missing.",
+    "H&M": "Article description plus product type/group, graphical appearance, colour, perceived colour, department, index, section and garment group.",
+    "dunnhumby": "Product, manufacturer/brand and commodity/subcommodity fields, plus basket prices, coupons and promotions in related tables.",
+    "Instacart": "Product names mapped to aisle and department.",
+    "Retailrocket": "Item-property snapshots plus a category tree; many values are hashed or sparsely populated.",
+    "Taobao and Ali-CCP": "Opaque item/category or feature IDs; no consumer-readable titles/descriptions in the standard release.",
+    "Yelp": "Business names, locations, attributes and flat category strings; this is venue preference rather than product interest.",
+    "Steam": "Game metadata includes names, genres/tags, price and bundle membership.",
+    "Tenrec/JD/Ta-Feng": "Semantic richness varies by file; Ta-Feng is commonly described with product subclass but authoritative current schema verification is [uncertain].",
+    "session group": "Yoochoose uses item and coarse/hashed category identifiers; Diginetica has item/category fields but limited natural-language semantics [uncertain]."
+  },
+  "feedback_and_exposure": "H&M, dunnhumby and Instacart contain purchases/baskets only. Amazon/Yelp contain ratings/reviews; Steam adds recommendation/play/ownership signals. Retailrocket contains view, add-to-cart and transaction events; Taobao contains page view, favorite, cart and buy. Ali-CCP contains display samples labeled for click and conversion and is the only serious exposure-side auxiliary in this group, although it lacks randomized propensities. Session challenges contain clicks and buys. None provides a complete randomized catalog-exposure log.",
+  "candidate_space": "Amazon metadata can approximate a catalog but not historical availability or exposure. H&M article metadata lists items but lacks dated inventory/availability. dunnhumby can approximate products sold in contemporaneous baskets, not every offered SKU. Instacart products define a static catalog without store/geography availability. Retailrocket's time-varying item properties help but do not prove availability. Taobao and Yelp cannot reconstruct full contemporaneous catalogs. Ali-CCP has observed displayed pairs but not necessarily complete slates. Exact candidate reconstruction for Tenrec/JD/Ta-Feng/session releases is [uncertain].",
+  "taxonomy_and_opportunity_drift": "Amazon and H&M have useful taxonomies, but public metadata is generally a snapshot and can leak future category/description information unless frozen or filtered by first-seen time. Fashion is highly seasonal and inventory constrained. Grocery availability depends on store/geography, which Instacart and dunnhumby do not fully expose to the benchmark builder. Retailrocket item properties are time-stamped, a relative advantage. Taobao category IDs are opaque and taxonomy-version history is absent. Record first-seen item/category times and evaluate only targets possible before the prediction cutoff; otherwise mark opportunity as unknown [uncertain].",
+  "construct_h_f_ynew": {
+    "Amazon": "Sort each user's reviews by timestamp; H is reviewed item/category concepts before cutoff, F is later reviewed concepts, and Y_new is F categories absent from H. Require metadata coverage and treat review as a consumption proxy.",
+    "H&M": "Sort customer transactions by t_dat; map articles to frozen hierarchy; H is prior purchased concepts, F is future purchased concepts, and Y_new is new product-type/section/garment concepts. Add a later repeat window.",
+    "dunnhumby": "Aggregate line items to household baskets; split the two-year sequence into burn-in/history, onset and persistence windows; compute new commodity/subcommodity targets. Explicitly label the unit as household.",
+    "Instacart": "Use order_number, products, aisles and departments; H is all prior orders and F the next/final orders; Y_new excludes aisles/departments already purchased. Absolute seasonal time cannot be recovered.",
+    "Retailrocket/Taobao": "Use earlier multi-action events as H, later purchases as F, and new category IDs as Y_new; require minimum views and purchases and acknowledge short-window censoring.",
+    "Yelp/Steam/Tenrec/Ta-Feng": "Possible robustness constructions after dataset-specific filtering; do not mix review, play and purchase onset semantics.",
+    "Ali-CCP": "Construct exposed pair prediction, not the primary H/F/Y_new benchmark; use it to estimate how conclusions change when negatives are restricted to observed displays.",
+    "Yoochoose/Diginetica": "Do not construct longitudinal Y_new; session ID is not a user ID.",
+    "JD/JData": "Do not construct until the exact owner-provided files and terms are verified [uncertain]."
+  },
+  "leakage_and_missingness_risks": "Main risks are MNAR positives without impressions, left-censored histories, reviewer/loyalty-card selection, household-versus-user conflation, repeated users crossing random splits, future item metadata or taxonomy leakage, future popularity leakage, inventory/geography constraints, seasonality and sampled-negative inflation. H&M/Instacart/Kaggle test labels may be hidden or competition-shaped; build only from legitimately available historical files. Use user-level splits and cutoff-derived metadata/popularity. Never interpret never-observed items as dislikes.",
+  "recommended_role": {
+    "primary benchmark": "H&M for semantic purchase novelty; Amazon Reviews 2023 for scale/text/long time; dunnhumby for dense household purchase trajectories.",
+    "primary if restored reproducibly": "Instacart, after documenting an owner-authorized snapshot, file hashes and terms.",
+    "robustness benchmark": "Retailrocket and Taobao for short-horizon multi-action onset; Steam for a digital-goods domain; possibly Ta-Feng after primary-source restoration.",
+    "auxiliary exposure validation": "Ali-CCP.",
+    "low-priority adjacent": "Yelp and heterogeneous Tenrec subsets.",
+    "reject for longitudinal claims": "Yoochoose and Diginetica session-only data; JD/JData until release verification."
+  },
+  "priority": "High: H&M, Amazon Reviews 2023, dunnhumby. Medium: Instacart if restored, Retailrocket, Taobao, Steam. Low/auxiliary: Ali-CCP, Yelp, Tenrec, Ta-Feng. Reject or blocked: Yoochoose, Diginetica, JD/JData. This ranking prioritizes stable history, purchase-strength onset, semantic taxonomy, persistence and reproducible access rather than raw interaction count.",
+  "verification_status": "Primary-source verified in this pass: Amazon scale/timespan/metadata; Yelp current scale and educational-use status; Steam current download links, scale and metadata summary; dunnhumby two-year/2,500-household scope; live H&M Kaggle, Tianchi Taobao/Ali-CCP and author Tenrec landing pages. Current owner access failed for Instacart (404) and could not be established for JD/JData or Ta-Feng. Retailrocket, H&M, Taobao and several historical counts/schema details should be recomputed from accepted raw files before benchmark commitment [uncertain].",
+  "repeat_explore_and_persistence_audit": "For every usable dataset, partition future events into repeat item, new item within known category, first observed category, and first observed ancestor category. Define persistence as at least one additional purchase/review in the new category after a gap and report one-off versus sustained targets separately. H&M/dunnhumby/Instacart are best for this audit; Amazon is weaker because unreviewed repeat purchases are missing; Retailrocket/Taobao windows may be too short; session-only data cannot pass the persistence gate.",
+  "evidence_quotes_or_schema_facts": [
+    "Amazon official page: 571.54M reviews, 54.51M users, 48.19M items, 33 domains, May 1996-Sep 2023, with second-or-finer timestamps and rich item metadata.",
+    "dunnhumby official page: The Complete Journey represents household-level transactions over two years for 2,500 frequent-shopping households, all of their purchases within the store, and direct-marketing contact history for select households.",
+    "Yelp official page: 6,990,280 reviews, 150,346 businesses, 11 metropolitan areas, 200,100 pictures; the subset is intended for educational use.",
+    "Steam official UCSD page: 7,793,069 reviews, 2,567,538 users, 15,474 items and 615 bundles; metadata includes purchases, plays, recommendations, bundles and prices.",
+    "Instacart's original owner URL returned a 404 during verification, so a third-party mirror alone is insufficient provenance for a frozen benchmark.",
+    "Tianchi's live Taobao meta description calls UserBehavior an Alibaba-provided implicit-feedback recommendation dataset; the standard five-column schema must still be verified from the downloaded archive before use.",
+    "Yoochoose and Diginetica challenge logs are session recommendation resources; a session key must not be silently promoted to a stable user identity."
+  ],
+  "sources": [
+    "https://amazon-reviews-2023.github.io/ — authoritative statistics, date range, timestamp precision, metadata and downloads.",
+    "https://arxiv.org/abs/2403.03952 — original Amazon Reviews 2023/BLaIR paper and benchmark positioning.",
+    "https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations/data — official H&M competition distribution and schema route; account/rules required.",
+    "https://www.dunnhumby.com/source-files/ — authoritative Complete Journey household count, two-year scope, purchase coverage and research purpose.",
+    "https://www.instacart.com/datasets/grocery-shopping-2017 — original owner URL; verified 404 on 2026-08-19.",
+    "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset — principal Retailrocket distribution route; raw-file verification required.",
+    "https://tianchi.aliyun.com/dataset/649 — official Taobao UserBehavior landing page.",
+    "https://tianchi.aliyun.com/dataset/408 — official Ali-CCP landing page.",
+    "https://business.yelp.com/data/resources/open-dataset/ — current Yelp scale, contents and educational-use statement.",
+    "https://cseweb.ucsd.edu/~jmcauley/datasets.html#steam_data — current Steam statistics, metadata and download links.",
+    "https://github.com/yuangh-x/2022-NIPS-Tenrec — author repository and downloads for Tenrec.",
+    "https://recsys.acm.org/recsys15/challenge/ — official RecSys 2015/YOOCHOOSE challenge context.",
+    "https://competitions.codalab.org/competitions/11161 — historical CIKM Cup 2016/Diginetica challenge route."
+  ],
+  "uncertain": [
+    "official_sources",
+    "release_and_license",
+    "is_direct_match",
+    "exposure_handling",
+    "scale",
+    "stable_user_identity",
+    "timestamps_and_order",
+    "item_semantics",
+    "candidate_space",
+    "taxonomy_and_opportunity_drift",
+    "construct_h_f_ynew",
+    "verification_status"
+  ]
+}

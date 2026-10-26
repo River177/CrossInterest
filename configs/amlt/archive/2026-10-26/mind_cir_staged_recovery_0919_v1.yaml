@@ -1,0 +1,30 @@
+description: 'Resume only the failed CIR5/NI3/NI5 job: preserve completed CIR5, validate
+  and resume NI3 checkpoint900, then run independent NI5. Storage-only EIO retries;
+  unchanged scientific contract.'
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+  - nvidia-smi
+target:
+  service: singularity
+  name: Recall
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../../../artifacts/mind-cir-four-20260918/bundle-staged-recovery-0919-v1
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+jobs:
+- name: recover-staged
+  sku: 80G4-A100
+  sla_tier: Standard
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+      CIR_MODE: staged
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash recovery/run.sh

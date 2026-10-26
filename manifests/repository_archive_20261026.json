@@ -1,0 +1,2073 @@
+{
+  "date": "2026-10-26",
+  "policy": "Retain mainline entrypoints and preparation templates; archive other historical launchers. Directory placement does not assert remote job state.",
+  "retained": [
+    {
+      "path": "configs/amlt/mind_cir_candidate_competition_0924_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_cir_four_conditions_full_0918_v1.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_cir_ni_direct_analysis_0929_v2.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_cir_ni_direct_cir_0929_v1.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_cir_ni_direct_ni_0929_v1.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_cir_ni_matched_cir_length_matched_0928_v1.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_cir_ni_matched_ni_prefix_0928_v1.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_cir_ni_prompt_0928_v1.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_cir_parameter_transfer_0923_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_cir_parameter_transfer_0923_v2.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_history_length_ablation_0915_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_history_order_0923_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_history_token_analysis_1001_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_history_token_analysis_1001_v2.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_history_token_text_0930_v1.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_history_token_token_0930_v1.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_rho_student_comparison_0916_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_rho_student_full_0916_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_rho_twofold_gate_0915_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_rho_twofold_reference_0915_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_sid_relation_full_0915_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_sid_relation_gate_0915_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    },
+    {
+      "path": "configs/amlt/mind_token_joint_alignment_1001_v1.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/mind_token_joint_analysis_1002_v1.yaml",
+      "reason": "mainline-entrypoint"
+    },
+    {
+      "path": "configs/amlt/personal_cir_meta_0924_v1.yaml",
+      "reason": "referenced-by-preparation-or-orchestration"
+    }
+  ],
+  "moves": [
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_four_condition_smoke_0902_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_four_condition_smoke_0902_v1.yaml",
+      "before_sha256": "0e00d5fb8e1eeed96652ee7cbc9a3da7c6dc5e7ab278dffb5cc99fef6471449b",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "7c2f8ddde40c7b9016cbdfa1bf8a43d31e2cec4dbc5579068e7abefeb57631fd"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_four_condition_smoke_0902_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_four_condition_smoke_0902_v2.yaml",
+      "before_sha256": "5250070b5191cd79a81612d5f46697fbe7a30981c1c3d461ce2f72b024c63856",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "fd2a1994c69380045a73b93f73c9acf8059f4567277d4f4316704fca79612571"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_four_condition_smoke_0902_v3.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_four_condition_smoke_0902_v3.yaml",
+      "before_sha256": "c7c452de8f59d1f9ec6e17e5f8fbfc694c3a4fcee5bb53f24414a4640e3413a5",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "a420d862bf85ad3829aedc7eed7dc5efdf96cc412482cb6c964287ef4dc046db"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_four_condition_smoke_0902_v4.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_four_condition_smoke_0902_v4.yaml",
+      "before_sha256": "39e01e2707d1ea508897dd1d3b8eb08c74dd78c3b5aed4717ae796d39c1ea984",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "246fce4eed0bb96b46b994a9e5cf7b1a9aaed4d679a1830d03ed5262d0f94bd7"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_four_condition_smoke_0902_v5.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_four_condition_smoke_0902_v5.yaml",
+      "before_sha256": "d8041ae80e1c5310b13c27226ecb283af6aea1a7aa43aac2db587ea103d9eaff",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "ee64f8f91bcdc010ce5c54b5de84fd48fa67f7c49adad2a74434cb19793d339f"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_four_condition_smoke_0902_v6.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_four_condition_smoke_0902_v6.yaml",
+      "before_sha256": "27b9c2e864d64eda0bc917965fc79d1651c9bb6d190a5f6af38d159c1756665c",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "6b0e6d42504693c49b429d919fdaf49e52bf857f5f6b8ada3fc797be6667999a"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_four_condition_smoke_0902_v7.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_four_condition_smoke_0902_v7.yaml",
+      "before_sha256": "0a025cf09a0bf1ad9f6147cc66027a8b597294f2dd3553d6a03bc420810f8fd1",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "2333e4afb9a295b40e3baaea02b510c40f426e429610cb707438f7f820a1871a"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_four_condition_smoke_0902_v9.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_four_condition_smoke_0902_v9.yaml",
+      "before_sha256": "50e1528b4006da56128ec4043e002da3ff3b81e9fd2280319cb07466ee98dbaa",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "b1df77ac7566540094670fc21b532738af3f1d674400e62df304583a3171c113"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_full_0902_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_full_0902_v1.yaml",
+      "before_sha256": "514be43b43f919440cdd39b73c2a32480e9f12308f90768d461bc166fcf8f77c",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "28df1b9a3076a260377e0b150c23631e8d355ccda794b5fa8d83cc840d336c5d"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_prefetch_0902_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_prefetch_0902_v1.yaml",
+      "before_sha256": "80d0f7b2c8cbecb0cbf54bb9f200f37ac9e3e68dcc0b68691496cd1b385b8125",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "fc7fad407c09ee0371f2aab3e874cee2426cb35a2b2e3e6bd59c038f73327f21"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_reload_diagnostic_0902_v8.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_reload_diagnostic_0902_v8.yaml",
+      "before_sha256": "2113f00074f0b2382a5960f061023aa40c13756c1d9ecfbae5b4dd544e60a78a",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "dd5d523c2a86ca1ea3023686683cd1eeecc7042350ddb2b70f4da1243c9a4f9f"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_worker_env_0902_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_worker_env_0902_v1.yaml",
+      "before_sha256": "be66ab7d46c15a0bd572883690ba0632d870626f3d9884858319a6b9cc32da98",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "7805c14b6e9f496d01c8af815bc63660d02937644e84ef987aa574809f2d8b98"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mera_original_qwen2_worker_env_0902_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mera_original_qwen2_worker_env_0902_v2.yaml",
+      "before_sha256": "9aaf658856b7281ac9ec89565c350f99fd03cc18334d17023ab13e09029f8878",
+      "code_root": "amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_original_qwen2_0902_v1",
+      "after_sha256": "8e278afac3bc68c7cdae7e6963d14ae320f628068eb7426526bac827536b609a"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_cir3_ni3_108_full_0917_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_cir3_ni3_108_full_0917_v1.yaml",
+      "before_sha256": "652dd236bb03e14b02b9a6d9c1d46667190ecba9d61cf4752a64e6df6cc79352",
+      "code_root": "artifacts/mind-cir3-20260917/bundle-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-cir3-20260917/bundle-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-cir3-20260917/bundle-v1",
+      "after_sha256": "191b7c47680d19e3db49d4de15d3261f50f9868e916bac9f4335d31b3a4e8b2e"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_cir_108_full_0916_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_cir_108_full_0916_v1.yaml",
+      "before_sha256": "99005623cc2ffe99d0a20ced8268e2e084393e72470c966ca76e95eec3cc51f2",
+      "code_root": "artifacts/mind-cir-20260916/bundle-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-cir-20260916/bundle-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-cir-20260916/bundle-v1",
+      "after_sha256": "f463c2b63261699e4072b5ea59dcccd30938e2a41f7fa990fa570a698ed40ad7"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_cir_108_full_0916_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_cir_108_full_0916_v2.yaml",
+      "before_sha256": "b7ea9168be5c2218ffbc12c5180c56773791a9f338b43f50a45b69894bef3fa7",
+      "code_root": "artifacts/mind-cir-20260916/bundle-v2",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-cir-20260916/bundle-v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-cir-20260916/bundle-v2",
+      "after_sha256": "77a6e425197b0c8b9a640c80b609e5b239e9adb99543a77d5c9c1895c4524123"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_cir_108_full_0916_v3.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_cir_108_full_0916_v3.yaml",
+      "before_sha256": "b4300bdbb691cd5655705e5e706898f9f6ff8886d9d396ca40a2050a273f4ae3",
+      "code_root": "artifacts/mind-cir-20260916/bundle-v3",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-cir-20260916/bundle-v3",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-cir-20260916/bundle-v3",
+      "after_sha256": "7f4b90d9cbff5a6ff8280013613bf3a0e5f6f57dbfd1308b1f4515130010c46c"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_cir_frequency_repeated_0917_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_cir_frequency_repeated_0917_v1.yaml",
+      "before_sha256": "fdf1d281138530305f70c3bfc3d2e66db7a14e8f1a327b85e3027a81812d69d3",
+      "code_root": "artifacts/mind-cir-frequency-20260917/repeated/bundle-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-cir-frequency-20260917/repeated/bundle-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-cir-frequency-20260917/repeated/bundle-v1",
+      "after_sha256": "b024b0ccd61835706eac930130a6f56ab91c5590ae0551462b6618e4613caaa8"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_cir_frequency_singleton_0917_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_cir_frequency_singleton_0917_v1.yaml",
+      "before_sha256": "e7de9991421117ab40c813ea4a5f349faa5f624ef68cc1f0770fc86a332b0a70",
+      "code_root": "artifacts/mind-cir-frequency-20260917/singleton/bundle-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-cir-frequency-20260917/singleton/bundle-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-cir-frequency-20260917/singleton/bundle-v1",
+      "after_sha256": "efa2eb3f1677b424c8702211a4e1db1acb23b1aa5d1f18f3e914c1af6bbddc8c"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_cir_ni_direct_analysis_0929_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_cir_ni_direct_analysis_0929_v1.yaml",
+      "before_sha256": "9f2326ea1ffe9eaee08901a4fc62e60e93670ebd10acbc6e2c4f541b47709eed",
+      "code_root": "artifacts/mind-cir-ni-direct-training-20260929/analysis-bundle-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-cir-ni-direct-training-20260929/analysis-bundle-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-cir-ni-direct-training-20260929/analysis-bundle-v1",
+      "after_sha256": "d8230e9e1ed7a7b24eb1716f05187d67ed37b941d1da2ff1ba14aaa434a3527a"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_cir_staged_recovery_0919_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_cir_staged_recovery_0919_v1.yaml",
+      "before_sha256": "cb57992a62da8e5654c9df07624e52a07d4bf37e06242b3b21ad67126870d5ca",
+      "code_root": "artifacts/mind-cir-four-20260918/bundle-staged-recovery-0919-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-cir-four-20260918/bundle-staged-recovery-0919-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-cir-four-20260918/bundle-staged-recovery-0919-v1",
+      "after_sha256": "c3a451624b43c813714f5183cb52c00ee14b7ec8849774057c40db0c5010010d"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_grpo_e_full_0914_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_grpo_e_full_0914_v1.yaml",
+      "before_sha256": "a0534217551dd0e24c8b30713729b48f77d14c1790147e0ec5ac55bd7269f9f2",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-full-E-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-full-E-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-full-E-v1",
+      "after_sha256": "6093e76571a7ee21d8d59604b66f38846161f2c0215bfb3a24fcb85806b6116d"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_grpo_engine_recovery_0914_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_grpo_engine_recovery_0914_v1.yaml",
+      "before_sha256": "d19c97af6ece98a34e05d1de331b7458fc666d6d576504bad63ab01b3f1c868b",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-engine-recovery-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-engine-recovery-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-engine-recovery-v1",
+      "after_sha256": "7ed822bd85768366b54332180e164035693eb1a88c2a5537365d577cd00496c3"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_grpo_h_continue_0914_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_grpo_h_continue_0914_v1.yaml",
+      "before_sha256": "4a61e37643a378ee9ad19c538d1bf19bce22d3a93625be6f8c6e7a779d5dc07a",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-full-H-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-full-H-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-full-H-v1",
+      "after_sha256": "e8b6d33e7196dcaa9ea4cafeecf17812e76bf44f37b30336d7e11119c77269d3"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_grpo_h_full_0914_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_grpo_h_full_0914_v1.yaml",
+      "before_sha256": "ad640a2211d6cf26c4f30d108e33722582128bd49119c01340edf16be8310810",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-full-H-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-full-H-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-full-H-v1",
+      "after_sha256": "2dd6730959954757bae3a9502a7dd79591ae67ec9b49d1aedb11d4a0d57d150e"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_grpo_hl_continue_0914_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_grpo_hl_continue_0914_v1.yaml",
+      "before_sha256": "b914c81c9d48183f7619a51da4a52e59c73632998319f3714a745deb7d2ab8f6",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-full-HL-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-full-HL-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-full-HL-v1",
+      "after_sha256": "e83009f0d55d77740beef3272b82ea29facd8b2f1bc6d51d1c910d0a87737a86"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_grpo_reload_diagnostic_0914_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_grpo_reload_diagnostic_0914_v1.yaml",
+      "before_sha256": "0f1e224ed1efc29c9722f33b7a6babdb34953f772157de38baa10ca1d8064bfd",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-reload-diagnostic-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-reload-diagnostic-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-reload-diagnostic-v1",
+      "after_sha256": "c50cf580285a9426d6f2531708810eded25466cb1d9e08a6f781dad35eb78df8"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_history_h5_recovery_full_0916_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_history_h5_recovery_full_0916_v1.yaml",
+      "before_sha256": "9d9db4fb56596cbc42d77ceada909e7ce0861979c8881c496ded2165d0a73e56",
+      "code_root": "artifacts/mind-history-length-ablation-20260915/recovery-h5-v1/bundle",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-history-length-ablation-20260915/recovery-h5-v1/bundle",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-history-length-ablation-20260915/recovery-h5-v1/bundle",
+      "after_sha256": "38fedf897234b938a97ac10935ef2afbe80849083cb46d516a17f0e9d1b3a553"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_history_h5_reload_diagnostic_0916_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_history_h5_reload_diagnostic_0916_v1.yaml",
+      "before_sha256": "04f8b629f64e90424e8d05b597ba370bcda5b10a1fd41556225c067e877cc087",
+      "code_root": "artifacts/mind-history-length-ablation-20260915/diagnostics/h5-reload-v1/bundle",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-reload-v1/bundle",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-reload-v1/bundle",
+      "after_sha256": "fce6bf50bcdcffcaaf97d3f00da210bed819d76d938f903c710340320336dca3"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_history_h5_reload_diagnostic_0916_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_history_h5_reload_diagnostic_0916_v2.yaml",
+      "before_sha256": "3873b833ae027b3b746b037b6e2a3e3d46168755c0351b78e6355df5e40dd658",
+      "code_root": "artifacts/mind-history-length-ablation-20260915/diagnostics/h5-reload-v2/bundle",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-reload-v2/bundle",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-reload-v2/bundle",
+      "after_sha256": "bc4f59323229806b918e4c5eab058ddbbb3cb3b5f96c5fc3b3b624af320e0912"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_history_h5_trainer_diagnostic_0916_feeds_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_history_h5_trainer_diagnostic_0916_feeds_v1.yaml",
+      "before_sha256": "037371c50ca5277a8b7dcb2fdc383fd9e46f24d341bd697659aa1172e0f12a9d",
+      "code_root": "artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v1/bundle",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v1/bundle",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v1/bundle",
+      "after_sha256": "4976b0eca4fdf4f6859ea3eb31d11d982ec526487cad9045b0ad9c38b2c60089"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_history_h5_trainer_diagnostic_0916_feeds_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_history_h5_trainer_diagnostic_0916_feeds_v2.yaml",
+      "before_sha256": "1acd6a175438e4f0438a508f6cc784e6ea7a08ed2c07db3c7a244a7ad404bf7a",
+      "code_root": "artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v2/bundle",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v2/bundle",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v2/bundle",
+      "after_sha256": "56320bd407464bc6d17a271740bb8170e20451e9e1ab9bb9b1fea433dfb71531"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_history_h5_trainer_diagnostic_0916_standard_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_history_h5_trainer_diagnostic_0916_standard_v1.yaml",
+      "before_sha256": "9208b9c78dca48d59e0d9134375d389d9fbc6de2984c566b274a6d5e7f71a740",
+      "code_root": "artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v1/bundle",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v1/bundle",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v1/bundle",
+      "after_sha256": "2e5d01aa9b895dc1332efc6b39112244e147c02d1d4e619d62e0d9381f13e23d"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_history_h5_trainer_diagnostic_0916_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_history_h5_trainer_diagnostic_0916_v1.yaml",
+      "before_sha256": "1526b6a3ea55ece2f247ebbd7ae05aaea2a6a3e5950a73d7593eeeb8394b5b8f",
+      "code_root": "artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v1/bundle",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v1/bundle",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-history-length-ablation-20260915/diagnostics/h5-trainer-v1/bundle",
+      "after_sha256": "64d01a92fd0640004efab7d24ac113378659c13e4701651a5ab8c680e3b51f64"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_oi_ni_full_sft_mixed_storage_recovery_0914_v3.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_oi_ni_full_sft_mixed_storage_recovery_0914_v3.yaml",
+      "before_sha256": "39f9dcae8d4d767e66722fec6f2a608c931ede454cfda68ef358ec215ab3dd36",
+      "code_root": "artifacts/mind-oi-ni-full-sft-20260914/bundle-v3-storage-mixed",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-oi-ni-full-sft-20260914/bundle-v3-storage-mixed",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-oi-ni-full-sft-20260914/bundle-v3-storage-mixed",
+      "after_sha256": "2d8c83b2b5ceb92d0a37a72ae66a54f124e1b7c1e54d722739f35de2eae78863"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_oi_ni_full_sft_recall_premium_0914_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_oi_ni_full_sft_recall_premium_0914_v1.yaml",
+      "before_sha256": "9b6f8e0f752f166191a5084d583fbabc7d66553bd7fe59baab8cc179ac618eba",
+      "code_root": "artifacts/mind-oi-ni-full-sft-20260914/bundle-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-oi-ni-full-sft-20260914/bundle-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-oi-ni-full-sft-20260914/bundle-v1",
+      "after_sha256": "e15b0e0bdda14ceb9ffe0b6aa0cedb3226cf426c7439f8009fc2c83e19cf2994"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_oi_ni_full_sft_recall_premium_0914_v2_native.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_oi_ni_full_sft_recall_premium_0914_v2_native.yaml",
+      "before_sha256": "866d7304a7ebff4716a8354464699a77cbcca50fb5e40c41018696ac229f4f1c",
+      "code_root": "artifacts/mind-oi-ni-full-sft-20260914/bundle-v2-native",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-oi-ni-full-sft-20260914/bundle-v2-native",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-oi-ni-full-sft-20260914/bundle-v2-native",
+      "after_sha256": "4ff84a49599f2d18e00e533e67f43354a21104d8a631444131c7a509934aa765"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_oi_ni_meta_calibrate_0913_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_oi_ni_meta_calibrate_0913_v1.yaml",
+      "before_sha256": "8c925b9d665387b48ed909e36cb556ec26d3661c8ebe7ee2ace508c368c8f7a2",
+      "code_root": "artifacts/mind-oi-ni-meta-20260913/bundle-long-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-oi-ni-meta-20260913/bundle-long-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-oi-ni-meta-20260913/bundle-long-v1",
+      "after_sha256": "f526aa09b535bed7fa121056aa41b50a104a3c366416a042f3945ed6eeef148c"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_oi_ni_meta_calibrate_recovery_0913_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_oi_ni_meta_calibrate_recovery_0913_v1.yaml",
+      "before_sha256": "af69f815c556ad39c2dfc98829a21dd694e27ce467b1189df81583bdd4ce5c1d",
+      "code_root": "artifacts/mind-oi-ni-meta-20260913/bundle-calibration-recovery-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-oi-ni-meta-20260913/bundle-calibration-recovery-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-oi-ni-meta-20260913/bundle-calibration-recovery-v1",
+      "after_sha256": "3f87d8473d580f20858a76dc7fd55900654eafdb60c0e7cb6c34da1c741fe26d"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_oi_ni_meta_four_rank_gate_0913_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_oi_ni_meta_four_rank_gate_0913_v1.yaml",
+      "before_sha256": "04228492168dfb55c9b7c004ca6640ae215d1c9424f3a8b5889e20037591be2e",
+      "code_root": "artifacts/mind-oi-ni-meta-20260913/bundle-four-rank-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-oi-ni-meta-20260913/bundle-four-rank-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-oi-ni-meta-20260913/bundle-four-rank-v1",
+      "after_sha256": "9e7d715c839e3f01b8da6fbd37db7f96ede128c7a978c42193166913c5c71ad0"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_oi_ni_meta_four_rank_pilot_0913_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_oi_ni_meta_four_rank_pilot_0913_v1.yaml",
+      "before_sha256": "19af130a6e259296b7cd5b0a44f84925f2983ab962509fc957301462c3b01c9a",
+      "code_root": "artifacts/mind-oi-ni-meta-20260913/bundle-four-rank-pilot-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-oi-ni-meta-20260913/bundle-four-rank-pilot-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-oi-ni-meta-20260913/bundle-four-rank-pilot-v1",
+      "after_sha256": "c54c267ee14520ea2899151442103ad4c3845b76f12cb65ec0633d1035eda7a2"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_oi_ni_meta_gate_0913_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_oi_ni_meta_gate_0913_v1.yaml",
+      "before_sha256": "68a182231a6d3fc5c8ebbbdd31b7fabae696a1cddb5d115e3a9e1f0fdf0daf25",
+      "code_root": "artifacts/mind-oi-ni-meta-20260913/bundle-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-oi-ni-meta-20260913/bundle-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-oi-ni-meta-20260913/bundle-v1",
+      "after_sha256": "8fb14ad91c7e2bcd7a7bb413e11bd91eb26d195f62a2a709b01adf4c0ccd5ad9"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_oi_ni_meta_gate_0913_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_oi_ni_meta_gate_0913_v2.yaml",
+      "before_sha256": "f0ef0b55bdc313863939c8c7bc319e6786a330c40d5071a3b17ed8133ed45dad",
+      "code_root": "artifacts/mind-oi-ni-meta-20260913/bundle-v2",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-oi-ni-meta-20260913/bundle-v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-oi-ni-meta-20260913/bundle-v2",
+      "after_sha256": "cea3432697eeaa3a85256fe38bc34af48491fae8d9d97b7b17492d8c94d8c536"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_rho_fold1_reload_diagnostic_0916_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_rho_fold1_reload_diagnostic_0916_v1.yaml",
+      "before_sha256": "fce708ae3f057880c781dfc3b38e67db45f4b410739b5161559ec8f6979275dd",
+      "code_root": "artifacts/rho-twofold-reference-20260915/bundle-reload-diagnostic-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/rho-twofold-reference-20260915/bundle-reload-diagnostic-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/rho-twofold-reference-20260915/bundle-reload-diagnostic-v1",
+      "after_sha256": "8740a6f23b818990146af6de6c3598c4091a406c6b8d34f2e7aacddc795456d8"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_rho_native_gradient_diagnostic_0916_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_rho_native_gradient_diagnostic_0916_v1.yaml",
+      "before_sha256": "a3ac9853f802dd2bc036f2f9fe40986f4e89ad72e9f549509fc4662a68668805",
+      "code_root": "artifacts/rho-student-20260916/bundle-native-gradient-diagnostic-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/rho-student-20260916/bundle-native-gradient-diagnostic-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/rho-student-20260916/bundle-native-gradient-diagnostic-v1",
+      "after_sha256": "5cd89287cdaa9727f33c1de284185aea2f4124930c7208f49ed77136a59f7d09"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_rho_stable_rescore_0916_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_rho_stable_rescore_0916_v1.yaml",
+      "before_sha256": "e99ea430e6a51a96922b64fac2aed730d278bde4406cabd4075f17471868c4c4",
+      "code_root": "artifacts/rho-twofold-reference-20260915/bundle-stable-rescore-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/rho-twofold-reference-20260915/bundle-stable-rescore-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/rho-twofold-reference-20260915/bundle-stable-rescore-v1",
+      "after_sha256": "946c2db0d7d16f52eb2755f674d94df28c5068f422e06c2ed8642b1a9abeb110"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_rho_student_full_0916_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_rho_student_full_0916_v2.yaml",
+      "before_sha256": "800aa0d6746f61af7f00ff81f1a2b005e989460ff0b497f450c2580a7d514b5c",
+      "code_root": "artifacts/rho-student-20260916/bundle-full-v2",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/rho-student-20260916/bundle-full-v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/rho-student-20260916/bundle-full-v2",
+      "after_sha256": "b4cd69d9cc65c49448dcb3388cd30c8a3182d85d5b4ff0828d1e69b5a31e6763"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_rho_student_gate_0916_premium_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_rho_student_gate_0916_premium_v1.yaml",
+      "before_sha256": "b410b30b8da5575eb2087f31640a13ae50586258b5c826e0c649a364be2b0b78",
+      "code_root": "artifacts/rho-student-20260916/bundle-gate-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/rho-student-20260916/bundle-gate-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/rho-student-20260916/bundle-gate-v1",
+      "after_sha256": "4ecc6f59aa70783df3b1cb1a5ee5d547cc8ea898da26500e465d36618c8bd988"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_rho_student_gate_0916_premium_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_rho_student_gate_0916_premium_v2.yaml",
+      "before_sha256": "b5ff835ebca31b5ee7aac9454bbe48ad70f62afe02764d16d93d8d7342c2504c",
+      "code_root": "artifacts/rho-student-20260916/bundle-gate-v2",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/rho-student-20260916/bundle-gate-v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/rho-student-20260916/bundle-gate-v2",
+      "after_sha256": "65d85b2848c7b08d30833a7f64ba5b86ebd53219eaf26ec1fd4e5be35dd4e9d2"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_rho_student_gate_0916_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_rho_student_gate_0916_v1.yaml",
+      "before_sha256": "89f17e4b3dea46821ad37cc9bb3d0a1a01b825d9b5123ccdbf64d1ee8c9ec5b3",
+      "code_root": "artifacts/rho-student-20260916/bundle-gate-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/rho-student-20260916/bundle-gate-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/rho-student-20260916/bundle-gate-v1",
+      "after_sha256": "88464a0c157000edff0e0f11d5dc9ab16bed3cc58dc986d8e6e419772e6289d2"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_rho_twofold_gate_0915_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_rho_twofold_gate_0915_v2.yaml",
+      "before_sha256": "4f5afbafc80ef36fbb9d035ae47a63cb824a6c1dde10c56c75387b0ae656b1bb",
+      "code_root": "artifacts/rho-twofold-reference-20260915/bundle-gate-v2",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/rho-twofold-reference-20260915/bundle-gate-v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/rho-twofold-reference-20260915/bundle-gate-v2",
+      "after_sha256": "36169c5d2b2ee87f254ecf348580a3e5dbe98ea90513d1605ac4683cc9f61589"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_short_think_grpo_engine_0914_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_short_think_grpo_engine_0914_v1.yaml",
+      "before_sha256": "8d16f74931b52257893eec72b3334ca8560211e86652b0f25283f19e3e8ed6de",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-engine-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-engine-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-engine-v1",
+      "after_sha256": "44f86d08cba7509b1d4ab3d0887d7eed77947e6ab0ac55d30dd9165aee7ee7cc"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_short_think_grpo_engine_0914_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_short_think_grpo_engine_0914_v2.yaml",
+      "before_sha256": "cc5b9712f49195f1561eaebbcfa84827321c6a084151033e1efdcb4023811296",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-engine-v2",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-engine-v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-engine-v2",
+      "after_sha256": "de8e99f4963d0f931b512a578abdaaa4e3bc4e29e8a5f430a75dcd6901ab17b1"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_short_think_grpo_preflight_0914_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_short_think_grpo_preflight_0914_v1.yaml",
+      "before_sha256": "96de86b829c0728a2bd37ed926335858471447d4dee4071a7bba0f7b558475e3",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-preflight-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-preflight-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-preflight-v1",
+      "after_sha256": "8607886db7920dfbdfc01202b94d7a6fedd73250879bd5fe00701dd5e57e2291"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_short_think_grpo_preflight_0914_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_short_think_grpo_preflight_0914_v2.yaml",
+      "before_sha256": "2955ecb45459864a587d928e7813157019e5baa525006e3cacf8f2d5645b3916",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-preflight-v2",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-preflight-v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-preflight-v2",
+      "after_sha256": "a69838d5e3dbf23f8d7403fed88e1a17905862fde54a8922de2f8c3cb98d18e0"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_short_think_grpo_preflight_0914_v3.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_short_think_grpo_preflight_0914_v3.yaml",
+      "before_sha256": "9c25cbb0d96387f4f147e0238bf1f029e03ba9ec1d9579dca36aec798f903057",
+      "code_root": "artifacts/mind-short-think-grpo-20260914/bundle-preflight-v3",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-grpo-20260914/bundle-preflight-v3",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-grpo-20260914/bundle-preflight-v3",
+      "after_sha256": "7afc873dd54cebe11bdee4ec61730dcb6075627c8bb53cf105d18b7046fb039e"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_short_think_qwen35_2b_full_0913_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_short_think_qwen35_2b_full_0913_v1.yaml",
+      "before_sha256": "4ae32bff152a0ab44389b5d78a1f6bf903809f01f8c27942c164e96a2f25e8a4",
+      "code_root": "artifacts/mind-short-think-sft-20260913/bundle-full-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-sft-20260913/bundle-full-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-sft-20260913/bundle-full-v1",
+      "after_sha256": "8520aab0d0eb8aaa24883cb7c5beb8233223e589002838e2f8728027f7684593"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_short_think_qwen35_2b_smoke_0913_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_short_think_qwen35_2b_smoke_0913_v1.yaml",
+      "before_sha256": "db364c995c8a3a70bf4343aa0182a2206b3c5e90a857a7f80b58e147e95e2f7f",
+      "code_root": "artifacts/mind-short-think-sft-20260913/bundle-smoke-v1",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-sft-20260913/bundle-smoke-v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-sft-20260913/bundle-smoke-v1",
+      "after_sha256": "7fd37afb4570d2b3da11aae0785d68158f0d1d9a6a8ebb702f7e8dee1518ead7"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_short_think_qwen35_2b_smoke_0913_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_short_think_qwen35_2b_smoke_0913_v2.yaml",
+      "before_sha256": "c1953518e613c1c3d27419fbdd18e7742bb5129d60e998c80c59619700bbdb0d",
+      "code_root": "artifacts/mind-short-think-sft-20260913/bundle-smoke-v2",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/mind-short-think-sft-20260913/bundle-smoke-v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/mind-short-think-sft-20260913/bundle-smoke-v2",
+      "after_sha256": "db1b1267892395f4dbc701a29c785d4abcdaf2584e0b3fb8671077e84f3ac33a"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/mind_sid_relation_gate_0915_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/mind_sid_relation_gate_0915_v2.yaml",
+      "before_sha256": "d9c87e8cf53164c63c12462c077778b5c9503f056ae96d6d3206281a319135e7",
+      "code_root": "artifacts/sid-relation-bias-20260915/bundle-gate-v2-final",
+      "local_dir_before": "$CONFIG_DIR/../../artifacts/sid-relation-bias-20260915/bundle-gate-v2-final",
+      "local_dir_after": "$CONFIG_DIR/../../../../artifacts/sid-relation-bias-20260915/bundle-gate-v2-final",
+      "after_sha256": "048e7e3fc3b118ff625d7c2bc87f1e181a1c20e7dc35462bb057fb3b0d13bd28"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen35_22k_beam_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen35_22k_beam_map.yaml",
+      "before_sha256": "357627b1ded2d136cda73dc1056b81c6fd216329f15550d775753832e496b92e",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "73130d686c5a1868e606009ee5b856a5744c19fc6626494a33299d42dce4bb3a"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen35_22k_pilot.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen35_22k_pilot.yaml",
+      "before_sha256": "1a199d97e1b51e0bb8d718ca2b808d5557d95b6beebc2736a9d24a1105271f5f",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "f44965523127a90e04da6e1ebf2ed6b0cb169bfa7ce2ddedf6c3a6d3240c75d2"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen35_22k_smoke.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen35_22k_smoke.yaml",
+      "before_sha256": "6ac843ffc526b3c8184d44a724db59362236f5356417cbbef1d76e02859bbb21",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "bb9c61ba6f5133f009de8a759578a67b40c6cc6c874ead39adddd3422438e959"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen35_22k_train.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen35_22k_train.yaml",
+      "before_sha256": "45122fad5d696ec5bb624468f9237041f34070660f7067355a7e4006cfcd202e",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "b8bd34dfdc44224a3b19f1d236019756bff55522b1e5be90d1bc459b209bec23"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_cot_accuracy_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_cot_accuracy_map.yaml",
+      "before_sha256": "ebcbb37d753e09843f560c66f35d2b2da9bbcff1e295cc1b500e295c8bcb1947",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "1c73c0d8405e8be5e54bee180b9e21b0b4269a437db4df405636a8c7557e6f85"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_cot_label_eval_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_cot_label_eval_map.yaml",
+      "before_sha256": "2a3d0776ec650fb5fb6c2ed62d1ce3ce6e7f05674a1b5fde43792a3ca6fd047d",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "2717b4f41176897ee35fc7ddc89977d57e034e26b99db0163bbc807d6f2103e1"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_cot_sft_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_cot_sft_map.yaml",
+      "before_sha256": "909c32e86e3a7c12c649ff0a0e64d09d7681882bffe688417ad39113a869e67f",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "8273023332605b91818c0e682a654474ee6e7be1f01826b393769efca3315b0c"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_cot_v2_correctness_preflight.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_cot_v2_correctness_preflight.yaml",
+      "before_sha256": "a72c94e016edde2487f59235b31c3e79e4ba43a03244c301a3498d691061e478",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "e89ed12252fee6c180e3b8fcc746ef262f9a411357b9aadbd571553fc2ab928f"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_grpo_1k_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_grpo_1k_map.yaml",
+      "before_sha256": "f933a4e2dfdd124f17e1fc8ee22c065cd7c78a018171d075811835d378c9ae27",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "070ab5e8095dc5e5c81d873b9b48600a87b3f500ddd6c3c660655b767dd856b5"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_grpo_correctness_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_grpo_correctness_map.yaml",
+      "before_sha256": "3e8b124916519e094dbf468982d6e998026031674c679530c840bde78a127bdc",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "6d2e92dd94fa244db59afea60b1d9394399fca0501ed62aec9d0c6655d7fd24f"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_grpo_correctness_preflight_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_grpo_correctness_preflight_map.yaml",
+      "before_sha256": "0cf3c05e246cc9f522660c86be0b64423d13263194299bf35c71af3970cae4c3",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "bd1ed24754a470849c8b9b5a3906d620bd837359b781d365d512c590ab1042f4"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_grpo_format_bootstrap_20step_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_grpo_format_bootstrap_20step_map.yaml",
+      "before_sha256": "b8d7a7be9abeb9475b6d2ed4b58ccab25b18f13df5639fe7072a9f838417de40",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "67f8564501594b0f73b68a64b371baefbcf2a057bc3af5cc88eb1a3c4a526f65"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_grpo_format_bootstrap_accuracy_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_grpo_format_bootstrap_accuracy_map.yaml",
+      "before_sha256": "462ccfdb0ff214f54a78ddc38829efec23205ff05b6373f2ff4369fc0ff1dc86",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "dae0c93ee0e732d832ff9eaa47bae6cc439b66ddea8bff4ff54a40cabde53cc5"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_grpo_format_bootstrap_preflight_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_grpo_format_bootstrap_preflight_map.yaml",
+      "before_sha256": "f0eb5bb9d57950ff95fa862a7e3c5e9a867cc167f44a63e7e42b10b4a18c3ca7",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "72d9a90400ea4fc01f0fc00025a30478b441c7f7c113535270dd434080a50216"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_grpo_preflight_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_grpo_preflight_map.yaml",
+      "before_sha256": "b01fea842d26ce5e3b60df38e40ece50af91675c0f841e8117ea26c861c68daa",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "3ef94ca9ec8fb2f78cceb2ebdabfc12b69b1f83148c3bcdd3fe4c3e900011569"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/qwen_grpo_smoke_map.yaml",
+      "new": "configs/amlt/archive/2026-10-26/qwen_grpo_smoke_map.yaml",
+      "before_sha256": "dd2f694a9e3f521d1a6b72c57b0c0b81c9b90508b1631288f3ea853f12ebf427",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "b260d6c10fa1f14126064ecb058c1954521ac52cc8d8427afc114007b5c7fc2b"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_candidate_behavior_interest_gpu_full_v3.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_candidate_behavior_interest_gpu_full_v3.yaml",
+      "before_sha256": "9a4b444dbfa1f36f9a247f3f60305b1744a721e6dc19fa573a74848d3fdc9cae",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "c01dab0f8c0a20167a47326a4be0c965346f141080ee24f83da26ec7c5e6cb32"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_candidate_behavior_interest_pilot.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_candidate_behavior_interest_pilot.yaml",
+      "before_sha256": "a505b115b60b08928b3ae315de0186b65bf7e8028272fde619798b8199621c3f",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "92ebe86ed605dae73a41634c2f8b0b2b3d39f51a78964f86cac21655eec6b89d"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_candidate_behavior_interest_pilot_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_candidate_behavior_interest_pilot_v2.yaml",
+      "before_sha256": "c5a598d00be5d44c467024d922510527d8565ac557416fa297df8d86ebe2a269",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "922a9b526bb994d6b9e6d52b850c7fdab52d2bd2c0ee4badcebb0c4709121660"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_candidate_behavior_interest_pilot_v3.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_candidate_behavior_interest_pilot_v3.yaml",
+      "before_sha256": "6c9f99ea0d14aec03cf7eba17350903e0121e673cec7c81b702119a7f3fc6180",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "5fa0333dee4e4c33e52f97423576757714f315223ffaa6bd2a069c193286c6be"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_candidate_full.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_candidate_full.yaml",
+      "before_sha256": "b601ef61404339babc03081848bfd83c8181cbabf747ed21da86fa3c76d6521e",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "8e271a0f68adc26600a58ddb145ede4d7fc2f366bfc49fb6987335ab1b68bd70"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_candidate_pilot.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_candidate_pilot.yaml",
+      "before_sha256": "5a52b0b2a1a385d79ffc488c009542a7150592502bcc76117384a80e311a83a5",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "1a1b792b2f25615d28fbe485794721378815e7e1608ee1e2da173ab3d030bd49"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_semantic_id_token_full_0818_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_semantic_id_token_full_0818_v1.yaml",
+      "before_sha256": "7920dc72e5dc4ee302a6265cbb8c28cab9d86f45d8a026d1cd339b154533ba6b",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "1aa753c0ab861e6195beba02766e34529a29ad99708c34a07d0890c9f336790b"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_semantic_id_token_llama_recovery_smoke_0819_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_semantic_id_token_llama_recovery_smoke_0819_v2.yaml",
+      "before_sha256": "4ee5def7af44a2e258b424065f96df1ca098b9855eef004da637f1538add07d8",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "3eb74d692f2c6243334222f6eb076dfd053ec8200733dd133b0770cd61ce29b1"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_semantic_id_token_qwen_interest_eval_recovery_0820_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_semantic_id_token_qwen_interest_eval_recovery_0820_v1.yaml",
+      "before_sha256": "e1a6266fa5824151393c8983a91f866b8bc0a9618f96839def5e43c75a7abfe4",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "9fae3c6059709f59796a67c55b0f322a5f971f439d9a6d7c0568871b4b079ace"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_semantic_id_token_recovery_full_0819_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_semantic_id_token_recovery_full_0819_v1.yaml",
+      "before_sha256": "ac5417fef7eb0ba26e040c497ff34bdab93f1b72c1a2f0216a1b9a66da28ec93",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "7c455dfc4f11e9403538a873567b1d11af745f98d56cc9bc8b0c50ade7551e66"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_semantic_id_token_recovery_smoke_0819_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_semantic_id_token_recovery_smoke_0819_v1.yaml",
+      "before_sha256": "8beef4a46ae1402deee6804e674646bca9b301e777b713129584dd02090762e8",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "7ece2a0e5297f3844c6e7c72ef3dc4b95099b826d457180bd5cf340a739650a7"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_semantic_id_token_reload_diagnostic_0818_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_semantic_id_token_reload_diagnostic_0818_v1.yaml",
+      "before_sha256": "c98ff2e9d140eb756459ee60c69bc9aa444f1e5e16a8fa8c679758d617ee856f",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "6a8c4dc816e024bae63b397ef6b5d388514ac3b9d814e38ae0c8cb11b9a495d6"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_semantic_id_token_smoke_0818_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_semantic_id_token_smoke_0818_v1.yaml",
+      "before_sha256": "ac50255fe50b3dadff0cfdc8aa8d3bf6dfc48c566f6992f731af08cb2a313156",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "701dd80306de14dbdc61d5d7ad13a8f3966726c8fd801ed824af561b11f69adb"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_behavior_interest_llama_parallel_g4_0819_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_behavior_interest_llama_parallel_g4_0819_v1.yaml",
+      "before_sha256": "75c737c2248c9b4ef32810832775359f4422fcb79d7a716cbdaa9df7701d2f7d",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "75f060750cbbed4a786df0dbb8689451d5381cfde5426ddb9daa4be0a0765de3"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_behavior_interest_qwen_beam_g4_0820_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_behavior_interest_qwen_beam_g4_0820_v1.yaml",
+      "before_sha256": "969249653fe907f09c73e46ad28a87190d773e500c4f70b06634a47143f5bbb4",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "3dc61b6e3c90e01aa867dcdca269d9163fc200d717715b3cd365a00fb1cb7133"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_behavior_interest_serial_g4_0818_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_behavior_interest_serial_g4_0818_v1.yaml",
+      "before_sha256": "fd60f129a81af08782153783fd8fefddbe71006a9291057595527c938a8d00dc",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "59c8d83e97da6f188f4b6439c1963694c135ce0bae6d8e33702dad9c9b68af99"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_full_0816_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_full_0816_v1.yaml",
+      "before_sha256": "08b9f2a044e7c75c6b9f645ce97050c9346bf2755d8e623114d863fe2c466895",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "9d5959c79f2a2899a09e396460cb965ed80e75a79d8f6943ff99ef6c01f53283"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_llama_ddp_smoke_0817_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_llama_ddp_smoke_0817_v2.yaml",
+      "before_sha256": "2175119706a723f1ff8bd5d142e02bd3751c40083fe70316644fd76064459632",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "0a0c3d82519f6d6a2b786a7dff0ea2da757a529bda8784d878bacbf27aa00f95"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_llama_ddp_smoke_0817_v3_g4.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_llama_ddp_smoke_0817_v3_g4.yaml",
+      "before_sha256": "2a09424590dc8dd01f0c8d5a70b351bb66a0038577b400af82396f6fb160548e",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "cf2a42a057c97e92bb82f0b3dfbd7ba8efd3b03a18b2ccf55a3f46412ab39fba"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_llama_full_recovery_0817_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_llama_full_recovery_0817_v2.yaml",
+      "before_sha256": "d224b68dfbfa57b36b61c143a4f6087dfc1f7f41dcdb03ea23ed35a63b0e8a41",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "f651e371a882b2873c8d7d12715ea679f92fd4774d198b88b9108c1b9fac08b4"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_llama_full_recovery_0817_v3_g4.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_llama_full_recovery_0817_v3_g4.yaml",
+      "before_sha256": "4d51002573182638c46b3bdee5adfce161bd6b83ad8fc3913060d151119b2894",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "30b37f92f7e3648d6e62d9bff21667efdc36deb3fa409a141e5c6d46b1ceae49"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_qwen_beam_recovery_0817_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_qwen_beam_recovery_0817_v2.yaml",
+      "before_sha256": "4a22a0fbfade283323c4e951cb42d4598902b80fc0d70728f32ba04ea796913b",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "6df4fd20bc58c951b07786c70ec0f10fa1ba668c476774862e7079ecfc3098ae"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_qwen_beam_recovery_0817_v3_g4.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_qwen_beam_recovery_0817_v3_g4.yaml",
+      "before_sha256": "5420f893fe7c84d2b2a42955ba67547f7f8f903a6197226c92ded72645590d78",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "0151137d4f1a2eca44add3b3d53fa6922bffa9b932f254e32dcc5945887a1af8"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_qwen_beam_v2_smoke_0817.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_qwen_beam_v2_smoke_0817.yaml",
+      "before_sha256": "f2e733324a61897bae9d7e0fbffdb2de8ab4e5a40898917ecc2a566bbd7e792a",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "310b8fec7346bafed5b028e69c56feaed70c5a06f46d22206cd5980f66312db1"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sft_smoke_0816_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sft_smoke_0816_v1.yaml",
+      "before_sha256": "436acce30f10d48aa4d9ba496b536c4b1a8059ec7f80ba5533ea5ea822070d1a",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "4cf8cec1dd7dc3e221809f3fd70ee0eddebb3961c381d5c7e288688c5b6454b2"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_behavior_eval_recovery_0821_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_behavior_eval_recovery_0821_v1.yaml",
+      "before_sha256": "ac694a04ea99291ea91fa0d15740d2d8345a0b60689451183a152a0e07c2a368",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "9d3c90134d39abd041f940420723ec89989219e591c685b1bda4f8ada2500e59"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_checkpoint_g8_smoke_0820_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_checkpoint_g8_smoke_0820_v1.yaml",
+      "before_sha256": "b67650d0b9e6abd4167ab5bb306c82d4dd19dd437121ffc6aa280fc2f45e437e",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "a2cec5813718fa549cbfad5ecd7732bebbc8569ee3a1b6fd87ab09a56ff60de1"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_final_0818_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_final_0818_v1.yaml",
+      "before_sha256": "b29f80c3262be63a073bb1725ff84c10a5d30906aa461ebf5867f343b5b88a4d",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "5ec0130b23f0ab53f71d8f56e329c3d5364951a953baef0c319e45c8123f19ca"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_llama31_final_real_0822_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_llama31_final_real_0822_v1.yaml",
+      "before_sha256": "5c6bdbf2ca6653d2e622caaac6b135cd1d2e55161c68912940c55bdfef295378",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "1d9c0b0310d6c1d2d18b9e598d94d72def4cd7b8fe164aa4ea6a60e74eaee35e"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_llama31_oof_behavior_0822_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_llama31_oof_behavior_0822_v1.yaml",
+      "before_sha256": "ae9b9ee1a0d511b018278497b1bf3a97240da32d7e927894ddc7691347ecc0df",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "3cf26c70b0f875159e69ed6c4cc975b77444498943af9227d3dc789813e4dc63"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_llama31_oof_interest_0822_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_llama31_oof_interest_0822_v1.yaml",
+      "before_sha256": "3894e97cab860d655e9238f379d0d34a8d8d1de4ea4288e7a9e61fdfb21c307c",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "8b797a37ba0327c0f110d7b3afe317c4f90d1d07e1bf8a13ce7363d9d99b0f37"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_llama31_smoke_0822_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_llama31_smoke_0822_v1.yaml",
+      "before_sha256": "e98a7ba1d43a4890885b7a2e8a72ecf7a3e0e1ef454fc865f94af46e17579677",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "26727dbd1db113b9ccfd3235abb65b327030ef42fa65f638ea3e49a03707c087"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_oof_behavior_0818_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_oof_behavior_0818_v1.yaml",
+      "before_sha256": "f5bb669773b7490eb010d3a93964b4022a099593850c37bebb73227015ad1009",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "149af00d360a596415c8bbcc7e001ab7458ff5974a5c19b4b7d8cd945204829f"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_oof_interest_0818_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_oof_interest_0818_v1.yaml",
+      "before_sha256": "7326bd3e63d8e2b050043447a2ea02d03f39e659356516e72d609e54decbf15c",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "bf2d49a547077095936ac8da5857d488d3b1c9bb736ad3ade1d62e2783a7d946"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_oof_interest_fold2_recovery_g8_0820_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_oof_interest_fold2_recovery_g8_0820_v1.yaml",
+      "before_sha256": "5c1eb2fe91188198e188298730cf4129529deaec9fff73ca86f4833c11d5e0a5",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "4fa649ba712c01a258dd156e79cb525090e55ea56058a138df781476d27604e1"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_crossfit_smoke_0818_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_crossfit_smoke_0818_v1.yaml",
+      "before_sha256": "45f92e373ae2466e15639bfb50f7dde00b97b873b28d46b3ea5db53e6986697a",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "4c80e7762f186b3f7aed045f152d1307a9dca506841d071533d7015b3557fc3b"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_frontier_reweighting_qwen35_pilot_0901_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_frontier_reweighting_qwen35_pilot_0901_v1.yaml",
+      "before_sha256": "a05b5b1fb6eed157f1dd2c4d6cf69bdaa57303ead783c3a27acb14e8d7a6f16e",
+      "code_root": "amlt_inputs/static_sud_independent_pilots_0901_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_independent_pilots_0901_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_independent_pilots_0901_v1",
+      "after_sha256": "ae40f431522d34440dbc2a8c81913b4cf1a62ab711c8ca84719e01b3c18c8acc"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_frontier_reweighting_qwen35_smoke_0901_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_frontier_reweighting_qwen35_smoke_0901_v1.yaml",
+      "before_sha256": "126341aa70396d5f7528a22c2d65007cb9f2e490706ad28778bbb9e8e8be7cd1",
+      "code_root": "amlt_inputs/static_sud_frontier_reweighting_qwen35_smoke_0901_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_frontier_reweighting_qwen35_smoke_0901_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_frontier_reweighting_qwen35_smoke_0901_v1",
+      "after_sha256": "2f5854c727d792c9a0d5b6bfb1c7918427a1474850a11246be915f440e95e7a0"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_mera_faithful_qwen35_ddp_eval_smoke_0831_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_mera_faithful_qwen35_ddp_eval_smoke_0831_v1.yaml",
+      "before_sha256": "c7791fc1f547581507b08fc27602b05e4ed6a6c4db6b3c8a7705a11bbdde2a28",
+      "code_root": "amlt_inputs/mera_gnip_faithful_qwen35_full_0831_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_gnip_faithful_qwen35_full_0831_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_gnip_faithful_qwen35_full_0831_v1",
+      "after_sha256": "10425bac75f37d2f6e5330b73d809723b6cada69f75cc3a9139a9e414ba9281a"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_mera_faithful_qwen35_full_0831_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_mera_faithful_qwen35_full_0831_v1.yaml",
+      "before_sha256": "855d8d9d7d829cca394ed3371e7a34266e134c3766d4e98f3f7518646881bce9",
+      "code_root": "amlt_inputs/mera_gnip_faithful_qwen35_full_0831_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_gnip_faithful_qwen35_full_0831_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_gnip_faithful_qwen35_full_0831_v1",
+      "after_sha256": "f3f6bd08aa1ea8a8277c7461e8ca3782e13a8cddddba443f341cf9bb6877ca05"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_mera_faithful_qwen35_interest_sid_smoke_0831_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_mera_faithful_qwen35_interest_sid_smoke_0831_v1.yaml",
+      "before_sha256": "6a074385f882f7e73df65dfef776c0bf5147d333a1b01c1b941cba69a34ff051",
+      "code_root": "amlt_inputs/mera_gnip_faithful_qwen35_smoke_0831_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_gnip_faithful_qwen35_smoke_0831_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_gnip_faithful_qwen35_smoke_0831_v1",
+      "after_sha256": "23e1c5c7d6372b31d3f97869d1fbd071823e7c4861d39a7109a8c7d098ab7c3c"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_mera_qwen35_mean_ablation_full_0901_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_mera_qwen35_mean_ablation_full_0901_v1.yaml",
+      "before_sha256": "062bd61abfbd44616226294384adcfb3f7bbb31ef5ebb941b389d627ecda48be",
+      "code_root": "amlt_inputs/mera_gnip_qwen35_mean_ablation_0901_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_gnip_qwen35_mean_ablation_0901_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_gnip_qwen35_mean_ablation_0901_v1",
+      "after_sha256": "1949f388283b0f4ba24b2ca599c5d0a6663be1cb868f115ddf5871070de2d9c2"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_mera_qwen35_mean_ablation_smoke_0901_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_mera_qwen35_mean_ablation_smoke_0901_v1.yaml",
+      "before_sha256": "bbc6547f4d380ea62858db8539b9f9da9e35398de4b2a5388f5f47316b0c72fc",
+      "code_root": "amlt_inputs/mera_gnip_qwen35_mean_ablation_0901_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/mera_gnip_qwen35_mean_ablation_0901_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/mera_gnip_qwen35_mean_ablation_0901_v1",
+      "after_sha256": "85ed37d0e94c99fdc6a59b7e2241c905e4e4e74742188ff59d36b7d83828adb4"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_preference_state_reasoning_sft_smoke_0902_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_preference_state_reasoning_sft_smoke_0902_v1.yaml",
+      "before_sha256": "45a3878e42c5f60b6c5dad503003baead2f2b8a3f0a07c5c8e517fc18e872227",
+      "code_root": "amlt_inputs/static_sud_preference_state_reasoning_sft_smoke_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_preference_state_reasoning_sft_smoke_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_preference_state_reasoning_sft_smoke_0902_v1",
+      "after_sha256": "098aaa42668b0082eb0fd00c345a27ed7a5197a40498e94219b5002972e73f48"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_reasoning_stability_qwen35_preflight_0901_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_reasoning_stability_qwen35_preflight_0901_v1.yaml",
+      "before_sha256": "8179328e3a321aa22778fd0290641c30d213d45fcd8725de7493d8dc13ef6308",
+      "code_root": "amlt_inputs/static_sud_reasoning_stability_qwen35_preflight_0901_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_reasoning_stability_qwen35_preflight_0901_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_reasoning_stability_qwen35_preflight_0901_v1",
+      "after_sha256": "8d7cb095a9c9f4d8ababbb16bffccf43e08af8325d91aa773e168aa8e773903f"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_reasoning_stability_qwen35_preflight_0901_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_reasoning_stability_qwen35_preflight_0901_v2.yaml",
+      "before_sha256": "d44422eb1742e0e1c985132203883d91747a778fef0a601a3d3917f1821ae5ea",
+      "code_root": "amlt_inputs/static_sud_reasoning_stability_qwen35_preflight_0901_v2",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_reasoning_stability_qwen35_preflight_0901_v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_reasoning_stability_qwen35_preflight_0901_v2",
+      "after_sha256": "7cb9081fbd0a49c61c5112db53e0d80c716c0a4947a04be61d67e22ef75d807f"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_class_crossfit_qwen35_behavior_interest_final_real_0826_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_class_crossfit_qwen35_behavior_interest_final_real_0826_v1.yaml",
+      "before_sha256": "0171fb079dcab57b964a552a1ba84e2259b4baabc4903065d4dbd3fde37018e8",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "21680cd5aad31a399a959e401ae572eb42d6e9d76c93569be7bb01d9e1334c64"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_class_crossfit_qwen35_behavior_interest_oof_0826_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_class_crossfit_qwen35_behavior_interest_oof_0826_v1.yaml",
+      "before_sha256": "c30885f6e160086644fa9ae30d8918a955b3e4f45c69a04cacd3260181058f3c",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "db15d11e1997a61d70f4e6d280d898a5df03b9a1f2ff26c944cf4b2c0737254f"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_class_crossfit_qwen35_behavior_interest_smoke_0826_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_class_crossfit_qwen35_behavior_interest_smoke_0826_v1.yaml",
+      "before_sha256": "83dbe76a9d06fa96dbfe7a4df6ad2cbb7256279f37a76306a869f4170ba6863c",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "3e7522e608980edd9b5501a3395a222a5c40c5c37f1d2e5aa559c97b656a60f7"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_class_crossfit_qwen35_interest_final_real_0826_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_class_crossfit_qwen35_interest_final_real_0826_v1.yaml",
+      "before_sha256": "bcd0a1ea4b7feca6df631bb6a81c86f33a5f4d7f434f5816cf5a92770d9bc851",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "baf2730d4fc4915e0d11490e2c3b97d2fb032688c03ded52ca5e141202023865"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_class_crossfit_qwen35_interest_final_real_0826_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_class_crossfit_qwen35_interest_final_real_0826_v2.yaml",
+      "before_sha256": "431ff64b8d6655fcd32c29809ca6d48ce2154f65facd7a9e8ee5e09ecc35a7dd",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "3a8768a67834f137f6656de84a4d147b31e66b0914b9e15a457395cf7741d9f9"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_global_crossfit_qwen35_behavior_interest_final_real_0828_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_global_crossfit_qwen35_behavior_interest_final_real_0828_v1.yaml",
+      "before_sha256": "7a0cd3f56badd9e987c7350adc07cb2bfcec29e75c08d53784532e32a7c9ee13",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "87a8e08b65d5e7152109b8888cf258f88fecaa96ba3b0301a0a1269d7bae5cd2"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_global_crossfit_qwen35_behavior_interest_smoke_0828_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_global_crossfit_qwen35_behavior_interest_smoke_0828_v1.yaml",
+      "before_sha256": "88aac9e0e62f1e80ba090584ffd6416ce118525edcd2b2410cabf752432a4ea2",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "d5da541c2ad8a00a72318ddcd8955453bbdfdddda4bf31b52c8b41be82b23917"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_global_crossfit_qwen35_interest_final_real_0824_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_global_crossfit_qwen35_interest_final_real_0824_v1.yaml",
+      "before_sha256": "706dd98175655af96f4f1b6e470c9a0a7b93a356e024d62c1e3575747d6b7c65",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "34e6a4d76399b19d3503cd4250121877cb23e1b23952ac5eaf2ec8cbefc136f3"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_global_crossfit_qwen35_interest_oof_0824_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_global_crossfit_qwen35_interest_oof_0824_v1.yaml",
+      "before_sha256": "c7575b39f60d884725784fb21efe46b81dc6489245c1bee87f58658c8c8ca380",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "e59eb8d46deb7318d7a409200b8dfb87c33c4657fafb4060c3a945b0b2fa2663"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_global_crossfit_qwen35_interest_smoke_0824_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_global_crossfit_qwen35_interest_smoke_0824_v1.yaml",
+      "before_sha256": "06e5a0b4d708966cf0fef0f32901467beabb196677ebd12930005bc88dd9bfd4",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "ac28e8178404372d3dcf0493d33d43c42be6a1bf9093186f38247a47dccc110d"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_llama31_behavior_interest_vanilla_scaling_full_0829_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_llama31_behavior_interest_vanilla_scaling_full_0829_v1.yaml",
+      "before_sha256": "e8175e4470138860ff217fce83d1cfcfc06f7f8f7fa00023af8734c097e65190",
+      "code_root": "amlt_inputs/static_sud_semantic_id_llama_vanilla_scaling_0829_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_semantic_id_llama_vanilla_scaling_0829_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_semantic_id_llama_vanilla_scaling_0829_v1",
+      "after_sha256": "d235e4b6c9c6b08abbb75df4f3995d5284a2bc4a25167c596da353bd5ea9dcd4"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_llama31_behavior_interest_vanilla_scaling_smoke_0829_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_llama31_behavior_interest_vanilla_scaling_smoke_0829_v1.yaml",
+      "before_sha256": "1c3f57be52da1aca5ba040c90b0b29cfeb1e9a0832e74177bad11a1959eb6c1c",
+      "code_root": "amlt_inputs/static_sud_semantic_id_llama_vanilla_scaling_0829_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_semantic_id_llama_vanilla_scaling_0829_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_semantic_id_llama_vanilla_scaling_0829_v1",
+      "after_sha256": "b43de2a3375bb8dac53605673e9ff6807c34c28fb66ec4398c53f960ab7ed057"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_llama31_behavior_interest_vanilla_scaling_supplement_0829_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_llama31_behavior_interest_vanilla_scaling_supplement_0829_v1.yaml",
+      "before_sha256": "68ec7ff1318b29423aef4dd9dfde76c7c81315aab23117fd12b136e7ec1f3915",
+      "code_root": "amlt_inputs/static_sud_semantic_id_llama_vanilla_scaling_0829_v2",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_semantic_id_llama_vanilla_scaling_0829_v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_semantic_id_llama_vanilla_scaling_0829_v2",
+      "after_sha256": "53a509e73be011f0a83be2b8dd540d920b71951de3ba39e0215c694a2621ae09"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_qwen35_behavior_interest_vanilla_scaling_full_0829_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_qwen35_behavior_interest_vanilla_scaling_full_0829_v1.yaml",
+      "before_sha256": "dce8645bce34548cf8cf2b4367148b653fb270dde6efdb436a3cc9341fd35b19",
+      "code_root": "amlt_inputs/static_sud_semantic_id_vanilla_scaling_0829_v3",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_semantic_id_vanilla_scaling_0829_v3",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_semantic_id_vanilla_scaling_0829_v3",
+      "after_sha256": "030b1b7827fee8eb0724f7c21a7980241973dc6a228677455302a965bdb2feef"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_qwen35_behavior_interest_vanilla_scaling_smoke_0829_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_qwen35_behavior_interest_vanilla_scaling_smoke_0829_v1.yaml",
+      "before_sha256": "973d7dd2456836454bc30472a3bb21425b41e88614b1b5a8fe4fef37d798e923",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "718ed4a5c3c29b6edab62f7be7b0cd3be4131851e5654726868d6432de0490f9"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_qwen35_behavior_interest_vanilla_scaling_smoke_0829_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_qwen35_behavior_interest_vanilla_scaling_smoke_0829_v2.yaml",
+      "before_sha256": "1ea9efd24e045ab6ce183b7d51f76af2469d54b26c9f8dcb24d51fe7042f31d4",
+      "code_root": "amlt_inputs/static_sud_semantic_id_vanilla_scaling_0829_v2",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_semantic_id_vanilla_scaling_0829_v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_semantic_id_vanilla_scaling_0829_v2",
+      "after_sha256": "5d669b5e9db13e9940321375a0d907ef11ebecb95291424a7c887d5397194411"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_semantic_id_qwen35_behavior_interest_vanilla_scaling_smoke_0829_v3.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_semantic_id_qwen35_behavior_interest_vanilla_scaling_smoke_0829_v3.yaml",
+      "before_sha256": "5638c63635fd2990b1526eae234225c997aa2e7fc3ff95de2955292c90e6015f",
+      "code_root": "amlt_inputs/static_sud_semantic_id_vanilla_scaling_0829_v3",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_semantic_id_vanilla_scaling_0829_v3",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_semantic_id_vanilla_scaling_0829_v3",
+      "after_sha256": "704517c2514a0e2664b3f448006ad1e510044ba1f971381e2943d110ccc41c22"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_taxonomy_softmax_qwen35_pilot_0901_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_taxonomy_softmax_qwen35_pilot_0901_v1.yaml",
+      "before_sha256": "a95c478894278b7f9072639b0f319b2836aade3cf7e96ea1cc84764d43b0e2b5",
+      "code_root": "amlt_inputs/static_sud_independent_pilots_0901_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_independent_pilots_0901_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_independent_pilots_0901_v1",
+      "after_sha256": "bf742a835c8b730b8ef61694b2d91df8f999b1412ed22845bafdd09339622046"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_taxonomy_softmax_qwen35_pilot_0902_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_taxonomy_softmax_qwen35_pilot_0902_v2.yaml",
+      "before_sha256": "7f5c77ecf300c90a5fd039957277cc4f8bd0b59ac9040b6d5a88100b94d4bec8",
+      "code_root": "amlt_inputs/static_sud_taxonomy_softmax_pilot_0902_v2",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_taxonomy_softmax_pilot_0902_v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_taxonomy_softmax_pilot_0902_v2",
+      "after_sha256": "db0828fae93a00d74c3a44b806639b7dd4e3c7de8d1394de1ce87ecd2c6e88f1"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_taxonomy_softmax_qwen35_smoke_0901_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_taxonomy_softmax_qwen35_smoke_0901_v1.yaml",
+      "before_sha256": "947a966b2c6c47fdff984c14639eacdc0a8b80d8e5445aac58066a78143ce9d3",
+      "code_root": "amlt_inputs/static_sud_taxonomy_softmax_qwen35_smoke_0901_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_taxonomy_softmax_qwen35_smoke_0901_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_taxonomy_softmax_qwen35_smoke_0901_v1",
+      "after_sha256": "cd3d03fa53db7bac873f4c293757f1acb9882e3722836a3033c9d20b828d09c1"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_taxonomy_softmax_qwen35_smoke_0901_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_taxonomy_softmax_qwen35_smoke_0901_v2.yaml",
+      "before_sha256": "45aaffe7b9cbd1f3e82c0c2ae0a1f950ac3b413cacb96333558aa4313e70e712",
+      "code_root": "amlt_inputs/static_sud_taxonomy_softmax_qwen35_smoke_0901_v2",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_taxonomy_softmax_qwen35_smoke_0901_v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_taxonomy_softmax_qwen35_smoke_0901_v2",
+      "after_sha256": "433d68c1ac7a3140e011a286fe80f5512d34196daeb47a7b5816571b71f1981f"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_text_label_behavior_interest_vanilla_scaling_full_0830_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_text_label_behavior_interest_vanilla_scaling_full_0830_v1.yaml",
+      "before_sha256": "34266dc042dec84b7d041fd7e8bc3830f0bf5383efb24face628b5a9de953e4c",
+      "code_root": "amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v1",
+      "after_sha256": "1fd4ddd53c536ea1b65f896e101669206e2be96e7a731f6dd336bec8d0cd05e3"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_text_label_behavior_interest_vanilla_scaling_full_0830_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_text_label_behavior_interest_vanilla_scaling_full_0830_v2.yaml",
+      "before_sha256": "40de2e9be31e898ebf5a2e99838bbb48dcea03a754c94a244319326a2ff58308",
+      "code_root": "amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v2",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v2",
+      "after_sha256": "2dda9785a1f452f686a139d1f416baf698de1ca66d5d4dab1b23e9374c74f437"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_text_label_behavior_interest_vanilla_scaling_smoke_0830_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_text_label_behavior_interest_vanilla_scaling_smoke_0830_v1.yaml",
+      "before_sha256": "b95cea9bacd19c9d6d46a5ab2c21cb4bbbbeebc1657361cdaeb908e9a0e07e7f",
+      "code_root": "amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v1",
+      "after_sha256": "2779ea9f3f57922f39606fd5cc5b6823b4fa976234c87b9c546670883537e789"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_text_label_behavior_interest_vanilla_scaling_smoke_0830_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_text_label_behavior_interest_vanilla_scaling_smoke_0830_v2.yaml",
+      "before_sha256": "75c0e3bba77432d7ac701e98aeca2f6fa10470100ed10dfa638102e3e5fa911b",
+      "code_root": "amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v2",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v2",
+      "after_sha256": "fd24c920f738e25ad8e066f646839fc197b2c69ea7847d23f0be9a566366a28a"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_sud_text_label_llama31_5400_recovery_0830_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_sud_text_label_llama31_5400_recovery_0830_v1.yaml",
+      "before_sha256": "cd5e473e253fb03dc3079337d46d6595d4df6c9879d83c01e63f46072feee4a6",
+      "code_root": "amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v3",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v3",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v3",
+      "after_sha256": "efaf180649ce1ed4ec02bc699cbcca7de109345f3a0ae736a76436f2490516e4"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_text_label_t0e_llama_full_0824_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_text_label_t0e_llama_full_0824_v1.yaml",
+      "before_sha256": "9515ff472cd5f591f4cf76c08f75c7517b6dad5dbd140d993dc8f6e1bb841485",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "3df91ba0409e2f2525a62134696c5eb5f4bd8bfbc01b1bf6a66f0341d264124e"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_text_label_t0e_llama_smoke_0824_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_text_label_t0e_llama_smoke_0824_v1.yaml",
+      "before_sha256": "46d8403b1aa73aa6741fef2a5b60a08dda3913e71ed28a752073df341e31e54a",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "a3dc690a615870e75bffd9a77be567ee74d231f709e2d807d91245eea65d4391"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_text_label_t0e_qwen_full_0824_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_text_label_t0e_qwen_full_0824_v1.yaml",
+      "before_sha256": "7f97ab8be9439f08171dc58ccd0c0dbb6d8a969b1317cb85dca782a83e5c836b",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "8f4b95f6df36b890b079d1b827926a4e69102e9a0449000c55eb04ad7cc0341b"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_text_label_t0e_qwen_smoke_0824_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_text_label_t0e_qwen_smoke_0824_v1.yaml",
+      "before_sha256": "3423437d8892fc09ec5ca7f009132dacb1ba3768c7d373cb27bf4559280104e6",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "76b7e9cc617e368581d09a7d6e82d447811700f9f63a5f3196819b1144df4d6e"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_text_label_t1_full_0824_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_text_label_t1_full_0824_v1.yaml",
+      "before_sha256": "7ea525f13d6e5e0e5318be75b80001c12a0d83c243329e6829b1a00812841bf6",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "10b7076fbed19a29deb18000e85677bfcb2576b4a7c54e45a5954bf920022d3e"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_text_label_t1_qwen_eval_recovery_0825_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_text_label_t1_qwen_eval_recovery_0825_v1.yaml",
+      "before_sha256": "8930b840409db8053a854a662c2d34eed946695d584a84f18c03005882f9ef69",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "f42af458827f0499d9d49f4d37e70912ebf73c97bce5a7572263e2bd53ae6e87"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_text_label_t1_smoke_0824_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_text_label_t1_smoke_0824_v1.yaml",
+      "before_sha256": "c10f274226045c45b5a0201f094c6ab30df114208510f09d235405f6fc9878a4",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "845612bbb2e0cbca4e1309dccf6a9c5f2a6a2424b9463c7946c3bcca7ed8dc47"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/static_user_disjoint_nrms.yaml",
+      "new": "configs/amlt/archive/2026-10-26/static_user_disjoint_nrms.yaml",
+      "before_sha256": "99ee5f8fde23f99b8fdb03c1a7d572fc8b301c2b7e922a4306028849b518be5b",
+      "code_root": ".",
+      "local_dir_before": "$CONFIG_DIR/../..",
+      "local_dir_after": "$CONFIG_DIR/../../../..",
+      "after_sha256": "e2890fb412e12b7c53950fdd95f8b199377801f9f3531bf6bb89fb376207a91c"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/wang_stage_a_dual_model_smoke_0902_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/wang_stage_a_dual_model_smoke_0902_v1.yaml",
+      "before_sha256": "613a697b1f2faac9bf40b6b347e91da926e011719fc1b26a27e4109d2464f5b2",
+      "code_root": "amlt_inputs/wang_stage_a_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/wang_stage_a_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_0902_v1",
+      "after_sha256": "ffe4c65c17d6dd46fc688ff5004234f3bf70e1594737576a1833c8f6dbdab1d4"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/wang_stage_a_main_validation_0902_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/wang_stage_a_main_validation_0902_v1.yaml",
+      "before_sha256": "71f28d5a6f1e96ef6fcb1beefc96683d09da0aef2202fcf8e916772f4b27a2ae",
+      "code_root": "amlt_inputs/wang_stage_a_full_0902_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/wang_stage_a_full_0902_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_full_0902_v1",
+      "after_sha256": "ec9bf336b5bc6546b2573ad738cefba3af2734861566d501c9810ab4fef90c8a"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/wang_stage_a_qwen2_generation_stop_recovery_0902_v3.yaml",
+      "new": "configs/amlt/archive/2026-10-26/wang_stage_a_qwen2_generation_stop_recovery_0902_v3.yaml",
+      "before_sha256": "9413bb20ffd6ee9a1e91b4c39c974131d05aa8b9bd7029680fb057fa468150bc",
+      "code_root": "amlt_inputs/wang_stage_a_0902_v3",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/wang_stage_a_0902_v3",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_0902_v3",
+      "after_sha256": "ba78618a4122c597a8c1b3c7466cb73776e32420d98bb62245acc0c50b19c703"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/wang_stage_a_qwen2_reload_recovery_smoke_0902_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/wang_stage_a_qwen2_reload_recovery_smoke_0902_v2.yaml",
+      "before_sha256": "b8139a51548f38a500a784edd799868f8e4483f7336e7e51689708e203ca8219",
+      "code_root": "amlt_inputs/wang_stage_a_0902_v2",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/wang_stage_a_0902_v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_0902_v2",
+      "after_sha256": "35cdfaa893bc3fcdbfc80c933b99aefe090e7a3610440948eb2f3e2c0c1b8b62"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/wang_stage_a_qwen35_main_validation_0902_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/wang_stage_a_qwen35_main_validation_0902_v2.yaml",
+      "before_sha256": "33f97d6408b9854690c65933a708a985d0e3cfeba805feb82531f83f1790a5ba",
+      "code_root": "amlt_inputs/wang_stage_a_qwen35_full_0902_v2",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/wang_stage_a_qwen35_full_0902_v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_qwen35_full_0902_v2",
+      "after_sha256": "5707059f37094e9f8da18b2ebfe4145aa5dff3e0348011312d4a5db784390891"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/wang_stage_a_qwen35_reload_recovery_smoke_0902_v2.yaml",
+      "new": "configs/amlt/archive/2026-10-26/wang_stage_a_qwen35_reload_recovery_smoke_0902_v2.yaml",
+      "before_sha256": "a4b2e60ac7d004901b55611f755c34ca6a6160c610af8b33e315c750a3d0542d",
+      "code_root": "amlt_inputs/wang_stage_a_0902_v2",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/wang_stage_a_0902_v2",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_0902_v2",
+      "after_sha256": "4edd902320445dfc0ddf5dcd3aa5fec84d51daf9a460405d86c1d8f44bfd49e0"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/wang_stage_a_top20_qwen2_0903_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/wang_stage_a_top20_qwen2_0903_v1.yaml",
+      "before_sha256": "2951e0e1e61e3be36523509cf24e977b48f2d9f53109ba1054dc78f58eb5f437",
+      "code_root": "amlt_inputs/wang_stage_a_top20_0903_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/wang_stage_a_top20_0903_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_top20_0903_v1",
+      "after_sha256": "94f8ea8d9becc679b594298e733d7aceaeeb61dd5085a375142cd4f67089670b"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/wang_stage_a_top20_qwen35_0903_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/wang_stage_a_top20_qwen35_0903_v1.yaml",
+      "before_sha256": "987616df7526184d20b79268ab17b559e2eafc18f8fc9cf056859163ff8de279",
+      "code_root": "amlt_inputs/wang_stage_a_top20_0903_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/wang_stage_a_top20_0903_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_top20_0903_v1",
+      "after_sha256": "17d58e8daf35c12f43153126f8b910baadf4d5efb78a0a1508e02d025ffe8f96"
+    },
+    {
+      "kind": "amlt",
+      "old": "configs/amlt/wang_stage_a_top20_smoke_0903_v1.yaml",
+      "new": "configs/amlt/archive/2026-10-26/wang_stage_a_top20_smoke_0903_v1.yaml",
+      "before_sha256": "5a45a363ab3af44f9f613c1f08b80b696d3236de3c5ea3a690008e273f9d8f83",
+      "code_root": "amlt_inputs/wang_stage_a_top20_0903_v1",
+      "local_dir_before": "$CONFIG_DIR/../../amlt_inputs/wang_stage_a_top20_0903_v1",
+      "local_dir_after": "$CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_top20_0903_v1",
+      "after_sha256": "b2bbebf7cfdb0d663a9c382b6caa2d5386e246294de89f4eea5ec0489c6e4f8b"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_static_user_disjoint_crossfit_behavior_eval_recovery.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_static_user_disjoint_crossfit_behavior_eval_recovery.sh",
+      "before_sha256": "93b1561b78ee0e4145407d9c5a4baf5c89aa730fd27bf16eee8972f22b14c00c",
+      "after_sha256": "93b1561b78ee0e4145407d9c5a4baf5c89aa730fd27bf16eee8972f22b14c00c"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_qwen35_22k_beam_map.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_qwen35_22k_beam_map.sh",
+      "before_sha256": "8e7c4b987daf840f4321da27cc70b6983dd912372ef1c78f9a324d22033686c6",
+      "after_sha256": "8e7c4b987daf840f4321da27cc70b6983dd912372ef1c78f9a324d22033686c6"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_rho_reference_rescore.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_rho_reference_rescore.sh",
+      "before_sha256": "f7860de1d463c3d310040eb21a9d872197e814cee9df741ed7ab1da843b8ff74",
+      "after_sha256": "f7860de1d463c3d310040eb21a9d872197e814cee9df741ed7ab1da843b8ff74"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_static_user_disjoint_nrms.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_static_user_disjoint_nrms.sh",
+      "before_sha256": "b3f1fd1f685d5e0e39604063a6819b58634f6a7ce518bd4443c0d289a1245386",
+      "after_sha256": "b3f1fd1f685d5e0e39604063a6819b58634f6a7ce518bd4443c0d289a1245386"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_reasoning_stability_preflight.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_reasoning_stability_preflight.sh",
+      "before_sha256": "f42a6f7ff0f6ed58c5eed0b52d25bb789ff39b54e09e06051198ec25ccd43e4b",
+      "after_sha256": "f42a6f7ff0f6ed58c5eed0b52d25bb789ff39b54e09e06051198ec25ccd43e4b"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_static_user_disjoint_behavior_interest_qwen_beam.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_static_user_disjoint_behavior_interest_qwen_beam.sh",
+      "before_sha256": "09702baaa474b5f102fe0290a0fbc196eb7ce33260735366751150872dd16b49",
+      "after_sha256": "09702baaa474b5f102fe0290a0fbc196eb7ce33260735366751150872dd16b49"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_qwen_cot_accuracy_map.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_qwen_cot_accuracy_map.sh",
+      "before_sha256": "acd0609ccb431654d7b742e70dd71ac6d3634f8bdde9e65ef3d6058bfcdadc3c",
+      "after_sha256": "acd0609ccb431654d7b742e70dd71ac6d3634f8bdde9e65ef3d6058bfcdadc3c"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_qwen_cot_label_eval_map.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_qwen_cot_label_eval_map.sh",
+      "before_sha256": "e6507492b756181f6f4752f6cacafc129544ef6cbc1d0512ee794e6878476613",
+      "after_sha256": "e6507492b756181f6f4752f6cacafc129544ef6cbc1d0512ee794e6878476613"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_wang_stage_a_top20.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_wang_stage_a_top20.sh",
+      "before_sha256": "aba01ac40ee74bfdbf75bfc8cf7a4fd00a2e9b90942d4e167db70167917c2481",
+      "after_sha256": "aba01ac40ee74bfdbf75bfc8cf7a4fd00a2e9b90942d4e167db70167917c2481"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_rho_reference_reload_diagnostic.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_rho_reference_reload_diagnostic.sh",
+      "before_sha256": "e2121118531b2d66513d0409a54aa521be7103569a889b97d6ceec54cbcd6789",
+      "after_sha256": "e2121118531b2d66513d0409a54aa521be7103569a889b97d6ceec54cbcd6789"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/evaluation/run_semantic_id_token_eval_recovery.sh",
+      "new": "scripts/archive/amlt/2026-10-26/evaluation/run_semantic_id_token_eval_recovery.sh",
+      "before_sha256": "e6edf5a44d0c1cb010b30bf2220c0313e50c29e191a56b5783288b98337365e3",
+      "after_sha256": "e6edf5a44d0c1cb010b30bf2220c0313e50c29e191a56b5783288b98337365e3"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_user_disjoint_behavior_interest_llama_parallel.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_user_disjoint_behavior_interest_llama_parallel.sh",
+      "before_sha256": "64a90a8cec9b5ea4c0c69baaf5d85a670522144246a2458db5423c0c172d4c76",
+      "after_sha256": "64a90a8cec9b5ea4c0c69baaf5d85a670522144246a2458db5423c0c172d4c76"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_semantic_id_global_crossfit_smoke.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_semantic_id_global_crossfit_smoke.sh",
+      "before_sha256": "4ce015231d1f8eb76a3dddd6595c2b930ca607612523caf970cae614b03058ba",
+      "after_sha256": "4ce015231d1f8eb76a3dddd6595c2b930ca607612523caf970cae614b03058ba"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_semantic_id_vanilla_scaling.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_semantic_id_vanilla_scaling.sh",
+      "before_sha256": "f34ac1e3528fb1e13e6164e75728adef0bff0768a1878194c0b5d2663469f9e2",
+      "after_sha256": "f34ac1e3528fb1e13e6164e75728adef0bff0768a1878194c0b5d2663469f9e2"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_semantic_id_global_crossfit_behavior_interest.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_semantic_id_global_crossfit_behavior_interest.sh",
+      "before_sha256": "64ad13d7d3c52cd7dddee278b3227b3d5927b47f3b065ac1b1d0c921df24baf0",
+      "after_sha256": "64ad13d7d3c52cd7dddee278b3227b3d5927b47f3b065ac1b1d0c921df24baf0"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_text_label_vanilla_scaling.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_text_label_vanilla_scaling.sh",
+      "before_sha256": "d8527ebad29684adc967e59004c494bac93d22f2d76686626c9239596149a993",
+      "after_sha256": "d8527ebad29684adc967e59004c494bac93d22f2d76686626c9239596149a993"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/prefetch_mera_original_model.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/prefetch_mera_original_model.sh",
+      "before_sha256": "ea71db84f429207a33fafa53863eedadc14b2a8cf18eca344de7ec37ded451d0",
+      "after_sha256": "ea71db84f429207a33fafa53863eedadc14b2a8cf18eca344de7ec37ded451d0"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_user_disjoint_text_label_ablation.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_user_disjoint_text_label_ablation.sh",
+      "before_sha256": "139ea1da3638b26138c6d557ccb0b26a7a332e79ce58ac02b20aeac0e6c335f4",
+      "after_sha256": "139ea1da3638b26138c6d557ccb0b26a7a332e79ce58ac02b20aeac0e6c335f4"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_semantic_id_class_crossfit_behavior_interest_smoke.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_semantic_id_class_crossfit_behavior_interest_smoke.sh",
+      "before_sha256": "1692308a1fc466b69394a1922ddf5a4fb8fd38a75b5f7ea6c965b06d8b96d079",
+      "after_sha256": "1692308a1fc466b69394a1922ddf5a4fb8fd38a75b5f7ea6c965b06d8b96d079"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_short_think_sft.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_short_think_sft.sh",
+      "before_sha256": "f65fed37eea102c4ba71122d7e2fff409f4b93d782a73423239eb03e84a1f7a9",
+      "after_sha256": "f65fed37eea102c4ba71122d7e2fff409f4b93d782a73423239eb03e84a1f7a9"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_oi_ni_meta_long.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_oi_ni_meta_long.sh",
+      "before_sha256": "9cd35f1c4d5efa24be4b8e56ec1bf482d85a9e6ca4e940d4ffa5a702ddff4015",
+      "after_sha256": "9cd35f1c4d5efa24be4b8e56ec1bf482d85a9e6ca4e940d4ffa5a702ddff4015"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_user_disjoint_behavior_interest_serial.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_user_disjoint_behavior_interest_serial.sh",
+      "before_sha256": "16e2ba33f7e9ca4562bd212896fc22735d566b36f721500575c827b76e857eea",
+      "after_sha256": "16e2ba33f7e9ca4562bd212896fc22735d566b36f721500575c827b76e857eea"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_user_disjoint_crossfit_reweighting.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_user_disjoint_crossfit_reweighting.sh",
+      "before_sha256": "eabffdf6ed61afa8e38e557506f30f4afbae195089e4209cbd139393256f9f41",
+      "after_sha256": "eabffdf6ed61afa8e38e557506f30f4afbae195089e4209cbd139393256f9f41"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_user_disjoint_balanced_sft.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_user_disjoint_balanced_sft.sh",
+      "before_sha256": "f620706bdd634e08faad638a1090ae2e9e9ab4698e07747c705d2cfe08720bb2",
+      "after_sha256": "f620706bdd634e08faad638a1090ae2e9e9ab4698e07747c705d2cfe08720bb2"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_user_disjoint_semantic_id_token_sft.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_user_disjoint_semantic_id_token_sft.sh",
+      "before_sha256": "6483aff03e9a209cc657e13ba2eca43558486179b9f5570e1f90da30e93b6079",
+      "after_sha256": "6483aff03e9a209cc657e13ba2eca43558486179b9f5570e1f90da30e93b6079"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_mera_gnip_distributed.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_mera_gnip_distributed.sh",
+      "before_sha256": "6e5857cfc225e928a06f45e34694e0d740ffde33344a8925de02e3158d6b5839",
+      "after_sha256": "6e5857cfc225e928a06f45e34694e0d740ffde33344a8925de02e3158d6b5839"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_semantic_id_global_crossfit_oof.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_semantic_id_global_crossfit_oof.sh",
+      "before_sha256": "ef3f5ae423eefee0219defd3aef3c8e7f98ddea4d773d610d52900e02f2a0880",
+      "after_sha256": "ef3f5ae423eefee0219defd3aef3c8e7f98ddea4d773d610d52900e02f2a0880"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_qwen35_22k.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_qwen35_22k.sh",
+      "before_sha256": "239d570a976c5aa3a2ec23719bab3b5e8a97dff0daa0b7a9d8dfe80a443a1f99",
+      "after_sha256": "239d570a976c5aa3a2ec23719bab3b5e8a97dff0daa0b7a9d8dfe80a443a1f99"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_semantic_id_llama_vanilla_scaling.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_semantic_id_llama_vanilla_scaling.sh",
+      "before_sha256": "314dad16d32252974fc5fb351df9391621b8838a35ace446a0dfb888159ea3de",
+      "after_sha256": "c4031bb1d576cff482df5835a09dbc90394221dbf5bdf9d9477b970a9c8cb29f"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_qwen_cot_sft_map.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_qwen_cot_sft_map.sh",
+      "before_sha256": "39d8de0e9253ea1d07194e21d512c86876a14b97e468de019951e8f7ee94873e",
+      "after_sha256": "39d8de0e9253ea1d07194e21d512c86876a14b97e468de019951e8f7ee94873e"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_oi_ni_full_sft.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_oi_ni_full_sft.sh",
+      "before_sha256": "beacd6c6bb06da68e1b1b371cefc4e1f59e59490af6c71669030559529acc717",
+      "after_sha256": "beacd6c6bb06da68e1b1b371cefc4e1f59e59490af6c71669030559529acc717"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_oi_ni_meta.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_oi_ni_meta.sh",
+      "before_sha256": "b75e7ecfa820d0b0b2f92dea6df91c3744ce04aed0f5f80a4d8243c9d00e509e",
+      "after_sha256": "b75e7ecfa820d0b0b2f92dea6df91c3744ce04aed0f5f80a4d8243c9d00e509e"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/build_mera_original_worker_env.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/build_mera_original_worker_env.sh",
+      "before_sha256": "fc4938002b9f422cdb2f66118a73324491512a0c1825858f1878489a0acb6296",
+      "after_sha256": "fc4938002b9f422cdb2f66118a73324491512a0c1825858f1878489a0acb6296"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_mera_gnip_ablation.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_mera_gnip_ablation.sh",
+      "before_sha256": "92cdbf8c2a2d91ac580989db3141c9a88873c355acb60f2230714dd62a81de35",
+      "after_sha256": "92cdbf8c2a2d91ac580989db3141c9a88873c355acb60f2230714dd62a81de35"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_independent_pilot.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_independent_pilot.sh",
+      "before_sha256": "ef97b76eb8cc5bef667c2901f98123a3e7515f1e0ab69a5e30f7f5c8f681050a",
+      "after_sha256": "ef97b76eb8cc5bef667c2901f98123a3e7515f1e0ab69a5e30f7f5c8f681050a"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_taxonomy_softmax_smoke.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_taxonomy_softmax_smoke.sh",
+      "before_sha256": "4e779ce104962c2d9036e44d050aaef5248e49ab9021cea12ce1e69c40163144",
+      "after_sha256": "4e779ce104962c2d9036e44d050aaef5248e49ab9021cea12ce1e69c40163144"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_semantic_id_class_crossfit_behavior_interest_oof.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_semantic_id_class_crossfit_behavior_interest_oof.sh",
+      "before_sha256": "53262ec7fbde03737783db11ee09d34f8b931fe493812ddc0cba4198c547a40f",
+      "after_sha256": "53262ec7fbde03737783db11ee09d34f8b931fe493812ddc0cba4198c547a40f"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_mera_gnip_smoke.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_mera_gnip_smoke.sh",
+      "before_sha256": "d52f85a9445117e15a9aa219ea5f810039aa25773e48eab83f0a1f8a80c557b7",
+      "after_sha256": "d52f85a9445117e15a9aa219ea5f810039aa25773e48eab83f0a1f8a80c557b7"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_semantic_id_token_reload_diagnostic.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_semantic_id_token_reload_diagnostic.sh",
+      "before_sha256": "af7c31087877f2f35480a0d81bc1b3ae1be45ff01b414247d202b783c2493306",
+      "after_sha256": "af7c31087877f2f35480a0d81bc1b3ae1be45ff01b414247d202b783c2493306"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_semantic_id_class_crossfit_final.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_semantic_id_class_crossfit_final.sh",
+      "before_sha256": "992477fef2e3bdd1e52eab5ef6b511144bc3e644ef7fd74c58ed9ad48e40aa8f",
+      "after_sha256": "992477fef2e3bdd1e52eab5ef6b511144bc3e644ef7fd74c58ed9ad48e40aa8f"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_semantic_id_global_crossfit_final.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_semantic_id_global_crossfit_final.sh",
+      "before_sha256": "a515d70e81c19fbbbe6fa7bb952cc53eedfb26f614ef904964868a0c9bbd6fdb",
+      "after_sha256": "a515d70e81c19fbbbe6fa7bb952cc53eedfb26f614ef904964868a0c9bbd6fdb"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_preference_state_reasoning_sft_smoke.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_preference_state_reasoning_sft_smoke.sh",
+      "before_sha256": "7d7262179a7bac63c3f2e4b0ae2ae9695ad44bd4228cfa7d876607b576c63998",
+      "after_sha256": "7d7262179a7bac63c3f2e4b0ae2ae9695ad44bd4228cfa7d876607b576c63998"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_oi_ni_meta_distributed.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_oi_ni_meta_distributed.sh",
+      "before_sha256": "476e35c6b440275a98684a11d5c0f1da4169e4bce6f57f1eda4844e9a7cdfb2a",
+      "after_sha256": "476e35c6b440275a98684a11d5c0f1da4169e4bce6f57f1eda4844e9a7cdfb2a"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_static_sud_semantic_id_class_crossfit_behavior_interest.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_static_sud_semantic_id_class_crossfit_behavior_interest.sh",
+      "before_sha256": "a7bd2c5b1a1c2db3325f149b8fd16011e5682709a4fd4cc2914cd3932f844e80",
+      "after_sha256": "a7bd2c5b1a1c2db3325f149b8fd16011e5682709a4fd4cc2914cd3932f844e80"
+    },
+    {
+      "kind": "worker",
+      "old": "scripts/amlt/sft/run_wang_stage_a.sh",
+      "new": "scripts/archive/amlt/2026-10-26/sft/run_wang_stage_a.sh",
+      "before_sha256": "8e10fcac8cc0efd4d9c5817ab16447ffacedf84b1426e17b844450bbe562c1c3",
+      "after_sha256": "8e10fcac8cc0efd4d9c5817ab16447ffacedf84b1426e17b844450bbe562c1c3"
+    }
+  ]
+}

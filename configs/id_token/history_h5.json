@@ -1,0 +1,21 @@
+{
+  "model_name": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "adapter_path": "artifacts/mind-backbone-qwen35-21600-v1/2b/sft/final_adapter",
+  "eval_file": "data/training/mind_history_length_ablation_20260915_v1/h5/eval/behavior_interest/dev_full_grouped.parquet",
+  "interest_token_mapping_file": "data/training/mind_history_length_ablation_20260915_v1/h5/interest_token_mapping.parquet",
+  "semantic_id_token_count": 108,
+  "semantic_id_initialization_mode": "mean_norm_matched",
+  "output_dir": "artifacts/mind-backbone-qwen35-21600-v1/2b/real_eval",
+  "run_name": "qwen35-2b-ni-only-h5-full-dev-seed42-0915-v1",
+  "enable_thinking": false,
+  "top_k": 20,
+  "cutoffs": [
+    1,
+    5,
+    10,
+    20
+  ],
+  "batch_size": 8,
+  "checkpoint_size": 256
+}

@@ -1,0 +1,145 @@
+{
+  "rule_version": "static-candidate-pilot-gate-v1",
+  "created_at": "2026-08-30T13:15:10.572633+00:00",
+  "passed": true,
+  "scope": "all_conditions",
+  "selected_condition_ids": [
+    "qwen35_behavior_uniform",
+    "qwen35_interest_uniform",
+    "llama31_behavior_uniform",
+    "llama31_interest_uniform"
+  ],
+  "manifest_path": "configs/candidate/static_user_disjoint_compact_single_view_gpu_v4.json",
+  "manifest_sha256": "b7f301b50aa24804009557e0149995084fe25a99d66bbdadd3f3d173833de637",
+  "condition_count": 4,
+  "conditions": {
+    "qwen35_behavior_uniform": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.1531815710854232,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/qwen35_behavior_uniform/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/qwen35_behavior_uniform/experiment_identity.json",
+          "sha256": "b505a6a19e948124ebc244f75bd881efa57bec29f4bb65c6242dbf6d8b4694e9"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/qwen35_behavior_uniform/metrics.json",
+          "sha256": "066e7e518a04618e09bdad6b0f18c8ac80007ed41694754be5061a1a46b588b9"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/qwen35_behavior_uniform/predictions.parquet",
+          "sha256": "4db3a9322ad3b68d1a953491beb97f4256094e4f77630c811ed0c513bc3f908b"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/qwen35_behavior_uniform/resolved_config.json",
+          "sha256": "8f3e802b6c51cbfb950eba2a832e664532f6e0352fed48414bd507da6a71b6e9"
+        }
+      }
+    },
+    "qwen35_interest_uniform": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.11825421312662256,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/qwen35_interest_uniform/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/qwen35_interest_uniform/experiment_identity.json",
+          "sha256": "8fa21f118c130cd22c36ee6358f94aa428dd8ded21c50d4c07e70b91938285af"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/qwen35_interest_uniform/metrics.json",
+          "sha256": "1d3e806a722ba6c4a26131664f5bdaf9deb7db979f25b184176ac9f5726ad70c"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/qwen35_interest_uniform/predictions.parquet",
+          "sha256": "f8c3dd0038d0bd94d22009d4c789c4ac15e54d5c4399dfafbc97537cb4c3bf74"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/qwen35_interest_uniform/resolved_config.json",
+          "sha256": "576a2aaabff9f3a58408306586f60a7310b0572aba360b812769dfb1ea8be683"
+        }
+      }
+    },
+    "llama31_behavior_uniform": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.13721384654718932,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/llama31_behavior_uniform/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/llama31_behavior_uniform/experiment_identity.json",
+          "sha256": "6f30db54165116fbf2ee85a1de518d9c67902f4f50d486168532bb283cec94fc"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/llama31_behavior_uniform/metrics.json",
+          "sha256": "7e99961d6a6dc4cf89c01abae5055b74e841806c38d1e8a286b5397eb6b2916e"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/llama31_behavior_uniform/predictions.parquet",
+          "sha256": "aa1062fa0096eed1d1e9c3e3b7a7911fd9c481cfecdbd81de220faf1aa0e6566"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/llama31_behavior_uniform/resolved_config.json",
+          "sha256": "bba6f9ff6d7a4cea5296dbbb442b8ee9596f87c5f2373ae696d5e79102ff8c8e"
+        }
+      }
+    },
+    "llama31_interest_uniform": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.15863300555304177,
+      "candidate_valid_rate": 0.998,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/llama31_interest_uniform/acceptance.json",
+          "sha256": "80d696b63b7aeb432d3d1396bcd91768f08c198509268aedcd478705325580f1"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/llama31_interest_uniform/experiment_identity.json",
+          "sha256": "d4da2a9f49d9cbf2b4c4c714074ae2caa971a455782b751f4a586f16a36142b1"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/llama31_interest_uniform/metrics.json",
+          "sha256": "0b61bd3d742c2317beff08c365db7d348189c67ce4fdf74080f85efb47c7d94b"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/llama31_interest_uniform/predictions.parquet",
+          "sha256": "d005bba3273c3a65fee1c74a0487c80fe71c1c8703dbddbd6400b82a8012b235"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/gpu/models/pilot/llama31_interest_uniform/resolved_config.json",
+          "sha256": "c1e948036a41b9607d971197351cfed9f56120d74f1ba4adc2a0e27593581600"
+        }
+      }
+    }
+  }
+}

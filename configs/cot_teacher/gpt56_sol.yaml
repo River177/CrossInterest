@@ -1,0 +1,19 @@
+source_dir: data/training/sft_experiments
+source_size: 1000
+output_dir: artifacts/cot_teacher/gpt56_sol
+
+instance: redmond/interactive
+deployment: gpt-5.6-sol_2026-07-09
+api_version: "2024-10-21"
+scope: api://trapi/.default
+
+max_completion_tokens: 256
+max_attempts: 3
+concurrency: 4
+shard_size: 20
+retry_failed_on_resume: true
+
+# Smoke/pilot mode makes exactly 20 teacher calls. Use --full for the
+# complete nested 5K Behavior + 5K Interest generation.
+pilot_size: 20
+pilot_seed: 20260809

@@ -96,8 +96,47 @@ def test_candidate_metrics_group_results() -> None:
     )
     assert metrics["strict_accuracy"] == 0.5
     assert metrics["category_accuracy"] == 1.0
+    assert metrics["macro_category_accuracy"] == 1.0
+    assert metrics["macro_category_count"] == 2
     assert metrics["candidate_valid_rate"] == 1.0
     assert metrics["prefix_compliance_rate"] == 0.5
     assert metrics["by_group"]["position:1"]["strict_correct"] == 1.0
     assert metrics["by_group"]["position:2"]["strict_correct"] == 0.0
     assert details[1]["normalized_category"] == "Golf"
+
+
+def test_candidate_macro_accuracy_weights_categories_equally() -> None:
+    music = _record()
+    music_second = {
+        **music,
+        "selection_id": "s2",
+    }
+    music_third = {
+        **music,
+        "selection_id": "s3",
+    }
+    golf = {
+        **music,
+        "selection_id": "s4",
+        "answer": "New topic: Golf",
+        "answer_category": "Golf",
+        "correct_position": 1,
+    }
+
+    metrics, _ = evaluate_candidate_outputs(
+        [music, music_second, music_third, golf],
+        [
+            "New topic: Music",
+            "New topic: Music",
+            "New topic: Golf",
+            "New topic: Music",
+        ],
+    )
+
+    assert metrics["category_accuracy"] == 0.5
+    assert metrics["per_category_accuracy"] == {
+        "Golf": 0.0,
+        "Music": 2 / 3,
+    }
+    assert metrics["macro_category_accuracy"] == 1 / 3
+    assert metrics["macro_category_count"] == 2

@@ -3,9 +3,11 @@ from __future__ import annotations
 import pytest
 
 from new_interest.evaluation.constrained_beam import (
+    RankedPrediction,
     TokenTrie,
     build_response_trie,
     decode_ranked_sequences,
+    fill_unique_predictions,
     make_prefix_allowed_tokens_fn,
 )
 
@@ -89,3 +91,49 @@ def test_finished_prefix_continues_to_allow_eos() -> None:
         [1, 2, *sequences["Music"], tokenizer.eos_token_id]
     )
     assert callback(0, repeated_eos) == [tokenizer.eos_token_id]
+
+
+def test_unique_prediction_fill_retries_excluding_selected_labels() -> None:
+    labels = [f"L{index:02d}" for index in range(24)]
+    initial = [
+        RankedPrediction(
+            label=label,
+            response=f"New topic: {label}",
+            score=float(100 - index),
+        )
+        for index, label in enumerate(labels[:19])
+    ]
+    seen_remaining: list[list[str]] = []
+
+    def generate_remaining(remaining: list[str]):
+        seen_remaining.append(remaining)
+        return [
+            RankedPrediction(
+                label=remaining[0],
+                response=f"New topic: {remaining[0]}",
+                score=1.0,
+            )
+        ]
+
+    filled = fill_unique_predictions(
+        initial,
+        labels,
+        top_k=20,
+        generate_remaining=generate_remaining,
+    )
+    assert len(filled.predictions) == 20
+    assert len({item.label for item in filled.predictions}) == 20
+    assert filled.initial_unique_count == 19
+    assert filled.retry_rounds == 1
+    assert seen_remaining == [labels[19:]]
+
+
+def test_unique_prediction_fill_rejects_retry_without_progress() -> None:
+    initial = [RankedPrediction("A", "New topic: A", 1.0)]
+    with pytest.raises(ValueError, match="no additional unique labels"):
+        fill_unique_predictions(
+            initial,
+            ["A", "B"],
+            top_k=2,
+            generate_remaining=lambda remaining: [],
+        )

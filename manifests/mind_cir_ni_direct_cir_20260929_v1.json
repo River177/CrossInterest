@@ -1,0 +1,54 @@
+{
+  "status": "accepted",
+  "artifact_root": "artifacts/mind-cir-ni-direct-training-20260929/cir_as_ni",
+  "monitor_step_totals": {
+    "standalone": 99
+  },
+  "report": "docs/experiments/2026-09-29/mind_cir_ni_direct_training.md",
+  "active_run": {
+    "experiment": "mind-cir-ni-direct-cir-0929-v1",
+    "job": "qwen35-2b-cir-direct3",
+    "bundle": "artifacts/mind-cir-ni-direct-training-20260929/bundles-v1/cir_as_ni",
+    "bundle_sha256": "08ea095e9b6378cc02d609a65c8f9923bf1a3165182c74c1c11371624b210f2b",
+    "yaml": "configs/amlt/mind_cir_ni_direct_cir_0929_v1.yaml",
+    "code_prefix": "projects/sft4safety/amlt-code/fef81689-616d-4c90-b1e6-09392382f093",
+    "submission_log": "artifacts/mind-cir-ni-direct-training-20260929/submission_cir.log",
+    "backend_id": "green_branch_99tl87syp5",
+    "results_prefix": "projects/sft4safety/amlt-results/7209376522.69574-8accad38-b71b",
+    "status": "accepted",
+    "cli_exit_code": 0,
+    "native_status": "Completed",
+    "latest_observation": "artifacts/mind-cir-ni-direct-training-20260929/cir_as_ni/progress/20260929T045750Z/receipt.json",
+    "last_checked_utc": "2026-09-29T04:58:12.550684+00:00",
+    "phase": "final_arm_accepted",
+    "gpu_startup_accepted": true,
+    "startup_acceptance": "artifacts/mind-cir-ni-direct-training-20260929/cir_as_ni/progress/20260929T035750Z/startup_progress_readback.json",
+    "latest_logged_optimizer_step": 99,
+    "last_committed_checkpoint_step": 99,
+    "committed_presentations": 3165,
+    "training_completion_readback": "artifacts/mind-cir-ni-direct-training-20260929/cir_as_ni/progress/20260929T042750Z/training_completion_readback.json",
+    "latest_progress_readback": "artifacts/mind-cir-ni-direct-training-20260929/cir_as_ni/progress/20260929T042750Z/startup_progress_readback.json",
+    "evaluation_progress": {
+      "prediction_ranges_by_shard": {
+        "0": 7848,
+        "1": 7848,
+        "2": 7848,
+        "3": 7848
+      },
+      "source": "blob names only; not independent coverage acceptance",
+      "complete_receipt_present": true
+    },
+    "final_acceptance": "artifacts/mind-cir-ni-direct-training-20260929/cir_as_ni/final_acceptance.json",
+    "final_acceptance_sha256": "92fd55e71fc2b297997521a1c4b3bfa602febdd483ff753b290a2a3655f2b219",
+    "final_prediction_sha256": "cc7f3c3abedc12e28a4a78278152a1efcc0cc7ff8c31b628ba64ca0d33b16494",
+    "final_macro_recall_at_10": 0.13784919946324925
+  },
+  "arm": "cir_as_ni",
+  "training_schedule": {
+    "samples": 1055,
+    "epochs": 3,
+    "optimizer_steps": 99,
+    "presentations": 3165,
+    "parent": null
+  }
+}

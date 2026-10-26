@@ -1,0 +1,35 @@
+description: 'Validate a four-A100 execution engine for the approved exact OI-to-NI meta objective: unchanged global
+  episode and original dropout realizations, ordered global gradients and HVP, serial-versus-four-rank loss/gradient/Adam
+  checks, singleton empty-rank boundary, checkpoint/reload and four-shard validation.'
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+  - nvidia-smi
+target:
+  service: singularity
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../../../artifacts/mind-oi-ni-meta-20260913/bundle-four-rank-v1
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+jobs:
+- name: qwen35-2b-exact-meta-four-rank-gate
+  sku: 80G4-A100
+  sla_tier: Standard
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - python -c 'import hashlib,json,os,pathlib,shutil; p=pathlib.Path('"'"'.'"'"'); m=json.loads((p/'"'"'four_rank_bundle_manifest.json'"'"').read_text());
+    h=lambda q:hashlib.sha256(q.read_bytes()).hexdigest(); assert h(p/'"'"'source_bundle_manifest.json'"'"')==m['"'"'source_bundle_manifest_sha256'"'"'];
+    assert all(h(p/n)==v for n,v in m['"'"'files'"'"'].items()); o=pathlib.Path(os.environ['"'"'AMLT_OUTPUT_DIR'"'"']);
+    o.mkdir(parents=True,exist_ok=True); shutil.copy2(p/'"'"'four_rank_bundle_manifest.json'"'"',o/'"'"'four_rank_bundle_manifest.json'"'"');
+    shutil.copy2(p/'"'"'scripts/amlt/sft/run_oi_ni_meta_distributed.sh'"'"',o/'"'"'operational_launcher.sh'"'"');
+    print(json.dumps({'"'"'four_rank_bundle_manifest_sha256'"'"':h(p/'"'"'four_rank_bundle_manifest.json'"'"'),'"'"'execution_source_identity'"'"':m['"'"'execution_source_identity'"'"']}))'
+  - bash scripts/amlt/sft/run_oi_ni_meta_distributed.sh gate meta

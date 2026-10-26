@@ -4,6 +4,7 @@ set -euo pipefail
 TASK_TYPE="$1"
 SIZE="$2"
 MODE="${3:-full}"
+VARIANT="${4:-legacy}"
 
 if [[ "$TASK_TYPE" == "auto" ]]; then
   case "${AMLT_MAP_INPUT_JOB_NAME:?AMLT_MAP_INPUT_JOB_NAME is required}" in
@@ -42,10 +43,35 @@ export PROJECT_DIR="$AMLT_CODE_DIR"
 export VERL_RUNTIME_DIR="${VERL_RUNTIME_DIR:-$HOME/verl-runtime}"
 export PYTHONPATH="$VERL_RUNTIME_DIR:$AMLT_CODE_DIR/src${PYTHONPATH:+:$PYTHONPATH}"
 export MODEL_PATH="Qwen/Qwen3-8B"
-export LORA_ADAPTER_PATH="$AMLT_MAP_INPUT_DIR/sft/final_adapter"
-export TRAIN_FILE="$AMLT_CODE_DIR/data/training/grpo_experiments/$TASK_TYPE/$SIZE.parquet"
+case "$VARIANT" in
+  legacy)
+    ADAPTER_RELATIVE_PATH="sft/final_adapter"
+    RUN_VARIANT="sft22k"
+    TRAIN_DATA_ROOT="grpo_experiments"
+    REWARD_FILE="grpo_reward.py"
+    ;;
+  correctness)
+    ADAPTER_RELATIVE_PATH="cot_sft/final_adapter"
+    RUN_VARIANT="cot-sft${SIZE}-acceptable"
+    TRAIN_DATA_ROOT="grpo_experiments"
+    REWARD_FILE="grpo_reward.py"
+    ;;
+  format_bootstrap)
+    ADAPTER_RELATIVE_PATH="sft/final_adapter"
+    RUN_VARIANT="sft22k-format-bootstrap"
+    TRAIN_DATA_ROOT="grpo_format_bootstrap_experiments"
+    REWARD_FILE="grpo_format_bootstrap_reward.py"
+    ;;
+  *)
+    echo "Unsupported GRPO variant: $VARIANT" >&2
+    exit 2
+    ;;
+esac
+export LORA_ADAPTER_PATH="$AMLT_MAP_INPUT_DIR/$ADAPTER_RELATIVE_PATH"
+export TRAIN_FILE="$AMLT_CODE_DIR/data/training/$TRAIN_DATA_ROOT/$TASK_TYPE/$SIZE.parquet"
+export REWARD_FUNCTION_PATH="$AMLT_CODE_DIR/src/new_interest/training/$REWARD_FILE"
 export OUTPUT_DIR="$AMLT_OUTPUT_DIR/grpo"
-export EXPERIMENT_NAME="qwen3-${SHORT_TASK}-sft22k-grpo${SIZE}-cot"
+export EXPERIMENT_NAME="qwen3-${SHORT_TASK}-${RUN_VARIANT}-grpo${SIZE}-cot"
 export CHECKPOINT_DIR="/scratch/crossinterest-grpo/$EXPERIMENT_NAME/checkpoints"
 export N_GPUS=4
 export TRAIN_BATCH_SIZE=32
@@ -64,14 +90,33 @@ export SAVE_FREQ=25
 export TEST_FREQ=-1
 export AGENT_LOOP_WORKERS=8
 
-if [[ "$MODE" == "smoke" ]]; then
-  export TRAIN_MAX_SAMPLES=128
-  export TOTAL_STEPS=2
-  export SAVE_FREQ=2
-else
-  export TRAIN_MAX_SAMPLES=-1
-  export TOTAL_STEPS=null
-fi
+case "$MODE" in
+  smoke)
+    export TRAIN_MAX_SAMPLES=128
+    export TOTAL_STEPS=2
+    export SAVE_FREQ=2
+    ;;
+  bootstrap20)
+    if [[ "$VARIANT" != "format_bootstrap" ]]; then
+      echo "bootstrap20 mode requires format_bootstrap variant" >&2
+      exit 2
+    fi
+    export TRAIN_MAX_SAMPLES=128
+    export TRAIN_BATCH_SIZE=8
+    export PPO_MINI_BATCH_SIZE=8
+    export TOTAL_STEPS=20
+    export LR=2e-6
+    export SAVE_FREQ=5
+    ;;
+  full)
+    export TRAIN_MAX_SAMPLES=-1
+    export TOTAL_STEPS=null
+    ;;
+  *)
+    echo "Unsupported GRPO mode: $MODE" >&2
+    exit 2
+    ;;
+esac
 
 test -f "$LORA_ADAPTER_PATH/adapter_model.safetensors"
 test -f "$TRAIN_FILE"

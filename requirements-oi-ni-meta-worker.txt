@@ -1,0 +1,11 @@
+transformers==5.14.1
+peft==0.18.0
+accelerate==1.12.0
+pyarrow==20.0.0
+PyYAML==6.0.2
+sentencepiece==0.2.0
+wandb==0.20.1
+tokenizers==0.22.2
+safetensors==0.8.0
+huggingface-hub==1.14.0
+pytest==8.3.5

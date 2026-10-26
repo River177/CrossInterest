@@ -1,0 +1,33 @@
+description: Faithful MeRA Qwen3.5 four-GPU DDP and 64-record real-evaluator smoke over 108 SID History and target tokens, pure-mean initialization, and paper T=0.05
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+    - python -c "import torch; print(torch.__version__, torch.version.cuda)"
+    - nvidia-smi
+code:
+  local_dir: $CONFIG_DIR/../../../../amlt_inputs/mera_gnip_faithful_qwen35_full_0831_v1
+target:
+  service: sing
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+jobs:
+  - name: qwen35-mera-faithful-t005-ddp-eval-smoke
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35-semantic-id
+        MERA_GNIP_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh &&
+        bash scripts/amlt/sft/run_mera_gnip_distributed.sh smoke

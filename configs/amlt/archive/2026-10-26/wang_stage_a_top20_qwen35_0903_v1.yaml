@@ -1,0 +1,75 @@
+description: Wang Stage-A primary held-out Top-20 evaluation-only for accepted Qwen3.5 adapters; no retraining and no Stage B
+
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+    - python -c "import torch; print(torch.__version__, torch.version.cuda)"
+    - nvidia-smi
+
+code:
+  local_dir: $CONFIG_DIR/../../../../amlt_inputs/wang_stage_a_top20_0903_v1
+
+target:
+  service: singularity
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+
+jobs:
+  - name: qwen35-arts-top20
+    sku: 80G8-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-wang-stage-a-qwen35
+        CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+        WANG_NUM_GPUS: "8"
+        WANG_REUSE_SFT_DIR: /mnt/output/projects/sft4safety/amlt-results/7211680523.14095-da9c454a-6422/sft
+        WANG_EXPECTED_ADAPTER_SHA256: b062d74330ac0ee3b41b04b80252b053a5cf1f64a4e7cedec6d88e6760239c75
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh && bash scripts/amlt/evaluation/run_wang_stage_a_top20.sh qwen35 arts
+  - name: qwen35-grocery-top20
+    sku: 80G8-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-wang-stage-a-qwen35
+        CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+        WANG_NUM_GPUS: "8"
+        WANG_REUSE_SFT_DIR: /mnt/output/projects/sft4safety/amlt-results/7211680523.14063-2001c061-1b32/sft
+        WANG_EXPECTED_ADAPTER_SHA256: da1e0d45283694f7297b10889f916d0cca146b39bfe0ec7c5f1b71740391ee92
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh && bash scripts/amlt/evaluation/run_wang_stage_a_top20.sh qwen35 grocery
+  - name: qwen35-mind-top20
+    sku: 80G8-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-wang-stage-a-qwen35
+        CUBLAS_WORKSPACE_CONFIG: ":4096:8"
+        WANG_NUM_GPUS: "8"
+        WANG_REUSE_SFT_DIR: /mnt/output/projects/sft4safety/amlt-results/7211680523.14036-28332cdc-b756/sft
+        WANG_EXPECTED_ADAPTER_SHA256: 7823c27dc4891e4ff2d13f2a5089ec4a2e116e25febedd5ab06240d511e7ef4f
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh && bash scripts/amlt/evaluation/run_wang_stage_a_top20.sh qwen35 mind

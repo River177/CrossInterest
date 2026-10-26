@@ -1,0 +1,46 @@
+{
+  "rule_version": "static-candidate-pilot-gate-v1",
+  "created_at": "2026-08-29T16:56:05.155918+00:00",
+  "passed": true,
+  "scope": "all_conditions",
+  "selected_condition_ids": [
+    "grok43_behavior_interest_uniform"
+  ],
+  "manifest_path": "configs/candidate/static_user_disjoint_behavior_interest_grok43_v1.json",
+  "manifest_sha256": "edda38b662dfa580e2ec45719148a9649e3bbeb0f48e213d4e441a4771951893",
+  "condition_count": 1,
+  "conditions": {
+    "grok43_behavior_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_interest",
+      "samples": 1000,
+      "macro_category_accuracy": 0.1789569295485564,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/grok43/models/pilot/grok43_behavior_interest_uniform/acceptance.json",
+          "sha256": "d501c1b65a83b1052af05e8a4b520dc7fab713e1e76dc3cbfbaa19d768dd2932"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/grok43/models/pilot/grok43_behavior_interest_uniform/experiment_identity.json",
+          "sha256": "97007a4a5b2b09cc3f79f5b931a449018bfa3b7457fe1dfa79b192684f0c2778"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/grok43/models/pilot/grok43_behavior_interest_uniform/metrics.json",
+          "sha256": "505ab274b154cbbd1930a693ce95e4d0dab0e5722313bd383a3705c8295eaf61"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/grok43/models/pilot/grok43_behavior_interest_uniform/predictions.parquet",
+          "sha256": "bf41c9393062175670f1b5665923b5d93b9b649775610ecbba5880b3bec27426"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/grok43/models/pilot/grok43_behavior_interest_uniform/resolved_config.json",
+          "sha256": "6cf7d1946274458b60a1be303a13d678f39d58e3b92440f91f2f1210902c4e10"
+        }
+      }
+    }
+  }
+}

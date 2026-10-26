@@ -1,0 +1,46 @@
+{
+  "rule_version": "static-candidate-pilot-gate-v1",
+  "created_at": "2026-08-31T11:11:30.327478+00:00",
+  "passed": true,
+  "scope": "condition_subset",
+  "selected_condition_ids": [
+    "gpt5_medium_behavior_interest_uniform"
+  ],
+  "manifest_path": "configs/candidate/static_user_disjoint_behavior_interest_gpt5_v1.json",
+  "manifest_sha256": "537f450e0a1c0148c30a52c39f769a9947021f765a8b2234392538df6f5beaa1",
+  "condition_count": 1,
+  "conditions": {
+    "gpt5_medium_behavior_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_interest",
+      "samples": 1000,
+      "macro_category_accuracy": 0.20880449820330388,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt5/models/pilot/gpt5_medium_behavior_interest_uniform/acceptance.json",
+          "sha256": "6d434f4f52ac2aed43db3ce2138f40d02f98e5a4c5e2616869c081de892cf199"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt5/models/pilot/gpt5_medium_behavior_interest_uniform/experiment_identity.json",
+          "sha256": "2a9db6f520fef42efa3696b3abf125fff6923face349ca02e340a2c362128fff"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt5/models/pilot/gpt5_medium_behavior_interest_uniform/metrics.json",
+          "sha256": "98c0b2d90849ff1c2e31cacab0d66077f87fc02c87bf7fe46fbf41e2a54a7cb8"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt5/models/pilot/gpt5_medium_behavior_interest_uniform/predictions.parquet",
+          "sha256": "5551d565bcaedab1fa972b3681643785d4bcb5c84ebf5a3d85e270eaf3733add"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt5/models/pilot/gpt5_medium_behavior_interest_uniform/resolved_config.json",
+          "sha256": "66f5b7179ffbce5123daecf6b902b4de576d4efb42e8f34d5d5584c9e08625fd"
+        }
+      }
+    }
+  }
+}

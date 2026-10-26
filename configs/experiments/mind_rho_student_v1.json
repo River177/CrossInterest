@@ -1,0 +1,121 @@
+{
+  "version": "mind-rho-student-v1",
+  "scope": "Uniform, static OOF, and epoch-refreshed reducible-loss weighting on the same NI training users",
+  "arms": [
+    "uniform",
+    "static",
+    "dynamic"
+  ],
+  "model_name": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "initialization": "Original pretrained weights and identical mean-norm SID initialization; fresh seed42 LoRA, no supervised parent",
+  "training_rows": 21600,
+  "classes": 108,
+  "rows_per_class": 200,
+  "optimizer_steps": 2025,
+  "gpus_per_arm": 4,
+  "max_concurrent_gpus": 12,
+  "training_kernel_selection": "stable_fla_v1",
+  "reference_acceptance_sha256": "042d349f66ce8d7e81c8c2e1fdf28889ae1d2fd86015cea7585ee354c77e72ae",
+  "weighting": {
+    "uniform": "1",
+    "static": "classwise midrank of negative OOF NLL",
+    "dynamic": "classwise midrank of current student NLL minus OOF NLL",
+    "score_definition": "first-supervised-SID; native-effective-head-cast; FP32-projection-and-logsumexp; no-prior-correction",
+    "kernel_selection": "stable_fla_v1",
+    "weight_rule": "q=zero_based_average_tie_rank/(class_count-1); raw=0.5+q; divide by class mean; singleton q=0.5",
+    "refresh_at_optimizer_steps": [
+      0,
+      675,
+      1350
+    ],
+    "current_student_scoring_all_arms": true,
+    "current_student_scoring_purpose_in_controls": "Compute-matched training-dynamics diagnostics only; uniform/static weights do not use current scores",
+    "scoring_batch_size": 4,
+    "stop_gradient": true,
+    "all_samples_retained": true,
+    "mid_epoch_resume": "Reload original epoch weights; never rescore after partial epoch updates"
+  },
+  "evaluation": {
+    "fixed_final_checkpoint": true,
+    "primary": "macro_ndcg_at_20",
+    "secondary": [
+      "macro_recall_at_10",
+      "macro_recall_at_20",
+      "macro_ndcg_at_10"
+    ],
+    "validation_rows": 5354,
+    "validation_main_supported_classes": 107,
+    "validation_main_min_class_support": 20,
+    "validation_rare_class_separate": true,
+    "dev_rows": 31392,
+    "dev_users": 27082,
+    "dev_supported_classes": 104,
+    "sid_candidates": 108,
+    "history_filtering": false,
+    "checkpoint_or_hyperparameter_selection": false,
+    "paired_bootstrap_unit": "user",
+    "paired_bootstrap_replicates": 2000,
+    "seed": 42
+  },
+  "gate": {
+    "single": {
+      "rows": 32,
+      "classes": 4,
+      "rows_per_class": 8,
+      "epochs": 3,
+      "world_size": 1,
+      "optimizer_steps": 12
+    },
+    "ddp": {
+      "rows": 64,
+      "classes": 8,
+      "rows_per_class": 8,
+      "epochs": 3,
+      "world_size": 4,
+      "optimizer_steps": 6
+    },
+    "evaluation_rows": 64,
+    "native_unit_weight_gradient_parity": "exact",
+    "weighted_scalar_gradient_control": true,
+    "epoch_refresh_and_resume_controls": true,
+    "formal_training_after_matching_gate_acceptance": true
+  },
+  "sft": {
+    "seed": 42,
+    "semantic_id_token_count": 108,
+    "semantic_id_initialization_mode": "mean_norm_matched",
+    "semantic_reload_reference_samples": 4,
+    "enable_thinking": false,
+    "max_seq_length": 2048,
+    "epochs": 3,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.03,
+    "lr_scheduler_type": "cosine",
+    "max_grad_norm": 1.0,
+    "gradient_checkpointing_use_reentrant": false,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": "all-linear",
+    "optim": "adamw_torch_fused",
+    "loss_reduction": "token_mean",
+    "semantic_id_loss_scope": "full_vocabulary",
+    "forbidden_trainable_module_substrings": [
+      "vision",
+      "visual"
+    ],
+    "logging_steps": 1,
+    "save_strategy": "steps",
+    "save_steps": 100,
+    "save_total_limit": 3,
+    "persistent_checkpoint_limit": 3,
+    "dataloader_num_workers": 2,
+    "wandb_mode": "disabled"
+  },
+  "large_artifact_policy": "Models, optimizer states, scores, weights, and predictions remain on remote persistent storage; compact receipts and reports only on Mac",
+  "training_numeric_policy": "torch-deterministic-algorithms-v1"
+}

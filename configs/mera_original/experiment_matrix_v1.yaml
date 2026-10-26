@@ -1,0 +1,97 @@
+config_version: mera-original-matrix-v1
+source_manifest: manifests/mera_original_v1.json
+source_root: data/external/mera_original/c07bdbe57bf82e5c938b478035baee78d630b17c
+
+model:
+  name: Qwen/Qwen2-1.5B
+  revision: 8a16abf2848eda07cc5253dec660bf1ce007ad7a
+  load_in_8bit: true
+  torch_dtype: float16
+  pad_token_id: 151643
+
+training:
+  seed: 2024
+  cutoff_len: 512
+  epochs: 10
+  learning_rate: 0.0001
+  per_device_train_batch_size: 36
+  per_device_eval_batch_size: 36
+  gradient_accumulation_steps: 7
+  effective_batch_size: 252
+  warmup_steps: 20
+  logging_steps: 8
+  eval_steps: 8
+  save_steps: 48
+  save_total_limit: 3
+  early_stopping_patience: 2
+  lora_r: 16
+  lora_alpha: 16
+  lora_dropout: 0.05
+  lora_target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - down_proj
+    - up_proj
+  modules_to_save:
+    - embed_tokens
+    - lm_head
+  temperature: 1.0
+
+evaluation:
+  top_k: 4
+  batch_size: 32
+  reload_reference_examples: 4
+  reload_max_abs_error: 0.1
+  fresh_repeat_max_abs_error: 0.00001
+  reload_require_topk_exact: true
+
+datasets:
+  arts:
+    directory: data/Arts
+    category_map: layer2_map.txt
+    category_tree: category_tree.json
+    cooccurrence_matrix: category_cooccurrence.npy
+    train_file: train.json
+    valid_file: valid.json
+    test_file: test.json
+    author_predictions: results/arts_resutls.json
+    expected_rows: {train: 20186, valid: 2523, test: 2524}
+    expected_categories: 143
+    expected_parents: 22
+    expected_max_steps: 800
+    expected_code_collaborative_anchors: 117
+    expected_paper_structure_anchors: 138
+    expected_paper_collaborative_anchors: 131
+  grocery:
+    directory: data/Grocery_and_Gourmet_Food
+    category_map: layer2_map.txt
+    category_tree: category_tree_new.json
+    cooccurrence_matrix: category_cooccurrence.npy
+    train_file: train.json
+    valid_file: valid.json
+    test_file: test.json
+    author_predictions: results/grocery_results.json
+    expected_rows: {train: 34981, valid: 4373, test: 4373}
+    expected_categories: 172
+    expected_parents: 32
+    expected_max_steps: 1380
+    expected_code_collaborative_anchors: 138
+    expected_paper_structure_anchors: 167
+    expected_paper_collaborative_anchors: 156
+
+contracts:
+  code-faithful:
+    regularizer_semantics: released-code
+    cooccurrence_threshold: null
+    datasets:
+      arts: {structure_weight: 0.01, collaborative_weight: 0.01, negative_samples: 5}
+      grocery: {structure_weight: 0.1, collaborative_weight: 0.1, negative_samples: 10}
+  paper-spec:
+    regularizer_semantics: paper-equation
+    cooccurrence_threshold: 0.05
+    structure_weight: 0.05
+    collaborative_weight: 0.1
+    negative_samples: 10

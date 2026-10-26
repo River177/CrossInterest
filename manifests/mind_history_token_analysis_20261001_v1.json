@@ -1,0 +1,32 @@
+{
+  "status": "accepted",
+  "artifact_root": "artifacts/mind-history-token-20260930/analysis",
+  "active_run": {
+    "experiment": "mind-history-token-analysis-1001-v2",
+    "job": "history-token-paired-analysis-v2",
+    "backend_id": "cool_panda_h84tqwcqpb",
+    "results_prefix": "projects/sft4safety/amlt-results/7209231189.73245-29d6a772-8097",
+    "yaml": "configs/amlt/mind_history_token_analysis_1001_v2.yaml",
+    "bundle": "artifacts/mind-history-token-20260930/analysis-bundle-v2",
+    "payload_sha256": "a845e5bd9d0c80b179a0d10ee45a1fcc3c2cd8f5f9fdecaa474ecff3316d186e"
+  },
+  "prior_runs": [
+    {
+      "experiment": "mind-history-token-analysis-1001-v1",
+      "job": "history-token-paired-analysis",
+      "yaml": "configs/amlt/mind_history_token_analysis_1001_v1.yaml",
+      "bundle": "artifacts/mind-history-token-20260930/analysis-bundle-v1",
+      "payload_sha256": "5143e8b0a76d5ac5ec6883424e5330367196f6a8acbc44e235564fc374066102",
+      "backend_id": "mighty_cartoon_r5d7vjsrlm",
+      "results_prefix": "projects/sft4safety/amlt-results/7209231390.78580-e080504f-4bd0"
+    }
+  ],
+  "latest_receipt": "artifacts/mind-history-token-20260930/analysis/progress/20260930T202333Z/receipt.json",
+  "acceptance_command": "python scripts/analysis/accept_history_token_comparison.py --receipt <current-v2-receipt>",
+  "observer_command": "NO_PROXY=\"*\" python scripts/analysis/observe_history_token.py --manifest manifests/mind_history_token_analysis_20261001_v1.json --skip-logs",
+  "v1_note": "Still Queued at 19:50 UTC; invalid admission manifest guarantees exit before analysis because .amltignore is not uploaded. Do not reuse or resubmit v1. Preserve evidence.",
+  "last_observed_utc": "2026-09-30T19:53:28.539558+00:00",
+  "final_acceptance": "artifacts/mind-history-token-20260930/paired_final_acceptance.json",
+  "v1_terminal_state": "Failed",
+  "v1_terminal_receipt": "artifacts/mind-history-token-20260930/analysis/progress/20260930T202357Z/receipt.json"
+}

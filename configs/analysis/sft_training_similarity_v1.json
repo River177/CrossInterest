@@ -1,0 +1,30 @@
+{
+  "rule_version": "sft-training-similarity-v1",
+  "sft_dir": "data/training/sft_experiments",
+  "source_dir": "data/processed/new_interest",
+  "raw_dir": "data/raw/MINDlarge_reclassified",
+  "artifact_dir": "artifacts/sft-training-data-analysis/v1",
+  "train_name": "22k.parquet",
+  "dev_name": "dev_10k_grouped.parquet",
+  "history_limit": 50,
+  "embedding": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "device": null,
+    "batch_size": 256
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20260813,
+    "confidence": 0.95
+  },
+  "permutation": {
+    "replicates": 2000,
+    "seed": 20260813,
+    "confidence": 0.95
+  },
+  "cases": {
+    "per_split_quadrant": 1,
+    "top_controls": 3
+  }
+}

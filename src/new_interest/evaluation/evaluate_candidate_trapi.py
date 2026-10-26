@@ -16,6 +16,10 @@ import pyarrow.parquet as pq
 from new_interest.evaluation.candidate_metrics import evaluate_candidate_outputs
 
 
+class EmptyChoicesError(RuntimeError):
+    """Retryable TRAPI response that contains no completion choice."""
+
+
 def _pilot_records(
     records: list[dict[str, object]],
     pilot_size: int | None,
@@ -49,6 +53,8 @@ def _is_retryable(error: Exception) -> tuple[bool, int | None]:
     name = type(error).__name__.lower()
     if "timeout" in name or "connection" in name:
         return True, status_code
+    if isinstance(error, EmptyChoicesError):
+        return True, status_code
     return False, status_code
 
 
@@ -57,7 +63,7 @@ def _call_one(
     record: dict[str, object],
     *,
     deployment: str,
-    reasoning_effort: str,
+    reasoning_effort: str | None,
     max_completion_tokens: int,
     max_attempts: int,
 ) -> dict[str, object]:
@@ -66,17 +72,25 @@ def _call_one(
     last_status: int | None = None
     for attempt in range(1, max_attempts + 1):
         try:
-            response = client.chat.completions.create(
-                model=deployment,
-                messages=[
+            request: dict[str, object] = {
+                "model": deployment,
+                "messages": [
                     {
                         "role": "user",
                         "content": str(record["prompt"]),
                     }
                 ],
-                max_completion_tokens=max_completion_tokens,
-                reasoning_effort=reasoning_effort,
+                "max_completion_tokens": max_completion_tokens,
+            }
+            if reasoning_effort is not None:
+                request["reasoning_effort"] = reasoning_effort
+            response = client.chat.completions.create(
+                **request,
             )
+            if not response.choices:
+                raise EmptyChoicesError(
+                    "TRAPI returned a response with no completion choices"
+                )
             usage = response.usage
             details = getattr(
                 usage,
@@ -102,6 +116,9 @@ def _call_one(
                     "reasoning_tokens",
                     None,
                 ),
+                "finish_reason": getattr(
+                    response.choices[0], "finish_reason", None
+                ),
                 "latency_seconds": time.time() - started_at,
             }
         except Exception as error:
@@ -124,6 +141,7 @@ def _call_one(
         "prompt_tokens": None,
         "completion_tokens": None,
         "reasoning_tokens": None,
+        "finish_reason": None,
         "latency_seconds": time.time() - started_at,
     }
 
@@ -153,6 +171,38 @@ def _create_client(instance: str, api_version: str) -> Any:
     )
 
 
+def _validate_zero_reasoning_tokens(
+    total_reasoning_tokens: int,
+    expected_zero_reasoning_tokens: bool,
+) -> None:
+    if expected_zero_reasoning_tokens and total_reasoning_tokens != 0:
+        raise RuntimeError(
+            "Expected zero reasoning tokens, but TRAPI reported "
+            f"{total_reasoning_tokens}"
+        )
+
+
+def _sanitize_config(config: dict[str, Any]) -> dict[str, Any]:
+    secret_keys = {
+        "access_token",
+        "api_key",
+        "api_token",
+        "bearer_token",
+        "client_secret",
+        "credential",
+        "credentials",
+        "id_token",
+        "refresh_token",
+        "secret",
+        "token",
+    }
+    return {
+        key: value
+        for key, value in config.items()
+        if key.lower() not in secret_keys
+    }
+
+
 def evaluate_trapi(config: dict[str, Any]) -> dict[str, object]:
     data_file = Path(config["data_file"])
     output_dir = Path(config["output_dir"])
@@ -160,7 +210,15 @@ def evaluate_trapi(config: dict[str, Any]) -> dict[str, object]:
     instance = str(config.get("instance", "redmond/interactive"))
     deployment = str(config["deployment"])
     api_version = str(config.get("api_version", "2024-10-21"))
-    reasoning_effort = str(config.get("reasoning_effort", "medium"))
+    reasoning_effort = config.get("reasoning_effort")
+    if reasoning_effort is not None and not isinstance(
+        reasoning_effort,
+        str,
+    ):
+        raise ValueError("reasoning_effort must be a string or null")
+    expected_zero_reasoning_tokens = bool(
+        config.get("expected_zero_reasoning_tokens", False)
+    )
     max_completion_tokens = int(
         config.get("max_completion_tokens", 256)
     )
@@ -315,6 +373,10 @@ def evaluate_trapi(config: dict[str, Any]) -> dict[str, object]:
             "deployment": deployment,
             "api_version": api_version,
             "reasoning_effort": reasoning_effort,
+            "requested_reasoning_effort": reasoning_effort,
+            "expected_zero_reasoning_tokens": (
+                expected_zero_reasoning_tokens
+            ),
             "samples_requested": len(records),
             "request_successes": successful,
             "request_failures": len(records) - successful,
@@ -328,6 +390,11 @@ def evaluate_trapi(config: dict[str, Any]) -> dict[str, object]:
             ),
             "total_reasoning_tokens": sum(
                 int(row["reasoning_tokens"] or 0)
+                for row in request_rows
+            ),
+            "truncated_output_count": sum(
+                bool(row["success"])
+                and str(row.get("finish_reason")) == "length"
                 for row in request_rows
             ),
             "mean_latency_seconds": (
@@ -353,6 +420,7 @@ def evaluate_trapi(config: dict[str, Any]) -> dict[str, object]:
                     "prompt_tokens",
                     "completion_tokens",
                     "reasoning_tokens",
+                    "finish_reason",
                     "latency_seconds",
                 )
             },
@@ -369,14 +437,18 @@ def evaluate_trapi(config: dict[str, Any]) -> dict[str, object]:
         json.dumps(metrics, indent=2) + "\n",
         encoding="utf-8",
     )
-    safe_config = {
-        key: value
-        for key, value in config.items()
-        if "token" not in key.lower() and "credential" not in key.lower()
-    }
+    safe_config = _sanitize_config(config)
+    safe_config["requested_reasoning_effort"] = reasoning_effort
+    safe_config["expected_zero_reasoning_tokens"] = (
+        expected_zero_reasoning_tokens
+    )
     (output_dir / "resolved_config.json").write_text(
         json.dumps(safe_config, indent=2, default=str) + "\n",
         encoding="utf-8",
+    )
+    _validate_zero_reasoning_tokens(
+        int(metrics["total_reasoning_tokens"]),
+        expected_zero_reasoning_tokens,
     )
     minimum_success_rate = float(
         config.get("minimum_success_rate", 0.99)

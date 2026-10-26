@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from dataclasses import dataclass
-from math import log2
+from math import log, log2
 from statistics import mean
 
 RESPONSE_PREFIX = "New topic: "
@@ -173,6 +173,10 @@ def evaluate_ranked_outputs(
     class_retrieved: dict[int, Counter[str]] = {
         k: Counter() for k in cutoffs
     }
+    class_discounted_gain: dict[int, Counter[str]] = {
+        k: Counter() for k in cutoffs
+    }
+    top1_counts: Counter[str] = Counter()
     details: list[dict[str, object]] = []
 
     for record, predictions in zip(records, ranked_outputs):
@@ -183,11 +187,15 @@ def evaluate_ranked_outputs(
         acceptable = set(acceptable_list)
         labels = [str(item["label"]) for item in predictions]
         scores = [float(item["score"]) for item in predictions]
+        if labels:
+            top1_counts[labels[0]] += 1
         if len(labels) != len(set(labels)):
             raise ValueError(
                 f"{record['impression_id']}: duplicate ranked labels"
             )
         answer_count = len(acceptable)
+        for target in acceptable:
+            class_support[target] += 1
         row_metrics: dict[str, float] = {}
         first_relevant_rank: int | None = None
         for rank, label in enumerate(labels, start=1):
@@ -211,9 +219,12 @@ def evaluate_ranked_outputs(
             row_metrics[f"ndcg_at_{k}"] = ndcg
             row_metrics[f"hit_at_{k}"] = hit
             for target in acceptable:
-                class_support[target] += int(k == cutoffs[0])
                 if target in top_k:
                     class_retrieved[k][target] += 1
+                    rank = labels.index(target) + 1
+                    class_discounted_gain[k][target] += (
+                        1.0 / log2(rank + 1)
+                    )
         reciprocal_rank = (
             1.0 / first_relevant_rank
             if first_relevant_rank is not None
@@ -235,6 +246,45 @@ def evaluate_ranked_outputs(
             }
         )
 
+    top1_total = sum(top1_counts.values())
+    top1_probabilities = [
+        count / top1_total
+        for count in top1_counts.values()
+    ] if top1_total else []
+    top1_entropy = -sum(
+        probability * log(probability)
+        for probability in top1_probabilities
+    )
+    label_space_size = len(class_support)
+    normalized_top1_entropy = (
+        top1_entropy / log(label_space_size)
+        if label_space_size > 1
+        else 0.0
+    )
+    max_top1_count = max(top1_counts.values(), default=0)
+    per_class_recall = {
+        str(k): {
+            target: (
+                class_retrieved[k][target] / support
+                if support
+                else 0.0
+            )
+            for target, support in sorted(class_support.items())
+        }
+        for k in cutoffs
+    }
+    per_class_ndcg = {
+        str(k): {
+            target: (
+                class_discounted_gain[k][target] / support
+                if support
+                else 0.0
+            )
+            for target, support in sorted(class_support.items())
+        }
+        for k in cutoffs
+    }
+
     metrics: dict[str, object] = {
         "samples": len(records),
         **{
@@ -250,17 +300,36 @@ def evaluate_ranked_outputs(
                 answer_count_metrics.items()
             )
         },
-        "per_class_recall": {
-            str(k): {
-                target: (
-                    class_retrieved[k][target] / support
-                    if support
-                    else 0.0
-                )
-                for target, support in sorted(class_support.items())
-            }
+        "supported_interest_count": len(class_support),
+        **{
+            f"interest_macro_recall_at_{k}": mean(
+                per_class_recall[str(k)].values()
+            )
             for k in cutoffs
         },
+        **{
+            f"interest_macro_ndcg_at_{k}": mean(
+                per_class_ndcg[str(k)].values()
+            )
+            for k in cutoffs
+        },
+        "per_class_recall": per_class_recall,
+        "per_class_ndcg": per_class_ndcg,
         "per_class_support": dict(sorted(class_support.items())),
+        "unique_top1_labels": len(top1_counts),
+        "max_top1_label_count": max_top1_count,
+        "max_top1_label_share": (
+            max_top1_count / top1_total
+            if top1_total
+            else 0.0
+        ),
+        "top1_label_entropy": top1_entropy,
+        "normalized_top1_label_entropy": normalized_top1_entropy,
+        "top1_label_counts": dict(
+            sorted(
+                top1_counts.items(),
+                key=lambda item: (-item[1], item[0]),
+            )
+        ),
     }
     return metrics, details

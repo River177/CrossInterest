@@ -1,0 +1,79 @@
+{
+  "rule_version": "static-candidate-pilot-gate-v1",
+  "created_at": "2026-08-29T08:23:06.440895+00:00",
+  "passed": true,
+  "scope": "condition_subset",
+  "selected_condition_ids": [
+    "qwen35_behavior_interest_uniform",
+    "llama31_behavior_interest_uniform"
+  ],
+  "manifest_path": "configs/candidate/static_user_disjoint_behavior_interest_v3.json",
+  "manifest_sha256": "fc81f92313529bd1c727cb39fcbc5540b65c7cdc7566f5ac531a62f244ff206e",
+  "condition_count": 2,
+  "conditions": {
+    "qwen35_behavior_interest_uniform": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "behavior_interest",
+      "samples": 1000,
+      "macro_category_accuracy": 0.17369159587540323,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/models/pilot/qwen35_behavior_interest_uniform/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/models/pilot/qwen35_behavior_interest_uniform/experiment_identity.json",
+          "sha256": "8d84291e89397208265aa465e97502483bbb51fd78890f2aa300c51ce484319a"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/models/pilot/qwen35_behavior_interest_uniform/metrics.json",
+          "sha256": "2b21438c5cf55000bff1157881de08b5865b275fdad18728c98adf65ed63d884"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/models/pilot/qwen35_behavior_interest_uniform/predictions.parquet",
+          "sha256": "b8edeedf48768e6795fdc77729dfcc67a8403dd7ac9cc02252d72cb2baaba4b8"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/models/pilot/qwen35_behavior_interest_uniform/resolved_config.json",
+          "sha256": "4686a6227b8534d59f6fe1bf2efc23601333fe4b595f47ca80fbc4e86e5b2369"
+        }
+      }
+    },
+    "llama31_behavior_interest_uniform": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "behavior_interest",
+      "samples": 1000,
+      "macro_category_accuracy": 0.14736063625075643,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/models/pilot/llama31_behavior_interest_uniform/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/models/pilot/llama31_behavior_interest_uniform/experiment_identity.json",
+          "sha256": "e11b1d00c0920860234af4b03366b9bc3f475f253b08cdd60eee095ee0a6362c"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/models/pilot/llama31_behavior_interest_uniform/metrics.json",
+          "sha256": "2eac3919f01e4c1a5102605bed7f8e61abefc68430a25b7b9cec8029f945e82c"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/models/pilot/llama31_behavior_interest_uniform/predictions.parquet",
+          "sha256": "062867623f321fb2e3e87ffc09ef1cf7a5504f8ea5cf36b77f485e11d2bf8f02"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/models/pilot/llama31_behavior_interest_uniform/resolved_config.json",
+          "sha256": "d821299fe120a6a60edf81ceab3b311b6a60a950250198b1c59d52415e01907d"
+        }
+      }
+    }
+  }
+}

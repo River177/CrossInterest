@@ -1,0 +1,14 @@
+{
+  "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+  "adapter_path": "artifacts/static-sud-sft/llama31-interest/final_adapter",
+  "eval_file": "data/training/sft_static_user_disjoint_balanced_200_h50_v1/eval/interest_only/dev_full_grouped.parquet",
+  "retained_interests_file": "data/training/generative_new_interest_static_user_disjoint_balanced_200_h50_v1/retained_interests.parquet",
+  "output_dir": "artifacts/static-sud-text-label-exhaustive/llama31-interest",
+  "run_name": "static-sud-t0e-llama31-interest-full",
+  "enable_thinking": false,
+  "batch_size": 32,
+  "checkpoint_size": 16,
+  "max_seq_length": 2048,
+  "top_k": 20,
+  "cutoffs": [1, 5, 10, 20]
+}

@@ -1,0 +1,40 @@
+description: 'Authorized SID-relation pilot: baseline and shared-SID relation, each4A100
+  in parallel; same Mixed parent,21600 NI rows,675 updates,full native SFT,FP32 full108
+  ranking.'
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+  - nvidia-smi
+target:
+  service: singularity
+  name: Recall
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../artifacts/sid-relation-bias-20260915/bundle-full-v1
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+jobs:
+- name: qwen35-2b-sid-baseline
+  sku: 80G4-A100
+  sla_tier: Premium
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash scripts/amlt/sft/run_sid_relation_bias.sh full baseline
+- name: qwen35-2b-sid-relation
+  sku: 80G4-A100
+  sla_tier: Premium
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash scripts/amlt/sft/run_sid_relation_bias.sh full relation

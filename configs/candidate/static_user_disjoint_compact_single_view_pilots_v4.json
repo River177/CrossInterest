@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "experiment_id": "static-user-disjoint-candidate-k10-compact-single-view-pilots-v4",
+  "seed": 20260815,
+  "data": {
+    "full_root": "data/training/candidate_selection_static_user_disjoint_k10_compact_v4",
+    "pilot_root": "data/training/candidate_selection_static_user_disjoint_k10_compact_v4_pilot1000",
+    "full_filename": "dev_expanded.parquet",
+    "pilot_filename": "dev_pilot_1000.parquet",
+    "full_samples": 37817,
+    "pilot_samples": 1000,
+    "supported_categories": 111
+  },
+  "artifact_root": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models",
+  "pilot_acceptance": {
+    "minimum_request_success_rate": 0.99,
+    "minimum_candidate_valid_rate": 0.99,
+    "minimum_prefix_compliance_rate": 0.99,
+    "require_no_truncation": true,
+    "require_zero_reasoning_tokens_when_expected": true
+  },
+  "conditions": [
+    {
+      "id": "gpt55_none_behavior_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {
+        "instance": "redmond/interactive",
+        "deployment": "gpt-5.5_2026-04-24",
+        "api_version": "2024-10-21",
+        "reasoning_effort": "none",
+        "expected_zero_reasoning_tokens": true,
+        "concurrency": 4,
+        "checkpoint_size": 64,
+        "max_attempts": 10,
+        "max_completion_tokens": 512,
+        "minimum_success_rate": 0.99
+      }
+    },
+    {
+      "id": "gpt55_none_interest_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {
+        "instance": "redmond/interactive",
+        "deployment": "gpt-5.5_2026-04-24",
+        "api_version": "2024-10-21",
+        "reasoning_effort": "none",
+        "expected_zero_reasoning_tokens": true,
+        "concurrency": 4,
+        "checkpoint_size": 64,
+        "max_attempts": 10,
+        "max_completion_tokens": 512,
+        "minimum_success_rate": 0.99
+      }
+    },
+    {
+      "id": "gpt55_medium_behavior_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {
+        "instance": "redmond/interactive",
+        "deployment": "gpt-5.5_2026-04-24",
+        "api_version": "2024-10-21",
+        "reasoning_effort": "medium",
+        "concurrency": 4,
+        "checkpoint_size": 64,
+        "max_attempts": 10,
+        "max_completion_tokens": 4096,
+        "minimum_success_rate": 0.99
+      }
+    },
+    {
+      "id": "gpt55_medium_interest_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {
+        "instance": "redmond/interactive",
+        "deployment": "gpt-5.5_2026-04-24",
+        "api_version": "2024-10-21",
+        "reasoning_effort": "medium",
+        "concurrency": 4,
+        "checkpoint_size": 64,
+        "max_attempts": 10,
+        "max_completion_tokens": 4096,
+        "minimum_success_rate": 0.99
+      }
+    },
+    {
+      "id": "grok43_behavior_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {
+        "instance": "redmond/interactive",
+        "deployment": "grok-4.3_1",
+        "api_version": "2024-10-21",
+        "reasoning_effort": null,
+        "concurrency": 4,
+        "checkpoint_size": 64,
+        "max_attempts": 10,
+        "max_completion_tokens": 512,
+        "minimum_success_rate": 0.99
+      }
+    },
+    {
+      "id": "grok43_interest_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {
+        "instance": "redmond/interactive",
+        "deployment": "grok-4.3_1",
+        "api_version": "2024-10-21",
+        "reasoning_effort": null,
+        "concurrency": 4,
+        "checkpoint_size": 64,
+        "max_attempts": 10,
+        "max_completion_tokens": 512,
+        "minimum_success_rate": 0.99
+      }
+    }
+  ]
+}

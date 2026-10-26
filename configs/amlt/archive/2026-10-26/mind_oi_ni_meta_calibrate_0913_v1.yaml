@@ -1,0 +1,34 @@
+description: 'Calibrate the approved exact OI-to-NI meta objective: three frozen inner step sizes, 27 updates each,
+  independent initialization and Train-only validation. Use the accepted v2 numerical core and an audited longer
+  wall-clock allowance based on measured A100 throughput.'
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+  - nvidia-smi
+target:
+  service: singularity
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../../../artifacts/mind-oi-ni-meta-20260913/bundle-long-v1
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+jobs:
+- name: qwen35-2b-exact-meta-calibrate
+  sku: 80G1-A100
+  sla_tier: Standard
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - python -c 'import hashlib,json,os,pathlib,shutil; p=pathlib.Path('"'"'.'"'"'); m=json.loads((p/'"'"'launch_manifest.json'"'"').read_text());
+    h=lambda q:hashlib.sha256(q.read_bytes()).hexdigest(); assert h(p/'"'"'source_bundle_manifest.json'"'"')==m['"'"'core_manifest_sha256'"'"'];
+    assert all(h(p/n)==v for n,v in m['"'"'files'"'"'].items()); o=pathlib.Path(os.environ['"'"'AMLT_OUTPUT_DIR'"'"']);
+    o.mkdir(parents=True,exist_ok=True); shutil.copy2(p/'"'"'launch_manifest.json'"'"',o/'"'"'launch_manifest.json'"'"');
+    shutil.copy2(p/'"'"'scripts/amlt/sft/run_oi_ni_meta_long.sh'"'"',o/'"'"'operational_launcher.sh'"'"'); print(json.dumps({'"'"'launch_manifest_sha256'"'"':h(p/'"'"'launch_manifest.json'"'"'),'"'"'timeouts_seconds'"'"':m['"'"'timeouts_seconds'"'"']}))'
+  - bash scripts/amlt/sft/run_oi_ni_meta_long.sh calibrate meta

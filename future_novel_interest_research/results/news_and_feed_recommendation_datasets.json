@@ -1,0 +1,195 @@
+{
+  "name": "Public news and feed recommendation logs for future novel-interest prediction: MIND, EB-NeRD, Adressa, Globo.com, and auxiliary exposure logs",
+  "kind": "Comparative dataset audit",
+  "venue_year": "MIND: ACL 2020; Adressa: WI 2017 with the current field documentation dated 2018; Globo.com G1: DLRS 2018 and updated dataset version 2 in 2019; EB-NeRD: RecSys Challenge 2024; auxiliary Yahoo! R6 and NewsREEL/Plista releases are older and their current access status is [uncertain].",
+  "official_sources": {
+    "MIND": [
+      "https://msnews.github.io/",
+      "https://learn.microsoft.com/en-us/azure/open-datasets/dataset-microsoft-news",
+      "https://aclanthology.org/2020.acl-main.331/",
+      "https://github.com/msnews/MIND"
+    ],
+    "EB-NeRD": [
+      "https://recsys.eb.dk/",
+      "https://recsys.eb.dk/dataset/",
+      "https://arxiv.org/abs/2410.03432",
+      "https://github.com/ebanalyse/ebnerd-benchmark"
+    ],
+    "Adressa": [
+      "https://reclab.idi.ntnu.no/dataset/",
+      "https://reclab.idi.ntnu.no/dataset/cxdataset_v5.pdf",
+      "https://doi.org/10.1145/3106426.3109436"
+    ],
+    "Globo.com": [
+      "https://www.kaggle.com/datasets/gspmoreira/news-portal-user-interactions-by-globocom",
+      "https://github.com/gabrielspmoreira/chameleon_recsys",
+      "https://arxiv.org/abs/1808.00076",
+      "https://arxiv.org/abs/1904.10367"
+    ],
+    "auxiliary": [
+      "https://webscope.sandbox.yahoo.com/catalog.php?datatype=r",
+      "http://www.newsreelchallenge.org/dataset/"
+    ]
+  },
+  "release_and_license": {
+    "MIND": "The official site currently offers MIND-large train, validation, and test downloads and MIND-small train and validation downloads after acceptance of the Microsoft Research License Terms. Use is free for research purposes under those custom terms; it is not an unrestricted open-data license. Microsoft Learn also documents the public Azure blob paths for large/small train and validation archives.",
+    "EB-NeRD": "Free for research after accepting the publisher's General License Terms and submitting name, email, and affiliation through the official download form. The dataset license is non-exclusive, non-transferable, non-commercial, lasts up to six years, requires deletion after termination, forbids redistribution, and explicitly allows recommender-system research but forbids use for other derivative products such as training language models. The repository code is MIT licensed, but that software license does not replace the dataset terms.",
+    "Adressa": "The official page directly links the light one-week and ten-week archives under CC BY-NC-SA 4.0 for non-commercial use. The full version and full article content require contacting NTNU because some articles are paywalled. The page calls the longer archive '10 Weeks' while its filename is three_month.tar.gz; the documentation specifies January 1 through March 31, 2017.",
+    "Globo.com": "Kaggle dataset version 2 was released on 2019-04-16 under CC BY-NC-SA 4.0 and is restricted to academic/non-commercial objectives. The data card remains visible, but direct unauthenticated archive download did not succeed in this audit; current download mechanics are therefore [uncertain]. Version 2 adds OS, country, region, and referrer context and removes within-session repeated clicks and sessions shorter than two clicks.",
+    "auxiliary": "The current download and license state of Yahoo! R6 and NewsREEL/Plista was not re-verified from downloadable first-party archives in this audit [uncertain]."
+  },
+  "input_history": {
+    "MIND": "An anonymized user ID and an ordered list of previously clicked news IDs, with candidate-time impressions. The original paper constructs training histories from the first four weeks and test histories from the first five weeks; the released behavior row contains impression time, history, and the shown slate.",
+    "EB-NeRD": "Per-user history.parquet provides 21 days of clicked article IDs with aligned click timestamps, read times, and scroll percentages. Each following behaviors.parquet covers seven days and supplies user, session, device, subscription and optional demographic context. The fixed history is not updated inside the seven-day behavior period, but the behavior records are timestamped and can be appended to reconstruct a dynamic history.",
+    "Adressa": "Chronologically ordered page-view events can be grouped by userId and sessionStart/sessionStop. Available context includes activeTime when known, device, OS, location, URL/document ID, and article metadata; there is no pre-made history/target pair.",
+    "Globo.com": "Timestamped page-view sequences grouped by user_id and session_id over 16 days, with session and device/location/referrer context. The published CHAMELEON task intentionally uses active-session context and ignores older sessions, but a CrossInterest builder could aggregate sessions by user_id if that identifier is stable in the released files.",
+    "auxiliary": "Yahoo! R6 supplies a contextual feature vector rather than a persistent user history; it is useful for exposure evaluation, not user-history prediction [uncertain]."
+  },
+  "prediction_target": "None of the four primary datasets natively labels 'future new interest.' Their native targets are candidate click/ranking for an impression (MIND and EB-NeRD) or next clicked article/page view (Adressa and Globo.com). For CrossInterest, define a user-level temporal target: categories, subcategories, topics, entities, or semantic clusters positively consumed during a fixed future window but absent from a fixed past window. Keep the observed target as positive-unlabeled adoption, not a complete latent-interest set.",
+  "novel_interest_definition": "Recommended operational definition: a future positive engagement in a semantic unit not positively consumed in the user's observed history, with item novelty reported separately from category/topic novelty. A single future click is 'observed exploration,' not necessarily an interest. EB-NeRD uniquely permits a stricter onset threshold using click plus read-time/scroll and a separate later-repeat criterion. MIND has only clicks; Adressa has page views plus sometimes activeTime; Globo.com has clicks only in the public release.",
+  "novelty_granularity_and_reference_window": {
+    "primary_definition": "Use leaf category/subcategory novelty relative to every observed positive in a fixed pre-cutoff history window. Also report ancestor-category novelty and semantic-distance novelty as separate outcomes; do not mix new-item clicks with new-interest labels.",
+    "MIND": "Category and subcategory novelty relative to the first four or five weeks; the official taxonomy has 20 top-level categories. A new article in an old category is item novelty only.",
+    "EB-NeRD": "Category, one of 263 subcategories, publisher-provided topic, or embedding-cluster novelty relative to the 21-day history. The seven-day behavior period is the future window.",
+    "Adressa": "Category, keyword/entity, or semantic-text novelty relative to an earlier window within the ten-week log. Use a minimum history duration and a disjoint future duration.",
+    "Globo.com": "Category or 250-dimensional content-embedding cluster novelty relative to an earlier portion of the 16-day log; the window is short and original text is absent."
+  },
+  "interest_onset_definition": {
+    "MIND": "First clicked exposure in a previously unseen semantic unit; no dwell signal is available, so onset remains weak.",
+    "EB-NeRD": "Prefer the first clicked in-view article in an unseen semantic unit that also passes a pre-registered next_read_time or next_scroll_percentage threshold. Retain click-only onset as a sensitivity analysis.",
+    "Adressa": "First page view in an unseen unit, optionally requiring activeTime above a threshold; missing activeTime must not be treated as zero.",
+    "Globo.com": "First click in an unseen category/cluster; version 2 removed repeated clicks inside sessions, so persistence must be measured across later events or sessions rather than within-session duplicate rows."
+  },
+  "is_direct_match": {
+    "MIND": "Dataset-only adjacent match. It supports history-to-future click prediction and semantic novelty construction, but does not directly label novel or persistent interest.",
+    "EB-NeRD": "Closest dataset-only match and the strongest candidate for a new primary benchmark. It combines stable users, temporal histories, actual in-view candidates, rich item semantics, and engagement depth, but still requires a new target definition.",
+    "Adressa": "Adjacent robustness dataset. It has the longest period and rich content/dwell context, but no impression slate, so non-clicks and availability are unobserved.",
+    "Globo.com": "Adjacent session-click dataset. Stable users and creation timestamps may permit a short history-to-future construction, but the 16-day horizon, lack of exposures, removed repeated clicks, and missing raw text make it a weaker match.",
+    "auxiliary": "Yahoo! R6 is method/evaluation-only because randomized exposure is valuable but persistent histories are absent. NewsREEL/Plista may be dataset-only if the original logs and persistent IDs remain obtainable [uncertain]."
+  },
+  "persistence_signal": {
+    "MIND": "Possible only as repeated later clicks in the remaining short future window; no dwell or explicit satisfaction signal.",
+    "EB-NeRD": "Strongest among the candidates: later category/topic clicks can be separated from onset, with read-time and scroll used as engagement quality. Seven future days still limit long-term persistence claims.",
+    "Adressa": "Repeated later views across sessions and activeTime can indicate persistence over several weeks, subject to missing dwell and absent exposure.",
+    "Globo.com": "Cross-session repeats can be counted, but version 2 deliberately removes same-article repeats within sessions and only 16 days are observed."
+  },
+  "method": "Build a common temporal benchmark rather than reuse native next-click labels unchanged. For each user, freeze an observation cutoff, derive semantic histories only from pre-cutoff positive events, enumerate exposed future positives where impressions exist, and label first-time semantic units. Compare global popularity, recent popularity, last-category transition, conditional co-occurrence, content-similarity, sequence models, and language-model rankers. Add an engagement-qualified EB-NeRD target and a persistence head predicting whether onset is followed by another positive in the same semantic unit.",
+  "evaluation_protocol": "Use chronological windows and user-level aggregation. Report seen-user temporal generalization as the main axis, and create an optional fully user-disjoint test to measure transfer without calling it personalized prediction. For MIND use the official first-four/fifth/sixth-week chronology but dynamically append earlier positive impressions when forming later targets. For EB-NeRD use 21-day history, early future days for onset, and remaining future days for persistence; the exact split within seven days must be pre-registered. For Adressa and Globo.com choose non-overlapping windows after inspecting event counts. Evaluate full taxonomy ranking and, where present, actual in-view candidate ranking; report Recall/NDCG/MRR, macro label recall, onset precision among exposed candidates, coverage, calibration, and paired user-clustered bootstrap intervals. Include popularity and last-category transition baselines.",
+  "generalization_axis": "The intended main axis is temporal future for stable, previously observed users. Secondary axes are new items within known categories, newly published articles, leaf-category onset, and user-disjoint transfer. Do not conflate unseen-user evaluation with predicting a known user's interest change. EB-NeRD and MIND can explicitly test in-impression item ranking; Adressa and Globo.com primarily test positive-sequence forecasting under unknown exposure.",
+  "exposure_handling": {
+    "MIND": "Each impression contains shown article IDs with click/non-click labels. These are exposed negatives, but there are no propensities or randomized positions. Articles never shown to the user must not be labeled negative.",
+    "EB-NeRD": "article_ids_inview records registered visible articles and article_ids_clicked records clicks. The released order is shuffled to remove positional information, so position effects cannot be modeled. No propensity scores or randomized exposure are provided. This is nevertheless the best actual-opportunity record among the four.",
+    "Adressa": "Only page visits are observed; no impression slate or propensity. Treat future labels as positive-unlabeled and avoid sampling never-clicked items as true negatives without an explicit assumption.",
+    "Globo.com": "Only clicked page views are released; no shown-but-not-clicked items or propensities. CHAMELEON samples negatives from recently seen items for ranking, which is an evaluation construction, not observed non-preference.",
+    "auxiliary": "Yahoo! R6 is valuable specifically because its Today Module logs were collected under a randomized serving policy with logged action/click context, but the exact currently downloadable schema and access state were not re-verified here [uncertain]."
+  },
+  "main_findings_and_limits": "EB-NeRD materially improves on MIND for CrossInterest because it exposes aligned history timestamps, in-view slates, article publication times, body text, category/subcategory/topic metadata, and engagement depth. It still observes only six weeks and supplies fixed 21-day histories, so dynamic reconstruction and explicit persistence auditing are required. Adressa provides ten weeks and rich Norwegian content/activeTime, making it attractive for temporal robustness, but the absence of impressions creates severe exposure MNAR. Globo.com is useful for short-session and cold-article robustness but is weak for durable new-interest claims. MIND remains a useful English benchmark with exact impression candidates, but released archives omit full bodies despite the paper's dataset-level description, histories are split-level snapshots in the official construction, and clicks alone do not establish durable interest.",
+  "scale": {
+    "MIND": "1,000,000 sampled users, 161,013 articles, 15,777,377 impressions, and 24,155,470 click behaviors over six weeks from 2019-10-12 through 2019-11-22. The paper reports 2,186,683 training, 365,200 validation, and 2,341,619 test samples after keeping non-empty histories.",
+    "EB-NeRD": "1,103,602 users, 125,541 articles, 37,966,985 impressions, 32 categories, and 263 subcategories over six weeks from 2023-04-27 through 2023-06-08. The official landing page additionally describes more than 251 million interactions. Each split pairs a 21-day history with seven days of behavior logs.",
+    "Adressa": "Public light archives cover one week and ten weeks. Official documentation reports, for one week, 561,733 users, 11,207 articles, and 2,286,835 views; for the longer release, 3,083,438 users, 48,486 articles, and 27,223,576 views. The paper and official page describe the longer release as ten weeks even though the documentation date range extends from 2017-01-01 to 2017-03-31.",
+    "Globo.com": "Kaggle version 2 covers 2017-10-01 through 2017-10-16, with about 3 million clicks, more than 1 million sessions, about 314,000 users, and more than 46,000 interacted articles. articles_metadata.csv and the embedding matrix cover 364,047 published articles, a much larger catalog than the interacted subset.",
+    "auxiliary": "Exact current counts and access for additional feed logs were not re-verified in this focused audit [uncertain]."
+  },
+  "stable_user_identity": {
+    "MIND": "Yes within the six-week sample: users are de-linked and hashed with one-time salt. Official experiments contain both overlap and unseen users. Stability outside the release window is impossible to assess.",
+    "EB-NeRD": "Yes within the six-week collection: active users are hashed with one-time salt and user_id joins history and behavior files. No linkage beyond the release window is available.",
+    "Adressa": "Mostly suitable within the archive: userId is documented as a cross-site identifier that differentiates devices/browsers or identifies subscription users. It can therefore fragment one person across devices, so the statistical unit is the released identifier, not a guaranteed human identity.",
+    "Globo.com": "The released click schema and papers use user_id across sessions, enabling per-ID aggregation during the 16-day window. Whether identifiers correspond to cookies, devices, or logged-in persons is not documented on the current data card [uncertain].",
+    "auxiliary": "Yahoo! R6 does not provide a stable identity suitable for longitudinal history; Plista identity persistence in currently obtainable files is [uncertain]."
+  },
+  "timestamps_and_order": {
+    "MIND": "Impression timestamp to the second in MM/DD/YYYY HH:MM:SS AM/PM; histories are sorted by click time according to the paper, but the public history column does not include per-click timestamps.",
+    "EB-NeRD": "Microsecond-typed impression timestamps and aligned timestamp lists for history clicks; article publication and modification timestamps are also present. In-view ID order is deliberately shuffled.",
+    "Adressa": "Event time is Unix time; publishTime is provided for articles; session boundaries and chronological event order can be reconstructed. activeTime is seconds when known.",
+    "Globo.com": "Click timestamp, session start, article creation time, and hourly CSV partitioning support exact temporal order across the 16-day collection."
+  },
+  "left_censoring_and_history_coverage": {
+    "MIND": "At most four weeks precede the training target week and five weeks precede test. Users were selected for at least five clicks in the six-week period, so pre-window interests are unobserved and apparent novelty can be rediscovery.",
+    "EB-NeRD": "Each target split exposes only 21 days of pre-period clicks. Active users were selected using five to 1,000 clicks during 2023-05-18 to 2023-06-08, which induces activity selection. Earlier interests and off-platform consumption are unobserved.",
+    "Adressa": "The ten-week archive provides the longest observable history here, but any cutoff remains left-censored at 2017-01-01 and user IDs may be device/browser scoped. Require a minimum history duration and run sensitivity analyses with longer burn-in.",
+    "Globo.com": "Only 16 days are observed and version 2 keeps sessions of at least two clicks, producing severe left censoring and selection toward active sessions. Treat novelty as 'not seen in the observed window,' never lifetime-new interest."
+  },
+  "item_semantics": {
+    "MIND": "Released news.tsv contains article ID, category, subcategory, title, abstract, URL, title entities, and abstract entities plus Wikidata-derived embeddings. The paper describes article bodies, but Microsoft Learn explicitly states that full bodies are not distributed due to licensing and some URLs are expired.",
+    "EB-NeRD": "articles.parquet includes Danish title, subtitle/abstract, full body, category and subcategories, article type, URL, premium flag, publication/modification time, image IDs, NER/entities, topics, sentiment, and aggregate early-consumption fields. Text and image embeddings are separately offered.",
+    "Adressa": "The light release includes canonical URL/document ID, title, category, keywords, named entities, author, publish time, and generated profiles. Full requested data adds body text and richer raw/article/content attributes.",
+    "Globo.com": "Public metadata provides article ID, category ID, creation time, publisher ID, and word count, plus a 250-dimensional learned article embedding for 364,047 articles. Original Portuguese article text is not shared for licensing reasons."
+  },
+  "feedback_and_exposure": {
+    "MIND": "Clicked and non-clicked articles within each homepage impression; no dwell, scroll, explicit satisfaction, position, or propensity.",
+    "EB-NeRD": "In-view and clicked article lists, page context, session ID, impression time, readtime, scroll percentage, next-readtime and next-scroll, device, subscription, SSO, and optional age/gender/postcode. Hidden test removes click and next-engagement targets.",
+    "Adressa": "Positive page views with activeTime when known, session markers, device/OS/location/referrer context. No shown-but-not-clicked slate.",
+    "Globo.com": "Positive page views/clicks with session, timestamp, environment, device, OS, country, region, and referrer context in version 2. No impression negatives or dwell.",
+    "auxiliary": "Yahoo! R6 is the notable auxiliary logged-bandit exposure source, but it lacks stable longitudinal users [uncertain]."
+  },
+  "candidate_space": {
+    "MIND": "The actual candidate slate is known per impression; the contemporaneous full catalog can only be approximated from observed news and URLs because article publication timestamps are not released directly. Use slate ranking for exposure-safe evaluation.",
+    "EB-NeRD": "Actual in-view candidates are known. Article publication timestamps permit reconstruction of a contemporaneous eligible catalog, although site placement, paywall/subscription, geography, and layout rules are only partially observed. In-view order is unavailable because it was shuffled.",
+    "Adressa": "A day-level published/visited catalog can be reconstructed from article publish times and files, but actual user opportunities are unknown. The light/full split and paywall access further constrain opportunity.",
+    "Globo.com": "A creation-time-filtered catalog can be formed from 364,047 metadata rows, but only about 46,000 received observed clicks in the study period and actual displayed candidates are absent. Treat catalog negatives as unlabeled.",
+    "auxiliary": "Additional feed-log candidate-space claims are [uncertain] until the exact downloadable archive is inspected."
+  },
+  "taxonomy_and_opportunity_drift": {
+    "MIND": "Twenty top-level editorial categories plus subcategories are observed over six weeks, but taxonomy versioning and article publication times are not explicit in the released file. News popularity and opportunity change rapidly; future news metadata must be joined only after its first observed availability.",
+    "EB-NeRD": "Thirty-two categories, 263 subcategories, publication/modification time, premium status, page context, device and subscription help model opportunity. Topics and entities come from proprietary models and may encode a later extraction snapshot; aggregate total_inviews/pageviews/read_time are measured over the first seven days after publication and must never be used to predict an earlier onset.",
+    "Adressa": "Category/profile fields and publish time allow partial drift auditing, but light and full schemas differ, some articles are paywalled, and user/device/location constraints affect availability. Freeze taxonomy mappings and candidate eligibility at cutoff.",
+    "Globo.com": "Category IDs and creation time allow cold-item and catalog-age slices. Original taxonomy meanings and actual serving inventory are limited, and the 16-day period can be dominated by transient news cycles."
+  },
+  "construct_h_f_ynew": {
+    "MIND": "For each user, H(u) is the set or ordered multiset of category/subcategory labels attached to all history clicks before cutoff. Reconstruct F(u) from clicked articles in later timestamped impressions, dynamically adding earlier future clicks when scoring later ones. Y_new(u)=set(F)-set(H). Preserve impression IDs and in-slate non-clicks for exposure-aware ranking. Do not use the same fixed history for every later event without an explicit static-history ablation.",
+    "EB-NeRD": "H(u) comes from all timestamped clicks in history.parquet before the behavior period. Sort behaviors by impression time and obtain F(u) from clicked in-view articles in an onset window; dynamically update history. Define Y_new at category, subcategory, or pre-frozen topic/embedding-cluster level. Reserve later behavior days to label persistence and use next_read_time/scroll to create engagement-qualified onsets. This is the cleanest construction among the audited datasets.",
+    "Adressa": "Sort events by released userId and Unix time. After a burn-in period, derive H(u) from positive page views and F(u) from a disjoint future interval; compute new category/keyword/entity/semantic-cluster units. activeTime can qualify positives. Because exposures are absent, evaluate positive forecasting or sampled ranking with explicit positive-unlabeled assumptions.",
+    "Globo.com": "Aggregate all sessions per user_id, sort clicks, split the 16 days chronologically, map clicks to category or frozen embedding clusters, and compute set difference. Use article created_at_ts to exclude unavailable candidates. Persistence is a later cross-session click in the same new unit. The construction is feasible but fragile because the window is short and exposure is absent."
+  },
+  "leakage_and_missingness_risks": "Shared risks are left censoring, exposure MNAR, active-user selection, popularity/seasonality, transient breaking-news effects, user-ID fragmentation, semantic taxonomy drift, and treating unexposed items as negatives. MIND risks include fixed split-level histories, missing per-history-click timestamps, expired URLs, and accidentally assuming paper-described bodies are in the archive. EB-NeRD risks include future leakage from total_inviews/total_pageviews/total_read_time and article modification time, fixed histories not updated within behavior splits, and shuffled positions. Adressa risks include missing activeTime, light/full schema mismatch, paywall-mediated opportunity, and no impressions. Globo.com risks include short-window rediscovery, removal of within-session repeats, missing article text, and a 364k catalog whose actual exposure is unknown. All splits and semantic mappings must be frozen before looking at test outcomes.",
+  "recommended_role": {
+    "EB-NeRD": "Primary new benchmark after a local schema/count preflight and license review. It is the best source for exposure-aware onset and engagement/persistence sensitivity analyses.",
+    "MIND": "Retain as the English baseline and continuity benchmark, but describe it as observed future novel-click prediction and keep dynamic-history versus fixed-history variants separate.",
+    "Adressa": "High-value temporal robustness benchmark for longer histories, rich text, and dwell-qualified positives; not the main exposure-aware benchmark.",
+    "Globo.com": "Low-cost session/cold-article robustness benchmark or method sanity check; not evidence of durable new-interest prediction.",
+    "auxiliary": "Use Yahoo! R6 only to test exposure/off-policy methodology, and inspect NewsREEL/Plista archives before considering them."
+  },
+  "priority": "1) EB-NeRD: high, because its schema most directly fills MIND's missing timestamps, engagement, publication time, and exposure detail. 2) Adressa: medium-high for long-window positive-sequence robustness, subject to storage/access and exposure limitations. 3) MIND: medium-high as the existing English continuity benchmark but not sufficient alone for durable-interest claims. 4) Globo.com: low-medium because 16 days, no exposures, and no raw text sharply limit the estimand. 5) Yahoo!/NewsREEL auxiliaries: low until access/schema are re-verified.",
+  "verification_status": "Verified from primary sources in this audit: MIND official site, Microsoft Learn schema, ACL paper and license link; EB-NeRD official landing page, dataset schema page, arXiv paper, official license PDF and repository; Adressa official download page and official field PDF; Globo.com Kaggle API data card and CHAMELEON repository/papers. Not verified by downloading full archives: EB-NeRD large files require form acceptance; Adressa archives are 1.4/16 GB and full content is request-only; Globo.com unauthenticated download failed. Exact current Yahoo!/NewsREEL archive availability and the meaning of 'ClickRec' as a distinct release are [uncertain].",
+  "repeat_explore_and_persistence_audit": "For every dataset, partition future positives into repeat semantic units already in H(u), first observed exploration units absent from H(u), and item-only novelty inside an old unit. For each exploration onset, label one-off versus repeated adoption using later disjoint events; never count the onset event itself as persistence. EB-NeRD should additionally report click-only versus dwell/scroll-qualified onset and persistence. Adressa should report activeTime-observed and activeTime-missing strata. MIND should report static official history versus dynamically appended history. Globo.com should measure persistence only across later events/sessions because version 2 removed repeated clicks within a session. Report per-user rates, macro semantic-unit recall, opportunity-conditioned rates where impressions exist, and confidence intervals clustered by user.",
+  "evidence_quotes_or_schema_facts": [
+    "MIND official documentation: behaviors.tsv has Impression ID, User ID, Time, History, and Impressions with click labels; news.tsv has ID, category, subcategory, title, abstract, URL, and entities.",
+    "MIND paper: one million users with at least five clicks were sampled over six weeks from October 12 to November 22, 2019; training history uses the first four weeks and test history the first five weeks.",
+    "MIND release caveat: Microsoft Learn states that full article bodies are not made available for download because of licensing, even though the paper describes bodies in the constructed dataset.",
+    "EB-NeRD official schema: every split contains seven days of behaviors and 21 days of fixed prior click history; history includes article IDs, timestamps, read times, and scroll percentages.",
+    "EB-NeRD paper: 1,103,602 users, 125,541 articles, 37,966,985 impressions, 32 categories, and 263 subcategories over April 27 to June 8, 2023.",
+    "EB-NeRD behavior schema: in-view candidates are registered as seen, clicked candidates are listed, impression time is recorded, and the in-view order has been shuffled.",
+    "Adressa official documentation: light archives cover one week and ten weeks; light event fields include userId, Unix time, activeTime, session boundaries, category, document ID, title, keywords, entities, author, and publishTime; full article bodies require request access.",
+    "Adressa documentation: userId can differentiate devices/browsers or identify subscription users, so it is not guaranteed to equal one human across devices.",
+    "Globo.com data card: version 2 covers October 1-16, 2017 with about three million clicks, over one million sessions, 314,000 users, and more than 46,000 interacted articles; metadata and embeddings cover 364,047 published articles.",
+    "Globo.com release caveat: original article text could not be shared for licensing reasons, and version 2 removes repeated clicks within sessions."
+  ],
+  "sources": [
+    "https://msnews.github.io/ — official MIND overview, downloads, scale, and dataset terms.",
+    "https://learn.microsoft.com/en-us/azure/open-datasets/dataset-microsoft-news — released file schema and explicit body-text limitation.",
+    "https://aclanthology.org/2020.acl-main.331.pdf — MIND dates, split construction, counts, and evaluation design.",
+    "https://github.com/msnews/MIND/blob/master/MSR%20License_Data.pdf — MIND custom research license terms.",
+    "https://recsys.eb.dk/ — EB-NeRD scale, access form, and license link.",
+    "https://recsys.eb.dk/dataset/ — EB-NeRD behavior, history, article, and artifact schemas.",
+    "https://recsys.eb.dk/assets/pdf/general_license_terms.pdf — EB-NeRD dataset-use restrictions.",
+    "https://arxiv.org/pdf/2410.03432 — EB-NeRD construction, counts, native ranking protocol, and comparison table.",
+    "https://reclab.idi.ntnu.no/dataset/ — Adressa releases, sizes, access boundary, and CC BY-NC-SA 4.0 statement.",
+    "https://reclab.idi.ntnu.no/dataset/cxdataset_v5.pdf — Adressa fields, dates, counts, missingness, and user-ID semantics.",
+    "https://www.kaggle.com/datasets/gspmoreira/news-portal-user-interactions-by-globocom — Globo.com v2 content, dates, counts, version changes, and license.",
+    "https://github.com/gabrielspmoreira/chameleon_recsys — Globo/Adressa preprocessing, native session task, and no-text limitation.",
+    "https://arxiv.org/abs/1904.10367 — Globo.com contextual session-recommendation protocol."
+  ],
+  "uncertain": [
+    "venue_year",
+    "release_and_license",
+    "input_history",
+    "is_direct_match",
+    "exposure_handling",
+    "scale",
+    "stable_user_identity",
+    "feedback_and_exposure",
+    "candidate_space",
+    "verification_status"
+  ]
+}

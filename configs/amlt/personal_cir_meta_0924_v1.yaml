@@ -1,0 +1,31 @@
+description: Approved three-condition NI experiment. Reuse CIR5->NI3; train CIR5 and
+  cold per-user exact-meta NI3 serially on four A100s. Deploy shared outer weights;
+  no test-time adaptation.
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+  - nvidia-smi
+target:
+  service: singularity
+  name: Recall
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../artifacts/personal-cir-meta-20260924/bundle-v1
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+jobs:
+- name: qwen35-2b-personal-cir-meta-three
+  sku: 80G4-A100
+  sla_tier: Standard
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+      AMLT_SKIP_GIT_INFO: '1'
+      AMLT_CODE_CHECKSUM_SECS: '0'
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash scripts/amlt/sft/run_personal_cir_meta.sh

@@ -1,0 +1,271 @@
+{
+  "status": "accepted",
+  "artifact_root": "artifacts/mind-cir-ni-matched-20260928",
+  "report": "docs/experiments/2026-09-28/mind_cir_ni_matched.md",
+  "authorization": {
+    "conditions": [
+      "ni_prefix",
+      "cir_length_matched"
+    ],
+    "ordinary_cir_retrain": false,
+    "auxiliary_epochs": 5,
+    "ni_epochs": 3,
+    "seed": 42,
+    "monitor_and_recover": true
+  },
+  "platform": {
+    "target": "Recall",
+    "sku": "80G4-A100",
+    "sla": "Standard",
+    "jobs": 2,
+    "maximum_concurrent_gpus": 8
+  },
+  "data_audit": {
+    "status": "passed",
+    "paired_rows": 9431,
+    "classes": 108,
+    "identical_pair_inputs": 1088,
+    "full_prefix_novelty_verified": true,
+    "hash_selection_independently_reconstructed": true,
+    "all_serialized_prompts_messages_labels_verified": true,
+    "same_pair_order": true,
+    "unchanged_companions": {
+      "ni.parquet": "e76acd152ed6e0e92f8b8015dfbc599603267a480d9321b41b5acb95d10487f0",
+      "dev_full_grouped.parquet": "c05b20033ce0d1a0c2d4b7bb97ca0cd6b7cffb7f198a7265cce9e54046b665fd",
+      "interest_token_mapping.parquet": "45397451ac2ae2e64d8156b2b47be3f454cc309a8d30a83bc23c2d3267653a0a"
+    },
+    "pair_manifest_sha256": "961e18d0fd146219bae034469819bc647bea53de3be00405a0789e7d7d0aa9f9"
+  },
+  "token_budget": {
+    "input_token_ratio_cir_to_ni": 1.0025591475745765,
+    "exact_behavior_length_match": true,
+    "equal_compute_claimed": false
+  },
+  "checks": {
+    "focused_tests": "................................                                         [100%]\n32 passed in 5.91s",
+    "full_tests": "Collection blocked by missing local peft; worker uses accepted pinned environment",
+    "upload_audit": "artifacts/mind-cir-ni-matched-20260928/upload_audit.json",
+    "uploaded_source_readback": "artifacts/mind-cir-ni-matched-20260928/uploaded_source_readback.json"
+  },
+  "arms": {
+    "ni_prefix": {
+      "manifest": "manifests/mind_cir_ni_matched_ni_prefix_20260928_v1.json",
+      "experiment": "mind-cir-ni-matched-0928-v1",
+      "job": "qwen35-2b-ni-prefix5-ni3",
+      "bundle": "artifacts/mind-cir-ni-matched-20260928/bundles-v1/ni_prefix",
+      "bundle_sha256": "ee115c33206ec669507dd8a96be7868122643873f3f973aea5b1ae6cdaef3576",
+      "yaml": "configs/amlt/mind_cir_ni_matched_ni_prefix_0928_v1.yaml",
+      "status": "accepted",
+      "backend_id": "willing_spider_6fvh9lz8pq",
+      "results_prefix": "projects/sft4safety/amlt-results/7209431452.40467-25fed6a6-b34b",
+      "code_prefix": "projects/sft4safety/amlt-code/30e510ba-0546-40ec-9e11-94d29c563431",
+      "native_status": "Completed",
+      "submission_log": "artifacts/mind-cir-ni-matched-20260928/submission_ni_prefix.log",
+      "url": "https://ml.azure.com/runs/willing_spider_6fvh9lz8pq?wsid=/subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourcegroups/rg-cs-newsandfeeds-singularity/workspaces/CS-NewsAndFeeds-Singularity&tid=72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "latest_observation": "artifacts/mind-cir-ni-matched-20260928/ni_prefix/progress/20260929T015449Z/receipt.json",
+      "startup_readback": "artifacts/mind-cir-ni-matched-20260928/ni_prefix/progress/20260928T123731Z/startup_readback.json",
+      "startup_acceptance": "artifacts/mind-cir-ni-matched-20260928/ni_prefix/progress/20260928T125509Z/startup_acceptance.json",
+      "latest_logged_optimizer_step": 2025,
+      "last_committed_checkpoint_step": 2025,
+      "phase": "final_arm_accepted",
+      "latest_checkpoint_readback": "artifacts/mind-cir-ni-matched-20260928/ni_prefix/progress/20260928T175448Z/checkpoint_readback.json",
+      "committed_auxiliary_exposures": 47155,
+      "last_checked_utc": "2026-09-29T01:55:06.349486+00:00",
+      "completed_auxiliary_epochs": 5,
+      "auxiliary_stage_acceptance": "artifacts/mind-cir-ni-matched-20260928/ni_prefix/progress/20260928T175448Z/stage_handoff_readback.json",
+      "latest_logged_auxiliary_step": 1475,
+      "last_committed_auxiliary_checkpoint_step": 1475,
+      "latest_logged_ni_step": 2025,
+      "last_committed_ni_checkpoint_step": 2025,
+      "latest_ni_checkpoint_readback": "artifacts/mind-cir-ni-matched-20260928/ni_prefix/progress/20260929T005449Z/ni_checkpoint_readback.json",
+      "committed_ni_exposures": 64800,
+      "ni_training_acceptance": "artifacts/mind-cir-ni-matched-20260928/ni_prefix/progress/20260929T005449Z/ni_completion_readback.json",
+      "evaluation_progress": {
+        "ranges_by_shard": {
+          "0": 1280,
+          "1": 1280,
+          "2": 1280,
+          "3": 1280
+        },
+        "source": "blob filenames only",
+        "accepted": false
+      },
+      "final_acceptance": "artifacts/mind-cir-ni-matched-20260928/ni_prefix/final_acceptance.json",
+      "final_acceptance_sha256": "6076fe1d68459473335745aab518f1a8d8ba7756c3084a8a9a4cef28ced45e35",
+      "final_macro_recall_at_10": 0.21223819381988607,
+      "final_prediction_sha256": "4f682274236180f871552583c65038350ec8cc4ec328aa650820fab4767ebd69",
+      "legacy_report_label_note": "Generic accept_cir_final labels this arm CIR_to_NI; scientifically this is historical-prefix NI5 to NI3."
+    },
+    "cir_length_matched": {
+      "manifest": "manifests/mind_cir_ni_matched_cir_length_matched_20260928_v1.json",
+      "experiment": "mind-cir-ni-matched-0928-v1",
+      "job": "qwen35-2b-cir-length-matched5-ni3",
+      "bundle": "artifacts/mind-cir-ni-matched-20260928/bundles-v1/cir_length_matched",
+      "bundle_sha256": "1c2930b984192117730bf942a8605638a2edd9a2e05375e7e6e979c2d7e953ba",
+      "yaml": "configs/amlt/mind_cir_ni_matched_cir_length_matched_0928_v1.yaml",
+      "status": "accepted",
+      "backend_id": "wheat_rail_0bfsbbq6fc",
+      "results_prefix": "projects/sft4safety/amlt-results/7209430668.77167-79d474f3-f884",
+      "code_prefix": "projects/sft4safety/amlt-code/fc83aa8f-67dd-43c5-b2c7-acb28935b44c",
+      "native_status": "Completed",
+      "submission_log": "artifacts/mind-cir-ni-matched-20260928/submission_cir_length_matched.log",
+      "url": "https://ml.azure.com/runs/wheat_rail_0bfsbbq6fc?wsid=/subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourcegroups/rg-cs-newsandfeeds-singularity/workspaces/CS-NewsAndFeeds-Singularity&tid=72f988bf-86f1-41af-91ab-2d7cd011db47",
+      "latest_observation": "artifacts/mind-cir-ni-matched-20260928/cir_length_matched/progress/20260929T015449Z/receipt.json",
+      "startup_readback": "artifacts/mind-cir-ni-matched-20260928/cir_length_matched/progress/20260928T123731Z/startup_readback.json",
+      "startup_acceptance": "artifacts/mind-cir-ni-matched-20260928/cir_length_matched/progress/20260928T125509Z/startup_acceptance.json",
+      "latest_logged_optimizer_step": 2025,
+      "last_committed_checkpoint_step": 2025,
+      "phase": "final_arm_accepted",
+      "latest_checkpoint_readback": "artifacts/mind-cir-ni-matched-20260928/cir_length_matched/progress/20260928T175448Z/checkpoint_readback.json",
+      "committed_auxiliary_exposures": 47155,
+      "last_checked_utc": "2026-09-29T01:55:06.349474+00:00",
+      "completed_auxiliary_epochs": 5,
+      "auxiliary_stage_acceptance": "artifacts/mind-cir-ni-matched-20260928/cir_length_matched/progress/20260928T175448Z/stage_handoff_readback.json",
+      "latest_logged_auxiliary_step": 1475,
+      "last_committed_auxiliary_checkpoint_step": 1475,
+      "latest_logged_ni_step": 2025,
+      "last_committed_ni_checkpoint_step": 2025,
+      "latest_ni_checkpoint_readback": "artifacts/mind-cir-ni-matched-20260928/cir_length_matched/progress/20260929T012449Z/ni_checkpoint_readback.json",
+      "committed_ni_exposures": 64800,
+      "ni_training_acceptance": "artifacts/mind-cir-ni-matched-20260928/cir_length_matched/progress/20260929T012449Z/ni_completion_readback.json",
+      "evaluation_progress": {
+        "ranges_by_shard": {
+          "0": 3328,
+          "1": 3328,
+          "2": 3328,
+          "3": 3328
+        },
+        "source": "blob filenames only",
+        "accepted": false
+      },
+      "final_acceptance": "artifacts/mind-cir-ni-matched-20260928/cir_length_matched/final_acceptance.json",
+      "final_acceptance_sha256": "4a9c890a31ae05a1626555b3640ef079374ef568277f4a4e7623f02592edd514",
+      "final_macro_recall_at_10": 0.20366836259093637,
+      "final_prediction_sha256": "a66d36d134af90ee24a23a6f86501d47c4af350721267f1448a83200252a00d1"
+    }
+  },
+  "monitoring": {
+    "automation_id": "cir-ni-2",
+    "interval_minutes": 30,
+    "status": "PAUSED",
+    "reader": "scripts/analysis/observe_cir_ni_matched.py",
+    "notify": "meaningful stage acceptance, actionable anomaly or completion only",
+    "stop_reason": "Both arms and final paired comparison accepted"
+  },
+  "submission_registry_issue": {
+    "cli_exit_code": 1,
+    "phase": "AMLT Azure Table registry persistence after backend submission",
+    "error": "ServiceResponseTimeoutError; table.core.windows.net read timeout=300",
+    "native_registration_verified": true,
+    "code_prefix_verified": true,
+    "resubmitted": false,
+    "amlt_registry_may_omit_job": true,
+    "monitoring_authority": "native backend id and bound results prefix"
+  },
+  "startup": {
+    "ni_prefix": {
+      "status": "startup_accepted_formal_auxiliary_training",
+      "bundle_sha256": "ee115c33206ec669507dd8a96be7868122643873f3f973aea5b1ae6cdaef3576",
+      "native_status": "Running",
+      "stages": [
+        {
+          "name": "single_cir",
+          "steps": 8,
+          "world_size": 1,
+          "exact_reload": true
+        },
+        {
+          "name": "single_ni",
+          "steps": 8,
+          "world_size": 1,
+          "exact_reload": true
+        },
+        {
+          "name": "ddp_cir",
+          "steps": 2,
+          "world_size": 4,
+          "exact_reload": true
+        },
+        {
+          "name": "ddp_ni",
+          "steps": 2,
+          "world_size": 4,
+          "exact_reload": true
+        }
+      ],
+      "gate_evaluation": {
+        "records": 64,
+        "targets": 75,
+        "supported_classes": 36,
+        "independent_compact_metric_recomputation": true
+      },
+      "formal_initial_state_sha256": "f924e8c76d9d28be55b8795920ca18811345dfde3b81ded85d5c039615a0510e",
+      "formal_optimizer_started_fresh": true,
+      "latest_logged_auxiliary_step": 73,
+      "latest_log_modified": "Mon, 28 Sep 2026 12:55:17 GMT",
+      "latest_committed_auxiliary_checkpoint": null,
+      "source_receipt": "artifacts/mind-cir-ni-matched-20260928/ni_prefix/progress/20260928T125509Z/receipt.json",
+      "source_receipt_sha256": "797bca6ecbf05f37a6653060d92fef561113adac811b82aaae43e1cd26d38103"
+    },
+    "cir_length_matched": {
+      "status": "startup_accepted_formal_auxiliary_training",
+      "bundle_sha256": "1c2930b984192117730bf942a8605638a2edd9a2e05375e7e6e979c2d7e953ba",
+      "native_status": "Running",
+      "stages": [
+        {
+          "name": "single_cir",
+          "steps": 8,
+          "world_size": 1,
+          "exact_reload": true
+        },
+        {
+          "name": "single_ni",
+          "steps": 8,
+          "world_size": 1,
+          "exact_reload": true
+        },
+        {
+          "name": "ddp_cir",
+          "steps": 2,
+          "world_size": 4,
+          "exact_reload": true
+        },
+        {
+          "name": "ddp_ni",
+          "steps": 2,
+          "world_size": 4,
+          "exact_reload": true
+        }
+      ],
+      "gate_evaluation": {
+        "records": 64,
+        "targets": 75,
+        "supported_classes": 36,
+        "independent_compact_metric_recomputation": true
+      },
+      "formal_initial_state_sha256": "f924e8c76d9d28be55b8795920ca18811345dfde3b81ded85d5c039615a0510e",
+      "formal_optimizer_started_fresh": true,
+      "latest_logged_auxiliary_step": 16,
+      "latest_log_modified": "Mon, 28 Sep 2026 12:55:22 GMT",
+      "latest_committed_auxiliary_checkpoint": null,
+      "source_receipt": "artifacts/mind-cir-ni-matched-20260928/cir_length_matched/progress/20260928T125509Z/receipt.json",
+      "source_receipt_sha256": "2b7e1ba3053b76ec76fbe2ca0155faa0b0ebf38577a3a6ef71b624c2278e1303"
+    }
+  },
+  "last_checked_utc": "2026-09-29T01:55:06.349486+00:00",
+  "paired_analysis": {
+    "status": "accepted",
+    "host": "gcr-a100",
+    "remote_root": "/home/v-wuhao1/cir-ni-matched-analysis-20260929-v1",
+    "device": "CPU",
+    "draws": 2000,
+    "seed": 42,
+    "large_artifacts": "remote_only",
+    "comparison": "artifacts/mind-cir-ni-matched-20260928/comparison.json",
+    "comparison_sha256": "3819aa445b11dc8e5a72f1384f01a8e8494e5d3fa7d6b12f14d846d19fc591c0",
+    "acceptance": "artifacts/mind-cir-ni-matched-20260928/paired_final_acceptance.json",
+    "acceptance_sha256": "ecc09e49ede7da334d3d5517ffa6efbe6aa8cf852bda6fcfe90a5110a730c21e",
+    "persistence": "artifacts/mind-cir-ni-matched-20260928/analysis_persistence.json"
+  },
+  "accepted_utc": "2026-09-29T01:59:21.752017+00:00"
+}

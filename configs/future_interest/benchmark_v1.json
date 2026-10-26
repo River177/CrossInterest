@@ -1,0 +1,14 @@
+{
+  "input_dir": "data/raw/MINDlarge_reclassified",
+  "output_dir": "data/processed/future_novel_interest_users_v1",
+  "expected_interest_count": 125,
+  "split_seed": 20260812,
+  "split_ratios": {
+    "train": 0.8,
+    "validation": 0.1,
+    "test": 0.1
+  },
+  "staging_batch_size": 50000,
+  "output_batch_size": 5000,
+  "overwrite": false
+}

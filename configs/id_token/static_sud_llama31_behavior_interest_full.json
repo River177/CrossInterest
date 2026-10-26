@@ -1,0 +1,14 @@
+{
+  "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+  "adapter_path": "artifacts/static-sud-semantic-id-vanilla-scaling/llama31-behavior-interest/ACTIVE_SIZE/sft/final_adapter",
+  "eval_file": "data/training/sft_static_user_disjoint_semantic_id_token_200_h50_behavior_interest_scaling_v1/eval/behavior_interest/dev_full_grouped.parquet",
+  "interest_token_mapping_file": "data/training/sft_static_user_disjoint_semantic_id_token_200_h50_behavior_interest_scaling_v1/interest_token_mapping.parquet",
+  "semantic_id_token_count": 108,
+  "output_dir": "artifacts/static-sud-semantic-id-vanilla-scaling/llama31-behavior-interest/ACTIVE_SIZE/eval",
+  "run_name": "static-sud-semantic-id-llama31-behavior-interest-vanilla",
+  "enable_thinking": false,
+  "batch_size": 8,
+  "checkpoint_size": 256,
+  "top_k": 20,
+  "cutoffs": [1, 5, 10, 20]
+}

@@ -1,0 +1,42 @@
+{
+  "status": "accepted",
+  "arm": "token",
+  "artifact_root": "artifacts/mind-history-token-20260930/token",
+  "report": "docs/experiments/2026-09-30/mind_history_token.md",
+  "monitor_step_totals": {
+    "ni": 2025
+  },
+  "active_run": {
+    "experiment": "mind-ni-history-token125-0930-v1",
+    "job": "qwen35-2b-ni-token125",
+    "yaml": "configs/amlt/mind_history_token_token_0930_v1.yaml",
+    "bundle": "artifacts/mind-history-token-20260930/bundles-v1/token",
+    "bundle_sha256": "c91f6d37fa58f9d0a43cc127a6b6306aeef18772f4ef66cdc466ee1f5dd10d04",
+    "backend_id": "salmon_plane_m3qq5sx0fm",
+    "results_prefix": "projects/sft4safety/amlt-results/7209271563.63494-5f26c7ff-1961"
+  },
+  "latest_independent_readback": "artifacts/mind-history-token-20260930/token/progress/20260930T194122Z/independent_readback.json",
+  "observed_status": "Completed",
+  "last_observed_utc": "2026-09-30T19:41:22.860616+00:00",
+  "latest_logged_step": 2025,
+  "formal_committed_checkpoint_step": 2025,
+  "platform_event": "Original attempt evicted for capacity compaction; same backend automatically recovered into retry_001; latest retry has no traceback.",
+  "cold_state_sha256": "28b70b3031e6c736ea10930595ac19651186067b4b5f8f85e4a72ff4b0b7c565",
+  "cross_arm_cold_state_equal": true,
+  "final_acceptance": "artifacts/mind-history-token-20260930/token/final_acceptance.json",
+  "evaluation": {
+    "records": 31392,
+    "supported_classes": 104,
+    "target_occurrences": 37728,
+    "metrics": {
+      "interest_macro_recall_at_1": 0.029324845040791418,
+      "interest_macro_ndcg_at_1": 0.029324845040791418,
+      "interest_macro_recall_at_5": 0.12265817848847936,
+      "interest_macro_ndcg_at_5": 0.07558709617445115,
+      "interest_macro_recall_at_10": 0.19873016413306607,
+      "interest_macro_ndcg_at_10": 0.10007434126863263,
+      "interest_macro_recall_at_20": 0.3346785339597168,
+      "interest_macro_ndcg_at_20": 0.1342790877231237
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "rule_version": "static-user-disjoint-semantic-coverage-interest-macro-v1",
+  "benchmark_dir": "data/processed/new_interest_static_user_disjoint_semantic_users_v1",
+  "semantic_artifact_dir": "artifacts/future-novel-interest/static-user-disjoint-semantic-v1",
+  "artifact_dir": "artifacts/future-novel-interest/static-user-disjoint-semantic-coverage-interest-macro-v1",
+  "cutoffs": [1, 5, 10, 20],
+  "internal_split": {
+    "seed": 20260815,
+    "modulus": 10000,
+    "model_fit_end": 8000,
+    "tune_end": 9000
+  },
+  "model": {
+    "prior_alpha": 1.0,
+    "ridge_alpha_grid": [1.0, 10.0, 100.0]
+  },
+  "scaffold": {
+    "primary_cutoff": 10,
+    "global_pool_size_grid": [10, 12, 15, 20, 30],
+    "semantic_expansion_grid": [0, 2, 5, 10, 20],
+    "lambda_grid": [0.0, 4.0, 8.0, 12.0, 16.0, 24.0, 32.0, 40.0, 48.0],
+    "minimum_tune_recall_delta": 0.0,
+    "selection_metric": "jointly select ridge alpha, M, E and lambda by maximizing interest_macro_ndcg_at_10 subject to interest_macro_recall_at_10 >= global"
+  },
+  "shuffle": {
+    "seeds": [20260815, 20260816, 20260817],
+    "match_on": ["history_length_bucket", "history_unique_subcategory_count_bucket"],
+    "singleton_fallback": "deterministic relaxed-bucket derangement with zero fixed points",
+    "fixed_candidate_mask": "actual_history"
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20260815,
+    "confidence": 0.95,
+    "resampling_unit": "user",
+    "aggregation": "recompute every supported interest within each user bootstrap replicate, then average interests equally"
+  },
+  "acceptance": {
+    "required_metrics": ["interest_macro_recall_at_10", "interest_macro_ndcg_at_10"],
+    "require_positive_delta": true,
+    "require_ci_excludes_zero": true,
+    "require_all_shuffle_seeds": true,
+    "user_macro_role": "secondary diagnostic only"
+  }
+}

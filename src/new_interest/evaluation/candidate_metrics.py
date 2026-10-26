@@ -142,10 +142,18 @@ def evaluate_candidate_outputs(
         }
 
     overall = summarize(grouped.pop("overall:all"))
+    per_category_accuracy = {
+        category: positive_correct[category] / support
+        for category, support in sorted(positive_support.items())
+    }
     metrics: dict[str, object] = {
         "samples": len(records),
         "strict_accuracy": overall["strict_correct"],
         "category_accuracy": overall["category_correct"],
+        "macro_category_accuracy": mean(
+            per_category_accuracy.values()
+        ),
+        "macro_category_count": len(per_category_accuracy),
         "candidate_valid_rate": overall["candidate_valid"],
         "prefix_compliance_rate": overall["prefix_compliant"],
         "empty_output_rate": overall["empty_output"],
@@ -157,10 +165,7 @@ def evaluate_candidate_outputs(
             key: summarize(values)
             for key, values in sorted(grouped.items())
         },
-        "per_category_accuracy": {
-            category: positive_correct[category] / support
-            for category, support in sorted(positive_support.items())
-        },
+        "per_category_accuracy": per_category_accuracy,
         "per_category_support": dict(sorted(positive_support.items())),
     }
     return metrics, details

@@ -1,0 +1,1210 @@
+{
+  "version": "mind-rho-student-v1",
+  "status": "completed",
+  "arms": [
+    "uniform",
+    "static",
+    "dynamic"
+  ],
+  "training_rows_per_arm": 21600,
+  "classes": 108,
+  "samples_per_class": 200,
+  "epochs_per_arm": 3,
+  "updates_per_arm": 2025,
+  "gpus_per_arm": 4,
+  "max_concurrent_gpus": 12,
+  "protocol": "configs/experiments/mind_rho_student_v1.json",
+  "protocol_sha256": "b3f56b93a2426397a79c80066a92d36fd35d396a0dd92f8606a444e4c35484aa",
+  "runtime_sha256": "7a150f978944f80bc1ecd2d04aa3759818a5183d741bad31a1485518366ceca1",
+  "gate_bundle": "artifacts/rho-student-20260916/bundle-gate-v2",
+  "gate_experiment": "mind-rho-student-gate-v2-0916",
+  "gate_job": "qwen35-2b-rho-student-gate-dynamic-premium-v2",
+  "gate_backend": "bubbly_island_dn53p9bwst",
+  "gate_sla": "Premium",
+  "gate_target": "Recall",
+  "full_experiment": "mind-rho-student-full-v1-0916",
+  "full_target": "Recall Premium for all three arms",
+  "full_sla": "Premium",
+  "reference_acceptance": "artifacts/rho-twofold-reference-20260915/twofold_acceptance.json",
+  "reference_acceptance_sha256": "042d349f66ce8d7e81c8c2e1fdf28889ae1d2fd86015cea7585ee354c77e72ae",
+  "local_validation": "artifacts/rho-student-20260916/local_validation.json",
+  "pipeline_state": "artifacts/rho-student-20260916/pipeline_state.json",
+  "execution_plan": "docs/research/2026-09-16_rho_student_execution.md",
+  "capacity_recovery": {
+    "original_job": "qwen35-2b-rho-student-gate-dynamic",
+    "original_backend": "modest_date_cpk7l192xl",
+    "reason": "Recall Standard passed quota but scheduler reported zero available ND48am_A100_v4 instances; no execution started",
+    "original_full_config_sha256": "dd49704e04d23da0f3ea0cc95cb7877e9fdb80c06e9de233b2d151cd795d7b13",
+    "training_runtime_unchanged": true,
+    "training_updates_discarded": 0
+  },
+  "large_artifact_policy": "All weights, optimizer states, full scores, epoch weights, and predictions remain on remote storage. Compact metadata and reports only on Mac.",
+  "comparison_plan": "artifacts/rho-student-20260916/comparison_plan.json",
+  "comparison_code": "src/new_interest/experiments/compare_rho_students.py",
+  "failed_gate_optimizer_updates": 0,
+  "failed_gate_error": "Native unit/scalar-weight gradient parity failed",
+  "formal_training_started": true,
+  "original_gradient_probe_values_persisted": false,
+  "failure_evidence": "artifacts/rho-student-20260916/native-gate-premium-current/log-0.txt",
+  "diagnostic_experiment": "mind-rho-native-gradient-diagnostic-v1-0916",
+  "diagnostic_job": "qwen35-2b-rho-native-gradient-diagnostic",
+  "diagnostic_backend": "musing_boat_kbvcgbn8lr",
+  "diagnostic_state": "artifacts/rho-student-20260916/native_diagnostic_state.json",
+  "local_diagnostic_regression": "artifacts/rho-student-20260916/local_diagnostic_regression_100.json",
+  "training_numeric_policy": "torch-deterministic-algorithms-v1",
+  "failed_v1_gate_backend": "dreamy_tongue_3whw5ltv1r",
+  "failed_v1_gate_bundle": "artifacts/rho-student-20260916/bundle-gate-v1",
+  "local_deterministic_validation": "artifacts/rho-student-20260916/deterministic_policy_local_validation_v2.json",
+  "diagnostic_acceptance": "artifacts/rho-student-20260916/native-gradient-diagnostic-watch/compact_readback.json",
+  "failed_v1_gate_remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210492531.93305-8608c16c-a1a9",
+  "gate_remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210488253.55196-8d5f997c-d76b",
+  "controller_pid_at_launch": 30903,
+  "controller_log": "artifacts/rho-student-20260916/pipeline-v3.log",
+  "controller_validation": {
+    "tests_passed": 64,
+    "controller_sha256": "909de41a6433779829c3d0ae2e9422d5bf31134b13ff4daf67632823aa07a1d6"
+  },
+  "full_local_suite": "artifacts/rho-student-20260916/full_suite_deterministic_v2.json",
+  "single_native_parity_verified": true,
+  "single_native_parity_readback": "artifacts/rho-student-20260916/native-gate-v2-watch/single_parity_comparison_readback.json",
+  "single_native_parity_report_sha256": "9c077c102bcf9bcae4d42d8c962e404bc54d327fe319ab4ec35508255c4ffa1f",
+  "single_stage_worker_accepted": true,
+  "ddp_native_parity_verified": true,
+  "ddp_native_parity_num_items_in_batch": 96,
+  "ddp_native_parity_report_sha256": [
+    "dcac555357142f118a730e4f00d258ba94b201bb6f8f7ddc4b3c38b841c8bb6b",
+    "7c0d20d18199b846b04d2ef0d9ff7f863e3eb5044fe531d75000cf6455f04624",
+    "35c242f4c5c2ff73cd1a7cf14b4019d57a7b557dc0d59a568144622d00438ee2",
+    "3438f0eadff6f31d1413f85871fa42294801f3cebdd67a2918bc2e3e3947c4fb"
+  ],
+  "ddp_stage_worker_accepted": true,
+  "ddp_native_parity_readback": "artifacts/rho-student-20260916/native-gate-v2-watch/ddp_parity_readback.json",
+  "gate_acceptance": "artifacts/rho-student-20260916/compact/gate/mind-rho-student-gate-v2-0916/qwen35-2b-rho-student-gate-dynamic-premium-v2/compact/gate_acceptance.json",
+  "gate_acceptance_sha256": "471e5915bc06fdada3e7639f13050951825464209deff66525d450480d6d11fe",
+  "full_bundle": "artifacts/rho-student-20260916/bundle-full-v2",
+  "formal_jobs_submitted": true,
+  "formal_jobs": {
+    "uniform": {
+      "backend": "silver_lettuce_z7c5yjsyl0",
+      "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169",
+      "experiment": "mind-rho-student-full-v1-0916",
+      "job": "qwen35-2b-rho-student-full-uniform",
+      "target": "Recall",
+      "sla_tier": "Premium",
+      "gpus": 4,
+      "original_backend": "ashy_chaconia_md6yfrbnbp",
+      "original_remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49478-7aa65c60-cffa",
+      "completion_status": "native_completed_and_independently_accepted",
+      "native_status": "Completed",
+      "native_resume_pending": false,
+      "final_training_steps": 2025,
+      "final_training_and_evaluation_accepted": true,
+      "completion_summary": {
+        "path": "artifacts/rho-student-20260916/native-full-uniform-premium-watch/full_watch_completion_summary.json",
+        "sha256": "649aa2ee92e31d2f2742617d438a6f46acb9c490bb5aef5e08396042c19c491c"
+      },
+      "native_terminal_evidence": {
+        "path": "artifacts/rho-student-20260916/native-full-uniform-premium-watch/receipt.json",
+        "sha256": "acce63196b72982f31dbfab05d025d86d505644d3c313db59223090cb541e05c"
+      },
+      "worker_success_sha256": "79d2b0c71ff0ff41bfe9f9d707016572a5b8bd4980dd5c7ba7f44b3e66debd58"
+    },
+    "static": {
+      "backend": "salmon_spring_lshrr7prrs",
+      "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303",
+      "experiment": "mind-rho-student-full-v1-0916",
+      "job": "qwen35-2b-rho-student-full-static",
+      "target": "Recall",
+      "sla_tier": "Premium",
+      "gpus": 4,
+      "storage_recovery_parent": {
+        "backend": "green_window_9r37fx97k6",
+        "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49398-be3e6842-21d0",
+        "experiment": "mind-rho-student-full-v1-0916",
+        "job": "qwen35-2b-rho-student-full-static",
+        "target": "Feeds",
+        "sla_tier": "Standard",
+        "gpus": 4
+      },
+      "storage_override_receipt_required": true,
+      "native_resume_pending": false,
+      "storage_recovery_v2_parent": {
+        "backend": "shy_pencil_hrwdnwhcc3",
+        "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210473723.18901-f0b317ef-cea7",
+        "experiment": "mind-rho-student-full-v1-0916",
+        "job": "qwen35-2b-rho-student-full-static",
+        "target": "Recall",
+        "sla_tier": "Premium",
+        "gpus": 4,
+        "storage_recovery_parent": {
+          "backend": "green_window_9r37fx97k6",
+          "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49398-be3e6842-21d0",
+          "experiment": "mind-rho-student-full-v1-0916",
+          "job": "qwen35-2b-rho-student-full-static",
+          "target": "Feeds",
+          "sla_tier": "Standard",
+          "gpus": 4
+        },
+        "storage_override_receipt_required": true
+      },
+      "code_remote_dir": "projects/sft4safety/amlt-code/d59335fa-744b-4b66-8553-669f64b4f657",
+      "completion_status": "native_completed_and_independently_accepted",
+      "native_status": "Completed",
+      "final_training_steps": 2025,
+      "final_training_and_evaluation_accepted": true,
+      "completion_summary": {
+        "path": "artifacts/rho-student-20260916/native-full-static-storage-recovery-v2-watch/watch_completion_summary.json",
+        "sha256": "08230ec910bf0110d4ff0d5b2790ef97c9fe2d2d8cc5684b399c181f5515bd0c"
+      },
+      "native_terminal_evidence": {
+        "path": "artifacts/rho-student-20260916/native-full-static-storage-recovery-v2-watch/native_terminal_verified.json",
+        "sha256": "dde1d7b3ec8803277d49f90418037ecd14ebea75cc6be06bc24b702a02143937"
+      },
+      "worker_success_sha256": "fa2904cc40907d967fd67050ca91e987ffa30ab142a2a23a615396a6247dbbc7"
+    },
+    "dynamic": {
+      "backend": "nice_balloon_j2sw5jbp85",
+      "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f",
+      "experiment": "mind-rho-student-full-v1-0916",
+      "job": "qwen35-2b-rho-student-full-dynamic",
+      "target": "Recall",
+      "sla_tier": "Premium",
+      "gpus": 4,
+      "original_backend": "wheat_bee_pwmp5hd12v",
+      "original_remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49319-e390d57e-ac98",
+      "storage_recovery_parent": {
+        "backend": "kind_pear_gwbqwjr10n",
+        "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210478079.44671-199f02fe-1157",
+        "experiment": "mind-rho-student-full-v1-0916",
+        "job": "qwen35-2b-rho-student-full-dynamic",
+        "target": "Feeds-LLM",
+        "sla_tier": "Premium",
+        "gpus": 4,
+        "original_backend": "wheat_bee_pwmp5hd12v",
+        "original_remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49319-e390d57e-ac98"
+      },
+      "storage_override_receipt_required": true,
+      "native_resume_pending": false,
+      "storage_recovery_v2_parent": {
+        "backend": "maroon_frog_z5kyzqf6yl",
+        "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210473721.69702-603e2354-290b",
+        "experiment": "mind-rho-student-full-v1-0916",
+        "job": "qwen35-2b-rho-student-full-dynamic",
+        "target": "Recall",
+        "sla_tier": "Premium",
+        "gpus": 4,
+        "original_backend": "wheat_bee_pwmp5hd12v",
+        "original_remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49319-e390d57e-ac98",
+        "storage_recovery_parent": {
+          "backend": "kind_pear_gwbqwjr10n",
+          "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210478079.44671-199f02fe-1157",
+          "experiment": "mind-rho-student-full-v1-0916",
+          "job": "qwen35-2b-rho-student-full-dynamic",
+          "target": "Feeds-LLM",
+          "sla_tier": "Premium",
+          "gpus": 4,
+          "original_backend": "wheat_bee_pwmp5hd12v",
+          "original_remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49319-e390d57e-ac98"
+        },
+        "storage_override_receipt_required": true
+      },
+      "code_remote_dir": "projects/sft4safety/amlt-code/d59335fa-744b-4b66-8553-669f64b4f657",
+      "completion_status": "native_completed_and_independently_accepted",
+      "native_status": "Completed",
+      "final_training_steps": 2025,
+      "final_training_and_evaluation_accepted": true,
+      "completion_summary": {
+        "path": "artifacts/rho-student-20260916/native-full-dynamic-storage-recovery-v2-watch/dynamic_final_independent_readback.json",
+        "sha256": "937efcf14a58fbc0f076c3540ce0d06344ebd8c8d0b8a27ecd626f2d8285b77f"
+      },
+      "native_terminal_evidence": {
+        "path": "artifacts/rho-student-20260916/native-full-dynamic-storage-recovery-v2-watch/final_terminal_status.json",
+        "sha256": "79064b9814b1e9f451e6590c8fb33605d0a95f34cfbd6a3ac9cdbe4eb5dab89f"
+      },
+      "worker_success_sha256": "d65bde74bd11783d237d1816cf9000000305825b61ef60802d5683442f2f04bb"
+    }
+  },
+  "first_verified_formal_progress": {
+    "observed_utc": "2026-09-16T07:43:56.009079+00:00",
+    "dynamic_updates": 13,
+    "static_updates": 4,
+    "uniform_updates": 0,
+    "uniform_phase": "epoch0_current_scoring",
+    "all_observed_losses_finite": true
+  },
+  "uniform_resource_recovery": "artifacts/rho-student-20260916/uniform-resource-recovery-v1/replacement_verified.json",
+  "three_arm_initialization_readback": "artifacts/rho-student-20260916/three_arm_initialization_readback.json",
+  "three_arm_initialization_readback_sha256": "18d33b76f028496238a9d1dc0489217eec8dea7ee587d44425efb84ddf75aa1a",
+  "completion_followup": {
+    "kind": "heartbeat",
+    "automation_id": "rho",
+    "interval_minutes": 15,
+    "scope": "Continue this same authorized experiment through final scores, comparison and report, then pause",
+    "experiment_complete": true,
+    "automatic_continuation_needed": false,
+    "closure_owner": "Root",
+    "status_before_closure": "ACTIVE",
+    "status": "PAUSED",
+    "closure_confirmation": "Root confirmed successful official automation_update; original name, prompt, rrule and target preserved.",
+    "closure_confirmation_received_utc": "2026-09-16T15:31:13.161692+00:00"
+  },
+  "dynamic_resource_recovery": {
+    "type": "same_backend_automatic_sla_recovery",
+    "status": "superseded_by_premium_replacement_after_second_eviction",
+    "backend": "wheat_bee_pwmp5hd12v",
+    "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49319-e390d57e-ac98",
+    "eviction_utc": "2026-09-16T09:02:45+00:00",
+    "new_container_running_utc": "2026-09-16T09:08:12+00:00",
+    "new_program_started_utc": "2026-09-16T09:08:57+00:00",
+    "pre_eviction_last_executed_step": 675,
+    "latest_committed_step": 600,
+    "possible_replayed_steps": 75,
+    "current_attempt_optimizer_step": 602,
+    "epoch1_committed_before_eviction": false,
+    "evidence": "artifacts/rho-student-20260916/native-full-dynamic-watch/epoch1_boundary_verification.json",
+    "evidence_sha256": "c94d94dfd7bb1220c5a9d0369dd5339181da3829ecbe946cdbedbba18bc92526",
+    "new_attempt_watch": "artifacts/rho-student-20260916/native-full-dynamic-resume-watch",
+    "job_mutated": false,
+    "controller_restarted": false,
+    "initial_snapshot_utc": "2026-09-16T09:11:08.066572+00:00",
+    "resume_verified_utc": "2026-09-16T09:17:55.255894+00:00",
+    "all_four_ranks_adam_and_scheduler_step_600": true,
+    "optimizer_state_entries_per_rank": 373,
+    "original_epoch0_weights_sha256": "510b402253f4e807ef1a944b5a1183be7b8f10f53e19c1f03242a5c0d8eb51b2",
+    "resume_snapshot": "artifacts/rho-student-20260916/dynamic-recovery-watch-root/resume_verified_snapshot.json",
+    "resume_snapshot_sha256": "221341464a30275b58b49ed34a989f30176252ac17c259896fe117db25ebed62",
+    "weight_chain_audit": "artifacts/rho-student-20260916/native-full-dynamic-resume-watch/checkpoint600_epoch_weight_chain.json",
+    "weight_chain_audit_sha256": "18e04e05d8a8ff7cf034e13699db3f01f7cf485bc6242ed1cb84d73c106b15ca",
+    "new_updates_finite": true,
+    "historical_record": true
+  },
+  "static_resource_recovery": {
+    "type": "same_backend_automatic_sla_recovery",
+    "status": "checkpoint700_restored_and_training_continues",
+    "backend": "green_window_9r37fx97k6",
+    "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49398-be3e6842-21d0",
+    "eviction_utc": "2026-09-16T09:17:38+00:00",
+    "pre_eviction_last_executed_step": 799,
+    "latest_committed_step": 700,
+    "possible_replayed_steps": 99,
+    "current_attempt_optimizer_step": 703,
+    "epoch1_committed_before_eviction": true,
+    "original_epoch1_weights_sha256": "e7dd35ddef8fc357d12a374262841d6e1291c99b1d4000cf517c9391d6262205",
+    "evidence": "artifacts/rho-student-20260916/native-full-static-watch/eviction-20260916T091738Z/eviction_summary.json",
+    "evidence_sha256": "900dd0970413e72f30a52168aec326fce1a94647892382494f0e4c05b7bdb066",
+    "new_attempt_watch": "artifacts/rho-student-20260916/native-full-static-resume-watch",
+    "job_mutated": false,
+    "controller_restarted": false,
+    "initial_snapshot_utc": "2026-09-16T09:21:02.223321+00:00",
+    "resume_receipt": "artifacts/rho-student-20260916/native-full-static-resume-watch/retry001_resume_confirmed.json",
+    "resume_receipt_sha256": "b0d602766cc69927b9e09af93dcf78076fcf0e22757de0699a0b843ba86644d1",
+    "all_four_rank_optimizer_scheduler_cursors_restored": true,
+    "original_epoch1_weights_retained": true,
+    "historical_record": true
+  },
+  "dynamic_premium_recovery": "artifacts/rho-student-20260916/dynamic-resource-recovery-premium-v1/recovery_state.json",
+  "controller_running": false,
+  "dynamic_premium_resource_recovery": {
+    "phase": "replacement_checkpoint600_restored_and_training_continues",
+    "experiment": "mind-rho-student-full-v1-0916",
+    "job": "qwen35-2b-rho-student-full-dynamic",
+    "original_backend": "wheat_bee_pwmp5hd12v",
+    "original_remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49319-e390d57e-ac98",
+    "original_target": "Feeds",
+    "original_sla": "Standard",
+    "target": "Feeds-LLM",
+    "sla": "Premium",
+    "latest_committed_step": 600,
+    "training_source_upload": false,
+    "delete_results": false,
+    "submission_attempted": true,
+    "old_controller_pid": 1946,
+    "old_controller_command": "/tmp/crossinterest-rho-repair-env/bin/python scripts/analysis/run_rho_student_pipeline.py",
+    "prepared_utc": "2026-09-16T09:24:29.568243+00:00",
+    "runtime_sha256": "7a150f978944f80bc1ecd2d04aa3759818a5183d741bad31a1485518366ceca1",
+    "protocol_sha256": "b3f56b93a2426397a79c80066a92d36fd35d396a0dd92f8606a444e4c35484aa",
+    "code_remote_dir": "projects/sft4safety/amlt-code/47ff530ed60408f9298e7210ab9ce62c570f2fcec44751b43fc7fa105b8be9e6",
+    "original_status": "killed",
+    "new_backend": "kind_pear_gwbqwjr10n",
+    "new_remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210478079.44671-199f02fe-1157",
+    "replacement_verified": "artifacts/rho-student-20260916/dynamic-resource-recovery-premium-v1/replacement_verified.json",
+    "latest_verified_step": 616,
+    "resume_verified_utc": "2026-09-16T09:44:31.878959+00:00",
+    "resume_snapshot": "artifacts/rho-student-20260916/dynamic-resource-recovery-premium-v1/resume_verified_snapshot.json",
+    "resume_snapshot_sha256": "2c74b1bc5915fbe5e9a2e97515fd1b762b87012d1ad3ccab504449a013117014",
+    "all_four_rank_optimizer_scheduler_cursors_restored": true,
+    "original_epoch0_weights_retained": true,
+    "historical_record": true
+  },
+  "dynamic_premium_checkpoint_copy": {
+    "receipt": "artifacts/rho-student-20260916/native-full-dynamic-premium-watch/migrated_checkpoint600_compact_verification.json",
+    "sha256": "7bd10162e8dae5a6f8f9f992f392147614165e03a9a3365aac0da8d2f32662d6",
+    "compact_copy_verified": true,
+    "runtime_load_verified": true
+  },
+  "storage_retention_recovery": "artifacts/rho-student-20260916/storage-retention-recovery-v1/plan.json",
+  "storage_retention_recovery_execution": "artifacts/rho-student-20260916/storage-retention-recovery-v1/execution_state.json",
+  "storage_recovery_ready": "artifacts/rho-student-20260916/storage-retention-recovery-v1-ready.json",
+  "full_local_suite_storage_recovery": {
+    "passed": 1446,
+    "warnings": 1,
+    "log": "artifacts/rho-student-20260916/storage-retention-recovery-full-suite.txt"
+  },
+  "storage_retention_overrides": {
+    "static": {
+      "arms": [
+        "static",
+        "dynamic"
+      ],
+      "base_file_count": 201,
+      "base_protocol_sha256": "b3f56b93a2426397a79c80066a92d36fd35d396a0dd92f8606a444e4c35484aa",
+      "base_runtime_sha256": "7a150f978944f80bc1ecd2d04aa3759818a5183d741bad31a1485518366ceca1",
+      "base_source_manifest_sha256": "36d506cd518b46d939ce4cdb03c619259b57db645a47faf79152b1354464c3d9",
+      "bundle": "artifacts/rho-student-20260916/bundle-storage-retention-recovery-v2",
+      "changed_fields": [
+        "persistent_checkpoint_limit"
+      ],
+      "compat_wrapper_sha256": "1a78e42c268fdd53f6003525be5166aa03163e81a914eb856b09cfe680a2ed99",
+      "launcher_sha256": "e329512ac6f6be6376197b4939fa58ebe321982e4aedca4370144e5c13b66655",
+      "new_value": 25,
+      "old_value": 3,
+      "planned_max_checkpoint_count": 21,
+      "planned_optimizer_steps": 2025,
+      "ready": true,
+      "recovery_manifest_sha256": "a57b42c24051e84099bfed90d0bf775b0ee8e2fbc6c2b22531513f59f2400ccc",
+      "stage": "full",
+      "submitted": false,
+      "version": "rho-storage-retention-recovery-v1",
+      "arm": "static"
+    },
+    "dynamic": {
+      "arms": [
+        "static",
+        "dynamic"
+      ],
+      "base_file_count": 201,
+      "base_protocol_sha256": "b3f56b93a2426397a79c80066a92d36fd35d396a0dd92f8606a444e4c35484aa",
+      "base_runtime_sha256": "7a150f978944f80bc1ecd2d04aa3759818a5183d741bad31a1485518366ceca1",
+      "base_source_manifest_sha256": "36d506cd518b46d939ce4cdb03c619259b57db645a47faf79152b1354464c3d9",
+      "bundle": "artifacts/rho-student-20260916/bundle-storage-retention-recovery-v2",
+      "changed_fields": [
+        "persistent_checkpoint_limit"
+      ],
+      "compat_wrapper_sha256": "1a78e42c268fdd53f6003525be5166aa03163e81a914eb856b09cfe680a2ed99",
+      "launcher_sha256": "e329512ac6f6be6376197b4939fa58ebe321982e4aedca4370144e5c13b66655",
+      "new_value": 25,
+      "old_value": 3,
+      "planned_max_checkpoint_count": 21,
+      "planned_optimizer_steps": 2025,
+      "ready": true,
+      "recovery_manifest_sha256": "a57b42c24051e84099bfed90d0bf775b0ee8e2fbc6c2b22531513f59f2400ccc",
+      "stage": "full",
+      "submitted": false,
+      "version": "rho-storage-retention-recovery-v1",
+      "arm": "dynamic"
+    }
+  },
+  "storage_recovery_replacements": "artifacts/rho-student-20260916/storage-retention-recovery-v1/replacement_verified.json",
+  "updated_utc": "2026-09-16T14:44:24.509617+00:00",
+  "storage_recovery_v1_failure": {
+    "stage": "verify_package_before_training",
+    "static_backend": "shy_pencil_hrwdnwhcc3",
+    "dynamic_backend": "maroon_frog_z5kyzqf6yl",
+    "new_optimizer_updates": 0,
+    "v1_bundle_preserved": true,
+    "cpu_runtime_preflight_required": true
+  },
+  "storage_recovery_v2_ready": "artifacts/rho-student-20260916/storage-retention-recovery-v2-ready.json",
+  "storage_recovery_v2_execution": "artifacts/rho-student-20260916/storage-retention-recovery-v2/execution_state.json",
+  "cpu_runtime_preflight": "artifacts/rho-student-20260916/storage-runtime-preflight-v3-zlib/submission_state.json",
+  "storage_recovery_v2_local_validation": {
+    "full_suite": "1478 passed, 1 existing warning",
+    "full_suite_log": "artifacts/rho-student-20260916/storage-retention-recovery-v2-full-suite.txt",
+    "compression_focused_tests": 14,
+    "cpu_preflight_backend": "neat_cushion_n665j9063m",
+    "cpu_preflight_actual_submissions": 1,
+    "historical_record": true
+  },
+  "cpu_prior_failure": "artifacts/rho-student-20260916/storage-runtime-preflight-v2/remote_independent_readback.json",
+  "storage_recovery_v2_replacements": "artifacts/rho-student-20260916/storage-retention-recovery-v2/replacement_verified.json",
+  "storage_recovery_v2_native_resume": {
+    "static": {
+      "path": "artifacts/rho-student-20260916/native-full-static-storage-recovery-v2-watch/resume800_confirmed.json",
+      "sha256": "f5272079c45d33762c8957f74b7b3f26a0261aa35c02cab2425633a7bc6e3752",
+      "resume_step": 800
+    },
+    "dynamic": {
+      "path": "artifacts/rho-student-20260916/native-full-dynamic-storage-recovery-v2-watch/native_cp700_resume_verified.json",
+      "sha256": "604f76d2d3fed1d769b40565510860b7b03c4679fc77df00281e6f526d5aac8e",
+      "resume_step": 700
+    }
+  },
+  "storage_recovery_v2_acceptance": "artifacts/rho-student-20260916/storage-retention-recovery-v2/recovery_acceptance.json",
+  "storage_recovery_v2_acceptance_sha256": "6a3a25784ca3cf33c8ec503105ec11211dd387fc92a3a2dbffdd91e0bb6d9f52",
+  "latest_progress": {
+    "uniform": {
+      "training_step": 2025,
+      "step_source": "independent final four-rank Trainer/Adam/scheduler acceptance",
+      "backend": "silver_lettuce_z7c5yjsyl0",
+      "native_status": "Completed",
+      "terminal_observed_utc": "2026-09-16T13:33:31.012334+00:00",
+      "terminal_evidence": {
+        "path": "artifacts/rho-student-20260916/native-full-uniform-premium-watch/receipt.json",
+        "sha256": "acce63196b72982f31dbfab05d025d86d505644d3c313db59223090cb541e05c"
+      },
+      "final_training_reload_and_evaluation_accepted": true
+    },
+    "static": {
+      "training_step": 2025,
+      "step_source": "independent final four-rank Trainer/Adam/scheduler acceptance",
+      "backend": "salmon_spring_lshrr7prrs",
+      "native_status": "Completed",
+      "terminal_observed_utc": "2026-09-16T15:02:57.292266+00:00",
+      "terminal_evidence": {
+        "path": "artifacts/rho-student-20260916/native-full-static-storage-recovery-v2-watch/native_terminal_verified.json",
+        "sha256": "dde1d7b3ec8803277d49f90418037ecd14ebea75cc6be06bc24b702a02143937"
+      },
+      "final_training_reload_and_evaluation_accepted": true
+    },
+    "dynamic": {
+      "training_step": 2025,
+      "step_source": "independent final four-rank Trainer/Adam/scheduler acceptance",
+      "backend": "nice_balloon_j2sw5jbp85",
+      "native_status": "Completed",
+      "terminal_observed_utc": "2026-09-16T15:07:50.798793+00:00",
+      "terminal_evidence": {
+        "path": "artifacts/rho-student-20260916/native-full-dynamic-storage-recovery-v2-watch/final_terminal_status.json",
+        "sha256": "79064b9814b1e9f451e6590c8fb33605d0a95f34cfbd6a3ac9cdbe4eb5dab89f"
+      },
+      "final_training_reload_and_evaluation_accepted": true
+    }
+  },
+  "latest_heartbeat": "artifacts/rho-student-20260916/heartbeats/20260916T144424Z-endpoint-progress.json",
+  "latest_heartbeat_sha256": "2c5cb9bff9b1f96facd835c5ce2cde02863bf09b4986d2164d704a334d6c6bed",
+  "completed_arms": {
+    "uniform": {
+      "accepted": true,
+      "native_status": "Completed",
+      "backend": "silver_lettuce_z7c5yjsyl0",
+      "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169",
+      "readback": "artifacts/rho-student-20260916/native-full-uniform-premium-watch/full_final_readback.json",
+      "readback_sha256": "ba7b057dd62e5169045b845a666327789c547a12f9240ea1eb1f389a63d5809a",
+      "completion_summary": {
+        "path": "artifacts/rho-student-20260916/native-full-uniform-premium-watch/full_watch_completion_summary.json",
+        "sha256": "649aa2ee92e31d2f2742617d438a6f46acb9c490bb5aef5e08396042c19c491c"
+      },
+      "native_terminal_evidence": {
+        "path": "artifacts/rho-student-20260916/native-full-uniform-premium-watch/receipt.json",
+        "sha256": "acce63196b72982f31dbfab05d025d86d505644d3c313db59223090cb541e05c"
+      },
+      "native_terminal_observed_utc": "2026-09-16T13:33:31.012334+00:00",
+      "worker_success": {
+        "path": "artifacts/rho-student-20260916/compact/uniform/mind-rho-student-full-v1-0916/qwen35-2b-rho-student-full-uniform/compact/worker_success.json",
+        "sha256": "79d2b0c71ff0ff41bfe9f9d707016572a5b8bd4980dd5c7ba7f44b3e66debd58"
+      },
+      "worker_success_sha256": "79d2b0c71ff0ff41bfe9f9d707016572a5b8bd4980dd5c7ba7f44b3e66debd58",
+      "final_training_and_evaluation_accepted": true,
+      "training_steps": 2025,
+      "epochs": 3,
+      "world_size": 4,
+      "optimizer_states_per_rank": 373,
+      "fresh_reload_exact": true,
+      "fresh_fp32_probes_exact": true,
+      "metrics": {
+        "validation": {
+          "rows": 5354,
+          "users": 5354,
+          "target_occurrences": 5354,
+          "macro_supported_classes": 107,
+          "macro_recall_at_10": 0.2525233644859814,
+          "macro_recall_at_20": 0.3945794392523366,
+          "macro_ndcg_at_10": 0.12727611483238918,
+          "macro_ndcg_at_20": 0.16283218353969
+        },
+        "dev": {
+          "rows": 31392,
+          "users": 27082,
+          "target_occurrences": 37728,
+          "macro_supported_classes": 104,
+          "macro_recall_at_10": 0.2056169130984866,
+          "macro_recall_at_20": 0.3346884221943608,
+          "macro_ndcg_at_10": 0.1031338041660551,
+          "macro_ndcg_at_20": 0.13526284006291447
+        }
+      },
+      "restoration": {
+        "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169",
+        "final_adapter_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/full/final_adapter",
+        "final_adapter_file_sha256": "ed941160e7c40a592bb17d80d4d4f24d08d85f4d0c339924732e577e9183cb82",
+        "closed_training_manifest": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/full/artifact_manifest.json",
+        "checkpoint_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/checkpoints-full",
+        "current_epoch_weight_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/weights-full",
+        "original_epoch_weight_commits": [
+          {
+            "epoch": 0,
+            "epoch_start_step": 0,
+            "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/weights-full/epoch-0000",
+            "weights_sha256": "5e63e1d47e87e9a3c326a1336e2e55545e9eee7f38a99b37f3938ab07d257077"
+          },
+          {
+            "epoch": 1,
+            "epoch_start_step": 675,
+            "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/weights-full/epoch-0001",
+            "weights_sha256": "d8edf93df85dc2fb154c4fa56030f17d318efe6dcf1389fdccbbdf022e167631"
+          },
+          {
+            "epoch": 2,
+            "epoch_start_step": 1350,
+            "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/weights-full/epoch-0002",
+            "weights_sha256": "48d33a11d672b544f6842d5f7a0f50a7ea24200487c4c30746b5da56cece4ad0"
+          }
+        ],
+        "heldout_predictions": {
+          "validation": {
+            "path": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/evaluation-validation/readback/predictions.parquet",
+            "sha256": "184e60fc77ee62b1968d9c6bc0c0a2982fd60e4e0808407c4130d6c9a6d3264f",
+            "source_sha256": "208caffcfe7c9bdf2846ff98990bcfdd0bb746cf29516b29ca8cc8925b1e3594",
+            "metrics_sha256": "778fc20787c3af8adfe4d910f563d7d5f502b7e4996c8fbff68e7d1edba99536"
+          },
+          "dev": {
+            "path": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/evaluation-dev/readback/predictions.parquet",
+            "sha256": "fda79ea0a6f6007cbf7087aa00c45ce8b43456e8b813df6bc5d1ee8d97ee19ba",
+            "source_sha256": "d6fc2a21ef48699a3669419bb2edb3b1591e87787def5881c1cccbff3cb97a6e",
+            "metrics_sha256": "309e0d3a9b2c05029fce7824e64c8c7a9e81710b408a64f2ef1d2ebeef4f62e0"
+          }
+        },
+        "verification": "Verify identity and all manifest-declared hashes remotely before using a restored artifact; keep large payloads remote."
+      }
+    },
+    "static": {
+      "accepted": true,
+      "native_status": "Completed",
+      "backend": "salmon_spring_lshrr7prrs",
+      "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303",
+      "readback": "artifacts/rho-student-20260916/native-full-static-storage-recovery-v2-watch/worker_final_verified.json",
+      "readback_sha256": "33375c8b6a625bf0b457efa65db50e43dde5fbaf72309edc7276c96b1b18969d",
+      "completion_summary": {
+        "path": "artifacts/rho-student-20260916/native-full-static-storage-recovery-v2-watch/watch_completion_summary.json",
+        "sha256": "08230ec910bf0110d4ff0d5b2790ef97c9fe2d2d8cc5684b399c181f5515bd0c"
+      },
+      "native_terminal_evidence": {
+        "path": "artifacts/rho-student-20260916/native-full-static-storage-recovery-v2-watch/native_terminal_verified.json",
+        "sha256": "dde1d7b3ec8803277d49f90418037ecd14ebea75cc6be06bc24b702a02143937"
+      },
+      "native_terminal_observed_utc": "2026-09-16T15:02:57.292266+00:00",
+      "worker_success": {
+        "path": "artifacts/rho-student-20260916/compact/static/mind-rho-student-full-v1-0916/qwen35-2b-rho-student-full-static/compact/worker_success.json",
+        "sha256": "fa2904cc40907d967fd67050ca91e987ffa30ab142a2a23a615396a6247dbbc7"
+      },
+      "worker_success_sha256": "fa2904cc40907d967fd67050ca91e987ffa30ab142a2a23a615396a6247dbbc7",
+      "final_training_and_evaluation_accepted": true,
+      "training_steps": 2025,
+      "epochs": 3,
+      "world_size": 4,
+      "optimizer_states_per_rank": 373,
+      "fresh_reload_exact": true,
+      "fresh_fp32_probes_exact": true,
+      "metrics": {
+        "dev": {
+          "rows": 31392,
+          "users": 27082,
+          "target_occurrences": 37728,
+          "macro_supported_classes": 104,
+          "macro_recall_at_10": 0.20300771259860154,
+          "macro_recall_at_20": 0.34171366354686605,
+          "macro_ndcg_at_10": 0.10349820171580942,
+          "macro_ndcg_at_20": 0.138299764214467
+        },
+        "validation": {
+          "rows": 5354,
+          "users": 5354,
+          "target_occurrences": 5354,
+          "macro_supported_classes": 107,
+          "macro_recall_at_10": 0.24822429906542062,
+          "macro_recall_at_20": 0.3985046728971964,
+          "macro_ndcg_at_10": 0.1268861811543478,
+          "macro_ndcg_at_20": 0.1646073135942565
+        }
+      },
+      "restoration": {
+        "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303",
+        "final_adapter_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/full/final_adapter",
+        "final_adapter_file_sha256": "1aaa9ec6e35b8d99e5830f937236b653da7007166be7d59aad85c62fa30bb0e5",
+        "closed_training_manifest": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/full/artifact_manifest.json",
+        "checkpoint_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/checkpoints-full",
+        "current_epoch_weight_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/weights-full",
+        "original_epoch_weight_commits": [
+          {
+            "epoch": 0,
+            "epoch_start_step": 0,
+            "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49398-be3e6842-21d0/weights-full/epoch-0000",
+            "weights_sha256": "c68e28b065fcaba2524f2ed14037f81898de1f5cc8ff45dba9aa67df19b41f2c"
+          },
+          {
+            "epoch": 1,
+            "epoch_start_step": 675,
+            "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49398-be3e6842-21d0/weights-full/epoch-0001",
+            "weights_sha256": "e7dd35ddef8fc357d12a374262841d6e1291c99b1d4000cf517c9391d6262205"
+          },
+          {
+            "epoch": 2,
+            "epoch_start_step": 1350,
+            "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/weights-full/epoch-0002",
+            "weights_sha256": "606d6fd54caa6633d9f56738369504bbc48637d3debd7a95c0a822e61c15b559"
+          }
+        ],
+        "heldout_predictions": {
+          "dev": {
+            "path": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/evaluation-dev/readback/predictions.parquet",
+            "sha256": "fdeefb1d630b49fc2d6bdaf52a8676fcaefd1331501894d327387ebd04bb96a5",
+            "source_sha256": "d6fc2a21ef48699a3669419bb2edb3b1591e87787def5881c1cccbff3cb97a6e",
+            "metrics_sha256": "11def44ae6c01e6474a028672ac2051e6de03d5eba7d0ea8e7de54038cc540cb"
+          },
+          "validation": {
+            "path": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/evaluation-validation/readback/predictions.parquet",
+            "sha256": "49b22fb24045fe7a725d5be25b9e21e8a84aadf474cbf815e22141453ecfa29a",
+            "source_sha256": "208caffcfe7c9bdf2846ff98990bcfdd0bb746cf29516b29ca8cc8925b1e3594",
+            "metrics_sha256": "54bd362d179330ed748ea1ffb081f2ed8750435eca53d31ed39a45c7b0470575"
+          }
+        },
+        "verification": "Verify identity and all manifest-declared hashes remotely before using a restored artifact; keep large payloads remote."
+      },
+      "native_end_time_utc": "2026-09-16T15:00:49.9363262+00:00"
+    },
+    "dynamic": {
+      "accepted": true,
+      "native_status": "Completed",
+      "backend": "nice_balloon_j2sw5jbp85",
+      "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f",
+      "readback": "artifacts/rho-student-20260916/native-full-dynamic-storage-recovery-v2-watch/dynamic_final_independent_readback.json",
+      "readback_sha256": "937efcf14a58fbc0f076c3540ce0d06344ebd8c8d0b8a27ecd626f2d8285b77f",
+      "completion_summary": {
+        "path": "artifacts/rho-student-20260916/native-full-dynamic-storage-recovery-v2-watch/dynamic_final_independent_readback.json",
+        "sha256": "937efcf14a58fbc0f076c3540ce0d06344ebd8c8d0b8a27ecd626f2d8285b77f"
+      },
+      "native_terminal_evidence": {
+        "path": "artifacts/rho-student-20260916/native-full-dynamic-storage-recovery-v2-watch/final_terminal_status.json",
+        "sha256": "79064b9814b1e9f451e6590c8fb33605d0a95f34cfbd6a3ac9cdbe4eb5dab89f"
+      },
+      "native_terminal_observed_utc": "2026-09-16T15:07:50.798793+00:00",
+      "worker_success": {
+        "path": "artifacts/rho-student-20260916/compact/dynamic/mind-rho-student-full-v1-0916/qwen35-2b-rho-student-full-dynamic/compact/worker_success.json",
+        "sha256": "d65bde74bd11783d237d1816cf9000000305825b61ef60802d5683442f2f04bb"
+      },
+      "worker_success_sha256": "d65bde74bd11783d237d1816cf9000000305825b61ef60802d5683442f2f04bb",
+      "final_training_and_evaluation_accepted": true,
+      "training_steps": 2025,
+      "epochs": 3,
+      "world_size": 4,
+      "optimizer_states_per_rank": 373,
+      "fresh_reload_exact": true,
+      "fresh_fp32_probes_exact": true,
+      "metrics": {
+        "dev": {
+          "rows": 31392,
+          "users": 27082,
+          "target_occurrences": 37728,
+          "macro_supported_classes": 104,
+          "macro_recall_at_10": 0.19753150650444978,
+          "macro_recall_at_20": 0.3326400595138907,
+          "macro_ndcg_at_10": 0.09872724577515735,
+          "macro_ndcg_at_20": 0.13258545230959623
+        },
+        "validation": {
+          "rows": 5354,
+          "users": 5354,
+          "target_occurrences": 5354,
+          "macro_supported_classes": 107,
+          "macro_recall_at_10": 0.24728971962616822,
+          "macro_recall_at_20": 0.3934579439252338,
+          "macro_ndcg_at_10": 0.12321173087731749,
+          "macro_ndcg_at_20": 0.15983307124126814
+        }
+      },
+      "restoration": {
+        "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f",
+        "final_adapter_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/full/final_adapter",
+        "final_adapter_file_sha256": "5743f20eede6be01138ea52e2f0398f27e172e8ec0d19770f459ac6ff4767a73",
+        "closed_training_manifest": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/full/artifact_manifest.json",
+        "checkpoint_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/checkpoints-full",
+        "current_epoch_weight_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/weights-full",
+        "original_epoch_weight_commits": [
+          {
+            "epoch": 0,
+            "epoch_start_step": 0,
+            "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49319-e390d57e-ac98/weights-full/epoch-0000",
+            "weights_sha256": "510b402253f4e807ef1a944b5a1183be7b8f10f53e19c1f03242a5c0d8eb51b2"
+          },
+          {
+            "epoch": 1,
+            "epoch_start_step": 675,
+            "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210478079.44671-199f02fe-1157/weights-full/epoch-0001",
+            "weights_sha256": "be8931fa295bf5fb665742cc77115a991dd4f8a2ca78e70a2cf9e6a338d467de"
+          },
+          {
+            "epoch": 2,
+            "epoch_start_step": 1350,
+            "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/weights-full/epoch-0002",
+            "weights_sha256": "ff6f118a8ccd3de35b8e191be25d970718dc14e9bea569b58bdf2e0b50691835"
+          }
+        ],
+        "heldout_predictions": {
+          "dev": {
+            "path": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/evaluation-dev/readback/predictions.parquet",
+            "sha256": "c1d3dfb075144357c2a46263da75579e609a64c5b3db3995257a7e8091410e17",
+            "source_sha256": "d6fc2a21ef48699a3669419bb2edb3b1591e87787def5881c1cccbff3cb97a6e",
+            "metrics_sha256": "40f70a9ae18f8b5b6b0ec2aff0e5a82074ab06e663bf9828719c43edabcb8213"
+          },
+          "validation": {
+            "path": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/evaluation-validation/readback/predictions.parquet",
+            "sha256": "95c6b04096a35c74ebfda539a9746d752a6fb2a41b45a3dfbb30bfd677698006",
+            "source_sha256": "208caffcfe7c9bdf2846ff98990bcfdd0bb746cf29516b29ca8cc8925b1e3594",
+            "metrics_sha256": "60a5f71fe73b7d6cfb51a3fc5f7afeb9ed0d1ebc3f16baf74ca62bdf8dfd6e9a"
+          }
+        },
+        "verification": "Verify identity and all manifest-declared hashes remotely before using a restored artifact; keep large payloads remote."
+      },
+      "native_end_time_utc": "2026-09-16T15:06:52.188019+00:00"
+    }
+  },
+  "epoch2_readback": {
+    "static": [
+      {
+        "path": "artifacts/rho-student-20260916/native-full-static-storage-recovery-v2-watch/epoch2_refresh_verified.json",
+        "sha256": "00a2f66e24224cc8e4554f070bced6018b2ef612915d99309881e76c28650e66"
+      },
+      {
+        "path": "artifacts/rho-student-20260916/native-full-static-storage-recovery-v2-watch/epoch2_refresh_native_source_verified.json",
+        "sha256": "49dbe17b7ce7b405f3409bf8c5d86b696c74226d0141cdd13b2d84ecced751b9"
+      }
+    ],
+    "dynamic": [
+      {
+        "path": "artifacts/rho-student-20260916/native-full-dynamic-storage-recovery-v2-watch/epoch2_refresh_independent_readback.json",
+        "sha256": "86bade091cb50f6158c8dbb94377f2e242c472aac54e79456fb052b8f28d598b"
+      }
+    ]
+  },
+  "latest_verified_steps": {
+    "uniform": 2025,
+    "static": 2025,
+    "dynamic": 2025
+  },
+  "three_arm_acceptance": {
+    "path": "artifacts/rho-student-20260916/three_arm_acceptance.json",
+    "sha256": "5b7e2b488b96ad4a8d0e53d44ff8f6decf95952cdddb9ee58a7c5f301dbc4302"
+  },
+  "all_gpu_arms_native_completed": true,
+  "all_gpu_arms_independently_accepted": true,
+  "restoration": {
+    "uniform": {
+      "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169",
+      "final_adapter_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/full/final_adapter",
+      "final_adapter_file_sha256": "ed941160e7c40a592bb17d80d4d4f24d08d85f4d0c339924732e577e9183cb82",
+      "closed_training_manifest": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/full/artifact_manifest.json",
+      "checkpoint_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/checkpoints-full",
+      "current_epoch_weight_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/weights-full",
+      "original_epoch_weight_commits": [
+        {
+          "epoch": 0,
+          "epoch_start_step": 0,
+          "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/weights-full/epoch-0000",
+          "weights_sha256": "5e63e1d47e87e9a3c326a1336e2e55545e9eee7f38a99b37f3938ab07d257077"
+        },
+        {
+          "epoch": 1,
+          "epoch_start_step": 675,
+          "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/weights-full/epoch-0001",
+          "weights_sha256": "d8edf93df85dc2fb154c4fa56030f17d318efe6dcf1389fdccbbdf022e167631"
+        },
+        {
+          "epoch": 2,
+          "epoch_start_step": 1350,
+          "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/weights-full/epoch-0002",
+          "weights_sha256": "48d33a11d672b544f6842d5f7a0f50a7ea24200487c4c30746b5da56cece4ad0"
+        }
+      ],
+      "heldout_predictions": {
+        "validation": {
+          "path": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/evaluation-validation/readback/predictions.parquet",
+          "sha256": "184e60fc77ee62b1968d9c6bc0c0a2982fd60e4e0808407c4130d6c9a6d3264f",
+          "source_sha256": "208caffcfe7c9bdf2846ff98990bcfdd0bb746cf29516b29ca8cc8925b1e3594",
+          "metrics_sha256": "778fc20787c3af8adfe4d910f563d7d5f502b7e4996c8fbff68e7d1edba99536"
+        },
+        "dev": {
+          "path": "/mnt/output/projects/sft4safety/amlt-results/7210483669.14114-f4487e90-f169/evaluation-dev/readback/predictions.parquet",
+          "sha256": "fda79ea0a6f6007cbf7087aa00c45ce8b43456e8b813df6bc5d1ee8d97ee19ba",
+          "source_sha256": "d6fc2a21ef48699a3669419bb2edb3b1591e87787def5881c1cccbff3cb97a6e",
+          "metrics_sha256": "309e0d3a9b2c05029fce7824e64c8c7a9e81710b408a64f2ef1d2ebeef4f62e0"
+        }
+      },
+      "verification": "Verify identity and all manifest-declared hashes remotely before using a restored artifact; keep large payloads remote."
+    },
+    "static": {
+      "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303",
+      "final_adapter_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/full/final_adapter",
+      "final_adapter_file_sha256": "1aaa9ec6e35b8d99e5830f937236b653da7007166be7d59aad85c62fa30bb0e5",
+      "closed_training_manifest": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/full/artifact_manifest.json",
+      "checkpoint_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/checkpoints-full",
+      "current_epoch_weight_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/weights-full",
+      "original_epoch_weight_commits": [
+        {
+          "epoch": 0,
+          "epoch_start_step": 0,
+          "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49398-be3e6842-21d0/weights-full/epoch-0000",
+          "weights_sha256": "c68e28b065fcaba2524f2ed14037f81898de1f5cc8ff45dba9aa67df19b41f2c"
+        },
+        {
+          "epoch": 1,
+          "epoch_start_step": 675,
+          "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49398-be3e6842-21d0/weights-full/epoch-0001",
+          "weights_sha256": "e7dd35ddef8fc357d12a374262841d6e1291c99b1d4000cf517c9391d6262205"
+        },
+        {
+          "epoch": 2,
+          "epoch_start_step": 1350,
+          "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/weights-full/epoch-0002",
+          "weights_sha256": "606d6fd54caa6633d9f56738369504bbc48637d3debd7a95c0a822e61c15b559"
+        }
+      ],
+      "heldout_predictions": {
+        "dev": {
+          "path": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/evaluation-dev/readback/predictions.parquet",
+          "sha256": "fdeefb1d630b49fc2d6bdaf52a8676fcaefd1331501894d327387ebd04bb96a5",
+          "source_sha256": "d6fc2a21ef48699a3669419bb2edb3b1591e87787def5881c1cccbff3cb97a6e",
+          "metrics_sha256": "11def44ae6c01e6474a028672ac2051e6de03d5eba7d0ea8e7de54038cc540cb"
+        },
+        "validation": {
+          "path": "/mnt/output/projects/sft4safety/amlt-results/7210468662.03958-beb1fc98-6303/evaluation-validation/readback/predictions.parquet",
+          "sha256": "49b22fb24045fe7a725d5be25b9e21e8a84aadf474cbf815e22141453ecfa29a",
+          "source_sha256": "208caffcfe7c9bdf2846ff98990bcfdd0bb746cf29516b29ca8cc8925b1e3594",
+          "metrics_sha256": "54bd362d179330ed748ea1ffb081f2ed8750435eca53d31ed39a45c7b0470575"
+        }
+      },
+      "verification": "Verify identity and all manifest-declared hashes remotely before using a restored artifact; keep large payloads remote."
+    },
+    "dynamic": {
+      "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f",
+      "final_adapter_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/full/final_adapter",
+      "final_adapter_file_sha256": "5743f20eede6be01138ea52e2f0398f27e172e8ec0d19770f459ac6ff4767a73",
+      "closed_training_manifest": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/full/artifact_manifest.json",
+      "checkpoint_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/checkpoints-full",
+      "current_epoch_weight_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/weights-full",
+      "original_epoch_weight_commits": [
+        {
+          "epoch": 0,
+          "epoch_start_step": 0,
+          "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210485921.49319-e390d57e-ac98/weights-full/epoch-0000",
+          "weights_sha256": "510b402253f4e807ef1a944b5a1183be7b8f10f53e19c1f03242a5c0d8eb51b2"
+        },
+        {
+          "epoch": 1,
+          "epoch_start_step": 675,
+          "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210478079.44671-199f02fe-1157/weights-full/epoch-0001",
+          "weights_sha256": "be8931fa295bf5fb665742cc77115a991dd4f8a2ca78e70a2cf9e6a338d467de"
+        },
+        {
+          "epoch": 2,
+          "epoch_start_step": 1350,
+          "original_commit_directory": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/weights-full/epoch-0002",
+          "weights_sha256": "ff6f118a8ccd3de35b8e191be25d970718dc14e9bea569b58bdf2e0b50691835"
+        }
+      ],
+      "heldout_predictions": {
+        "dev": {
+          "path": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/evaluation-dev/readback/predictions.parquet",
+          "sha256": "c1d3dfb075144357c2a46263da75579e609a64c5b3db3995257a7e8091410e17",
+          "source_sha256": "d6fc2a21ef48699a3669419bb2edb3b1591e87787def5881c1cccbff3cb97a6e",
+          "metrics_sha256": "40f70a9ae18f8b5b6b0ec2aff0e5a82074ab06e663bf9828719c43edabcb8213"
+        },
+        "validation": {
+          "path": "/mnt/output/projects/sft4safety/amlt-results/7210468661.10917-f5efd525-392f/evaluation-validation/readback/predictions.parquet",
+          "sha256": "95c6b04096a35c74ebfda539a9746d752a6fb2a41b45a3dfbb30bfd677698006",
+          "source_sha256": "208caffcfe7c9bdf2846ff98990bcfdd0bb746cf29516b29ca8cc8925b1e3594",
+          "metrics_sha256": "60a5f71fe73b7d6cfb51a3fc5f7afeb9ed0d1ebc3f16baf74ca62bdf8dfd6e9a"
+        }
+      },
+      "verification": "Verify identity and all manifest-declared hashes remotely before using a restored artifact; keep large payloads remote."
+    }
+  },
+  "documentation_updated_utc": "2026-09-16T15:31:13.161692+00:00",
+  "controller_observation": {
+    "pid": 30903,
+    "phase": "complete",
+    "comparison_status": "pass",
+    "process_running": false,
+    "observed_utc": "2026-09-16T15:30:39.067401+00:00",
+    "owner": "Root",
+    "pipeline_state": "artifacts/rho-student-20260916/pipeline_state.json"
+  },
+  "comparison": {
+    "status": "native_completed_and_independently_accepted",
+    "experiment": "mind-rho-student-comparison-v1-0916",
+    "job": "rho-student-three-arm-comparison",
+    "gpu_count": 0,
+    "ready": {
+      "path": "artifacts/rho-student-20260916/comparison_ready.json",
+      "sha256": "b9d4d43faccb4406b5bd53124d14cb1d03939e199caca94186a93b3802167504"
+    },
+    "bundle": "artifacts/rho-student-20260916/bundle-comparison-v1",
+    "config": {
+      "path": "configs/amlt/mind_rho_student_comparison_0916_v1.yaml",
+      "sha256": "0d45531648511cb714dd54b4ef80b5bc668195ffa5d9b79be198423f2bdd226f"
+    },
+    "source_manifest_sha256": "1c5a0a9a1f8646503c10a5a26685e4f6e2c324980b1645f2c1d4848a2d8add28",
+    "comparison_code_sha256": "317d3ecc20e53d3605434f0802a222ac70aa3921f6d75fa818b0d3fe900e0393",
+    "comparison_plan_sha256": "4788f127f931fa734c6482f2a53354afffcbe4c094e3b3500f9a0506c4b07178",
+    "three_arm_acceptance_sha256": "5b7e2b488b96ad4a8d0e53d44ff8f6decf95952cdddb9ee58a7c5f301dbc4302",
+    "controller_submission_attempted": true,
+    "controller_status_at_observation": "pass",
+    "result_accepted": true,
+    "owner": "Root",
+    "backend": "heroic_yuca_q7twcrdjsz",
+    "native_status": "Completed",
+    "native_end_time_utc": "2026-09-16T15:23:42.2575576+00:00",
+    "amlt_job_id": "7210457495.41283-45c4298c-f1f6",
+    "remote_output": "/mnt/output/projects/sft4safety/amlt-results/7210457495.41283-45c4298c-f1f6",
+    "remote_result": "/mnt/output/projects/sft4safety/amlt-results/7210457495.41283-45c4298c-f1f6/comparison.json",
+    "result": {
+      "path": "artifacts/rho-student-20260916/compact/comparison/mind-rho-student-comparison-v1-0916/rho-student-three-arm-comparison/comparison.json",
+      "sha256": "e5015a19d7a453ff370e00b97a8bb9319feef4082167cd82f720fe626d069909"
+    },
+    "terminal_evidence": {
+      "path": "artifacts/rho-student-20260916/native-comparison-v1-watch/terminal-status-20260916T152444Z.json",
+      "sha256": "7a09aa6b98713015a19fb7c46f2158e85c7723ec924ca33b4f958952c05fcaa9"
+    },
+    "native_completion_verification": {
+      "path": "artifacts/rho-student-20260916/native-comparison-v1-watch/native_completion_verification.json",
+      "sha256": "5aadea43a23acfcd238776598bda6af15d0e4e4c75fa3b93fa512c02b90c05ad"
+    },
+    "identity": {
+      "amlt_job_id": "7210457495.41283-45c4298c-f1f6",
+      "backend": "heroic_yuca_q7twcrdjsz",
+      "code_remote_dir": "projects/sft4safety/amlt-code/1092c3e4-66ed-408c-9419-20ea990c36a4",
+      "experiment": "mind-rho-student-comparison-v1-0916",
+      "job": "rho-student-three-arm-comparison",
+      "mpi": false,
+      "sku": "5C3",
+      "sla_tier": "Basic",
+      "source_manifest_sha256": "1c5a0a9a1f8646503c10a5a26685e4f6e2c324980b1645f2c1d4848a2d8add28",
+      "target": "Feeds"
+    },
+    "outcome": {
+      "primary": {
+        "split": "validation",
+        "contrast": "dynamic_minus_static",
+        "metric": "macro_ndcg_at_20",
+        "delta": -0.00477424235298823,
+        "delta_percentage_points": -0.47742423529882305,
+        "ci95": [
+          -0.007237960102625567,
+          -0.002178582223352102
+        ],
+        "ci95_percentage_points": [
+          -0.7237960102625567,
+          -0.2178582223352102
+        ]
+      },
+      "dev_consistency": {
+        "split": "dev",
+        "contrast": "dynamic_minus_static",
+        "metric": "macro_ndcg_at_20",
+        "delta": -0.0057143119048708915,
+        "delta_percentage_points": -0.5714311904870891,
+        "ci95": [
+          -0.010398941805427891,
+          -0.001155653356985142
+        ],
+        "ci95_percentage_points": [
+          -1.039894180542789,
+          -0.1155653356985142
+        ]
+      },
+      "static_minus_uniform": {
+        "validation": {
+          "split": "validation",
+          "contrast": "static_minus_uniform",
+          "metric": "macro_ndcg_at_20",
+          "delta": 0.0017751300545664176,
+          "delta_percentage_points": 0.17751300545664175,
+          "ci95": [
+            -0.0003894579937768573,
+            0.003978948743282706
+          ],
+          "ci95_percentage_points": [
+            -0.03894579937768573,
+            0.3978948743282706
+          ]
+        },
+        "dev": {
+          "split": "dev",
+          "contrast": "static_minus_uniform",
+          "metric": "macro_ndcg_at_20",
+          "delta": 0.0030369241515525456,
+          "delta_percentage_points": 0.3036924151552546,
+          "ci95": [
+            -0.00039878462941943775,
+            0.006417992420827935
+          ],
+          "ci95_percentage_points": [
+            -0.039878462941943776,
+            0.6417992420827935
+          ]
+        }
+      },
+      "dynamic_incremental_benefit_confirmed": false,
+      "primary_and_dev_dynamic_minus_static_intervals_below_zero": true,
+      "static_benefit_over_uniform_confirmed": false,
+      "static_ndcg20_intervals_include_zero_in_both_splits": true,
+      "conclusion": "Under the frozen single-seed setup, Dynamic is worse than Static on the prespecified validation Macro NDCG@20 contrast, with the same direction on Dev. Static-versus-Uniform NDCG@20 intervals include zero in both splits, so a Static benefit is not confirmed.",
+      "limits": "user-sampling uncertainty conditional on one trained seed; no causal noise-truth claim or training-seed uncertainty"
+    },
+    "bootstrap_selection_rules": {
+      "unit": "user",
+      "sampling": "sample N user IDs with replacement from the N observed users in each split",
+      "cluster_contents": "all impressions and target occurrences of each selected user share its multiplicity",
+      "class_universe": "fixed before bootstrap: validation support>=20; Dev observed supported classes",
+      "missing_class_rule": "in each draw, average paired class differences over originally eligible classes with positive drawn support; identical class set for all arms",
+      "empty_draw_rule": "omit draws with zero eligible classes from percentile intervals; count them; do not replace draws",
+      "draw_sharing": "all three contrasts use exactly the same draws within a split",
+      "interval": "two-sided 95% percentile interval, numpy quantile linear interpolation",
+      "seed_per_split": 42,
+      "draws": 2000
+    },
+    "bootstrap_summary": {
+      "validation": {
+        "observed_users": 5354,
+        "draws": 2000,
+        "usable_draws": 2000,
+        "draws_missing_any_eligible_class": 0,
+        "zero_supported_class_draws": 0,
+        "draw_supported_class_count_range": [
+          107,
+          107
+        ],
+        "draw_indices_sha256": "4534a5e2dadefb0b52f1741677645b55f9858c30874d3a4a2bd5970ff7f16c90",
+        "user_order_sha256": "c9f4d1d891b2339d58eb9c9ddbaef8bf709e22b96336705a210bc0bc07aef7d2"
+      },
+      "dev": {
+        "observed_users": 27082,
+        "draws": 2000,
+        "usable_draws": 2000,
+        "draws_missing_any_eligible_class": 1589,
+        "zero_supported_class_draws": 0,
+        "draw_supported_class_count_range": [
+          99,
+          104
+        ],
+        "draw_indices_sha256": "ef5de53750c666e19fbd47d212897e50b5d0dc89a1f7b66c7a9eadb3077427b6",
+        "user_order_sha256": "7f0fed460b44ea6d887de196b50f2b276576ebc666e535e58e9f2b8e90a7214d"
+      }
+    }
+  },
+  "final_report": {
+    "path": "docs/experiments/2026-09-16/rho_student_three_arm.md",
+    "sha256": "8b379bef89fa34baecb43e4b6607a41a2e6c938d39f67191ec400ff80fb2aee0",
+    "status": "root_confirmed_final",
+    "hash_bound": true,
+    "generated_report_sha256": "8609d698f6421dca41dcc3a9587bab143e1bf8cc8a4f43b1ea6da29b7e33ba2e",
+    "finalization_evidence": {
+      "path": "artifacts/rho-student-20260916/report_finalization.json",
+      "sha256": "f5df6ff3f129dc56a41c301360a91bc64cd761162fe148328c102c2eba7d7c97"
+    },
+    "numeric_tables_unchanged": true,
+    "root_confirmed_report_prose": true,
+    "index": {
+      "path": "docs/experiments/README.md",
+      "sha256": "31d96c3a9ecb5017666f8f5b24ead50ed8453f04fb61ecde0f25f221487d6fc4"
+    }
+  },
+  "completion": {
+    "gpu_training_and_evaluation_complete": true,
+    "paired_comparison_complete": true,
+    "native_comparison_completed": true,
+    "final_report_hash_bound": true,
+    "complete": true,
+    "scope": "All authorized GPU training/evaluation, paired CPU comparison, and Root-confirmed final report.",
+    "remaining_scientific_work": [],
+    "remaining_root_delivery_actions": [
+      "Deliver final result to user"
+    ],
+    "completed_observed_utc": "2026-09-16T15:30:39.067401+00:00",
+    "heartbeat_paused": true
+  },
+  "historical_progress_note": "Earlier resource-recovery snapshots and first-progress fields are historical. completed_arms, formal_jobs, and their terminal evidence define current GPU completion.",
+  "comparison_result": {
+    "path": "artifacts/rho-student-20260916/compact/comparison/mind-rho-student-comparison-v1-0916/rho-student-three-arm-comparison/comparison.json",
+    "sha256": "e5015a19d7a453ff370e00b97a8bb9319feef4082167cd82f720fe626d069909"
+  },
+  "comparison_outcome": {
+    "primary": {
+      "split": "validation",
+      "contrast": "dynamic_minus_static",
+      "metric": "macro_ndcg_at_20",
+      "delta": -0.00477424235298823,
+      "delta_percentage_points": -0.47742423529882305,
+      "ci95": [
+        -0.007237960102625567,
+        -0.002178582223352102
+      ],
+      "ci95_percentage_points": [
+        -0.7237960102625567,
+        -0.2178582223352102
+      ]
+    },
+    "dev_consistency": {
+      "split": "dev",
+      "contrast": "dynamic_minus_static",
+      "metric": "macro_ndcg_at_20",
+      "delta": -0.0057143119048708915,
+      "delta_percentage_points": -0.5714311904870891,
+      "ci95": [
+        -0.010398941805427891,
+        -0.001155653356985142
+      ],
+      "ci95_percentage_points": [
+        -1.039894180542789,
+        -0.1155653356985142
+      ]
+    },
+    "static_minus_uniform": {
+      "validation": {
+        "split": "validation",
+        "contrast": "static_minus_uniform",
+        "metric": "macro_ndcg_at_20",
+        "delta": 0.0017751300545664176,
+        "delta_percentage_points": 0.17751300545664175,
+        "ci95": [
+          -0.0003894579937768573,
+          0.003978948743282706
+        ],
+        "ci95_percentage_points": [
+          -0.03894579937768573,
+          0.3978948743282706
+        ]
+      },
+      "dev": {
+        "split": "dev",
+        "contrast": "static_minus_uniform",
+        "metric": "macro_ndcg_at_20",
+        "delta": 0.0030369241515525456,
+        "delta_percentage_points": 0.3036924151552546,
+        "ci95": [
+          -0.00039878462941943775,
+          0.006417992420827935
+        ],
+        "ci95_percentage_points": [
+          -0.039878462941943776,
+          0.6417992420827935
+        ]
+      }
+    },
+    "dynamic_incremental_benefit_confirmed": false,
+    "primary_and_dev_dynamic_minus_static_intervals_below_zero": true,
+    "static_benefit_over_uniform_confirmed": false,
+    "static_ndcg20_intervals_include_zero_in_both_splits": true,
+    "conclusion": "Under the frozen single-seed setup, Dynamic is worse than Static on the prespecified validation Macro NDCG@20 contrast, with the same direction on Dev. Static-versus-Uniform NDCG@20 intervals include zero in both splits, so a Static benefit is not confirmed.",
+    "limits": "user-sampling uncertainty conditional on one trained seed; no causal noise-truth claim or training-seed uncertainty"
+  },
+  "accepted_cpu_runtime_preflight_backend": "heroic_oyster_p8vg5hcw81"
+}

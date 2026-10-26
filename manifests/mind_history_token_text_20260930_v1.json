@@ -1,0 +1,41 @@
+{
+  "status": "accepted",
+  "arm": "text",
+  "artifact_root": "artifacts/mind-history-token-20260930/text",
+  "report": "docs/experiments/2026-09-30/mind_history_token.md",
+  "monitor_step_totals": {
+    "ni": 2025
+  },
+  "active_run": {
+    "experiment": "mind-ni-history-text125-0930-v1",
+    "job": "qwen35-2b-ni-text125",
+    "yaml": "configs/amlt/mind_history_token_text_0930_v1.yaml",
+    "bundle": "artifacts/mind-history-token-20260930/bundles-v1/text",
+    "bundle_sha256": "a8865a3142e0eddc293d84172afbe75a6caf3d2d7687f147c84e68ba2bd5ddb6",
+    "backend_id": "upbeat_lettuce_k6my50hhvb",
+    "results_prefix": "projects/sft4safety/amlt-results/7209271490.37957-7cccf28c-9256"
+  },
+  "latest_independent_readback": "artifacts/mind-history-token-20260930/text/progress/20260930T170516Z/independent_readback.json",
+  "observed_status": "Completed",
+  "last_observed_utc": "2026-09-30T17:05:16.595466+00:00",
+  "latest_logged_step": 2025,
+  "formal_committed_checkpoint_step": 2025,
+  "cold_state_sha256": "28b70b3031e6c736ea10930595ac19651186067b4b5f8f85e4a72ff4b0b7c565",
+  "cross_arm_cold_state_equal": true,
+  "final_acceptance": "artifacts/mind-history-token-20260930/text/final_acceptance.json",
+  "evaluation": {
+    "records": 31392,
+    "supported_classes": 104,
+    "target_occurrences": 37728,
+    "metrics": {
+      "interest_macro_recall_at_1": 0.028645645590237467,
+      "interest_macro_ndcg_at_1": 0.028645645590237467,
+      "interest_macro_recall_at_5": 0.12250158814263559,
+      "interest_macro_ndcg_at_5": 0.07535705666338349,
+      "interest_macro_recall_at_10": 0.2025346210853163,
+      "interest_macro_ndcg_at_10": 0.10098753583600742,
+      "interest_macro_recall_at_20": 0.3337403579307648,
+      "interest_macro_ndcg_at_20": 0.13400366712489664
+    }
+  }
+}

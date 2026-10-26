@@ -9,6 +9,7 @@
   "batch_size": 4,
   "checkpoint_size": 128,
   "max_new_tokens": 32,
+  "enable_thinking": false,
   "do_sample": true,
   "temperature": 0.7,
   "top_p": 0.8,

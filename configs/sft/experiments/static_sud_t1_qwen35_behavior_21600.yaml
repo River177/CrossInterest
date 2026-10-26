@@ -1,0 +1,31 @@
+model_name: Qwen/Qwen3.5-9B
+train_file: data/training/sft_static_user_disjoint_balanced_200_h50_v1/train/behavior_only/21600.parquet
+output_dir: artifacts/static-sud-text-label-length-normalized/qwen35-behavior
+run_name: static-sud-t1-qwen35-behavior-21600-seed42
+wandb_mode: disabled
+enable_thinking: false
+loss_reduction: per_example_mean
+max_seq_length: 2048
+epochs: 3
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 0.00002
+weight_decay: 0.01
+warmup_ratio: 0.03
+lr_scheduler_type: cosine
+max_grad_norm: 1.0
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+target_modules: all-linear
+forbidden_trainable_module_substrings:
+  - vision
+  - visual
+gradient_checkpointing_use_reentrant: false
+optim: adamw_torch_fused
+logging_steps: 5
+save_total_limit: 3
+save_strategy: steps
+save_steps: 25
+dataloader_num_workers: 2
+seed: 42
