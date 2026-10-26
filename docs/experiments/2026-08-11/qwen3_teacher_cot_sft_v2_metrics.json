@@ -1,0 +1,80 @@
+[
+  {
+    "scope": "dev128",
+    "task": "behavior",
+    "mode": "cot",
+    "samples": 128,
+    "set_accuracy_at_1": 0.015625,
+    "strict_set_accuracy_at_1": 0.015625,
+    "strict_format_rate": 0.9921875,
+    "valid_label_rate": 0.859375,
+    "novelty_compliance_rate": 0.703125,
+    "truncation_rate": 0.0078125,
+    "mean_response_tokens": 74.0390625
+  },
+  {
+    "scope": "dev128",
+    "task": "behavior",
+    "mode": "no_cot",
+    "samples": 128,
+    "set_accuracy_at_1": 0.0234375,
+    "strict_set_accuracy_at_1": 0.0234375,
+    "strict_format_rate": 1.0,
+    "valid_label_rate": 1.0,
+    "novelty_compliance_rate": 0.78125,
+    "truncation_rate": 0.0,
+    "mean_response_tokens": 6.9765625
+  },
+  {
+    "scope": "dev128",
+    "task": "interest",
+    "mode": "cot",
+    "samples": 128,
+    "set_accuracy_at_1": 0.0078125,
+    "strict_set_accuracy_at_1": 0.0078125,
+    "strict_format_rate": 1.0,
+    "valid_label_rate": 0.96875,
+    "novelty_compliance_rate": 0.953125,
+    "truncation_rate": 0.0,
+    "mean_response_tokens": 87.5859375
+  },
+  {
+    "scope": "dev128",
+    "task": "interest",
+    "mode": "no_cot",
+    "samples": 128,
+    "set_accuracy_at_1": 0.046875,
+    "strict_set_accuracy_at_1": 0.046875,
+    "strict_format_rate": 1.0,
+    "valid_label_rate": 1.0,
+    "novelty_compliance_rate": 1.0,
+    "truncation_rate": 0.0,
+    "mean_response_tokens": 6.96875
+  },
+  {
+    "scope": "dev10k",
+    "task": "interest",
+    "mode": "cot",
+    "samples": 10000,
+    "set_accuracy_at_1": 0.0206,
+    "strict_set_accuracy_at_1": 0.0206,
+    "strict_format_rate": 0.9981,
+    "valid_label_rate": 0.9711,
+    "novelty_compliance_rate": 0.9497,
+    "truncation_rate": 0.0014,
+    "mean_response_tokens": 88.6452
+  },
+  {
+    "scope": "dev10k",
+    "task": "interest",
+    "mode": "no_cot",
+    "samples": 10000,
+    "set_accuracy_at_1": 0.0339,
+    "strict_set_accuracy_at_1": 0.0339,
+    "strict_format_rate": 1.0,
+    "valid_label_rate": 0.9996,
+    "novelty_compliance_rate": 0.9992,
+    "truncation_rate": 0.0,
+    "mean_response_tokens": 6.855
+  }
+]

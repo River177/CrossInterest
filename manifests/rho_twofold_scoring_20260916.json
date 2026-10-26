@@ -1,0 +1,272 @@
+{
+  "experiment": "mind-rho-twofold-stable-rescore-v1-0916",
+  "status": "accepted",
+  "model_name": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "train_users": 21600,
+  "folds": 2,
+  "users_per_class_per_fold": 100,
+  "classes": 108,
+  "parent_checkpoints": {
+    "0": {
+      "checkpoint_path": "/mnt/default/projects/sft4safety/amlt-results/7210554755.61946-841221fb-e7d4/checkpoints-full/checkpoint-1014",
+      "checkpoint_marker_sha256": "5176c878014d1f26ccaefb4940de327dc96a52f738a9ea85587d7999e851501a",
+      "checkpoint_identity": {
+        "effective_global_batch_size": 32,
+        "enable_thinking": false,
+        "epochs": 3.0,
+        "gradient_accumulation_steps": 8,
+        "gradient_checkpointing_kwargs": {
+          "use_reentrant": false
+        },
+        "identity_version": "trainer-checkpoint-identity-v1",
+        "input_adapter_sha256": null,
+        "learning_rate": 2e-05,
+        "lora_alpha": 32,
+        "lora_dropout": 0.05,
+        "lora_r": 16,
+        "loss_reduction": "token_mean",
+        "lr_scheduler_type": "cosine",
+        "max_grad_norm": 1.0,
+        "max_samples": null,
+        "max_seq_length": 2048,
+        "model_name": "/scratch/rho-reference-model",
+        "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+        "optim": "adamw_torch_fused",
+        "per_device_train_batch_size": 1,
+        "run_name": "rho-reference-fold0-full-seed42",
+        "sample_weight_file_sha256": null,
+        "seed": 42,
+        "semantic_id_initialization_mode": "mean_norm_matched",
+        "semantic_id_loss_scope": "full_vocabulary",
+        "target_modules": "all-linear",
+        "train_file_sha256": "7bf5894066ae63f3a7c89b44f888797fc0688a652d18bd83c5722dac08ecd600",
+        "warmup_ratio": 0.03,
+        "weight_decay": 0.01,
+        "world_size": 4
+      },
+      "adapter_sha256": "067e0aa4ca91cde3481de008a09263615a2f8d04bcb6c1546459c02965ef1065"
+    },
+    "1": {
+      "checkpoint_path": "/mnt/default/projects/sft4safety/amlt-results/7210554755.61884-15430fe9-d277/checkpoints-full/checkpoint-1014",
+      "checkpoint_marker_sha256": "b3da8a653721e2c9cef5b2eb4eb6aa98edec4d02b40817ed5870e6170f67b4a0",
+      "checkpoint_identity": {
+        "effective_global_batch_size": 32,
+        "enable_thinking": false,
+        "epochs": 3.0,
+        "gradient_accumulation_steps": 8,
+        "gradient_checkpointing_kwargs": {
+          "use_reentrant": false
+        },
+        "identity_version": "trainer-checkpoint-identity-v1",
+        "input_adapter_sha256": null,
+        "learning_rate": 2e-05,
+        "lora_alpha": 32,
+        "lora_dropout": 0.05,
+        "lora_r": 16,
+        "loss_reduction": "token_mean",
+        "lr_scheduler_type": "cosine",
+        "max_grad_norm": 1.0,
+        "max_samples": null,
+        "max_seq_length": 2048,
+        "model_name": "/scratch/rho-reference-model",
+        "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+        "optim": "adamw_torch_fused",
+        "per_device_train_batch_size": 1,
+        "run_name": "rho-reference-fold1-full-seed42",
+        "sample_weight_file_sha256": null,
+        "seed": 42,
+        "semantic_id_initialization_mode": "mean_norm_matched",
+        "semantic_id_loss_scope": "full_vocabulary",
+        "target_modules": "all-linear",
+        "train_file_sha256": "aa929f113c2ba8805f90c0f7f898ce646694112cf0df8f1ced5e9d30211e3cc9",
+        "warmup_ratio": 0.03,
+        "weight_decay": 0.01,
+        "world_size": 4
+      },
+      "adapter_sha256": "728b828c5d632bec247efade183b7fe3d816d3069bdbd54b5900a7aa1651b702"
+    }
+  },
+  "new_training_updates": 0,
+  "score_definition": "first SID full native-effective vocabulary NLL; FP32 head projection and logsumexp; no prior correction",
+  "kernel_selection": "stable_fla_v1",
+  "kernel_selector_sha256": "62b9183f7ee26e6b6073a0061af21f43916ae99668ba872232db4b5f9b6f4ac0",
+  "scorer_runtime_sha256": "113796b6f44a164490310a3b44a2e7eebee68577a6bcd2dba0d69154345cfbed",
+  "rescore_contract_sha256": "39a0c1ea74a39f58a3f935fe3ab9d9daa366fe85ce5265fcda08fde8353c3ac1",
+  "local_acceptance": "artifacts/rho-twofold-reference-20260915/twofold_acceptance.json",
+  "large_artifacts": "Keep remote; do not restore weights, optimizer states or full predictions to Mac",
+  "original_fold0_outputs_preserved": true,
+  "historical_fold1_native_forward_mismatch_preserved": true,
+  "diagnostic_summary": "artifacts/rho-twofold-reference-20260915/compact/reload-diagnostic/mind-rho-fold1-reload-diagnostic-v1-0916/qwen35-2b-rho-fold1-reload-diagnostic/compact/diagnostic_summary.json",
+  "scored_rows": 21600,
+  "scored_users": 21600,
+  "completed_utc": "2026-09-16T03:49:31.160065+00:00",
+  "student_training_started": false,
+  "common_kernel_configs_consistent": true,
+  "kernel_cache_keys_checked": 10,
+  "local_independent_acceptance": {
+    "path": "artifacts/rho-twofold-reference-20260915/independent_twofold_acceptance.json",
+    "sha256": "042d349f66ce8d7e81c8c2e1fdf28889ae1d2fd86015cea7585ee354c77e72ae"
+  },
+  "local_input_verification": {
+    "path": "artifacts/rho-twofold-reference-20260915/final_local_input_verification.json",
+    "sha256": "a187c73e2cc1b3af1e37485ae6de85c3fcc40c3e0ddf9dda207274cedf17b6f6"
+  },
+  "report": "docs/experiments/2026-09-16/rho_twofold_reference_scoring.md",
+  "remote_storage": {
+    "account": "csnewsandfeeds4150361735",
+    "container": "amulet",
+    "mount_aliases": [
+      "/mnt/default",
+      "/mnt/output"
+    ]
+  },
+  "scoring_outputs": {
+    "0": {
+      "job": "qwen35-2b-rho-stable-score-fold0",
+      "backend": "gray_drop_ldfsp6pn9s",
+      "rows": 10800,
+      "restoration": {
+        "teacher": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/teacher",
+        "train_file": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/inputs/fold0.parquet",
+        "score_file": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/inputs/fold1.parquet",
+        "mapping_file": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/inputs/interest_token_mapping.parquet",
+        "score_dirs": [
+          "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/oof_stable_fla_v1/shard-0",
+          "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/oof_stable_fla_v1/shard-1",
+          "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/oof_stable_fla_v1/shard-2",
+          "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/oof_stable_fla_v1/shard-3"
+        ]
+      },
+      "reference_acceptance_sha256": "d8c1a3cf9967763b44f05c779d10b3f03b396c2f4523ba59d6af7805d6474ef7",
+      "fresh_probe_acceptance_sha256": "ab4b1d0f62e3c2725b71d3db516ce5268132b3f3b169bd9a69cd9731a1de9172",
+      "score_artifacts": [
+        {
+          "directory": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/oof_stable_fla_v1/shard-0",
+          "manifest_sha256": "38a7f5011b67afc46f9d2a2ba47399d84e8e5ea6733a77c2d78d43d6e0d68aec",
+          "scores_sha256": "ee0a0f125a49dbfe07d089904c79a334806fa4e3d0da9adef4caef12876285bc",
+          "kernel_selection_receipt": {
+            "sha256": "0aeedf0f7bad7c9f2595b625cad615c2be4c3de7394b738da68ba94cc83b26bf",
+            "snapshots_sha256": "8bdc889d6788e9c1384ded0362e2e04527996f4af8f199f75d55a172449ed051",
+            "snapshot_count": 12
+          }
+        },
+        {
+          "directory": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/oof_stable_fla_v1/shard-1",
+          "manifest_sha256": "19753552a76b9301559ad826d1b52888a347500d2974903911910fc07e1f23f2",
+          "scores_sha256": "ffdcfbee889ff19c44091f195ace6b518e437a3c9bd2bce762a58156c74ed0b0",
+          "kernel_selection_receipt": {
+            "sha256": "0aeedf0f7bad7c9f2595b625cad615c2be4c3de7394b738da68ba94cc83b26bf",
+            "snapshots_sha256": "8bdc889d6788e9c1384ded0362e2e04527996f4af8f199f75d55a172449ed051",
+            "snapshot_count": 12
+          }
+        },
+        {
+          "directory": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/oof_stable_fla_v1/shard-2",
+          "manifest_sha256": "1199066902ce0d623c06190df1c45222025cd032cf0bf3bdee2a0f280462ef93",
+          "scores_sha256": "bc3944d930b68d45678b3451c1d4d9ca91a15a92944e0c78a3c26bcb18ee76e3",
+          "kernel_selection_receipt": {
+            "sha256": "0aeedf0f7bad7c9f2595b625cad615c2be4c3de7394b738da68ba94cc83b26bf",
+            "snapshots_sha256": "8bdc889d6788e9c1384ded0362e2e04527996f4af8f199f75d55a172449ed051",
+            "snapshot_count": 12
+          }
+        },
+        {
+          "directory": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54897-13d17a85-8dc3/oof_stable_fla_v1/shard-3",
+          "manifest_sha256": "af23d7b29e745dc41af8ddd389780a49af75a034caa5292663892df8df9da252",
+          "scores_sha256": "71d5fd0b28592c008a5408e3463da46661863e65268b6ded9545bb8520afdc58",
+          "kernel_selection_receipt": {
+            "sha256": "0aeedf0f7bad7c9f2595b625cad615c2be4c3de7394b738da68ba94cc83b26bf",
+            "snapshots_sha256": "8bdc889d6788e9c1384ded0362e2e04527996f4af8f199f75d55a172449ed051",
+            "snapshot_count": 12
+          }
+        }
+      ],
+      "full_vocab_first_sid_nll": {
+        "mean": 4.539789388709598,
+        "min": 1.1177616119384766,
+        "max": 7.971539497375488,
+        "p10": 3.7084388732910156,
+        "median": 4.551637649536133,
+        "p90": 5.358572006225586
+      }
+    },
+    "1": {
+      "job": "qwen35-2b-rho-stable-score-fold1",
+      "backend": "happy_shirt_69czs68npn",
+      "rows": 10800,
+      "restoration": {
+        "teacher": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/teacher",
+        "train_file": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/inputs/fold1.parquet",
+        "score_file": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/inputs/fold0.parquet",
+        "mapping_file": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/inputs/interest_token_mapping.parquet",
+        "score_dirs": [
+          "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/oof_stable_fla_v1/shard-0",
+          "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/oof_stable_fla_v1/shard-1",
+          "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/oof_stable_fla_v1/shard-2",
+          "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/oof_stable_fla_v1/shard-3"
+        ]
+      },
+      "reference_acceptance_sha256": "f73d863fb3b1993087ae2b27a1a74379ffabe06687ce058803581dfcdbebb70b",
+      "fresh_probe_acceptance_sha256": "827f21b0d242376663d233aced809a70ab946b0b6a4933a0a6314ae3d59398ca",
+      "score_artifacts": [
+        {
+          "directory": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/oof_stable_fla_v1/shard-0",
+          "manifest_sha256": "735af18677b49247e232c19ad7ae4f8d76c615dd574c1d963db705f6ca0b482d",
+          "scores_sha256": "8df3a4f138e1bc28bb1a6bc20b3693a20cf11b9fd86a7b1661d5a357619d5874",
+          "kernel_selection_receipt": {
+            "sha256": "4d2543848090b680e845a5778c3ffb8c1d8afb4f3a02a62fbf5fa0c22753892c",
+            "snapshots_sha256": "8bdc889d6788e9c1384ded0362e2e04527996f4af8f199f75d55a172449ed051",
+            "snapshot_count": 12
+          }
+        },
+        {
+          "directory": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/oof_stable_fla_v1/shard-1",
+          "manifest_sha256": "c3884ca6a95d14fa5b58ac8117b6af1afcd1460405c0679efaf6ec13313684a0",
+          "scores_sha256": "0a0073457b817f50c50fb6f7acfd41d660078ecc976e08d8e7b2e93861b25ff1",
+          "kernel_selection_receipt": {
+            "sha256": "4d2543848090b680e845a5778c3ffb8c1d8afb4f3a02a62fbf5fa0c22753892c",
+            "snapshots_sha256": "8bdc889d6788e9c1384ded0362e2e04527996f4af8f199f75d55a172449ed051",
+            "snapshot_count": 12
+          }
+        },
+        {
+          "directory": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/oof_stable_fla_v1/shard-2",
+          "manifest_sha256": "1f7d5a79ecf7e61d3194282c35ca53afda89c831aae387d55dcd76cd5623ddfe",
+          "scores_sha256": "377e06eba0acef2eebc7c6ec75a02b4c9bcbdde76e378597b86badc57653c018",
+          "kernel_selection_receipt": {
+            "sha256": "4d2543848090b680e845a5778c3ffb8c1d8afb4f3a02a62fbf5fa0c22753892c",
+            "snapshots_sha256": "8bdc889d6788e9c1384ded0362e2e04527996f4af8f199f75d55a172449ed051",
+            "snapshot_count": 12
+          }
+        },
+        {
+          "directory": "/mnt/output/projects/sft4safety/amlt-results/7210501074.54859-3f88aaab-b5ee/oof_stable_fla_v1/shard-3",
+          "manifest_sha256": "7e3ba105307e82d1e932c288313ed20552dc14ed0726cce083be102bb84853d0",
+          "scores_sha256": "30f241e44fe57f89a0c91f4afe29cf30887da491745d18cc94eb96f5e0eaed4a",
+          "kernel_selection_receipt": {
+            "sha256": "4d2543848090b680e845a5778c3ffb8c1d8afb4f3a02a62fbf5fa0c22753892c",
+            "snapshots_sha256": "8bdc889d6788e9c1384ded0362e2e04527996f4af8f199f75d55a172449ed051",
+            "snapshot_count": 12
+          }
+        }
+      ],
+      "full_vocab_first_sid_nll": {
+        "mean": 4.5292588125334845,
+        "min": 1.3132610321044922,
+        "max": 7.334810256958008,
+        "p10": 3.747182846069336,
+        "median": 4.548427581787109,
+        "p90": 5.278656005859375
+      }
+    }
+  },
+  "verification_scope": "Full remote score file readback, per-row source identity, NLL arithmetic and rank/metric recomputation; fresh model inference parity checked on four fixed probes per fold, not a second full model inference.",
+  "historical_forward_equivalence_established": false,
+  "local_acceptance_sha256": "042d349f66ce8d7e81c8c2e1fdf28889ae1d2fd86015cea7585ee354c77e72ae",
+  "platform_status": {
+    "qwen35-2b-rho-stable-score-fold0": "pass",
+    "qwen35-2b-rho-stable-score-fold1": "pass"
+  },
+  "local_supervisor_phase": "complete"
+}

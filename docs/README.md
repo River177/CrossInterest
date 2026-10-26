@@ -13,6 +13,7 @@ to the repository root unless stated otherwise.
 
 ## Reference
 
+- [Current repository and experiment guide](repository.md)
 - [Experiment reports](experiments/README.md)
 - [Generative data examples](generative_data_examples.md)
 - [Recall, NDCG, and Hit](metrics/recall_ndcg_hit.md)
@@ -21,6 +22,7 @@ to the repository root unless stated otherwise.
 - [Script guide](../scripts/README.md)
 - [Restoration manifests](../manifests/README.md)
 - [August 2026 repository migration](migration-2026-08.md)
+- [October 2026 integration and validation](maintenance/2026-10-26-repository-integration.md)
 
 `docs/archive/` contains historical CrossInterest material and is not
 authoritative for the current executable pipeline. Unrelated project material

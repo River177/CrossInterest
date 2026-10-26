@@ -1,0 +1,28 @@
+{
+  "version": "mind-short-think-teacher-reuse-20260913-v1",
+  "status": "data_prepared_not_gpu_trained",
+  "teacher": "gpt-5.5_2026-04-24",
+  "reuse_existing_teacher": true,
+  "new_teacher_calls": 0,
+  "data_file": "artifacts/mind-short-think-sft-20260913/dataset/train.parquet",
+  "data_sha256": "5b8b459e2d0e33afde2d401ff45ad3f3719cd7068dd3422abd1e7b2228beba42",
+  "audit_file": "artifacts/mind-short-think-sft-20260913/audit.json",
+  "audit_sha256": "f9b98b5345431f754331916fa85d0d8657a2307ec7742ba0d3c456a4431d13cd",
+  "preview_file": "artifacts/mind-short-think-sft-20260913/preview.md",
+  "rows": 1080,
+  "classes": 108,
+  "per_class": 10,
+  "initial_student": "accepted Qwen3.5-2B Mixed",
+  "initial_student_owner_thread": "01a09038-c65a-74a0-9875-dd23d5c98800",
+  "initial_student_acceptance": "artifacts/mind-four-experiments-20260911/mixed_full_coordinator_acceptance.json",
+  "student_target_input": "history_only",
+  "teacher_expansion_target_conditioned": true,
+  "thought_token_statistics": {
+    "min": 82,
+    "median": 111.0,
+    "p95": 122.0,
+    "max": 133
+  },
+  "hard_128_think_cap": false,
+  "next_step": "Limited short-think SFT smoke and free-generation/reload/ranking validation; no GRPO launch yet"
+}

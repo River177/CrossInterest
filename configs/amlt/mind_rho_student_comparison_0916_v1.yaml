@@ -1,0 +1,36 @@
+description: 'Frozen three-arm RHO comparison: paired user bootstrap, validation macro
+  NDCG@20 primary; CPU analysis only.'
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup: []
+target:
+  service: sing
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../artifacts/rho-student-20260916/bundle-comparison-v1
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+jobs:
+- name: rho-student-three-arm-comparison
+  sku: 5C3
+  sla_tier: Basic
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd "$$AMLT_CODE_DIR"
+  - export PYTHONPATH="$$AMLT_CODE_DIR/src" PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+    MKL_NUM_THREADS=1
+  - python bootstrap_verify.py --manifest-sha256 1c5a0a9a1f8646503c10a5a26685e4f6e2c324980b1645f2c1d4848a2d8add28
+  - python -m pip install --user --no-deps --no-warn-script-location --retries 4 --timeout
+    90 numpy==2.2.6 pyarrow==20.0.0 scipy==1.15.3
+  - python bootstrap_verify.py --manifest-sha256 1c5a0a9a1f8646503c10a5a26685e4f6e2c324980b1645f2c1d4848a2d8add28
+    --check-runtime
+  - python -m new_interest.experiments.compare_rho_students --acceptance inputs/three_arm_acceptance.json
+    --acceptance-sha256 5b7e2b488b96ad4a8d0e53d44ff8f6decf95952cdddb9ee58a7c5f301dbc4302
+    --validation-file inputs/validation.parquet --dev-file inputs/dev.parquet --mapping-file
+    inputs/interest_token_mapping.parquet --output "$$AMLT_OUTPUT_DIR/comparison.json"

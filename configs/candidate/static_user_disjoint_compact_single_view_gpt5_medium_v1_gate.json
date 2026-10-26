@@ -1,0 +1,79 @@
+{
+  "rule_version": "static-candidate-pilot-gate-v1",
+  "created_at": "2026-08-31T11:11:30.176986+00:00",
+  "passed": true,
+  "scope": "condition_subset",
+  "selected_condition_ids": [
+    "gpt5_medium_behavior_uniform",
+    "gpt5_medium_interest_uniform"
+  ],
+  "manifest_path": "configs/candidate/static_user_disjoint_compact_single_view_gpt5_v1.json",
+  "manifest_sha256": "975e15ce1f16f7e7ed5b1fe6b15a66c8c3387203599ec6599e5f90ef5b5d82ba",
+  "condition_count": 2,
+  "conditions": {
+    "gpt5_medium_behavior_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.15057513103389922,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_medium_behavior_uniform/acceptance.json",
+          "sha256": "f58d8d66d0355346cab796865c20ceefb988aa6e4ee8ab98b2e5af7d62817c65"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_medium_behavior_uniform/experiment_identity.json",
+          "sha256": "fd7a6afaf0f7d270e967a87019c76080affc0cc462b545268827f22ec9dabc10"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_medium_behavior_uniform/metrics.json",
+          "sha256": "077194eb18eea11b249d63dcfe19e4affc93e02c65206816148e845d14fedd2f"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_medium_behavior_uniform/predictions.parquet",
+          "sha256": "a1ff7d38dcc2049d73fcef391a81b10951601641a39ef62af0b3ba8005ee9a9f"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_medium_behavior_uniform/resolved_config.json",
+          "sha256": "49e0ba7072e542eab7d7e5b932dfabaffb9839926c3c3577d1265700146288ae"
+        }
+      }
+    },
+    "gpt5_medium_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.18910446858198615,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_medium_interest_uniform/acceptance.json",
+          "sha256": "5d41cf3887f3fd9115c6b8d8ade33559a3348078cdd11ad4d33d78c10ee2d5a6"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_medium_interest_uniform/experiment_identity.json",
+          "sha256": "67d5fe7bc24bf7ba6d2d36bb745d8d5776176ca9f4e4f1cc676ce7a6ed4b185e"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_medium_interest_uniform/metrics.json",
+          "sha256": "0952bedd705725af4423033622463021dc9fe3f7fea38f9fae875094f6cf1178"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_medium_interest_uniform/predictions.parquet",
+          "sha256": "8860ac4cb592c8b7b17f575d47e7b2606b19c9dec077bc2603a30a8d1f56d618"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_medium_interest_uniform/resolved_config.json",
+          "sha256": "ae72124f820c11fffd684360596687085258bd8e0c9a42bcac532185033bc0dd"
+        }
+      }
+    }
+  }
+}

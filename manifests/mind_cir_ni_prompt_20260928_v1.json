@@ -1,0 +1,264 @@
+{
+  "status": "accepted",
+  "artifact_root": "artifacts/mind-cir-ni-prompt-20260928",
+  "report": "docs/experiments/2026-09-28/mind_cir_ni_prompt.md",
+  "active_run": {
+    "experiment": "mind-cir-ni-prompt-0928-v1",
+    "job": "qwen35-2b-cir-ni-prompt5-ni3",
+    "bundle": "artifacts/mind-cir-ni-prompt-20260928/bundle-v1",
+    "bundle_sha256": "0009a783e1d4a82f5b65f4092a803309d92e7a4e47279abdeac2428388a1c1b6",
+    "yaml": "configs/amlt/mind_cir_ni_prompt_0928_v1.yaml",
+    "status": "completed",
+    "url": "https://aka.ms/amlt?q=k4l88",
+    "submission_log": "artifacts/mind-cir-ni-prompt-20260928/submission.log",
+    "code_prefix": "projects/sft4safety/amlt-code/715e7a2877d623489942e795efdad8cda9825c02a3375a76d9f036dfa070fce4",
+    "backend_id": "tough_bone_676m3s6rrw",
+    "results_prefix": "projects/sft4safety/amlt-results/7209441648.22156-0716e9cd-30c5",
+    "native_status": "Completed",
+    "latest_observation": "artifacts/mind-cir-ni-prompt-20260928/progress/20260929T034634Z/receipt.json",
+    "phase": "final_accepted",
+    "latest_logged_optimizer_step": 2025,
+    "last_committed_checkpoint_step": 2025,
+    "native_completed_at_utc": "2026-09-29T03:31:14.5142342+00:00"
+  },
+  "training_schedule": {
+    "cir_epochs": 5,
+    "ni_epochs": 3,
+    "cir_optimizer_steps": 2700,
+    "ni_optimizer_steps": 2025
+  },
+  "platform": {
+    "target": "Recall",
+    "sla": "Standard",
+    "sku": "80G4-A100"
+  },
+  "authorization": {
+    "condition": "Only exact NI template replacement on fixed CIR samples, fresh CIR5 then NI3",
+    "approved": "User requested start experiment and ensure healthy progress",
+    "monitor_and_recover": true
+  },
+  "checks": {
+    "data": {
+      "status": "passed",
+      "version": "mind-cir-ni-prompt-20260928-v1",
+      "cir_rows": 17271,
+      "ni_rows": 21600,
+      "classes": 108,
+      "changed_fields": [
+        "prompt",
+        "messages"
+      ],
+      "metadata_sha256": "9bf6fd2d04b0b5954ab36a82bbcd7155206511fffa4f6a389eb6578d5392761e",
+      "cir_sha256": "dc0b2c3ecae7893f9bd1c3c56d99a0daa383ae99b6093837f5b86d5eb940c45b",
+      "unchanged_companions": {
+        "ni.parquet": "e76acd152ed6e0e92f8b8015dfbc599603267a480d9321b41b5acb95d10487f0",
+        "dev_full_grouped.parquet": "c05b20033ce0d1a0c2d4b7bb97ca0cd6b7cffb7f198a7265cce9e54046b665fd",
+        "interest_token_mapping.parquet": "45397451ac2ae2e64d8156b2b47be3f454cc309a8d30a83bc23c2d3267653a0a",
+        "selection_manifest.parquet": "96299fc3daf5c40ff6f9d350af8d4d71d48ce8fc6ac594956ae3df61c98f3517"
+      }
+    },
+    "focused_tests": "40 passed",
+    "full_tests": "Blocked at collection by missing local peft; 2 skipped",
+    "actual_amlt_upload_audit": "artifacts/mind-cir-ni-prompt-20260928/upload_audit.json",
+    "amlt_dump": "artifacts/mind-cir-ni-prompt-20260928/amlt_dump.txt",
+    "sample_order": "artifacts/mind-cir-ni-prompt-20260928/sample_order_audit.json",
+    "remote_source_readback": "artifacts/mind-cir-ni-prompt-20260928/uploaded_source_readback.json",
+    "startup_acceptance": {
+      "path": "artifacts/mind-cir-ni-prompt-20260928/progress/20260928T095146Z/startup_acceptance.json",
+      "sha256": "67471b8e8a569eb2eec4bd5bbc48f3f148764a3780ce89d2d78065d72b61f2e2"
+    }
+  },
+  "baseline": {
+    "status": "accepted",
+    "condition": "cir5_ni3",
+    "bundle_sha256": "66b6c9f13013ef2dbfe73e294dd4763b51716e4185454651bc3342d1e370dc80",
+    "backend": "teal_rail_56hhgsgcnp",
+    "job": "recover-staged-qwen35-2b-cir5-ni3-ni5",
+    "stages": {
+      "cir5": {
+        "steps": 2700,
+        "epochs": 5,
+        "samples": 17271,
+        "presentations": 86355,
+        "parent_adapter_sha256": null,
+        "adapter_sha256": "1201a6e750cf65ca57940613df177a8caab14b594827f4496f84c7643f283df9",
+        "initial_state_sha256": "f924e8c76d9d28be55b8795920ca18811345dfde3b81ded85d5c039615a0510e",
+        "exact_reload": true
+      },
+      "ni3": {
+        "steps": 2025,
+        "epochs": 3,
+        "samples": 21600,
+        "presentations": 64800,
+        "parent_adapter_sha256": "1201a6e750cf65ca57940613df177a8caab14b594827f4496f84c7643f283df9",
+        "adapter_sha256": "9f171a3d4fd984586e7ebcb230fe88558d3201c3ae3f4e480269fd1edda2e306",
+        "initial_state_sha256": "dc57ec586aef1bf6fcc573ffbbc5fc5e441e551b69e7ce3b4685b7ea828e6e17",
+        "exact_reload": true
+      }
+    },
+    "evaluation": {
+      "records": 31392,
+      "supported_classes": 104,
+      "target_occurrences": 37728,
+      "metrics": {
+        "interest_macro_recall_at_1": 0.03983080195031767,
+        "interest_macro_ndcg_at_1": 0.03983080195031767,
+        "interest_macro_recall_at_5": 0.1266533016919234,
+        "interest_macro_ndcg_at_5": 0.08228234596976138,
+        "interest_macro_recall_at_10": 0.2197169771342078,
+        "interest_macro_ndcg_at_10": 0.11205057582435121,
+        "interest_macro_recall_at_20": 0.3507563397985774,
+        "interest_macro_ndcg_at_20": 0.1449658717673166
+      },
+      "prediction_sha256": "1b50ce724004483d0c8682898eeebd2de8fb09407748fd56f87754fd3b2a780d",
+      "metrics_sha256": "a002ac12daddd6e41d309319d9d8cac12a40ebfaabca898ded02cb3881f6d6c5",
+      "evaluation_identity": "6c6436ae81f4b7eb42571b2c16a5bfd052911a3135ab3614120389dad3760bc7"
+    },
+    "independently_recomputed_metrics": {
+      "interest_macro_recall_at_1": 0.03983080195031767,
+      "interest_macro_ndcg_at_1": 0.03983080195031767,
+      "interest_macro_recall_at_5": 0.1266533016919234,
+      "interest_macro_ndcg_at_5": 0.08228234596976138,
+      "interest_macro_recall_at_10": 0.2197169771342078,
+      "interest_macro_ndcg_at_10": 0.11205057582435121,
+      "interest_macro_recall_at_20": 0.3507563397985774,
+      "interest_macro_ndcg_at_20": 0.14496587176731657
+    },
+    "full_dev_records": 31392,
+    "files": {
+      "conditions/cir5_ni3/complete.json": "f66f21c8af63a9a54bbc24fef287c3158c95344747b0b4bb732a9c6033ada9fa",
+      "conditions/cir5_ni3/evaluation_readback.json": "f69779355dc20a5325ee10778b3daa4da0945bcbfe26f901f6c242484a46b959",
+      "conditions/cir5_ni3/real_eval/merged/merge_manifest.json": "35b21173c57b504f126e126ce486e1190beb6393f860c89446196a48bf65a0eb",
+      "conditions/cir5_ni3/real_eval/merged/metrics.json": "a002ac12daddd6e41d309319d9d8cac12a40ebfaabca898ded02cb3881f6d6c5",
+      "conditions/cir5_ni3/real_eval/shard-00/metrics.json": "943ca58a2613ee5d83de50beb11cd0eadf50365950bfcca478c6ff42994878e1",
+      "conditions/cir5_ni3/real_eval/shard-00/shard_manifest.json": "7ee1130627881ba6b90f89bda329bf85b41d386cb41152037eda970ec69d3b06",
+      "conditions/cir5_ni3/real_eval/shard-01/metrics.json": "8b2de3d6567975081dd1b3ac3e8655ee32a7d95f751398ad17e86b7f4d330b0e",
+      "conditions/cir5_ni3/real_eval/shard-01/shard_manifest.json": "94ae3b8336d74afca5cda55aac2175daefa8a31d78d44ea455d06e51fd89cc3f",
+      "conditions/cir5_ni3/real_eval/shard-02/metrics.json": "a54a6da2951585694416496d12b819553b9ea1cfb3a97fc7c967b3f8ad1d0fc3",
+      "conditions/cir5_ni3/real_eval/shard-02/shard_manifest.json": "978a3efa101da534deb392b97ce5abf526e91e005ce2a00ea3e72d3d7b082745",
+      "conditions/cir5_ni3/real_eval/shard-03/metrics.json": "898d02b52e7263492f66abd935579e755ef01c7816693bdba299886bd2319986",
+      "conditions/cir5_ni3/real_eval/shard-03/shard_manifest.json": "7b1b3be852f1a2e9813d17361c2f2b56322a34e17abd4406de54e56cf401b519",
+      "environment.json": "5158ddaf8ef24602192cbfb7e9a253a468ab7a010c8f915c546c06085861113f",
+      "formal/cir5/cursor_contract.json": "e149df52fedc313782487982ee0bddc36532ac9ebed46409a31ad913ccd5171b",
+      "formal/cir5/initial_adapter_state.json": "d0627afdc8ec5518d8cd22ee920718efa2b58d311737d107c1797688768d4ea2",
+      "formal/cir5/launch_config.json": "822e873a11e204d59bc222cbc08aa2f53cfd652d2b23be2296ad90136ff43add",
+      "formal/cir5/run_summary.json": "b1ce41ff1195b5a3761e278712b15559f9307555328e4f01a9f288a84fb7225e",
+      "formal/cir5/semantic_adapter_reload_audit.json": "5af7bf4ff7c676312936c9319d894642feed57d830a097698909e2815257e495",
+      "formal/cir5/stage_accepted.json": "d19518d7f6b82da0c43a5e130ec702506435cc70c82b95d43af18f8c9b915b4e",
+      "formal/cir5/training_start_audit.json": "a69b430dc65de5f40b5bf3d5b1aff3003ae35c871a09a965c2dd4f31f8afe5f7",
+      "formal/ni3/cursor_contract.json": "5a1a123dde1de0dc31f6868afae245b98f1546ada09c033f0454a4915fdb98a1",
+      "formal/ni3/initial_adapter_state.json": "475fef64e039c4df000c84f6e91bb879bfbc4dea5c1d33f146429b35c7b98d13",
+      "formal/ni3/launch_config.json": "9e329d2f93c5b6872303988ef4167c74b6152e3948322e3aa029e75739567f3f",
+      "formal/ni3/run_summary.json": "2c8e9ffbd81b77bfa04e6da1eb1e0ceb0994367d7b8e90554fd588c686b9f7fe",
+      "formal/ni3/semantic_adapter_reload_audit.json": "a7024096b455948782013e87926591d82c358af67783bbde7c1451c02b0a7081",
+      "formal/ni3/stage_accepted.json": "dbb993c1789de3e80b4894c6facffc13bf693a2e341307e37e7aafda9cfdb46f",
+      "formal/ni3/training_start_audit.json": "6e434f9dad7c71037e9f0c95f79acf8832da02f1064c87eaaefbbfb6209a76c6",
+      "formal/ni5/cursor_contract.json": "bcb2f04869144e88141da7e7192fcda83828027e7a1764a75a3c282a0377d86d",
+      "formal/ni5/initial_adapter_state.json": "a06cc801bcce89a46212f98300c89def9339c0abbf3ba78558ecc454915b960b",
+      "formal/ni5/launch_config.json": "dd707c243b14fadde7a4078ce89ca9d8ddd83a796a9df1826d648535f6549c1c",
+      "formal/ni5/training_start_audit.json": "f553c3ead73b7bb24bf72a2e0139a7a83854baf826dba94233eafee121d85da1",
+      "identity.json": "e1dede337b27ee75709eb1de38757e2c75bb7e577128df1a779c67857cf891ed",
+      "recovery/seed_complete.json": "2f2e29d38cc376ec25fcecbb2d4661a170a13b72c411a0442bbb3c77ed92b81c",
+      "snapshot_audit.json": "b754a613aaac83507771ff2ac5fd2e9a038ba3d0d83c5d8c10a2403bf5286fb7"
+    },
+    "large_artifact_policy": "remote_only"
+  },
+  "remote_storage": {
+    "account": "csnewsandfeeds4150361735",
+    "container": "amulet",
+    "large_artifacts": "remote_only",
+    "results_prefix": "projects/sft4safety/amlt-results/7209441648.22156-0716e9cd-30c5"
+  },
+  "monitoring": {
+    "automation_id": "cir-ni",
+    "status": "PAUSED",
+    "interval_minutes": 30,
+    "native_reader": "scripts/analysis/observe_cir_ni_prompt.py",
+    "notifications": "Only actionable anomalies, important acceptance or completion",
+    "completion_pending_shutdown": false,
+    "completed_at_utc": "2026-09-29T03:51:57.335641+00:00",
+    "reason": "Full training, independent Full Dev acceptance, baseline comparison and final report complete"
+  },
+  "observed_at_utc": "2026-09-29T03:46:34.196572+00:00",
+  "stage_acceptance": {
+    "cir": {
+      "status": "accepted",
+      "optimizer_steps": 2700,
+      "epochs": 5,
+      "samples": 17271,
+      "presentations": 86355,
+      "every_sample_presentations": 5,
+      "checkpoint_file_count": 13,
+      "adapter_sha256": "c48079b49858af093fdfe181cb3a1414f7042cad50ac31db7a3f774d7cea9d25",
+      "initial_state_sha256": "f924e8c76d9d28be55b8795920ca18811345dfde3b81ded85d5c039615a0510e",
+      "tensor_count": 373,
+      "fresh_reload_all_tensors_and_four_logits_exact": true,
+      "receipt": "artifacts/mind-cir-ni-prompt-20260928/progress/20260929T031645Z/training_acceptance.json"
+    },
+    "ni_handoff": {
+      "status": "accepted",
+      "initial_state_sha256": "63065022107be7981f512360f683d4b595b93267e1da255621ce66da0493e3a2",
+      "input_adapter_sha256": "c48079b49858af093fdfe181cb3a1414f7042cad50ac31db7a3f774d7cea9d25",
+      "input_and_initial_tensor_manifest_exact": true,
+      "optimizer_entries_at_start": 0,
+      "scheduler_step_at_start": 0,
+      "latest_logged_step": 20,
+      "expected_steps": 2025,
+      "latest_loss": 1.73,
+      "all_logged_diagnostics_finite": true,
+      "last_committed_checkpoint_step": null,
+      "receipt": "artifacts/mind-cir-ni-prompt-20260928/progress/20260928T194631Z/handoff_acceptance.json"
+    },
+    "ni": {
+      "status": "accepted",
+      "optimizer_steps": 2025,
+      "epochs": 3,
+      "samples": 21600,
+      "presentations": 64800,
+      "every_sample_presentations": 3,
+      "checkpoint_file_count": 13,
+      "adapter_sha256": "deb27796443078d7a17b00bdf7a4b59b4af236294452f699c0db81b769b32703",
+      "initial_state_sha256": "63065022107be7981f512360f683d4b595b93267e1da255621ce66da0493e3a2",
+      "tensor_count": 373,
+      "fresh_reload_all_tensors_and_four_logits_exact": true,
+      "receipt": "artifacts/mind-cir-ni-prompt-20260928/progress/20260929T031645Z/training_acceptance.json"
+    }
+  },
+  "evaluation_progress": {
+    "status": "accepted",
+    "records": 31392,
+    "target_occurrences": 37728,
+    "supported_classes": 104
+  },
+  "evaluation": {
+    "records": 31392,
+    "supported_classes": 104,
+    "target_occurrences": 37728,
+    "metrics": {
+      "interest_macro_recall_at_1": 0.0399526912623911,
+      "interest_macro_ndcg_at_1": 0.0399526912623911,
+      "interest_macro_recall_at_5": 0.1272808445003011,
+      "interest_macro_ndcg_at_5": 0.0830507470210199,
+      "interest_macro_recall_at_10": 0.20991355972746936,
+      "interest_macro_ndcg_at_10": 0.1094102585174439,
+      "interest_macro_recall_at_20": 0.34946973102615525,
+      "interest_macro_ndcg_at_20": 0.14462843908157216
+    },
+    "prediction_sha256": "bdecfbb60c9b75ec1cdbfb4f604448baa32d2c470f89399dc13cda7060d0a83d",
+    "metrics_sha256": "05afb64f53749863a76e8d561e333121819f079e1cc81882b18a1556cb87e9c3",
+    "evaluation_identity": "423ff62855692591d87709f8147a412dfaccd8a0ed7aaaa1c5b93d6f7ed5fd1b"
+  },
+  "final_acceptance": {
+    "path": "artifacts/mind-cir-ni-prompt-20260928/final_acceptance.json",
+    "sha256": "19115bca25d08e70bc4ff2eb5b792be80dfe752005547d96d2bcdbedaee49495",
+    "prompt_comparison_path": "artifacts/mind-cir-ni-prompt-20260928/final_prompt_comparison.json",
+    "prompt_comparison_sha256": "8fdc18eec247d13ef8f6ae7d9a08bcd606f843c50d42d1c58a8b63f0fd47d413"
+  },
+  "final_report": {
+    "path": "docs/experiments/2026-09-28/mind_cir_ni_prompt.md",
+    "sha256": "561d7dafeec115c4b119a0a3cb7603ce8fa9d43158e1f394a5f5ba30ef1dc35b",
+    "runlog": "docs/experiments/2026-09-28/mind_cir_ni_prompt_runlog.md",
+    "csv": "artifacts/mind-cir-ni-prompt-20260928/prompt_comparison.csv",
+    "csv_sha256": "b56ca757cee36a96f55c5783280da6402793e7ca258e29dae10ba2613ee94814"
+  }
+}

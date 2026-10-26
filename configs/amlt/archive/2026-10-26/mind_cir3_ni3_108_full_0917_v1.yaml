@@ -1,0 +1,27 @@
+description: MIND 108-class CIR three epochs then original NI three epochs; fixed CIR views and seed42, accepted numerical runtime and prior GPU gates reused.
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+    - nvidia-smi
+target:
+  service: singularity
+  name: Recall
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../../../artifacts/mind-cir3-20260917/bundle-v1
+  ignore:
+    - __pycache__/
+    - '*.pyc'
+jobs:
+  - name: qwen35-2b-cir3-ni3-108
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - bash scripts/amlt/sft/run_cir_warmup.sh

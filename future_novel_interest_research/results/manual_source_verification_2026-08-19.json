@@ -1,0 +1,50 @@
+{
+  "purpose": "Source-verification corrections and additions after reviewing the direct-literature agent output; bibliographic identity is primary-source verified, while abstract-only method summaries may also use scholarly indexes.",
+  "verified_as_of": "2026-08-19",
+  "records": [
+    {
+      "title": "Personalized Interest Graphs for Theme-Driven User Behavior",
+      "venue_year": "ACM RecSys 2025",
+      "doi": "10.1145/3705328.3748133",
+      "verified_claim": "The eBay system builds multi-granularity LLM-generated user-interest graphs for theme-centric cross-category recommendation. Its abstract reports online gains for engagement with previously unseen categories, purchases, and buyer count.",
+      "crossinterest_role": "Direct industrial method precedent for cross-category interest expansion; not a public history-to-future benchmark because logs, graph, taxonomy, and evaluation data are private.",
+      "sources": [
+        "https://doi.org/10.1145/3705328.3748133",
+        "https://dblp.org/rec/conf/recsys/ZinmanCFBFE25",
+        "https://www.semanticscholar.org/paper/085c2a95e9c1607273904ea26c3512e4c0750f54"
+      ]
+    },
+    {
+      "title": "When Relevance Meets Novelty: Dual-Stable Periodic Optimization for Serendipitous Recommendation",
+      "venue_year": "arXiv preprint 2025, version 3 dated 2026-03-04",
+      "identifier": "arXiv:2508.00450",
+      "verified_claim": "CoEA jointly models long-term group identity and short-term individual interests, and periodically co-optimizes novelty and relevance LLMs using incremental feedback; its abstract reports offline and online experiments.",
+      "crossinterest_role": "Method inspiration for separating stable history from emerging interests and for periodic alignment; it does not provide a verified public future-novel-interest benchmark.",
+      "sources": [
+        "https://arxiv.org/abs/2508.00450"
+      ]
+    },
+    {
+      "title": "Serendipitous Recommendation with Multimodal LLM",
+      "venue_year": "RecSys 2025 EARL Workshop preprint",
+      "identifier": "arXiv:2506.08283",
+      "verified_claim": "The hierarchical MLLM framework identifies relevant but unexplored interest clusters and grounds them through conventional recommenders; its abstract reports live experiments on a private short-video platform.",
+      "crossinterest_role": "Direct method precedent for unexplored semantic clusters and multimodal grounding; private production evidence, not a reusable dataset.",
+      "sources": [
+        "https://arxiv.org/abs/2506.08283"
+      ]
+    },
+    {
+      "title": "Breaking the Relevance-Diversity Seesaw: Hierarchical LLM Reasoning with RL for Industrial Novelty Recommendation",
+      "venue_year": "SIGIR 2026",
+      "doi": "10.1145/3805712.3808399",
+      "verified_claim": "BALANCE decomposes novelty recommendation into Novelty Tag, Interest Topic, and Recommendation List stages, adds self-reflection supervision, and optimizes sequence- and item-level rewards with SIPO. The abstract reports offline and JD.com online A/B tests.",
+      "crossinterest_role": "Closest 2026 industrial method precedent for hierarchical novelty direction and topic generation; its data and production evaluation remain private.",
+      "sources": [
+        "https://doi.org/10.1145/3805712.3808399",
+        "https://dblp.org/rec/conf/sigir/SunZWXYXQL26",
+        "https://www.semanticscholar.org/paper/d1d23a8d371ea378217787a7e29f32c9b3243bf8"
+      ]
+    }
+  ]
+}

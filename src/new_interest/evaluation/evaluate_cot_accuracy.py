@@ -15,7 +15,11 @@ from typing import Any, Literal
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-from new_interest.data.build_grpo_dataset import append_cot_instruction
+from new_interest.data.build_grpo_dataset import (
+    COT_INSTRUCTION,
+    LEGACY_COT_INSTRUCTION,
+    append_cot_instruction,
+)
 from new_interest.evaluation.metrics import RESPONSE_PREFIX
 from new_interest.training.grpo_reward import (
     extract_final_answer,
@@ -207,11 +211,30 @@ def generate_greedy_outputs(
     mode: str,
     batch_size: int,
     max_new_tokens: int,
+    cot_instruction: str | None = COT_INSTRUCTION,
+    do_sample: bool = False,
+    temperature: float | None = None,
+    top_p: float | None = None,
+    top_k: int | None = None,
+    min_p: float | None = None,
+    seed: int | None = None,
+    record_offset: int = 0,
 ) -> list[dict[str, object]]:
     import torch
 
     if batch_size <= 0 or max_new_tokens <= 0:
         raise ValueError("Generation sizes must be positive")
+    if do_sample:
+        if temperature is None or temperature <= 0:
+            raise ValueError("temperature must be positive when sampling")
+        if top_p is None or not 0 < top_p <= 1:
+            raise ValueError("top_p must be in (0, 1] when sampling")
+        if top_k is None or top_k <= 0:
+            raise ValueError("top_k must be positive when sampling")
+        if min_p is None or not 0 <= min_p <= 1:
+            raise ValueError("min_p must be in [0, 1] when sampling")
+        if seed is None:
+            raise ValueError("seed is required when sampling")
     mode = _normalize_mode(mode)
     rendered_prompts = [
         apply_chat_template(
@@ -220,7 +243,14 @@ def generate_greedy_outputs(
                 {
                     "role": "user",
                     "content": (
-                        append_cot_instruction(str(record["prompt"]))
+                        (
+                            append_cot_instruction(
+                                str(record["prompt"]),
+                                instruction=cot_instruction,
+                            )
+                            if cot_instruction is not None
+                            else str(record["prompt"])
+                        )
                         if mode == "cot"
                         else str(record["prompt"])
                     ),
@@ -236,8 +266,13 @@ def generate_greedy_outputs(
     model.generation_config.temperature = None
     model.generation_config.top_p = None
     model.generation_config.top_k = None
+    model.generation_config.min_p = None
 
     for start in range(0, len(records), batch_size):
+        if seed is not None:
+            batch_seed = seed + record_offset + start
+            torch.manual_seed(batch_seed)
+            torch.cuda.manual_seed_all(batch_seed)
         batch_prompts = rendered_prompts[start : start + batch_size]
         encoded = tokenizer(
             batch_prompts,
@@ -250,14 +285,26 @@ def generate_greedy_outputs(
             for key, value in encoded.items()
         }
         input_length = encoded["input_ids"].shape[1]
+        generation_kwargs: dict[str, object] = {
+            "do_sample": do_sample,
+            "max_new_tokens": max_new_tokens,
+            "use_cache": True,
+            "pad_token_id": tokenizer.pad_token_id,
+            "eos_token_id": tokenizer.eos_token_id,
+        }
+        if do_sample:
+            generation_kwargs.update(
+                {
+                    "temperature": temperature,
+                    "top_p": top_p,
+                    "top_k": top_k,
+                    "min_p": min_p,
+                }
+            )
         with torch.inference_mode():
             generated = model.generate(
                 **encoded,
-                do_sample=False,
-                max_new_tokens=max_new_tokens,
-                use_cache=True,
-                pad_token_id=tokenizer.pad_token_id,
-                eos_token_id=tokenizer.eos_token_id,
+                **generation_kwargs,
             )
         for prompt, token_row in zip(
             batch_prompts,
@@ -457,8 +504,44 @@ def evaluate_cot_accuracy(
     max_new_tokens = int(
         config.get("max_new_tokens", 768 if mode == "cot" else 64)
     )
+    instruction_version = str(
+        config.get("cot_instruction_version", "current")
+    )
+    do_sample = bool(config.get("do_sample", False))
+    temperature = (
+        float(config.get("temperature", 0.6)) if do_sample else None
+    )
+    top_p = float(config.get("top_p", 0.95)) if do_sample else None
+    top_k = int(config.get("top_k", 20)) if do_sample else None
+    min_p = float(config.get("min_p", 0.0)) if do_sample else None
+    seed = int(config["seed"]) if config.get("seed") is not None else None
+    instruction_by_version = {
+        "current": COT_INSTRUCTION,
+        "legacy": LEGACY_COT_INSTRUCTION,
+        "native": None,
+    }
+    if instruction_version not in instruction_by_version:
+        raise ValueError(
+            f"Unknown CoT instruction version: {instruction_version}"
+        )
     if checkpoint_size <= 0 or batch_size <= 0 or max_new_tokens <= 0:
         raise ValueError("Generation and checkpoint sizes must be positive")
+    if do_sample:
+        if temperature is None or temperature <= 0:
+            raise ValueError("temperature must be positive when sampling")
+        if top_p is None or not 0 < top_p <= 1:
+            raise ValueError("top_p must be in (0, 1] when sampling")
+        if top_k is None or top_k <= 0:
+            raise ValueError("top_k must be positive when sampling")
+        if min_p is None or not 0 <= min_p <= 1:
+            raise ValueError("min_p must be in [0, 1] when sampling")
+        if seed is None:
+            raise ValueError("seed is required when sampling")
+        if checkpoint_size % batch_size:
+            raise ValueError(
+                "checkpoint_size must be divisible by batch_size "
+                "for resume-stable sampling"
+            )
 
     shards_dir = output_dir / "shards"
     shards_dir.mkdir(parents=True, exist_ok=True)
@@ -491,9 +574,7 @@ def evaluate_cot_accuracy(
 
         model_name = str(config.get("model_name", "Qwen/Qwen3-8B"))
         adapter_value = config.get("adapter_path")
-        tokenizer = AutoTokenizer.from_pretrained(
-            adapter_value or model_name
-        )
+        tokenizer = AutoTokenizer.from_pretrained(model_name)
         if tokenizer.pad_token_id is None:
             tokenizer.pad_token = tokenizer.eos_token
         tokenizer.padding_side = "left"
@@ -518,6 +599,16 @@ def evaluate_cot_accuracy(
                 mode=typed_mode,
                 batch_size=batch_size,
                 max_new_tokens=max_new_tokens,
+                cot_instruction=instruction_by_version[
+                    instruction_version
+                ],
+                do_sample=do_sample,
+                temperature=temperature,
+                top_p=top_p,
+                top_k=top_k,
+                min_p=min_p,
+                seed=seed,
+                record_offset=start_index + start,
             )
             _, shard_rows = evaluate_accuracy_outputs(
                 shard_records,
@@ -548,6 +639,13 @@ def evaluate_cot_accuracy(
     metrics.update(
         {
             "mode": mode,
+            "cot_instruction_version": instruction_version,
+            "do_sample": do_sample,
+            "temperature": temperature,
+            "top_p": top_p,
+            "top_k": top_k,
+            "min_p": min_p,
+            "seed": seed,
             "start_index": start_index,
             "stop_index": stop_index,
             "label_count": len(labels),
@@ -641,6 +739,17 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-new-tokens", type=int)
     parser.add_argument("--max-examples", type=int)
     parser.add_argument("--start-index", type=int, default=0)
+    parser.add_argument(
+        "--cot-instruction-version",
+        choices=("current", "legacy", "native"),
+        default="current",
+    )
+    parser.add_argument("--do-sample", action="store_true")
+    parser.add_argument("--temperature", type=float, default=0.6)
+    parser.add_argument("--top-p", type=float, default=0.95)
+    parser.add_argument("--top-k", type=int, default=20)
+    parser.add_argument("--min-p", type=float, default=0.0)
+    parser.add_argument("--seed", type=int)
     parser.add_argument(
         "--wandb-mode",
         choices=("online", "offline", "disabled"),

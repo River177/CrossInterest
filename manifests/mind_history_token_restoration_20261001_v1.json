@@ -1,0 +1,47 @@
+{
+  "storage_account": "csnewsandfeeds4150361735",
+  "container": "amulet",
+  "large_artifacts_policy": "Remote only. No automatic download of pruned large artifacts.",
+  "arms": {
+    "text": {
+      "experiment": "mind-ni-history-text125-0930-v1",
+      "job": "qwen35-2b-ni-text125",
+      "yaml": "configs/amlt/mind_history_token_text_0930_v1.yaml",
+      "bundle": "artifacts/mind-history-token-20260930/bundles-v1/text",
+      "bundle_sha256": "a8865a3142e0eddc293d84172afbe75a6caf3d2d7687f147c84e68ba2bd5ddb6",
+      "backend_id": "upbeat_lettuce_k6my50hhvb",
+      "results_prefix": "projects/sft4safety/amlt-results/7209271490.37957-7cccf28c-9256",
+      "final_adapter_relative": "formal/ni/final_adapter",
+      "checkpoint_relative": "formal/checkpoints-ni/checkpoint-2025",
+      "predictions_relative": "formal/real_eval/merged/id_token_predictions.parquet",
+      "adapter_file_sha256": "e9da937955ce9271c9f7a912e6d87238ea03d86126cce08ebfeab4d25ffccc07",
+      "prediction_sha256": "b287abef1f719a8d5f908259b1d2e08be38f27be3085ec8ef8190b82e79dbea3",
+      "metrics_sha256": "42313c57db3057f19641055581669b2f76e8ee4bf900288494dcaed42e547152"
+    },
+    "token": {
+      "experiment": "mind-ni-history-token125-0930-v1",
+      "job": "qwen35-2b-ni-token125",
+      "yaml": "configs/amlt/mind_history_token_token_0930_v1.yaml",
+      "bundle": "artifacts/mind-history-token-20260930/bundles-v1/token",
+      "bundle_sha256": "c91f6d37fa58f9d0a43cc127a6b6306aeef18772f4ef66cdc466ee1f5dd10d04",
+      "backend_id": "salmon_plane_m3qq5sx0fm",
+      "results_prefix": "projects/sft4safety/amlt-results/7209271563.63494-5f26c7ff-1961",
+      "final_adapter_relative": "formal/ni/final_adapter",
+      "checkpoint_relative": "formal/checkpoints-ni/checkpoint-2025",
+      "predictions_relative": "formal/real_eval/merged/id_token_predictions.parquet",
+      "adapter_file_sha256": "703880572f12e19a94d178ff53707e849fa93a283e5cbe96301d5ef2cf980f2f",
+      "prediction_sha256": "81b8eede14eda5b88b39e7da50100be61cfc5bcdb3983af0f98d5817cfe0ef18",
+      "metrics_sha256": "76ec6b417ea55b67ca54c195dcfd22e1c3a1b7ae44032f282b470f96aa5c84ff"
+    }
+  },
+  "analysis": {
+    "experiment": "mind-history-token-analysis-1001-v2",
+    "job": "history-token-paired-analysis-v2",
+    "backend_id": "cool_panda_h84tqwcqpb",
+    "results_prefix": "projects/sft4safety/amlt-results/7209231189.73245-29d6a772-8097",
+    "yaml": "configs/amlt/mind_history_token_analysis_1001_v2.yaml",
+    "bundle": "artifacts/mind-history-token-20260930/analysis-bundle-v2",
+    "payload_sha256": "a845e5bd9d0c80b179a0d10ee45a1fcc3c2cd8f5f9fdecaa474ecff3316d186e"
+  },
+  "comparison_sha256": "d43d8ab86f7f4de0e2f941b7cf6e10ac7261fc1f6ed782eb04cafffdc8a64ec4"
+}

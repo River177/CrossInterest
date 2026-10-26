@@ -26,6 +26,11 @@ import pytest
             "cot-sft1k",
         ),
         (
+            "cot-sft-1k-rehearsal-qwen3-interest-22k",
+            "cot_sft/final_adapter",
+            "cot-rehearsal1k",
+        ),
+        (
             "correctness-grpo-1k-qwen3-interest-22k",
             "grpo/final_adapter",
             "new-grpo1k",
@@ -70,7 +75,7 @@ def test_accuracy_map_resolves_condition(
     fake_python.chmod(0o755)
     script = (
         Path(__file__).parents[1]
-        / "scripts/amlt/evaluation/run_qwen_cot_accuracy_map.sh"
+        / "scripts/archive/amlt/2026-10-26/evaluation/run_qwen_cot_accuracy_map.sh"
     )
     subprocess.run(
         ["bash", str(script), "cot", "2", "4", "full"],
@@ -92,4 +97,11 @@ def test_accuracy_map_resolves_condition(
     assert (
         arguments[arguments.index("--run-name") + 1]
         == f"qwen3-{expected_condition}-interest-cot-dev10k-s2of4"
+    )
+    expected_version = (
+        "legacy" if expected_condition == "old-grpo1k" else "current"
+    )
+    assert (
+        arguments[arguments.index("--cot-instruction-version") + 1]
+        == expected_version
     )

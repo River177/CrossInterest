@@ -1,0 +1,181 @@
+{
+  "status": "complete",
+  "artifact_root": "artifacts/mind-token-joint-alignment-20261001",
+  "report": "docs/experiments/2026-10-01/mind_token_joint_alignment.md",
+  "active_run": {
+    "experiment": "mind-token125-joint-alignment-1001-v1",
+    "job": "qwen35-2b-token125-joint",
+    "yaml": "configs/amlt/mind_token_joint_alignment_1001_v1.yaml",
+    "bundle": "artifacts/mind-token-joint-alignment-20261001/bundle-v1",
+    "bundle_sha256": "cf28f07e4c98904558c63fdc2b9b38efd376b247afa1a82b21eeab96451d6366",
+    "backend_id": "amiable_ghost_y68q7gmrb0",
+    "results_prefix": "projects/sft4safety/amlt-results/7209191952.16969-a21aaef8-2d05"
+  },
+  "budget": {
+    "samples": 24100,
+    "epochs": 3,
+    "optimizer_steps": 2262,
+    "presentations": 72300,
+    "parent": null
+  },
+  "tasks": {
+    "NI_per_epoch": 21600,
+    "name_to_id_per_epoch": 1250,
+    "id_to_name_per_epoch": 1250,
+    "pair_repeats_per_epoch": 10,
+    "directions": 2,
+    "classes": 125
+  },
+  "baseline": {
+    "baseline_id": "Token125-NI-only-seed42",
+    "status": "accepted",
+    "active_run": {
+      "experiment": "mind-ni-history-token125-0930-v1",
+      "job": "qwen35-2b-ni-token125",
+      "yaml": "configs/amlt/mind_history_token_token_0930_v1.yaml",
+      "bundle": "artifacts/mind-history-token-20260930/bundles-v1/token",
+      "bundle_sha256": "c91f6d37fa58f9d0a43cc127a6b6306aeef18772f4ef66cdc466ee1f5dd10d04",
+      "backend_id": "salmon_plane_m3qq5sx0fm",
+      "results_prefix": "projects/sft4safety/amlt-results/7209271563.63494-5f26c7ff-1961"
+    },
+    "acceptance_sha256": "66ab4780b31f1e99eba2af6a784c27e710b36c7dda0363740870a8de4680d46e",
+    "cold_state_sha256": "28b70b3031e6c736ea10930595ac19651186067b4b5f8f85e4a72ff4b0b7c565",
+    "evaluation": {
+      "records": 31392,
+      "supported_classes": 104,
+      "target_occurrences": 37728,
+      "metrics": {
+        "interest_macro_recall_at_1": 0.029324845040791418,
+        "interest_macro_ndcg_at_1": 0.029324845040791418,
+        "interest_macro_recall_at_5": 0.12265817848847936,
+        "interest_macro_ndcg_at_5": 0.07558709617445115,
+        "interest_macro_recall_at_10": 0.19873016413306607,
+        "interest_macro_ndcg_at_10": 0.10007434126863263,
+        "interest_macro_recall_at_20": 0.3346785339597168,
+        "interest_macro_ndcg_at_20": 0.1342790877231237
+      }
+    }
+  },
+  "gpu_count": 4,
+  "seed": 42,
+  "monitor_step_totals": {
+    "joint": 2262
+  },
+  "local_validation": {
+    "focused_tests_passed": 27,
+    "full_suite": "collection blocked by missing local peft",
+    "upload_files": 128,
+    "upload_bytes": 141133769,
+    "zero_overlength": true,
+    "cold_state_bound_in_all_stage_configs": true
+  },
+  "automation": {
+    "id": "ni-token",
+    "status": "PAUSED",
+    "interval_minutes": 30,
+    "stop_reason": "Joint training, Full Dev and final paired analysis independently accepted"
+  },
+  "submission_log": "artifacts/mind-token-joint-alignment-20261001/submit.log",
+  "latest_receipt": "artifacts/mind-token-joint-alignment-20261001/progress/20261001T183703Z/receipt.json",
+  "latest_independent_readback": "artifacts/mind-token-joint-alignment-20261001/progress/20261001T183703Z/independent_readback.json",
+  "observed_utc": "2026-10-01T18:37:03.030203+00:00",
+  "native_status": "Completed",
+  "latest_logged_step": 2262,
+  "formal_committed_checkpoint_step": 2262,
+  "gates_independently_verified": true,
+  "cold_state_matches_baseline": true,
+  "checkpoint_presentations_by_task": {
+    "new_interest": 64800,
+    "interest_name_to_id": 3750,
+    "interest_id_to_name": 3750
+  },
+  "latest_finite_loss": 1.411,
+  "final_acceptance": "artifacts/mind-token-joint-alignment-20261001/final_acceptance.json",
+  "evaluation": {
+    "records": 31392,
+    "supported_classes": 104,
+    "target_occurrences": 37728,
+    "metrics": {
+      "interest_macro_recall_at_1": 0.02991884433293331,
+      "interest_macro_ndcg_at_1": 0.02991884433293331,
+      "interest_macro_recall_at_5": 0.1227450909135229,
+      "interest_macro_ndcg_at_5": 0.07685213785835292,
+      "interest_macro_recall_at_10": 0.20088663505687376,
+      "interest_macro_ndcg_at_10": 0.10185586718275993,
+      "interest_macro_recall_at_20": 0.33382038752343135,
+      "interest_macro_ndcg_at_20": 0.1352292095760976
+    }
+  },
+  "paired_analysis_manifest": "manifests/mind_token_joint_analysis_20261002_v1.json",
+  "paired_analysis": {
+    "experiment": "mind-token125-joint-analysis-1002-v1",
+    "job": "token125-joint-paired-analysis",
+    "yaml": "configs/amlt/mind_token_joint_analysis_1002_v1.yaml",
+    "bundle": "artifacts/mind-token-joint-alignment-20261001/analysis-bundle-v1",
+    "payload_sha256": "eaa43995060caf2795a67acf3f3dcae547f984ca848537ca982e82376e9919f1",
+    "backend_id": "frank_diamond_qgqmggjsjy",
+    "results_prefix": "projects/sft4safety/amlt-results/7209118737.00693-efa2f3a6-1f37"
+  },
+  "paired_analysis_observation": {
+    "native_status": "Queued",
+    "receipt": "artifacts/mind-token-joint-alignment-20261001/analysis/progress/20261002T030451Z/receipt.json",
+    "observed_utc": "2026-10-02T03:04:51.815563+00:00",
+    "complete": false
+  },
+  "completed_utc": "2026-10-02T05:27:36.470835+00:00",
+  "paired_final_acceptance": "artifacts/mind-token-joint-alignment-20261001/paired_final_acceptance.json",
+  "comparison_sha256": "2a39773601b03e8f74cd7ced8b7d7023b8bf2b17f00aa4aaf60f33480e8311fb",
+  "paired_differences": {
+    "interest_macro_recall_at_10": {
+      "difference_pp": 0.21564709238076907,
+      "paired_user_bayesian_95_interval_pp": [
+        -0.27886468461147706,
+        0.6559909621439678
+      ]
+    },
+    "interest_macro_ndcg_at_10": {
+      "difference_pp": 0.178152591412728,
+      "paired_user_bayesian_95_interval_pp": [
+        -0.03336597212335297,
+        0.3763865399958391
+      ]
+    },
+    "interest_macro_recall_at_20": {
+      "difference_pp": -0.08581464362854008,
+      "paired_user_bayesian_95_interval_pp": [
+        -0.8661358622819214,
+        0.6606348371690491
+      ]
+    },
+    "interest_macro_ndcg_at_20": {
+      "difference_pp": 0.0950121852973912,
+      "paired_user_bayesian_95_interval_pp": [
+        -0.12943033068329726,
+        0.3209173939953523
+      ]
+    }
+  },
+  "final_metrics": {
+    "baseline": {
+      "interest_macro_recall_at_1": 0.029324845040791418,
+      "interest_macro_ndcg_at_1": 0.029324845040791418,
+      "interest_macro_recall_at_5": 0.12265817848847936,
+      "interest_macro_ndcg_at_5": 0.07558709617445117,
+      "interest_macro_recall_at_10": 0.19873016413306607,
+      "interest_macro_ndcg_at_10": 0.10007434126863265,
+      "interest_macro_recall_at_20": 0.33467853395971675,
+      "interest_macro_ndcg_at_20": 0.13427908772312372
+    },
+    "joint": {
+      "interest_macro_recall_at_1": 0.029918844332933306,
+      "interest_macro_ndcg_at_1": 0.029918844332933306,
+      "interest_macro_recall_at_5": 0.1227450909135229,
+      "interest_macro_ndcg_at_5": 0.07685213785835292,
+      "interest_macro_recall_at_10": 0.20088663505687376,
+      "interest_macro_ndcg_at_10": 0.10185586718275993,
+      "interest_macro_recall_at_20": 0.33382038752343135,
+      "interest_macro_ndcg_at_20": 0.13522920957609763
+    }
+  },
+  "conclusion": "Mixed small metric changes; all four paired-user intervals include zero; single-seed joint recipe benefit not established."
+}

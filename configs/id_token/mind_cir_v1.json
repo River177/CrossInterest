@@ -1,0 +1,20 @@
+{
+  "model_name": "Qwen/Qwen3.5-2B",
+  "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "adapter_path": "artifacts/mind-old-new-interest-v1/two_stage/new/sft/final_adapter",
+  "eval_file": "data/training/mind_cir_108_v1/dev_full_grouped.parquet",
+  "interest_token_mapping_file": "data/training/mind_cir_108_v1/interest_token_mapping.parquet",
+  "semantic_id_token_count": 108,
+  "output_dir": "artifacts/mind-old-new-interest-v1/two_stage/real_eval",
+  "run_name": "mind-cir-108-v1-dev",
+  "enable_thinking": false,
+  "batch_size": 2,
+  "checkpoint_size": 256,
+  "top_k": 20,
+  "cutoffs": [
+    1,
+    5,
+    10,
+    20
+  ]
+}

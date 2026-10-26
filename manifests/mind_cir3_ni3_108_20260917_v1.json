@@ -1,0 +1,228 @@
+{
+  "status": "accepted",
+  "observed_at_utc": "2026-09-17T21:10:25.818238+00:00",
+  "artifact_root": "artifacts/mind-cir3-20260917",
+  "training_schedule": {
+    "cir_epochs": 3,
+    "ni_epochs": 3,
+    "cir_optimizer_steps": 1620,
+    "ni_optimizer_steps": 2025
+  },
+  "active_run": {
+    "experiment": "mind-cir3-ni3-108-0917-v1",
+    "job": "qwen35-2b-cir3-ni3-108",
+    "status": "Completed",
+    "bundle": "artifacts/mind-cir3-20260917/bundle-v1",
+    "bundle_sha256": "21e78ca2abe9382e464f174f334c1af17c51ecfda1f71a08fc8d3e9389d7ba88",
+    "yaml": "configs/amlt/mind_cir3_ni3_108_full_0917_v1.yaml",
+    "submission_log": "artifacts/mind-cir3-20260917/submission.log",
+    "backend_id": "nifty_avocado_n4yyg08wwd",
+    "results_prefix": "projects/sft4safety/amlt-results/7210412790.94297-54d6cdaf-7b23",
+    "code_prefix": "projects/sft4safety/amlt-code/5dd7383d10bda746decaf8a06c12965698c594b61f4259f15d851430dcf2d374",
+    "url": "https://aka.ms/amlt?q=k2mmn",
+    "phase": "final_accepted",
+    "latest_observation": "artifacts/mind-cir3-20260917/progress/20260917T2040Z/receipt.json",
+    "native_status": "Completed",
+    "latest_logged_optimizer_step": 2025,
+    "last_committed_checkpoint_step": 2025,
+    "previous_attempt_last_logged_optimizer_step": 830,
+    "latest_resume_checkpoint_step": 800,
+    "active_stdout": "user_logs/retry_001/std_log.txt",
+    "amlt_status": "completed",
+    "previous_verified_logged_optimizer_step": 987,
+    "completed_at_utc": "2026-09-17T20:04:54Z",
+    "program_exit_at_utc": "2026-09-17T20:01:22Z"
+  },
+  "platform": {
+    "target": "Recall",
+    "sla": "Standard",
+    "sku": "80G4-A100"
+  },
+  "checks": {
+    "preflight": "artifacts/mind-cir3-20260917/local_preflight.json",
+    "preflight_sha256": "e2e7b08bf0a3e6faee90d05f33790882573ea348d1ea6aaf73a8a80d94fea7fe",
+    "actual_upload_audit": "artifacts/mind-cir3-20260917/upload_and_config_audit.json",
+    "tests": "28 passed, 1 skipped (local Transformers unavailable)",
+    "tests_sha256": "ce2eed3058f01ea2ce7fd0760e7e5dbb2a31fa2831c899964339e81b8c002a3d",
+    "fresh_stage_config_readback": {
+      "cir_steps": 1620,
+      "ni_steps": 2025,
+      "cir_input_adapter": null,
+      "ni_parent": "formal/cir/final_adapter"
+    },
+    "acceptance_reader_regression": "artifacts/mind-cir3-20260917/acceptance_reader_regression.json",
+    "remote_startup_readback": "artifacts/mind-cir3-20260917/progress/20260917T0407Z/verified_observation.json"
+  },
+  "comparisons": {
+    "cir1_manifest": "manifests/mind_cir_108_20260916_v1.json",
+    "cir1_acceptance": "artifacts/mind-cir-20260916/final_acceptance.json",
+    "cir1_acceptance_sha256": "1b0b748a94b715602c9fde7c37051f653d0ce6a05c43af853cba13f187382018",
+    "reuse_accepted_baselines": true
+  },
+  "authorization": {
+    "condition": "CIR3 epochs then NI3 epochs only",
+    "excluded": [
+      "shuffled CIR labels",
+      "multiple seeds",
+      "extra NI control",
+      "class balancing"
+    ],
+    "monitoring": "Continue the authorized monitoring/recovery workflow for this selected CIR duration condition; 30 minute interval"
+  },
+  "monitoring": {
+    "automation_id": "cir",
+    "status": "DELETED",
+    "interval_minutes": 30,
+    "snapshot_verifier": "scripts/analysis/verify_cir_monitor_snapshot.py --manifest manifests/mind_cir3_ni3_108_20260917_v1.json",
+    "final_verifier": "scripts/analysis/accept_cir_final.py --manifest manifests/mind_cir3_ni3_108_20260917_v1.json",
+    "updated_at_utc": "2026-09-17T03:35:46.661119+00:00",
+    "completed_at_utc": "2026-09-17T22:36:48.524743+00:00",
+    "reason": "Final training, lineage, exact reload and Full Dev independent acceptance completed; final report verified",
+    "saved_config": "artifacts/mind-cir3-20260917/monitor_completed_config.json"
+  },
+  "stage_acceptance": {
+    "cir": {
+      "status": "accepted",
+      "optimizer_steps": 1620,
+      "samples": 17271,
+      "epochs": 3,
+      "presentations": 51813,
+      "adapter_sha256": "dceda49eaaf4fa258ced1fe8ba7146dc494b6cb1d51d26855906e5270abd2c77",
+      "receipt": "artifacts/mind-cir3-20260917/progress/20260917T1019Z/cir_final_handoff_readback.json",
+      "final_receipt": "artifacts/mind-cir3-20260917/final_training_lineage_readback.json"
+    },
+    "ni_handoff": {
+      "status": "accepted",
+      "optimizer_reset": true,
+      "scheduler_reset": true,
+      "initial_state_sha256": "8b50d13504b6797892f09c910dde85b0143b1922e6b49938f679f73009409cf8",
+      "receipt": "artifacts/mind-cir3-20260917/progress/20260917T1019Z/cir_final_handoff_readback.json"
+    },
+    "ni": {
+      "status": "accepted",
+      "optimizer_steps": 2025,
+      "samples": 21600,
+      "epochs": 3,
+      "presentations": 64800,
+      "adapter_sha256": "f4544e9c8d8dfed3cca5f110a5bf760af1cada17d813097004a4e9a292f6f389",
+      "receipt": "artifacts/mind-cir3-20260917/final_training_lineage_readback.json"
+    }
+  },
+  "remote_storage": {
+    "account": "csnewsandfeeds4150361735",
+    "container": "amulet",
+    "large_artifacts": "remote_only",
+    "results_prefix": "projects/sft4safety/amlt-results/7210412790.94297-54d6cdaf-7b23"
+  },
+  "report": "docs/experiments/2026-09-17/mind_cir3_ni3.md",
+  "local_sources": {
+    "src/new_interest/experiments/cir_warmup.py": "8559608b35cc954100186428049f6bcec29fadaf581bb3b45ba0d2138a2f1ac9",
+    "scripts/analysis/prepare_cir_duration_bundle.py": "1cef20565a8a485cc200f9d85008fe960a86975623f5ad9383070e24ef62f0bc",
+    "scripts/analysis/verify_cir_monitor_snapshot.py": "aac4c9d2115f02f42f4612eceaebcad9aeac44a8f53815863065cb59dc57a606",
+    "scripts/analysis/accept_cir_final.py": "9cb609262283f78a2f4853922344190ee9dba01209b94114651affa8352c8f2f",
+    "tests/test_cir_warmup.py": "4747b2e37a05265e3ce35013430396f9fb61e8d4bfcc7693859bb692d3a5809b",
+    "tests/test_cir_monitor_snapshot.py": "a2f41a77dba85b64eb460a9a56964c46c6251d7d0a714445da30bfe0ae9443f7",
+    "tests/test_cir_gate_reuse.py": "9d3c80fc25eb5e38ca29d1c42943592c0ee3d2e9fca30bd1112944749d0e2b5c"
+  },
+  "recovery_history": [
+    {
+      "status": "automatic_ni_resume_verified",
+      "backend": "nifty_avocado_n4yyg08wwd",
+      "observed_at_utc": "2026-09-17T14:14:54.231057+00:00",
+      "eviction_time_utc": "2026-09-17T13:34:40Z",
+      "reason": "higher SLA eviction",
+      "previous_attempt_last_logged_step": 830,
+      "resume_checkpoint": 800,
+      "checkpoint_marker_sha256": "aa2fece402c689290863b4d0569f746b92cf4ad74ba4bf1c44adea3ddf9d78a6",
+      "unchanged_cir_stage_acceptance": true,
+      "optimizer_states": 373,
+      "adam_step_min": 800,
+      "adam_step_max": 800,
+      "scheduler_step": 800,
+      "original_cosine_learning_rate_verified": true,
+      "resumed_epoch_index": 1,
+      "resumed_epoch_update": 125,
+      "committed_sample_presentations": 25600,
+      "current_logged_step": 866,
+      "current_stdout": "user_logs/retry_001/std_log.txt",
+      "resume_audit_sha256": "2a591fa8e47480b8e42ea1bc343fb93a259bdeb4ef7447884301756edbc86c18",
+      "large_payloads": "Remain remote; scoped metadata and runtime restoration checks only; final reload still required",
+      "restarted_or_resubmitted_by_agent": false
+    }
+  ],
+  "evaluation": {
+    "status": "accepted",
+    "records": 31392,
+    "target_occurrences": 37728,
+    "supported_classes": 104,
+    "ranking_classes": 108,
+    "logical_shards": 4,
+    "records_per_shard": 7848,
+    "metrics": {
+      "interest_macro_recall_at_1": 0.03771619323318202,
+      "interest_macro_ndcg_at_1": 0.03771619323318202,
+      "interest_macro_recall_at_5": 0.12357540805544234,
+      "interest_macro_ndcg_at_5": 0.080403065500847,
+      "interest_macro_recall_at_10": 0.2182717833640841,
+      "interest_macro_ndcg_at_10": 0.11070775724981861,
+      "interest_macro_recall_at_20": 0.35174017632222754,
+      "interest_macro_ndcg_at_20": 0.14425748770806615
+    },
+    "prediction_sha256": "e5ab94b8c58805bdcc8483ca706ea55b1bc4680c0954ffc7c1073ae3b5e989f5",
+    "metrics_sha256": "b825c260c923afe21ed900b3e8a8c03c0ceac5ce000d2bc39ade420461e5955b",
+    "evaluation_identity": "380a1df8e49f58f932b61c3ea047cb17a5c2b8449c57c34a9cab9a083632815b"
+  },
+  "comparison": [
+    {
+      "metric": "interest_macro_recall_at_10",
+      "NI_only": 0.20327452589980838,
+      "CIR_to_NI": 0.2182717833640841,
+      "delta_percentage_points": 1.4997257464275715,
+      "relative_change_percent": 7.377834186496979,
+      "CIR1_to_NI": 0.21278600641329884,
+      "delta_vs_CIR1_percentage_points": 0.5485776950785254
+    },
+    {
+      "metric": "interest_macro_recall_at_20",
+      "NI_only": 0.3365530187670146,
+      "CIR_to_NI": 0.35174017632222754,
+      "delta_percentage_points": 1.5187157555212938,
+      "relative_change_percent": 4.512560193592119,
+      "CIR1_to_NI": 0.3426093619746444,
+      "delta_vs_CIR1_percentage_points": 0.9130814347583116
+    },
+    {
+      "metric": "interest_macro_ndcg_at_10",
+      "NI_only": 0.10132460111875792,
+      "CIR_to_NI": 0.11070775724981861,
+      "delta_percentage_points": 0.9383156131060694,
+      "relative_change_percent": 9.260491556303418,
+      "CIR1_to_NI": 0.10806815594618016,
+      "delta_vs_CIR1_percentage_points": 0.2639601303638453
+    },
+    {
+      "metric": "interest_macro_ndcg_at_20",
+      "NI_only": 0.13466269484912316,
+      "CIR_to_NI": 0.14425748770806612,
+      "delta_percentage_points": 0.9594792858942963,
+      "relative_change_percent": 7.125056326618906,
+      "CIR1_to_NI": 0.14072519544434,
+      "delta_vs_CIR1_percentage_points": 0.35322922637261167
+    }
+  ],
+  "final_acceptance": {
+    "path": "artifacts/mind-cir3-20260917/final_acceptance.json",
+    "sha256": "7cfac08ebf15ea72ed44e962de1c4f3adf238a4a545d8a005f375864c7d34ce1",
+    "training_lineage_path": "artifacts/mind-cir3-20260917/final_training_lineage_readback.json",
+    "training_lineage_sha256": "b36e91649d547e1ceccf4bec667f40b190815e844b1bf0ee9f26d9abd57e1cba",
+    "download_receipt": "artifacts/mind-cir3-20260917/final_download_receipt.json",
+    "download_receipt_sha256": "4a51e13ab7ba1d941b2bb7539890bb6f6724b696e184cdebea679992ab67e993"
+  },
+  "final_report": {
+    "path": "docs/experiments/2026-09-17/mind_cir3_ni3.md",
+    "sha256": "33c6ac55b059ae491171baa47a494309a743719237bb78e30b20ef5859dba72a",
+    "csv": "docs/experiments/2026-09-17/mind_cir3_ni3_results.csv",
+    "csv_sha256": "c3a911bd5c3fc638dfc41a196ab226bdbe781cb4c13433397f8009a56fdfc24a",
+    "runlog": "docs/experiments/2026-09-17/mind_cir3_ni3_runlog.md"
+  }
+}

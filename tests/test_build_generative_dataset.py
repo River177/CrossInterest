@@ -11,6 +11,7 @@ import pytest
 from new_interest.data.build_dataset import DATASET_SCHEMA
 from new_interest.data.build_generative_dataset import (
     GENERATIVE_SCHEMA,
+    _format_behavior_interest_prompt,
     _sampling_priority,
     _target_selection_priority,
     build_generative_dataset,
@@ -52,6 +53,38 @@ def _history_item(
         "subcategory": subcategory,
         "title": f"Clicked title {index}",
     }
+
+
+def test_formats_behavior_interest_prompt_with_aligned_history() -> None:
+    prompt = _format_behavior_interest_prompt(
+        [
+            _history_item(1, "Parent Alpha", "History One"),
+            _history_item(2, "Parent Beta", "History Two"),
+        ]
+    )
+
+    assert (
+        'Each item is formatted as "[Topic category] Headline"' in prompt
+    )
+    assert "1. [History One] Clicked title 1" in prompt
+    assert "2. [History Two] Clicked title 2" in prompt
+    assert "Based on both the headlines and their topic categories" in prompt
+    assert 'Begin your response with "New topic: "' in prompt
+
+
+@pytest.mark.parametrize(
+    "history",
+    [
+        [],
+        [{"title": "", "subcategory": "History One"}],
+        [{"title": "Clicked title", "subcategory": ""}],
+    ],
+)
+def test_rejects_invalid_behavior_interest_history(
+    history: list[dict[str, object]],
+) -> None:
+    with pytest.raises(ValueError):
+        _format_behavior_interest_prompt(history)
 
 
 def _write_source(source_dir: Path) -> None:

@@ -1,0 +1,166 @@
+{
+  "version": "mind-backbone-qwen35-21600-v1",
+  "approved_on": "2026-09-15",
+  "task": "History length ablation",
+  "training_view": "behavior_interest",
+  "output_type": "semantic_id",
+  "training_method": "vanilla",
+  "independent_sid_warmup": false,
+  "max_concurrent_gpus": 12,
+  "gpus_per_model": 4,
+  "sku": "80G4-A100",
+  "sla_tier": "Standard",
+  "effective_global_batch_size": 32,
+  "full_optimizer_steps": 2025,
+  "train_rows": 21600,
+  "train_classes": 108,
+  "samples_per_class": 200,
+  "dev_impressions": 31392,
+  "supported_dev_classes": 104,
+  "metric_columns": [
+    "Macro R@10",
+    "Macro R@20",
+    "Macro NDCG@10",
+    "Macro NDCG@20"
+  ],
+  "full_selection": "final_epoch_3",
+  "reference_9b_metrics": [
+    0.20226361133687365,
+    0.33765807598425546,
+    0.10348067356592919,
+    0.1373918140977058
+  ],
+  "reference_9b_input_audit_sha256": "782bc6276b5693b25fcc0c196af106e3851eb8bf976a37214cc29a4b87c081a7",
+  "input_files": [
+    {
+      "path": "data/training/mind_history_length_ablation_20260915_v1/h10/train/behavior_interest/21600.parquet",
+      "sha256": "6c6c11e9e9947d3925b4fb0800ae1fb87c99a3527441edba0498905303491ae7",
+      "bytes": 11110307
+    },
+    {
+      "path": "data/training/mind_history_length_ablation_20260915_v1/h10/eval/behavior_interest/dev_full_grouped.parquet",
+      "sha256": "91219dd12e8fef2fe4e54471cfb35af47471b7c026418501e32fa9d7d5fac7bd",
+      "bytes": 6637719
+    },
+    {
+      "path": "data/training/mind_history_length_ablation_20260915_v1/h10/interest_token_mapping.parquet",
+      "sha256": "45397451ac2ae2e64d8156b2b47be3f454cc309a8d30a83bc23c2d3267653a0a",
+      "bytes": 3324
+    }
+  ],
+  "models": {
+    "2b": {
+      "model_name": "Qwen/Qwen3.5-2B",
+      "model_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+      "model_config_sha256": "ed1c1723241f23f7f4e23430759cbd7dcfb4103cbdfe052bfe7626b57c2615b4",
+      "hidden_size": 2048,
+      "tie_word_embeddings": true,
+      "expected_trainable_token_tensors": 1
+    }
+  },
+  "recipe": {
+    "enable_thinking": false,
+    "max_seq_length": 2048,
+    "epochs": 3,
+    "per_device_train_batch_size": 1,
+    "gradient_accumulation_steps": 32,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.03,
+    "lr_scheduler_type": "cosine",
+    "max_grad_norm": 1.0,
+    "gradient_checkpointing_use_reentrant": false,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": "all-linear",
+    "optim": "adamw_torch_fused",
+    "seed": 42,
+    "loss_reduction": "token_mean",
+    "semantic_id_loss_scope": "full_vocabulary",
+    "semantic_id_initialization_mode": "mean_norm_matched",
+    "record_initial_adapter_state": true
+  },
+  "evaluation": {
+    "top_k": 20,
+    "cutoffs": [
+      1,
+      5,
+      10,
+      20
+    ],
+    "batch_size": 8,
+    "checkpoint_size": 256,
+    "logical_shards": 4,
+    "history_prediction_filtering": false
+  },
+  "smoke": {
+    "gradient_representatives": 108,
+    "gradient_batch_size": 1,
+    "single_samples": 32,
+    "single_epochs": 5,
+    "single_accumulation": 8,
+    "single_optimizer_steps": 20,
+    "recipe_samples": 108,
+    "recipe_epochs": 2,
+    "recipe_optimizer_steps": 8,
+    "dev_impressions": 64,
+    "reload_samples": 4,
+    "reload_atol": 0.0,
+    "reload_rtol": 0.0
+  },
+  "promotion": "Per-model terminal smoke plus independent downloaded readback authorizes fresh full SFT and Full Dev. Never initialize full from the smoke adapter.",
+  "shared_2b_baseline": {
+    "key": "qwen35-2b-bi-sid-ni-only-21600-seed42-v1",
+    "reused_by": [
+      "backbone",
+      "sid-warmup",
+      "training-method"
+    ]
+  },
+  "worker_packages": {
+    "torch": "2.8.0+cu126",
+    "transformers": "5.14.1",
+    "peft": "0.18.0",
+    "accelerate": "1.12.0",
+    "pyarrow": "20.0.0",
+    "PyYAML": "6.0.2",
+    "sentencepiece": "0.2.0",
+    "wandb": "0.20.1",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "1.14.0",
+    "torchvision": "0.23.0+cu126",
+    "torchaudio": "2.8.0+cu126"
+  },
+  "ablation_version": "mind-h50-controlled-length-ablation-20260915-v1",
+  "h50_data": "data/training/sft_static_user_disjoint_semantic_id_token_200_h50_behavior_interest_scaling_v1",
+  "ablation_data": "data/training/mind_history_length_ablation_20260915_v1/h10",
+  "history_limit": 10,
+  "h50_initial_adapter_sha256": "f924e8c76d9d28be55b8795920ca18811345dfde3b81ded85d5c039615a0510e",
+  "h50_final_sample_prefix_sha256": "fbc553db6b7476322378022f404a17e55ebebd4258f16572ab9801620420f01e",
+  "baseline_acceptance_sha256": "adaf18883c304fb183645a4ec2d6f430fc3d8d2ce14be895ab819b7c7dd25594",
+  "execution_schedule": [
+    {
+      "updates": [
+        1,
+        500
+      ],
+      "gpus": 1,
+      "batch": 1,
+      "accumulation": 32,
+      "kernel": "torch-fallback"
+    },
+    {
+      "updates": [
+        501,
+        2025
+      ],
+      "gpus": 4,
+      "batch": 8,
+      "accumulation": 1,
+      "kernel": "fla-0.5.2-causal-conv1d-1.7.0"
+    }
+  ],
+  "sample_and_target_selection": "reuse frozen H50 rows and labels exactly"
+}

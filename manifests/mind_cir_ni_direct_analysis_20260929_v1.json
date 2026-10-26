@@ -1,0 +1,58 @@
+{
+  "status": "accepted",
+  "artifact_root": "artifacts/mind-cir-ni-direct-training-20260929/analysis",
+  "monitor_step_totals": {
+    "bootstrap": 2000
+  },
+  "active_run": {
+    "status": "accepted",
+    "host": "AMLT Feeds",
+    "experiment": "mind-cir-ni-direct-analysis-0929-v2",
+    "job": "direct-paired-prediction-analysis-v2",
+    "sku": "5C3",
+    "gpus": 0,
+    "yaml": "configs/amlt/mind_cir_ni_direct_analysis_0929_v2.yaml",
+    "bundle": "artifacts/mind-cir-ni-direct-training-20260929/analysis-bundle-v1",
+    "payload_sha256": "e52ac8d32a33c176aef66bc37be2bba0a05f1be33462816c866d592dfa6eda95",
+    "draws": 2000,
+    "seed": 42,
+    "submission_log": "artifacts/mind-cir-ni-direct-training-20260929/analysis_submission_v2.log",
+    "gcr_unreachable": true,
+    "analysis_executed_on_gcr": false,
+    "cli_exit_code": 0,
+    "sla": "Basic",
+    "backend_id": "sweet_bone_4s0nl1n40x",
+    "results_prefix": "projects/sft4safety/amlt-results/7209369952.25123-1d6c3461-b168",
+    "code_prefix": "projects/sft4safety/amlt-code/1e4c0e62-ae56-4094-8e46-60a289c4e98a",
+    "native_status": "Completed",
+    "latest_observation": "artifacts/mind-cir-ni-direct-training-20260929/analysis/progress/20260929T052750Z/receipt.json",
+    "last_checked_utc": "2026-09-29T05:28:03.279732+00:00",
+    "final_comparison": "artifacts/mind-cir-ni-direct-training-20260929/comparison.json",
+    "comparison_sha256": "2887981ee79167c92d47886da7929f2c4a01873b6efc1dc8771b5102456b057f"
+  },
+  "attempts": [
+    {
+      "status": "failed_pending_diagnosis",
+      "host": "AMLT Feeds",
+      "experiment": "mind-cir-ni-direct-analysis-0929-v1",
+      "job": "direct-paired-prediction-analysis",
+      "sku": "5C3",
+      "gpus": 0,
+      "yaml": "configs/amlt/mind_cir_ni_direct_analysis_0929_v1.yaml",
+      "bundle": "artifacts/mind-cir-ni-direct-training-20260929/analysis-bundle-v1",
+      "payload_sha256": "e52ac8d32a33c176aef66bc37be2bba0a05f1be33462816c866d592dfa6eda95",
+      "draws": 2000,
+      "seed": 42,
+      "submission_log": "artifacts/mind-cir-ni-direct-training-20260929/analysis_submission.log",
+      "gcr_unreachable": true,
+      "analysis_executed_on_gcr": false,
+      "backend_id": "dynamic_cow_1nkp3sk32v",
+      "results_prefix": "projects/sft4safety/amlt-results/7209370255.79399-32794f0e-e7af",
+      "code_prefix": "projects/sft4safety/amlt-code/e7070bbd-96f2-47b9-9bae-0b1f5bf657f8",
+      "cli_exit_code": 0,
+      "native_status": "Failed",
+      "failure_evidence": "artifacts/mind-cir-ni-direct-training-20260929/analysis_failure_v1.json",
+      "failure_reason": "Spot CPU supports Basic SLA only; rejected before any execution"
+    }
+  ]
+}

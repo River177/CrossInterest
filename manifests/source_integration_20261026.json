@@ -1,0 +1,330 @@
+{
+  "date": "2026-10-26",
+  "base_commit": "6306780",
+  "frozen_bundles_modified": false,
+  "sources": [
+    {
+      "path": "configs/experiments/history_h10.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-length/configs/experiments/history_h10.json",
+      "source_sha256": "cac6c8350815c31c5e684953ac4f02f9ea5817ad8fbeb572b997a10ca0346cd2",
+      "before_sha256": null,
+      "integrated_sha256": "cac6c8350815c31c5e684953ac4f02f9ea5817ad8fbeb572b997a10ca0346cd2",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/experiments/history_h30.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-length/configs/experiments/history_h30.json",
+      "source_sha256": "dfb01fcc6c38a3d460b53f86d807601061c8d7ca1e399e45ceec20e4e443ebf3",
+      "before_sha256": null,
+      "integrated_sha256": "dfb01fcc6c38a3d460b53f86d807601061c8d7ca1e399e45ceec20e4e443ebf3",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/experiments/history_h5.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-length/configs/experiments/history_h5.json",
+      "source_sha256": "00ffda8dbaf3c3efa2d34bbc766fe840b928c452b7b91ab5e8d98aac6e95e4fd",
+      "before_sha256": null,
+      "integrated_sha256": "00ffda8dbaf3c3efa2d34bbc766fe840b928c452b7b91ab5e8d98aac6e95e4fd",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/experiments/history_order.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-order/configs/experiments/history_order.json",
+      "source_sha256": "064bd5d7e3f962d705e8e4a5feb57871be98e93e26f4903e6e7dc4e91c2b0a6c",
+      "before_sha256": null,
+      "integrated_sha256": "064bd5d7e3f962d705e8e4a5feb57871be98e93e26f4903e6e7dc4e91c2b0a6c",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/id_token/history_h10.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-length/configs/id_token/history_h10.json",
+      "source_sha256": "e95cc7ddd29ba1645dcb4e69c066d9fafce12b2e6f2540ec75669bda4b0acef2",
+      "before_sha256": null,
+      "integrated_sha256": "e95cc7ddd29ba1645dcb4e69c066d9fafce12b2e6f2540ec75669bda4b0acef2",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/id_token/history_h30.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-length/configs/id_token/history_h30.json",
+      "source_sha256": "a5d9b7c88fab7c17d1417ef12b6daf0a65fb912067a621ce03616dc19c34a9b2",
+      "before_sha256": null,
+      "integrated_sha256": "a5d9b7c88fab7c17d1417ef12b6daf0a65fb912067a621ce03616dc19c34a9b2",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/id_token/history_h5.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-length/configs/id_token/history_h5.json",
+      "source_sha256": "b01e4a062e13513beb0f5523a6e22883c8b150c42d1133466e2c0593c5db4c37",
+      "before_sha256": null,
+      "integrated_sha256": "b01e4a062e13513beb0f5523a6e22883c8b150c42d1133466e2c0593c5db4c37",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/id_token/history_order_B.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-order/configs/id_token/history_order_B.json",
+      "source_sha256": "be4e94ad09fa2199a13d44082c27dd1034723449f04c60ff923bc84c07849936",
+      "before_sha256": null,
+      "integrated_sha256": "be4e94ad09fa2199a13d44082c27dd1034723449f04c60ff923bc84c07849936",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/id_token/history_order_C.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-order/configs/id_token/history_order_C.json",
+      "source_sha256": "5a4f55f0ec7ae227fa8a1398ebd60f9c1c8dea1044ab85a84a54fd889f3c5cb4",
+      "before_sha256": null,
+      "integrated_sha256": "5a4f55f0ec7ae227fa8a1398ebd60f9c1c8dea1044ab85a84a54fd889f3c5cb4",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/id_token/history_order_D.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-order/configs/id_token/history_order_D.json",
+      "source_sha256": "3d3d5e99bd98db806314a1098cbfdce859030a63b19d1e1a21d1416c3e47f2fc",
+      "before_sha256": null,
+      "integrated_sha256": "3d3d5e99bd98db806314a1098cbfdce859030a63b19d1e1a21d1416c3e47f2fc",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/sft/history_h10.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-length/configs/sft/history_h10.json",
+      "source_sha256": "6bf585efa5e4b4d93a59a91457fb11123481db2c473dd2d4443f72bc718d4d28",
+      "before_sha256": null,
+      "integrated_sha256": "6bf585efa5e4b4d93a59a91457fb11123481db2c473dd2d4443f72bc718d4d28",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/sft/history_h30.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-length/configs/sft/history_h30.json",
+      "source_sha256": "480c6d685c7f0f960bca9a6035ed9877372466acc37dce778793806ec06756db",
+      "before_sha256": null,
+      "integrated_sha256": "480c6d685c7f0f960bca9a6035ed9877372466acc37dce778793806ec06756db",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/sft/history_h5.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-length/configs/sft/history_h5.json",
+      "source_sha256": "2bbfe9a2f5041a79dd1704d58d4970ab7ea81882d33ff43df8946984b97a563d",
+      "before_sha256": null,
+      "integrated_sha256": "2bbfe9a2f5041a79dd1704d58d4970ab7ea81882d33ff43df8946984b97a563d",
+      "integration": "restored"
+    },
+    {
+      "path": "configs/sft/history_order.json",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-order/configs/sft/history_order.json",
+      "source_sha256": "123f7cd3d93d45bb0d3c164c969dbaa66c1a83af7f2925942112738dda8f4326",
+      "before_sha256": null,
+      "integrated_sha256": "123f7cd3d93d45bb0d3c164c969dbaa66c1a83af7f2925942112738dda8f4326",
+      "integration": "restored"
+    },
+    {
+      "path": "requirements-cir-worker.txt",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/requirements-cir-worker.txt",
+      "source_sha256": "4c5e13269df5fe208a9a28e31c030e0b7412f39eae468b412cf56f93ac4f96e6",
+      "before_sha256": null,
+      "integrated_sha256": "4c5e13269df5fe208a9a28e31c030e0b7412f39eae468b412cf56f93ac4f96e6",
+      "integration": "restored"
+    },
+    {
+      "path": "runtime_overrides/cir_storage_retry.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/runtime_overrides/cir_storage_retry.py",
+      "source_sha256": "339c8dec8f0eaaee7e43fb36629a9d03735768de09624dd0e80f51efe9a9bdba",
+      "before_sha256": null,
+      "integrated_sha256": "339c8dec8f0eaaee7e43fb36629a9d03735768de09624dd0e80f51efe9a9bdba",
+      "integration": "restored"
+    },
+    {
+      "path": "runtime_overrides/sitecustomize.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/runtime_overrides/sitecustomize.py",
+      "source_sha256": "77153ad4e0390b1d353c4d4d728cb8cf046ca183f51ae7b0c0e76dc4628dedc8",
+      "before_sha256": null,
+      "integrated_sha256": "77153ad4e0390b1d353c4d4d728cb8cf046ca183f51ae7b0c0e76dc4628dedc8",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/data/build_old_new_interest_dataset.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/data/build_old_new_interest_dataset.py",
+      "source_sha256": "71a147e42560054defb50c58382b9932930bc2ed44fd973ee861d932368eadcf",
+      "before_sha256": null,
+      "integrated_sha256": "71a147e42560054defb50c58382b9932930bc2ed44fd973ee861d932368eadcf",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/data/restore_static_mind_projection.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/data/restore_static_mind_projection.py",
+      "source_sha256": "9a77087472fad7141262fb2368ff6aacd0e743ee063279f1488459efd3b353d9",
+      "before_sha256": null,
+      "integrated_sha256": "9a77087472fad7141262fb2368ff6aacd0e743ee063279f1488459efd3b353d9",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/evaluation/evaluate_id_token_ranking.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/evaluation/evaluate_id_token_ranking.py",
+      "source_sha256": "1d49409ab45e6f4328ae3a7b9aa505bc65858007f8bbc7a5f2925776b76c6d34",
+      "before_sha256": "24d4704fc53e2cffb0a4abbef0d6393b90c0defc01024dd170c94d3b9686ca19",
+      "integrated_sha256": "1d49409ab45e6f4328ae3a7b9aa505bc65858007f8bbc7a5f2925776b76c6d34",
+      "integration": "merged"
+    },
+    {
+      "path": "src/new_interest/evaluation/merge_id_token_shards.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/evaluation/merge_id_token_shards.py",
+      "source_sha256": "01fd44bd5597053270673e45aebddb7935690a05014e4c67b82eb3929035847a",
+      "before_sha256": "f640f3859e2a3eb6e83423a4169ac8e7cb8c14c1f910c1d54dcbe890feac2e72",
+      "integrated_sha256": "01fd44bd5597053270673e45aebddb7935690a05014e4c67b82eb3929035847a",
+      "integration": "merged"
+    },
+    {
+      "path": "src/new_interest/experiments/backbone_bundle.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-order/src/new_interest/experiments/backbone_bundle.py",
+      "source_sha256": "057591106a2a4ccec20060dbb0f0b23ebd9ee59fde491728007d2df28dd68d09",
+      "before_sha256": null,
+      "integrated_sha256": "057591106a2a4ccec20060dbb0f0b23ebd9ee59fde491728007d2df28dd68d09",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/experiments/backbone_four_gpu.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-order/src/new_interest/experiments/backbone_four_gpu.py",
+      "source_sha256": "fea57fd41645b3622f54c22a5aef0dfb08f20de11590661435881a9f633319a0",
+      "before_sha256": null,
+      "integrated_sha256": "fea57fd41645b3622f54c22a5aef0dfb08f20de11590661435881a9f633319a0",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/experiments/backbone_recovery.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-order/src/new_interest/experiments/backbone_recovery.py",
+      "source_sha256": "c56e9a740ea4a2452cce329e8725e0edd4a1a3dd93dde29ffc67b6defb4e8922",
+      "before_sha256": null,
+      "integrated_sha256": "c56e9a740ea4a2452cce329e8725e0edd4a1a3dd93dde29ffc67b6defb4e8922",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/experiments/backbone_scaling.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/experiments/backbone_scaling.py",
+      "source_sha256": "c62d56d0ebb0ddae09d7e6d771422cd93b30974ca2958a11db9a30d75596f152",
+      "before_sha256": null,
+      "integrated_sha256": "39d459cba6e9071087d2d6ad38c96573be39305e759daa961d419ef1baf29804",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/experiments/cir_warmup.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/experiments/cir_warmup.py",
+      "source_sha256": "ca80c1e50ac6ced690014e05b0a9be6a6fa99d5ebd6b4b7e88fe81dfa4de4d0a",
+      "integration": "merged-configurable-vocabulary-and-candidate-bindings",
+      "integrated_sha256": "ef51911fc23d8c5de7aac71fb87fe5836288f75d48fb27dd409b2b415b1569ea"
+    },
+    {
+      "path": "src/new_interest/experiments/history_length_ablation.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-length/src/new_interest/experiments/history_length_ablation.py",
+      "source_sha256": "f74081d83a563e7b52e85c7ad428a8fa3b4b50829c26496fbd0470cdfcf419e7",
+      "integration": "merged-configurable-vocabulary-and-candidate-bindings",
+      "integrated_sha256": "505e2203299603966e0a29679bfc0c12bf1cd979f1a389c04045e5553f4dcecf"
+    },
+    {
+      "path": "src/new_interest/experiments/history_order_ablation.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/history-order/src/new_interest/experiments/history_order_ablation.py",
+      "source_sha256": "ec698efd74755b337fd05aca02bfaf7238ec504f28634227dcb018d853ba552f",
+      "integration": "merged-configurable-vocabulary-and-candidate-bindings",
+      "integrated_sha256": "a61ad2d4fc637c69374cdb28b69bb865a58b047e49787b5be8ace5f54ea7de9a"
+    },
+    {
+      "path": "src/new_interest/experiments/old_new_interest.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/experiments/old_new_interest.py",
+      "source_sha256": "3907b27808799a5c54c86314eb9fd560fb2de2855d02d1134f58f409030f7911",
+      "before_sha256": null,
+      "integrated_sha256": "654df75fb19ca774d48f42b87dc8d99dad562dcc78d597f62778567996f6048b",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/experiments/old_new_interest_g4.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/experiments/old_new_interest_g4.py",
+      "source_sha256": "60ecb20a4677b7edf2ac4c4df6b4c8e584d9917c9b47d153c2ffd3d195bfd5bd",
+      "before_sha256": null,
+      "integrated_sha256": "60ecb20a4677b7edf2ac4c4df6b4c8e584d9917c9b47d153c2ffd3d195bfd5bd",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/training/audit_semantic_id_token_gradients.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/training/audit_semantic_id_token_gradients.py",
+      "source_sha256": "c1c8fe6057fc1631129c53b12f166db5d9bf254f5e6388a00c6ebdb640df01aa",
+      "before_sha256": "92181537848a1734d87865a7c7806fa096b8dafffb6c8dd0ab7495ba20230ab0",
+      "integrated_sha256": "c1c8fe6057fc1631129c53b12f166db5d9bf254f5e6388a00c6ebdb640df01aa",
+      "integration": "merged"
+    },
+    {
+      "path": "src/new_interest/training/checkpoint_persistence.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/training/checkpoint_persistence.py",
+      "source_sha256": "43162ee21a9150166375243c623908e393a80f8366c61c6420e7e12c2efb16e9",
+      "before_sha256": "283e062bc809f3eeac2b484c5f841c0de7bb9ecf815f260526751ca04f94ee2f",
+      "integrated_sha256": "d272565a079bdd0cea16e602d0cfb9b8c737d17590299330a07f235d0261c579",
+      "integration": "merged"
+    },
+    {
+      "path": "src/new_interest/training/execution_migration.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/training/execution_migration.py",
+      "source_sha256": "0e3a42281e312e65c45c3274b1e02ee8b6eb74392410a0857e6db8a95a9500c0",
+      "before_sha256": null,
+      "integrated_sha256": "0e3a42281e312e65c45c3274b1e02ee8b6eb74392410a0857e6db8a95a9500c0",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/training/execution_probe.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/training/execution_probe.py",
+      "source_sha256": "ef6e41f209114e519ef35120d04475b7a4039e4779bfb514a026d17fbebdd5be",
+      "before_sha256": null,
+      "integrated_sha256": "ef6e41f209114e519ef35120d04475b7a4039e4779bfb514a026d17fbebdd5be",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/training/global_sample_cursor.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/training/global_sample_cursor.py",
+      "source_sha256": "3da77f034a271b9dcf6e1371452c19ad286d2f53501a54df1b130c9bb99ba062",
+      "before_sha256": null,
+      "integrated_sha256": "3da77f034a271b9dcf6e1371452c19ad286d2f53501a54df1b130c9bb99ba062",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/training/old_new_execution.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/training/old_new_execution.py",
+      "source_sha256": "a9aa8a9e1bb91e978d91ccc11b0c512964701f653a1b60e98c2e0d7d7ccb5cf5",
+      "before_sha256": null,
+      "integrated_sha256": "b59b95c26f8559e25f2d42f43c1722f04b645a455884f7a1b456c137e4c09556",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/training/sft_exposure.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/training/sft_exposure.py",
+      "source_sha256": "cc39b9c894ca1b622d9276fd64b5624f211a872a163432310ede7dbb41929ae4",
+      "before_sha256": "2914945ca5d63706dbd7336b9e4ff074ed35f5b716edb0d1d0e939c6703afcd9",
+      "integrated_sha256": "cc39b9c894ca1b622d9276fd64b5624f211a872a163432310ede7dbb41929ae4",
+      "integration": "merged"
+    },
+    {
+      "path": "src/new_interest/training/sft_state_audit.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/training/sft_state_audit.py",
+      "source_sha256": "984a2419b7f402ac0d0175bf1f45b924752fc15e3737d145c61b3f06a1a16be8",
+      "before_sha256": null,
+      "integrated_sha256": "984a2419b7f402ac0d0175bf1f45b924752fc15e3737d145c61b3f06a1a16be8",
+      "integration": "restored"
+    },
+    {
+      "path": "src/new_interest/training/train_sft.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/training/train_sft.py",
+      "source_sha256": "9b305617df104b3cc15ea16d569443bce2623bb59d2530232c8ff549216b1073",
+      "before_sha256": "be19c0bbe450c54d975f76ab4dbf8d4ab4253a307d452305d136d19f5b3e92f1",
+      "integrated_sha256": "a9fd71ae87b491704d22e71eb56b4dbd835f8010247398bebddc97140cd0de78",
+      "integration": "merged"
+    },
+    {
+      "path": "src/new_interest/training/verify_semantic_id_token_adapter.py",
+      "source": "artifacts/handoff/CrossInterest-handoff-20261009/experiments/joint-alignment/src/new_interest/training/verify_semantic_id_token_adapter.py",
+      "source_sha256": "481f98c80e9454d42d4526dc707a46dcbbe43e2e0580bc6406872b6bbcee05ef",
+      "before_sha256": "f6e7d4c6a14dac48d79ee70baca1ab91eb05915f8427f906155684ed7b5bd2f7",
+      "integrated_sha256": "481f98c80e9454d42d4526dc707a46dcbbe43e2e0580bc6406872b6bbcee05ef",
+      "integration": "merged"
+    }
+  ],
+  "handoff_archive": {
+    "path": "artifacts/handoff/CrossInterest-handoff-20261009.tar.gz",
+    "sha256": "47167a27719bd6c1ef6284170d44f2d192d49c50ce78c4c32825d70e5322a075",
+    "verified_frozen_file_hashes": 1843,
+    "included_in_git": false
+  }
+}

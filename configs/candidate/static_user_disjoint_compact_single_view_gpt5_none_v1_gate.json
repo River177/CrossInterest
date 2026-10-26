@@ -1,0 +1,96 @@
+{
+  "rule_version": "static-candidate-pilot-gate-v1",
+  "created_at": "2026-08-31T08:09:24.298982+00:00",
+  "passed": true,
+  "scope": "condition_subset_with_user_waiver",
+  "selected_condition_ids": [
+    "gpt5_none_behavior_uniform",
+    "gpt5_none_interest_uniform"
+  ],
+  "manifest_path": "configs/candidate/static_user_disjoint_compact_single_view_gpt5_v1.json",
+  "manifest_sha256": "975e15ce1f16f7e7ed5b1fe6b15a66c8c3387203599ec6599e5f90ef5b5d82ba",
+  "condition_count": 2,
+  "conditions": {
+    "gpt5_none_behavior_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.08006421171818918,
+      "candidate_valid_rate": 0.999,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_none_behavior_uniform/acceptance.json",
+          "sha256": "4493c97b709fb825eba161739e65db0bfd6e9e2c4de8f8479ea57c1406ead0da"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_none_behavior_uniform/experiment_identity.json",
+          "sha256": "df6cf8fa14aa3000d02f6433c89e57b5bcabb23d0cc3cff57e399742852fd492"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_none_behavior_uniform/metrics.json",
+          "sha256": "3fafd8b8f949aceede17977fcb135880ebab9cb290532be9ee51249749c63846"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_none_behavior_uniform/predictions.parquet",
+          "sha256": "562833a4d56b8d6343961dfda95afc6497c75d927902397dc142bbb3c92a0817"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_none_behavior_uniform/resolved_config.json",
+          "sha256": "8adf799b409e3970de915c91d243c2f05b0685ef45da00036ed206e228e44fb4"
+        }
+      }
+    },
+    "gpt5_none_interest_uniform": {
+      "passed": true,
+      "acceptance_passed": false,
+      "user_waiver": {
+        "recorded_at": "2026-08-31T08:09:24.302819+00:00",
+        "reason": "User explicitly authorized full launch after being informed that 30/1000 GPT-5 None Interest outputs were outside the candidate set (candidate_valid_rate=0.97).",
+        "failed_acceptance_preserved": true,
+        "candidate_valid_rate": 0.97,
+        "candidate_invalid_count": 30
+      },
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.17678183517196308,
+      "candidate_valid_rate": 0.97,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_none_interest_uniform/acceptance.json",
+          "sha256": "8f1918c39eb7deb9b137b6dd2e5b58cae8a2091373a6fa08b5a9bd27d37a8ff3"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_none_interest_uniform/experiment_identity.json",
+          "sha256": "f043b9125a1fbab2e1c9c0864e1f71a2153e644f8d1fe228e53671bd5cdb84a8"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_none_interest_uniform/metrics.json",
+          "sha256": "168326e16b0cfd2c342d3fdc015dbd061e49758fd75b2c5897949a1f7eb19d70"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_none_interest_uniform/predictions.parquet",
+          "sha256": "4a94f5f493b7748640c29584d404dfbe34f67f034b12ee83b89640af0fe7e245"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/gpt5/models/pilot/gpt5_none_interest_uniform/resolved_config.json",
+          "sha256": "f2fdd97d6caf07366cb4029603b87b345d3a2a333ba426911d7aa5379b967ab6"
+        }
+      }
+    }
+  },
+  "user_waivers": {
+    "gpt5_none_interest_uniform": {
+      "recorded_at": "2026-08-31T08:09:24.302819+00:00",
+      "reason": "User explicitly authorized full launch after being informed that 30/1000 GPT-5 None Interest outputs were outside the candidate set (candidate_valid_rate=0.97).",
+      "failed_acceptance_preserved": true,
+      "candidate_valid_rate": 0.97,
+      "candidate_invalid_count": 30
+    }
+  }
+}

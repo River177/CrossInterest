@@ -1,0 +1,322 @@
+{
+  "created_at_utc": "2026-09-15T06:59:35.263285+00:00",
+  "account": "https://csnewsandfeeds4150361735.blob.core.windows.net",
+  "container": "amulet",
+  "files": [
+    {
+      "path": "artifacts/mind-short-think-grpo-20260914/bundle-preflight-v1/inputs/short_sft_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48252936,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-grpo-20260914/bundle-engine-v2/inputs/short_sft_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48344367,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-grpo-20260914/bundle-full-HL-v1/inputs/short_sft_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48532269,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-grpo-20260914/bundle-full-E-v1/inputs/short_sft_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48420835,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-grpo-20260914/bundle-engine-recovery-v1/inputs/short_sft_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48400056,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-grpo-20260914/bundle-preflight-v3/inputs/short_sft_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48297203,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-grpo-20260914/bundle-preflight-v2/inputs/short_sft_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48262369,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-grpo-20260914/bundle-engine-v1/inputs/short_sft_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48311646,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-grpo-20260914/bundle-reload-diagnostic-v1/inputs/short_sft_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48368907,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-grpo-20260914/bundle-full-H-v1/inputs/short_sft_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48420704,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/readback-smoke-v2/ddp/final_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48041764,
+      "nlink": 1,
+      "mtime_ns": 1789297736000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210732000.00360-3be2d836-c0b6/ddp/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF1187678E582C",
+        "sha256": "6064c3ae26ce4c2d02eaf2fe9ad55339a7fd5484b4d025dee57e45e7a7477019"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/readback-smoke-v2/single/final_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48041827,
+      "nlink": 1,
+      "mtime_ns": 1789297608000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210732000.00360-3be2d836-c0b6/single/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF11871B0C2D21",
+        "sha256": "2220cdc58434fa72e432bd0eb636ed1d9cb7c8d0c026d3072e79bf1115ae35d5"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/acceptance/full-v1-metrics-readback/id_token_predictions.parquet",
+      "bytes": 11332318,
+      "device": 16777230,
+      "inode": 48146487,
+      "nlink": 1,
+      "mtime_ns": 1789320948179948372,
+      "blocks": 22136,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/real_eval/merged/id_token_predictions.parquet",
+        "bytes": 11332318,
+        "etag": "0x8DF11BA1A6896AA",
+        "sha256": "65be5c1bb5a0052f1ad70ae42628544ddd9fba964ca2b0f6ea05bb8eeac183f2"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/download-smoke-v2/results.tar.gz",
+      "bytes": 134408140,
+      "device": 16777230,
+      "inode": 48040004,
+      "nlink": 1,
+      "mtime_ns": 1789299165206681884,
+      "blocks": 262520,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210732000.00360-3be2d836-c0b6/results.tar.gz",
+        "bytes": 134408140,
+        "etag": "0x8DF1187EFC5B54B",
+        "sha256": "4ca15791ad6febca47fbcf311c69c2be6fb33aa19d95dfa289625dcd67a3d3a8"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/download-full-v1/results.tar.gz",
+      "bytes": 111665035,
+      "device": 16777230,
+      "inode": 48143896,
+      "nlink": 1,
+      "mtime_ns": 1789320709297287582,
+      "blocks": 218096,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/results.tar.gz",
+        "bytes": 111665035,
+        "etag": "0x8DF11BA29D91677",
+        "sha256": "60993f5b767daf4bbb70c666e24c0a28791424584f6d73624c9eaf3755645a0c"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/readback-full-v1/real_eval/shard-0/id_token_predictions.parquet",
+      "bytes": 3105536,
+      "device": 16777230,
+      "inode": 48144434,
+      "nlink": 1,
+      "mtime_ns": 1789318923000000000,
+      "blocks": 6072,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/real_eval/shard-0/id_token_predictions.parquet",
+        "bytes": 3105536,
+        "etag": "0x8DF11B8BBC52B2D",
+        "sha256": "6ca278ec21c74a24d75352bf91a2d41068213de0c3f99cfe1d86261195ae6f56"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/readback-full-v1/real_eval/shard-1/id_token_predictions.parquet",
+      "bytes": 3120661,
+      "device": 16777230,
+      "inode": 48144932,
+      "nlink": 1,
+      "mtime_ns": 1789319491000000000,
+      "blocks": 6096,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/real_eval/shard-1/id_token_predictions.parquet",
+        "bytes": 3120661,
+        "etag": "0x8DF11BA0E44630E",
+        "sha256": "ffdf63d98cba23d0f5c98249dbbb54fc70c6f294207a7fd7ba4e626d6c1fe6b5"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/readback-full-v1/real_eval/shard-3/id_token_predictions.parquet",
+      "bytes": 3130709,
+      "device": 16777230,
+      "inode": 48145926,
+      "nlink": 1,
+      "mtime_ns": 1789319374000000000,
+      "blocks": 6120,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/real_eval/shard-3/id_token_predictions.parquet",
+        "bytes": 3130709,
+        "etag": "0x8DF11B9C8FFBC72",
+        "sha256": "fb7bae52bd617ce634a198422ce6148026d4872e8de1065bfd21b11992b4df26"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/readback-full-v1/real_eval/shard-2/id_token_predictions.parquet",
+      "bytes": 3099797,
+      "device": 16777230,
+      "inode": 48145429,
+      "nlink": 1,
+      "mtime_ns": 1789318834000000000,
+      "blocks": 6056,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/real_eval/shard-2/id_token_predictions.parquet",
+        "bytes": 3099797,
+        "etag": "0x8DF11B88710D3AC",
+        "sha256": "8d026ba0778770f3c472d9fe155ecee51c391dc9732475877d2628abc20246ba"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/readback-full-v1/real_eval/merged/id_token_predictions.parquet",
+      "bytes": 11332318,
+      "device": 16777230,
+      "inode": 48144430,
+      "nlink": 1,
+      "mtime_ns": 1789319511000000000,
+      "blocks": 22136,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/real_eval/merged/id_token_predictions.parquet",
+        "bytes": 11332318,
+        "etag": "0x8DF11BA1A6896AA",
+        "sha256": "65be5c1bb5a0052f1ad70ae42628544ddd9fba964ca2b0f6ea05bb8eeac183f2"
+      }
+    },
+    {
+      "path": "artifacts/mind-short-think-sft-20260913/readback-full-v1/sft/final_adapter/adapter_model.safetensors",
+      "bytes": 68212000,
+      "device": 16777230,
+      "inode": 48146437,
+      "nlink": 1,
+      "mtime_ns": 1789300600000000000,
+      "blocks": 133232,
+      "remote": {
+        "name": "projects/sft4safety/amlt-results/7210729459.34046-264ba751-e5ec/sft/final_adapter/adapter_model.safetensors",
+        "bytes": 68212000,
+        "etag": "0x8DF118E12673DE0",
+        "sha256": "bc847408fe401920904a3cd8faad8a71393cce378ed1b06fe5ad6674d03e581d"
+      }
+    }
+  ]
+}

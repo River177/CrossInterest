@@ -497,3 +497,33 @@ def test_rejects_target_in_history_and_teacher_identity_mismatch(
             tmp_path / "mismatch-output",
             sizes=(1,),
         )
+
+
+def test_rejects_changed_v2_student_prompt(
+    tmp_path: Path,
+) -> None:
+    source_dir = tmp_path / "sft"
+    rows = _write_source_fixture(
+        source_dir,
+        targets=("Music",),
+        histories=(("Sports", "Finance"),),
+    )
+    teacher_path = tmp_path / "teacher.parquet"
+    teacher_rows = []
+    for task_type in ("behavior_only", "interest_only"):
+        row = _teacher_row(
+            rows[task_type][0],
+            "A valid history-grounded rationale.",
+        )
+        row["new_student_prompt"] = "Changed Prompt"
+        row["strict_valid"] = True
+        teacher_rows.append(row)
+    pq.write_table(pa.Table.from_pylist(teacher_rows), teacher_path)
+
+    with pytest.raises(ValueError, match="Student Prompt"):
+        build_cot_sft_datasets(
+            source_dir,
+            teacher_path,
+            tmp_path / "output",
+            sizes=(1,),
+        )

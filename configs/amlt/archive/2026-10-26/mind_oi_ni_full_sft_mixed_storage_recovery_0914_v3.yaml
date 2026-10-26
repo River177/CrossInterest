@@ -1,0 +1,31 @@
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+  - nvidia-smi
+target:
+  service: singularity
+  name: Recall
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+description: Storage-only recovery of existing Mixed from verified parent manifestCP400.
+  Journal locally, publish at checkpoints outside NCCL waits. Same full-vocabulary
+  native SFT,38698rows,3epochs,3630 total updates,seed42. Recall Premium4xA100. Existing
+  Meta remains in v2; no new experimental condition.
+code:
+  local_dir: $CONFIG_DIR/../../../../artifacts/mind-oi-ni-full-sft-20260914/bundle-v3-storage-mixed
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+  - .pytest_cache/
+jobs:
+- name: qwen35-2b-mixed-full-sft
+  sku: 80G4-A100
+  sla_tier: Premium
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash scripts/amlt/sft/run_oi_ni_full_sft.sh mixed

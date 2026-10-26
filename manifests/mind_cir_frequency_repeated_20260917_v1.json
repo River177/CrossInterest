@@ -1,0 +1,93 @@
+{
+  "status": "accepted",
+  "artifact_root": "artifacts/mind-cir-frequency-20260917/repeated",
+  "active_run": {
+    "experiment": "mind-cir-repeated-ni3-0917-v1",
+    "job": "qwen35-2b-cir-repeated-ni3",
+    "status": "completed",
+    "bundle": "artifacts/mind-cir-frequency-20260917/repeated/bundle-v1",
+    "bundle_sha256": "63aeca55a0b10a24b80260ca21a0122b2a985d81b7dd6f70041ba93bd0c619ce",
+    "yaml": "configs/amlt/mind_cir_frequency_repeated_0917_v1.yaml",
+    "backend_id": "maroon_lock_mxfmmxtqnp",
+    "results_prefix": "projects/sft4safety/amlt-results/7210393502.04729-5636ba85-6192",
+    "code_prefix": "projects/sft4safety/amlt-code/cedf4c51a62bb79d62806305c1007bd16507b815b2a16d006b217eb9998ed9af",
+    "url": "https://aka.ms/amlt?q=k2ozt",
+    "submission_log": "artifacts/mind-cir-frequency-20260917/repeated/submission.log",
+    "native_status": "Completed",
+    "phase": "accepted",
+    "latest_observation": "artifacts/mind-cir-frequency-20260917/repeated/final_acceptance.json",
+    "latest_logged_optimizer_step": 2025,
+    "last_committed_checkpoint_step": 2025
+  },
+  "training_schedule": {
+    "cir_epochs": 1,
+    "ni_epochs": 3,
+    "cir_optimizer_steps": 309,
+    "ni_optimizer_steps": 2025
+  },
+  "frequency_arm": "repeated",
+  "paired_users": 9883,
+  "class_balancing": false,
+  "authorization": {
+    "scope": "Two paired frequency conditions, same users, random category within frequency pool, report distribution differences",
+    "seed": 42
+  },
+  "platform": {
+    "target": "Recall",
+    "sla": "Standard",
+    "sku": "80G4-A100"
+  },
+  "remote_storage": {
+    "account": "csnewsandfeeds4150361735",
+    "container": "amulet",
+    "large_artifacts": "remote_only",
+    "results_prefix": "projects/sft4safety/amlt-results/7210393502.04729-5636ba85-6192"
+  },
+  "checks": {
+    "preflight": "artifacts/mind-cir-frequency-20260917/repeated/bundle-v1/manifests/frequency_preflight.json",
+    "focused_tests": "35 passed",
+    "full_tests": "Collection blocked: missing local peft in unrelated tests/test_semantic_id_rollout_export.py",
+    "actual_upload_audit": "artifacts/mind-cir-frequency-20260917/upload_and_config_audit.json",
+    "final_collector": "scripts/analysis/accept_cir_final.py --manifest manifests/mind_cir_frequency_repeated_20260917_v1.json",
+    "submission_status_receipt": "artifacts/mind-cir-frequency-20260917/repeated/submitted_status.txt"
+  },
+  "report": "docs/experiments/2026-09-17/mind_cir_frequency_repeated.md",
+  "observed_at_utc": "2026-09-18T00:50:14.186405+00:00",
+  "stage_acceptance": {
+    "cir": {
+      "adapter_sha256": "7b2f62c775326734fd5816b26e75a89658ea33ab3db1be53f6c66dcb701a77ed",
+      "optimizer_steps": 309,
+      "samples": 9883,
+      "exact_reload": true,
+      "ni_handoff_verified": true
+    },
+    "ni": {
+      "optimizer_steps": 2025,
+      "samples": 21600,
+      "epochs": 3,
+      "presentations": 64800,
+      "exact_reload": true,
+      "adapter_sha256": "1de972b01b992d1aaaa4030bf8b387747b3d871d78bdeb9b6d5c64d89ec729d5"
+    }
+  },
+  "final_acceptance": "artifacts/mind-cir-frequency-20260917/repeated/final_acceptance.json",
+  "final_acceptance_sha256": "ff0632e7d9196c90aec1fbdc95f0f21b24b3dc7c6828399ba1db884298a87a6f",
+  "evaluation_acceptance": {
+    "records": 31392,
+    "supported_classes": 104,
+    "target_occurrences": 37728,
+    "metrics": {
+      "interest_macro_recall_at_1": 0.03373525074082838,
+      "interest_macro_ndcg_at_1": 0.03373525074082838,
+      "interest_macro_recall_at_5": 0.1298841510300996,
+      "interest_macro_ndcg_at_5": 0.08218769002662549,
+      "interest_macro_recall_at_10": 0.21469242676409783,
+      "interest_macro_ndcg_at_10": 0.10922640830744382,
+      "interest_macro_recall_at_20": 0.3452150655782692,
+      "interest_macro_ndcg_at_20": 0.14187354449382247
+    },
+    "prediction_sha256": "b7653d2b11d1cc3c37e2c73574b83a7fb6edce9dd32f68dba782df27c43cb8db",
+    "metrics_sha256": "255ad8e614de62d5d6828799f0bab3311e88baee9ca593e16aab53db91e23154",
+    "evaluation_identity": "a3e233bdb4807876e27de3ad7e40e78376900127d48ceef3a7810dc6a5c95556"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "base_url": "http://127.0.0.1:4141/v1",
+  "api_key_env": "OPENAI_API_KEY",
+  "model": "gemini-3.6-flash",
+  "data_file": "data/training/candidate_selection_k10/interest_only/dev_10k_expanded.parquet",
+  "output_dir": "artifacts/candidate-selection-k10/gemini36_flash_interest",
+  "expected_samples": 12164,
+  "pilot_size": null,
+  "pilot_seed": 20260808,
+  "concurrency": 8,
+  "checkpoint_size": 128,
+  "max_attempts": 6,
+  "retry_failed_on_resume": true,
+  "request_timeout_seconds": 120,
+  "max_tokens": 128,
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "seed": 20260808,
+  "reasoning_effort": "minimal",
+  "preflight": true,
+  "minimum_success_rate": 0.99
+}

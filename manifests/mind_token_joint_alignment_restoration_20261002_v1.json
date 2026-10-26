@@ -1,0 +1,73 @@
+{
+  "storage_account": "csnewsandfeeds4150361735",
+  "container": "amulet",
+  "large_artifacts_policy": "Remote only; no automatic redownload of pruned artifacts.",
+  "arms": {
+    "baseline": {
+      "results_prefix": "projects/sft4safety/amlt-results/7209271563.63494-5f26c7ff-1961",
+      "bundle_sha256": "c91f6d37fa58f9d0a43cc127a6b6306aeef18772f4ef66cdc466ee1f5dd10d04",
+      "acceptance_path": "artifacts/mind-history-token-20260930/token/final_acceptance.json",
+      "acceptance_sha256": "66ab4780b31f1e99eba2af6a784c27e710b36c7dda0363740870a8de4680d46e",
+      "metrics": {
+        "interest_macro_recall_at_1": 0.029324845040791418,
+        "interest_macro_ndcg_at_1": 0.029324845040791418,
+        "interest_macro_recall_at_5": 0.12265817848847936,
+        "interest_macro_ndcg_at_5": 0.07558709617445115,
+        "interest_macro_recall_at_10": 0.19873016413306607,
+        "interest_macro_ndcg_at_10": 0.10007434126863263,
+        "interest_macro_recall_at_20": 0.3346785339597168,
+        "interest_macro_ndcg_at_20": 0.1342790877231237
+      },
+      "prediction_sha256": "81b8eede14eda5b88b39e7da50100be61cfc5bcdb3983af0f98d5817cfe0ef18",
+      "metrics_sha256": "76ec6b417ea55b67ca54c195dcfd22e1c3a1b7ae44032f282b470f96aa5c84ff",
+      "evaluation_identity": "714f17de7f1f23481411895f3db5b2ba5fe0240b0440de99394979f565ec8b9a",
+      "complete_sha256": "5ddb9b9f46a3759794d03d591f290b5afe46a3b5eb940265c75951cfa41eaab6",
+      "optimizer_steps": 2025,
+      "presentations_by_task": {
+        "new_interest": 64800
+      },
+      "checkpoint_relative": "formal/checkpoints-ni/checkpoint-2025",
+      "final_adapter_relative": "formal/ni/final_adapter",
+      "predictions_relative": "formal/real_eval/merged/id_token_predictions.parquet"
+    },
+    "joint": {
+      "results_prefix": "projects/sft4safety/amlt-results/7209191952.16969-a21aaef8-2d05",
+      "bundle_sha256": "cf28f07e4c98904558c63fdc2b9b38efd376b247afa1a82b21eeab96451d6366",
+      "acceptance_path": "artifacts/mind-token-joint-alignment-20261001/final_acceptance.json",
+      "acceptance_sha256": "c15ace46e83887bb490a2337482ce14efcb224eacd7a561a45bcab4a96eb2f97",
+      "metrics": {
+        "interest_macro_recall_at_1": 0.02991884433293331,
+        "interest_macro_ndcg_at_1": 0.02991884433293331,
+        "interest_macro_recall_at_5": 0.1227450909135229,
+        "interest_macro_ndcg_at_5": 0.07685213785835292,
+        "interest_macro_recall_at_10": 0.20088663505687376,
+        "interest_macro_ndcg_at_10": 0.10185586718275993,
+        "interest_macro_recall_at_20": 0.33382038752343135,
+        "interest_macro_ndcg_at_20": 0.1352292095760976
+      },
+      "prediction_sha256": "9c439cb197134f7b1e9a0916ab4777995634b48b13ff8bf4ab2cbb43b2334d92",
+      "metrics_sha256": "06cb0c28c60cd16d52f22ccad3e081710da1b11f7018a80b6dc1b76aa770bd8e",
+      "evaluation_identity": "7c713da6fb06b334d07f4a160978f027ce95371f6b6fd16ec89e3cdd609e10d0",
+      "complete_sha256": "ca1572a4a006f905ac67ec46240329730b8b1e9fad683951351cf48b623569ad",
+      "optimizer_steps": 2262,
+      "presentations_by_task": {
+        "new_interest": 64800,
+        "interest_name_to_id": 3750,
+        "interest_id_to_name": 3750
+      },
+      "checkpoint_relative": "formal/checkpoints-ni/checkpoint-2262",
+      "final_adapter_relative": "formal/ni/final_adapter",
+      "predictions_relative": "formal/real_eval/merged/id_token_predictions.parquet"
+    }
+  },
+  "analysis": {
+    "experiment": "mind-token125-joint-analysis-1002-v1",
+    "job": "token125-joint-paired-analysis",
+    "yaml": "configs/amlt/mind_token_joint_analysis_1002_v1.yaml",
+    "bundle": "artifacts/mind-token-joint-alignment-20261001/analysis-bundle-v1",
+    "payload_sha256": "eaa43995060caf2795a67acf3f3dcae547f984ca848537ca982e82376e9919f1",
+    "backend_id": "frank_diamond_qgqmggjsjy",
+    "results_prefix": "projects/sft4safety/amlt-results/7209118737.00693-efa2f3a6-1f37"
+  },
+  "comparison_sha256": "2a39773601b03e8f74cd7ced8b7d7023b8bf2b17f00aa4aaf60f33480e8311fb"
+}

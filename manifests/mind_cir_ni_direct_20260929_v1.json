@@ -1,0 +1,95 @@
+{
+  "status": "data_ready_independently_audited",
+  "scope": "data_feasibility_and_construction_only",
+  "dataset_root": "data/training/mind_cir_ni_direct_20260929_v1",
+  "report": "docs/experiments/2026-09-29/mind_cir_ni_direct_data.md",
+  "arms": {
+    "cir_as_ni": "data/training/mind_cir_ni_direct_20260929_v1/cir_as_ni.parquet",
+    "original_ni_paired": "data/training/mind_cir_ni_direct_20260929_v1/original_ni_paired.parquet"
+  },
+  "paired_rows": 17271,
+  "paired_users": 17271,
+  "classes_each": 108,
+  "pairing_key": "source_sample_id; user_id/impression_id/timestamp verified",
+  "source_CIR_rule": "reuse all original 17271 CIR views; erase target category in H50; retain all remaining events",
+  "same_prompt": "exact frozen original NI template",
+  "same_training_task": "new_interest",
+  "label_origins": {
+    "cir_as_ni": "synthetic erased historical interest, not a future-click label",
+    "original_ni_paired": "unchanged observed future new-interest target"
+  },
+  "following_NI_finetuning": false,
+  "class_rebalancing": false,
+  "length_matching": false,
+  "training_submitted": false,
+  "training_epochs": null,
+  "files": {
+    "data/training/mind_cir_ni_direct_20260929_v1/dev_full_grouped.parquet": "c05b20033ce0d1a0c2d4b7bb97ca0cd6b7cffb7f198a7265cce9e54046b665fd",
+    "data/training/mind_cir_ni_direct_20260929_v1/metadata.json": "3d65dadfa1f7f0b966018a55ca40bbe8eaa8d2b54c1d8e008b0d660f0053b3d9",
+    "data/training/mind_cir_ni_direct_20260929_v1/statistics.json": "bd50ee1cf3432c426f17b4f03a4cff32e5ef5f40a9466e1af0e4c5df9399c588",
+    "data/training/mind_cir_ni_direct_20260929_v1/pairs.parquet": "3644c165c84411f024f9a77de95a6700eb022af9e3f7177531f8d7cbcf14aa6e",
+    "data/training/mind_cir_ni_direct_20260929_v1/cir_as_ni.parquet": "c9c58c87a1823e92545f7ee0b841f660c75ece5de899d7ee7a0f42423e567270",
+    "data/training/mind_cir_ni_direct_20260929_v1/original_ni_paired.parquet": "beec161c74ce0f09792a663ee5c71f18aa5a050c3d86de04bb5aea9867ab1657",
+    "data/training/mind_cir_ni_direct_20260929_v1/interest_token_mapping.parquet": "45397451ac2ae2e64d8156b2b47be3f454cc309a8d30a83bc23c2d3267653a0a",
+    "artifacts/mind-cir-ni-direct-20260929/independent_readback.json": "681145866f53fb8afa009bad47c48c6fe313f95a15b5462e95d9c5490d7f0866",
+    "artifacts/mind-cir-ni-direct-20260929/token_audit.json": "df62fff025233ed8b6c64ec3f29b06413de9d4e6e9fe7db64066b0e907564488",
+    "artifacts/mind-cir-ni-direct-20260929/audit_data.py": "5b436a6e762686859fce3c583d819bfeeb5326e63d5a255918606a7371414da9"
+  },
+  "code_sha256": {
+    "src/new_interest/data/build_cir_ni_direct.py": "c94e4cb4702f8d329dec03b6268bceb98258c75b0a884b4934b7ac66b0d06ae2",
+    "src/new_interest/data/build_cir_dataset.py": "0b17cc7da5cb853d8a0023852637dab85d05365494824a79ace0505acb2b52c2",
+    "src/new_interest/data/build_cir_ni_prompt_dataset.py": "c6ceaaf2091bf89417154e7fbcd2db6ecffbde842e977205c963c421fa2ec607",
+    "src/new_interest/infrastructure/paths.py": "b984358197ee95a95ff14d30e28b772d48ce132dbc88072be9d5f16efa3b7872",
+    "src/new_interest/training/sft_data.py": "545664c632a517ec5142a96c40e6fb7d85106176d7ae10d8bc17c501159320b3",
+    "src/new_interest/training/semantic_id_tokens.py": "4bd86eb351051ec3e52bae6bb22a224506c55fa3ebad6151a01672dad2a32fe9",
+    "tests/test_cir_ni_direct.py": "04357746f3c4c10b1e2bf24a6665c3229d63f43f7efbba9aa76bb118744b2f10"
+  },
+  "tests": "18 passed: new direct pairing, original CIR and NI-prompt builder tests",
+  "token_audit": {
+    "status": "passed",
+    "tokenizer_revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+    "tokenizer_files": {
+      "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "tokenizer_config.json": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c",
+      "chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    },
+    "enable_thinking": false,
+    "max_seq_length": 2048,
+    "truncation": false,
+    "arms": {
+      "cir_as_ni": {
+        "rows": 17271,
+        "sum_input_tokens": 11365525,
+        "mean_input_tokens": 658.069885935962,
+        "max_tokens": 1532,
+        "min_tokens": 185,
+        "supervised_tokens_counts": {
+          "3": 17271
+        },
+        "over_2048": 0,
+        "parquet_sha256": "c9c58c87a1823e92545f7ee0b841f660c75ece5de899d7ee7a0f42423e567270"
+      },
+      "original_ni_paired": {
+        "rows": 17271,
+        "sum_input_tokens": 12085738,
+        "mean_input_tokens": 699.7705981124428,
+        "max_tokens": 1564,
+        "min_tokens": 212,
+        "supervised_tokens_counts": {
+          "3": 17271
+        },
+        "over_2048": 0,
+        "parquet_sha256": "beec161c74ce0f09792a663ee5c71f18aa5a050c3d86de04bb5aea9867ab1657"
+      }
+    },
+    "token_ratio_cir_to_original_ni": 0.940408024731299
+  },
+  "interpretation_limits": [
+    "Label distributions differ: CIR 3..1056 per class, original NI subset 91..183.",
+    "Input history contents and lengths differ; equal update count is not equal token compute.",
+    "Historical CIR target appears once in H50 for 12401/17271 pairs; cleaner labels not assumed.",
+    "The comparison tests standalone supervision construction and transfer, not isolated label-noise causality."
+  ]
+}

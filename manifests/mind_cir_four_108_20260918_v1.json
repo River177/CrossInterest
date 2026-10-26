@@ -1,0 +1,396 @@
+{
+  "status": "all_four_accepted",
+  "observed_at_utc": "2026-09-20T01:40:21.773111+00:00",
+  "experiment": "mind-cir-four-108-0918-v1",
+  "artifact_root": "artifacts/mind-cir-four-20260918",
+  "bundle": "artifacts/mind-cir-four-20260918/bundle-v1",
+  "bundle_sha256": "66b6c9f13013ef2dbfe73e294dd4763b51716e4185454651bc3342d1e370dc80",
+  "yaml": "configs/amlt/mind_cir_four_conditions_full_0918_v1.yaml",
+  "submission_log": "artifacts/mind-cir-four-20260918/submission.log",
+  "conditions": {
+    "cir5_ni3": {
+      "method": "two_stage",
+      "cir_epochs": 5,
+      "ni_epochs": 3,
+      "steps": [
+        2700,
+        2025
+      ],
+      "presentations": [
+        86355,
+        64800
+      ],
+      "job_mode": "staged",
+      "status": "accepted",
+      "output_subdir": "conditions/cir5_ni3",
+      "stage_keys": [
+        "cir5",
+        "ni3"
+      ],
+      "acceptance": "artifacts/mind-cir-four-20260918/acceptance/cir5_ni3.json",
+      "acceptance_sha256": "eba2e01948cb9ab1f62a7b8259e1409e394bfcb101c8950df0a0e9e8eb6d8228"
+    },
+    "cir5_ni5": {
+      "method": "two_stage",
+      "cir_epochs": 5,
+      "ni_epochs": 5,
+      "steps": [
+        2700,
+        3375
+      ],
+      "presentations": [
+        86355,
+        108000
+      ],
+      "job_mode": "staged",
+      "status": "accepted",
+      "output_subdir": "conditions/cir5_ni5",
+      "stage_keys": [
+        "cir5",
+        "ni5"
+      ],
+      "acceptance": "artifacts/mind-cir-four-20260918/acceptance/cir5_ni5.json",
+      "acceptance_sha256": "8a1f434d44516e4cd46783416197c67584ac72fba9a4643b2d51e9803f7c0447"
+    },
+    "mixed3": {
+      "method": "mixed",
+      "epochs": 3,
+      "steps": [
+        3645
+      ],
+      "presentations": [
+        116613
+      ],
+      "by_task_presentations": {
+        "cross_interest_reconstruction": 51813,
+        "new_interest": 64800
+      },
+      "job_mode": "mixed3",
+      "status": "accepted",
+      "output_subdir": "conditions/mixed3",
+      "stage_keys": [
+        "mixed3"
+      ],
+      "acceptance": "artifacts/mind-cir-four-20260918/acceptance/mixed3.json",
+      "acceptance_sha256": "1ddec8e73ea9d81a62e32613b3ccda3e69c444b505ab9348ca717e24f628f415"
+    },
+    "mixed5": {
+      "method": "mixed",
+      "epochs": 5,
+      "steps": [
+        6075
+      ],
+      "presentations": [
+        194355
+      ],
+      "by_task_presentations": {
+        "cross_interest_reconstruction": 86355,
+        "new_interest": 108000
+      },
+      "job_mode": "mixed5",
+      "status": "accepted",
+      "output_subdir": "conditions/mixed5",
+      "stage_keys": [
+        "mixed5"
+      ],
+      "acceptance": "artifacts/mind-cir-four-20260918/acceptance/mixed5.json",
+      "acceptance_sha256": "4b8fceaeb5301e69530831674b1df69b97091d672d90595d057d79ca35664f87"
+    }
+  },
+  "jobs": {
+    "staged": {
+      "job": "recover-staged-qwen35-2b-cir5-ni3-ni5",
+      "mode": "staged",
+      "status": "completed",
+      "stage_acceptance": {
+        "cir5": {
+          "steps": 2700,
+          "epochs": 5,
+          "samples": 17271,
+          "presentations": 86355,
+          "parent_adapter_sha256": null,
+          "adapter_sha256": "1201a6e750cf65ca57940613df177a8caab14b594827f4496f84c7643f283df9",
+          "initial_state_sha256": "f924e8c76d9d28be55b8795920ca18811345dfde3b81ded85d5c039615a0510e",
+          "exact_reload": true
+        },
+        "ni3": {
+          "steps": 2025,
+          "epochs": 3,
+          "samples": 21600,
+          "presentations": 64800,
+          "parent_adapter_sha256": "1201a6e750cf65ca57940613df177a8caab14b594827f4496f84c7643f283df9",
+          "adapter_sha256": "9f171a3d4fd984586e7ebcb230fe88558d3201c3ae3f4e480269fd1edda2e306",
+          "initial_state_sha256": "dc57ec586aef1bf6fcc573ffbbc5fc5e441e551b69e7ce3b4685b7ea828e6e17",
+          "exact_reload": true
+        },
+        "ni5": {
+          "steps": 3375,
+          "epochs": 5,
+          "samples": 21600,
+          "presentations": 108000,
+          "parent_adapter_sha256": "1201a6e750cf65ca57940613df177a8caab14b594827f4496f84c7643f283df9",
+          "adapter_sha256": "bb1b086086d73a9b83a2bddce599b190584d56882449fb78dbb0cb98a8aeefe4",
+          "initial_state_sha256": "dc57ec586aef1bf6fcc573ffbbc5fc5e441e551b69e7ce3b4685b7ea828e6e17",
+          "exact_reload": true
+        }
+      },
+      "backend_id": "teal_rail_56hhgsgcnp",
+      "results_prefix": "projects/sft4safety/amlt-results/7210244599.48462-16575cc7-74a3",
+      "code_prefix": "projects/sft4safety/amlt-code/223d473149bb41bde9e04d93eb050c93746db7866a4c74241b25d07ed995aab5",
+      "url": "https://aka.ms/amlt?q=k20mh",
+      "phase": "all_conditions_accepted",
+      "native_status": "Completed",
+      "latest_observation": "artifacts/mind-cir-four-20260918/progress/20260920T0140Z/staged/receipt.json",
+      "observed_at_utc": "2026-09-20T01:40:21.773111+00:00",
+      "latest_logged_step": 3375,
+      "last_committed_checkpoint_step": 3375,
+      "checkpoint_persistence_readback": "artifacts/mind-cir-four-20260918/progress/20260919T0923Z/staged/independent_readback.json",
+      "recovery_submission": {
+        "status": "completed_and_accepted",
+        "experiment": "mind-cir-staged-recovery-0919-v1",
+        "job": "recover-staged-qwen35-2b-cir5-ni3-ni5",
+        "bundle": "artifacts/mind-cir-four-20260918/bundle-staged-recovery-0919-v1",
+        "original_bundle_sha256": "66b6c9f13013ef2dbfe73e294dd4763b51716e4185454651bc3342d1e370dc80",
+        "recovery_manifest_sha256": "b7a9c9049e4242f46a95d832e853a3d24e99a96e191abfb65a2b7a25b1fc317f",
+        "source_backend": "salmon_brake_1n6nc9r2t6",
+        "source_checkpoint_step": 900,
+        "log": "artifacts/mind-cir-four-20260918/recovery_submission.log",
+        "automatic_monitoring": "remains_disabled",
+        "backend_id": "teal_rail_56hhgsgcnp",
+        "source_results_prefix": "projects/sft4safety/amlt-results/7210333900.71200-65efff3f-3a2c",
+        "source_experiment": "mind-cir-four-108-0918-v1",
+        "source_job": "qwen35-2b-cir5-ni3-ni5",
+        "uploaded_source_readback": "artifacts/mind-cir-four-20260918/recovery_uploaded_source_readback.json",
+        "preflight": "artifacts/mind-cir-four-20260918/recovery_preflight.json"
+      },
+      "previous_runs": [
+        {
+          "job": "qwen35-2b-cir5-ni3-ni5",
+          "mode": "staged",
+          "status": "failed",
+          "stage_acceptance": {
+            "cir5": {
+              "status": "accepted",
+              "adapter_sha256": "1201a6e750cf65ca57940613df177a8caab14b594827f4496f84c7643f283df9",
+              "steps": 2700,
+              "epochs": 5,
+              "presentations": 86355,
+              "exact_reload": true,
+              "receipt": "artifacts/mind-cir-four-20260918/progress/20260919T0156Z/terminal_readback.json"
+            }
+          },
+          "backend_id": "salmon_brake_1n6nc9r2t6",
+          "results_prefix": "projects/sft4safety/amlt-results/7210333900.71200-65efff3f-3a2c",
+          "code_prefix": "projects/sft4safety/amlt-code/f043354b20a31e26d5191bb33505690f70ed416bd2299dae6a96a2abc66118ea",
+          "url": "https://aka.ms/amlt?q=k2t7d",
+          "phase": "ni3_checkpoint_restore_io_error",
+          "native_status": "Failed",
+          "latest_observation": "artifacts/mind-cir-four-20260918/progress/20260919T0156Z/staged/receipt.json",
+          "observed_at_utc": "2026-09-19T01:56:48.896067+00:00",
+          "latest_logged_step": null,
+          "last_committed_checkpoint_step": 900,
+          "checkpoint_persistence_readback": "artifacts/mind-cir-four-20260918/progress/20260918T0317Z/staged/persistence_readback.json",
+          "last_attempt_high_water_step": 1000,
+          "failure": {
+            "observed_at_utc": "2026-09-19T01:56:48.896067+00:00",
+            "native_failed_at_utc": "2026-09-18T18:13:28+00:00",
+            "stage": "ni3",
+            "attempt": "retry_002",
+            "error": "OSError: [Errno 5] Input/output error reading checkpoint-900/optimizer.pt during resume",
+            "training_running": false,
+            "checkpoint_integrity": "compact metadata and exact sample cursor pass; payload existence/size pass; full remote readable-byte validation required before resume"
+          }
+        }
+      ],
+      "experiment": "mind-cir-staged-recovery-0919-v1",
+      "native_completed_at_utc": "2026-09-19T20:56:38+00:00"
+    },
+    "mixed3": {
+      "job": "qwen35-2b-cir-ni-mixed3",
+      "mode": "mixed3",
+      "status": "completed",
+      "stage_acceptance": {
+        "mixed3": {
+          "steps": 3645,
+          "epochs": 3,
+          "samples": 38871,
+          "presentations": 116613,
+          "parent_adapter_sha256": null,
+          "adapter_sha256": "d40d571406072e98ab939c3806cbc7ce058a8a32b04d6c17f7c4526a9483dc56",
+          "initial_state_sha256": "f924e8c76d9d28be55b8795920ca18811345dfde3b81ded85d5c039615a0510e",
+          "exact_reload": true
+        }
+      },
+      "backend_id": "honest_tongue_7dfgsm4cgl",
+      "results_prefix": "projects/sft4safety/amlt-results/7210333900.71132-8da77ec1-9d03",
+      "code_prefix": "projects/sft4safety/amlt-code/f043354b20a31e26d5191bb33505690f70ed416bd2299dae6a96a2abc66118ea",
+      "url": "https://aka.ms/amlt?q=k2t7b",
+      "phase": "full_dev_accepted",
+      "native_status": "Completed",
+      "latest_observation": "artifacts/mind-cir-four-20260918/progress/20260919T0156Z/mixed3/receipt.json",
+      "observed_at_utc": "2026-09-19T01:56:49.048455+00:00",
+      "latest_logged_step": 3645,
+      "last_committed_checkpoint_step": 3645,
+      "mixed_gate_acceptance": {
+        "status": "accepted",
+        "samples": 41,
+        "optimizer_steps": 2,
+        "exposure_by_task": {
+          "cross_interest_reconstruction": 20,
+          "new_interest": 21
+        },
+        "masked_padding_slots": 7,
+        "exact_reload_tensors": 373,
+        "real_dev_records": 64,
+        "metrics_independently_recomputed": true,
+        "adapter_file_sha256": "ccabf34a2058bf2725396334fab333f2b935c7fe79c09e5bc01bbfec3a6b3231",
+        "evaluated_adapter_directory_sha256": "9e5d8aa2f942907315cf0921f9c00376c192b434c28cd17649a7ce86e02a6a06",
+        "adapter_binding_source": "frozen remote evaluate verifies actual final adapter directory digest before evaluation_readback is written",
+        "recomputed_metrics": {
+          "interest_macro_recall_at_1": 0.0,
+          "interest_macro_ndcg_at_1": 0.0,
+          "interest_macro_recall_at_5": 0.027777777777777776,
+          "interest_macro_ndcg_at_5": 0.011963237724260918,
+          "interest_macro_recall_at_10": 0.08333333333333333,
+          "interest_macro_ndcg_at_10": 0.028354760557090616,
+          "interest_macro_recall_at_20": 0.1898148148148148,
+          "interest_macro_ndcg_at_20": 0.05421125446150577
+        },
+        "receipt": "artifacts/mind-cir-four-20260918/progress/20260918T0317Z/mixed3/startup_readback.json"
+      }
+    },
+    "mixed5": {
+      "job": "qwen35-2b-cir-ni-mixed5",
+      "mode": "mixed5",
+      "status": "completed",
+      "stage_acceptance": {
+        "mixed5": {
+          "steps": 6075,
+          "epochs": 5,
+          "samples": 38871,
+          "presentations": 194355,
+          "parent_adapter_sha256": null,
+          "adapter_sha256": "ef29563fcf97bd87d35ec1bd79b94b89ead433e1518bd0959aeb486279f78a7e",
+          "initial_state_sha256": "f924e8c76d9d28be55b8795920ca18811345dfde3b81ded85d5c039615a0510e",
+          "exact_reload": true
+        }
+      },
+      "backend_id": "calm_bread_5jd90pjvdr",
+      "results_prefix": "projects/sft4safety/amlt-results/7210333900.71064-f63f763c-b629",
+      "code_prefix": "projects/sft4safety/amlt-code/f043354b20a31e26d5191bb33505690f70ed416bd2299dae6a96a2abc66118ea",
+      "url": "https://aka.ms/amlt?q=k2t7c",
+      "phase": "full_dev_accepted",
+      "native_status": "Completed",
+      "latest_observation": "artifacts/mind-cir-four-20260918/progress/20260919T0156Z/mixed5/receipt.json",
+      "observed_at_utc": "2026-09-19T01:56:48.838256+00:00",
+      "latest_logged_step": 6075,
+      "last_committed_checkpoint_step": 6075,
+      "mixed_gate_acceptance": {
+        "receipt": "artifacts/mind-cir-four-20260918/progress/20260918T0203Z/mixed5/startup_readback.json",
+        "status": "accepted",
+        "samples": 41,
+        "optimizer_steps": 2,
+        "exposure_by_task": {
+          "cross_interest_reconstruction": 20,
+          "new_interest": 21
+        },
+        "masked_padding_slots": 7,
+        "exact_reload_tensors": 373,
+        "real_dev_records": 64,
+        "metrics_independently_recomputed": true
+      },
+      "checkpoint_persistence_readback": "artifacts/mind-cir-four-20260918/progress/20260918T0317Z/mixed5/persistence_readback.json"
+    }
+  },
+  "platform": {
+    "target": "Recall",
+    "sla": "Standard",
+    "sku": "80G4-A100",
+    "gpus_per_job": 4,
+    "jobs": 3,
+    "maximum_concurrent_gpus": 12
+  },
+  "checks": {
+    "focused_tests": "31 passed, 1 skipped (existing CPU Trainer case: local Transformers unavailable)",
+    "tests_file": "artifacts/mind-cir-four-20260918/focused_tests.txt",
+    "tests_sha256": "0863a5c23e36868ed981df98babfd8cc95ff128e8847c667abd399fb1f3e3edf",
+    "preflight": "artifacts/mind-cir-four-20260918/local_preflight.json",
+    "upload_config_audit": "artifacts/mind-cir-four-20260918/upload_config_audit.json",
+    "launch_config_readback": "artifacts/mind-cir-four-20260918/launch_config_readback.json"
+  },
+  "shared_cir5": {
+    "job_mode": "staged",
+    "stage_key": "cir5",
+    "steps": 2700,
+    "epochs": 5,
+    "samples": 17271,
+    "presentations": 86355,
+    "ni_branches": "Independent cold optimizer/scheduler starts from the exact same CIR5 final adapter, run NI3 then NI5"
+  },
+  "data": {
+    "cir_rows": 17271,
+    "ni_rows": 21600,
+    "mixed_rows": 38871,
+    "mixed_sampling": "one global permutation over full union per epoch; natural task ratio; no resampling",
+    "seed": 42,
+    "fixed_views": true
+  },
+  "report": "docs/experiments/2026-09-18/mind_cir_four_conditions.md",
+  "monitoring": {
+    "status": "STOPPED_BY_USER",
+    "interval_minutes": 30,
+    "snapshot_verifier": "scripts/analysis/verify_cir_schedule_snapshot.py",
+    "final_verifier": "scripts/analysis/accept_cir_schedule_final.py",
+    "automation_id": "cir",
+    "automation_deleted": true,
+    "stopped_at_utc": "2026-09-18T03:21:03.523608+00:00",
+    "reason": "User requested no further monitoring; estimate remaining time only. Training jobs continue.",
+    "completion_note": "Already deleted at user request; all four conditions now independently accepted. No monitor recreated."
+  },
+  "authorization": {
+    "conditions": [
+      "cir5_ni3",
+      "cir5_ni5",
+      "mixed3",
+      "mixed5"
+    ],
+    "preserve": [
+      "fixed CIR views",
+      "original NI inputs",
+      "model/revision",
+      "108 SID mapping",
+      "news/click prompts",
+      "loss",
+      "seed42",
+      "per-job 4 A100 Standard execution",
+      "exact reload gates",
+      "full Dev protocol"
+    ],
+    "no_extra_conditions": true
+  },
+  "remote_storage": {
+    "account": "csnewsandfeeds4150361735",
+    "container": "amulet",
+    "large_artifacts": "remote_only"
+  },
+  "baselines": {
+    "cir1_acceptance": "artifacts/mind-cir-20260916/final_acceptance.json",
+    "cir3_acceptance": "artifacts/mind-cir3-20260917/final_acceptance.json",
+    "ni_only": "qwen35-2b-bi-sid-ni-only-21600-seed42-v1"
+  },
+  "local_sources": {
+    "src/new_interest/experiments/cir_schedule.py": "04f92aa4a2182f4755b0e2b46f90f64daaf7069814a83cd3c811d3da6513289b",
+    "src/new_interest/data/build_cir_mixed_dataset.py": "247ffaa8c920124a4c39dd2763a872433b65a47ec11bf3388b8542fdf17488df",
+    "scripts/analysis/prepare_cir_schedule_bundle.py": "eba265a82eec5b5f6f1ee96742ce0f1865714b508bfaafe8c1eeb6b7060b2448",
+    "scripts/analysis/verify_cir_schedule_snapshot.py": "6bfbf236950e5c06354359657871acbc92ea27626576e937563ac09482286f02",
+    "scripts/analysis/accept_cir_schedule_final.py": "988a3d0659115336bdf0260168da3555faf1071abe41f0c2627639528b19e452",
+    "tests/test_cir_schedule.py": "e5558391d0777df396db7d6c3e2f92c2987816f679ee1afb08be51d1df821704",
+    "scripts/analysis/recover_cir_schedule.py": "71363370ab07356a38a6ac1e8cfc7e73c6ac828a9375440e03fdd930ac25d369",
+    "scripts/analysis/cir_storage_retry.py": "339c8dec8f0eaaee7e43fb36629a9d03735768de09624dd0e80f51efe9a9bdba",
+    "tests/test_cir_storage_retry.py": "ff1d5a144c73e8272db7843cdabb1603882d4dc63543e646885eddbda4c0a372"
+  },
+  "comparison_csv": "artifacts/mind-cir-four-20260918/all_conditions_comparison.csv",
+  "comparison_csv_sha256": "9867881500123b0465d478ad5f16d42a926d1b73550614c239b58c38b7c66da5",
+  "final_acceptance": "artifacts/mind-cir-four-20260918/final_acceptance.json",
+  "final_acceptance_sha256": "d5a23af8b48202827b6fa5284e2dd217d699bd31a8d9fd539116aded86b297d7"
+}

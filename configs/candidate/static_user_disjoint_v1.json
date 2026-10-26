@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "experiment_id": "static-user-disjoint-candidate-k10-v1",
+  "seed": 20260815,
+  "data": {
+    "full_root": "data/training/candidate_selection_static_user_disjoint_k10_v1",
+    "pilot_root": "data/training/candidate_selection_static_user_disjoint_k10_v1_pilot1000",
+    "full_filename": "dev_expanded.parquet",
+    "pilot_filename": "dev_pilot_1000.parquet",
+    "full_samples": 37817,
+    "pilot_samples": 1000,
+    "supported_categories": 111
+  },
+  "artifact_root": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models",
+  "pilot_acceptance": {
+    "minimum_request_success_rate": 0.99,
+    "minimum_candidate_valid_rate": 0.99,
+    "minimum_prefix_compliance_rate": 0.99,
+    "require_no_truncation": true,
+    "require_zero_reasoning_tokens_when_expected": true
+  },
+  "conditions": [
+    {
+      "id": "gpt56_medium_behavior_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {"instance": "redmond/interactive", "deployment": "gpt-5.6-sol_2026-07-09", "api_version": "2024-10-21", "reasoning_effort": "medium", "concurrency": 4, "checkpoint_size": 64, "max_attempts": 10, "max_completion_tokens": 512, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "gpt56_medium_interest_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {"instance": "redmond/interactive", "deployment": "gpt-5.6-sol_2026-07-09", "api_version": "2024-10-21", "reasoning_effort": "medium", "concurrency": 4, "checkpoint_size": 64, "max_attempts": 10, "max_completion_tokens": 512, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "gpt56_none_behavior_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {"instance": "redmond/interactive", "deployment": "gpt-5.6-sol_2026-07-09", "api_version": "2024-10-21", "reasoning_effort": "none", "expected_zero_reasoning_tokens": true, "concurrency": 4, "checkpoint_size": 64, "max_attempts": 10, "max_completion_tokens": 512, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "gpt56_none_interest_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {"instance": "redmond/interactive", "deployment": "gpt-5.6-sol_2026-07-09", "api_version": "2024-10-21", "reasoning_effort": "none", "expected_zero_reasoning_tokens": true, "concurrency": 4, "checkpoint_size": 64, "max_attempts": 10, "max_completion_tokens": 512, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "gpt5_medium_behavior_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {"instance": "redmond/interactive", "deployment": "gpt-5_2025-08-07", "api_version": "2024-10-21", "reasoning_effort": "medium", "concurrency": 4, "checkpoint_size": 64, "max_attempts": 10, "max_completion_tokens": 4096, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "gpt5_medium_interest_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {"instance": "redmond/interactive", "deployment": "gpt-5_2025-08-07", "api_version": "2024-10-21", "reasoning_effort": "medium", "concurrency": 4, "checkpoint_size": 64, "max_attempts": 10, "max_completion_tokens": 4096, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "gpt5_none_behavior_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {"instance": "redmond/interactive", "deployment": "gpt-5_2025-08-07", "api_version": "2024-10-21", "reasoning_effort": "none", "expected_zero_reasoning_tokens": true, "concurrency": 4, "checkpoint_size": 64, "max_attempts": 10, "max_completion_tokens": 512, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "gpt5_none_interest_uniform",
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {"instance": "redmond/interactive", "deployment": "gpt-5_2025-08-07", "api_version": "2024-10-21", "reasoning_effort": "none", "expected_zero_reasoning_tokens": true, "concurrency": 4, "checkpoint_size": 64, "max_attempts": 10, "max_completion_tokens": 512, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "gemini36_flash_behavior_uniform",
+      "evaluator": "openai",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {"base_url": "http://127.0.0.1:4141/v1", "api_key_env": "OPENAI_API_KEY", "model": "gemini-3.6-flash", "reasoning_effort": "minimal", "concurrency": 8, "checkpoint_size": 128, "max_attempts": 6, "retry_failed_on_resume": true, "request_timeout_seconds": 120, "max_tokens": 128, "temperature": 0.7, "top_p": 0.8, "preflight": true, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "gemini36_flash_interest_uniform",
+      "evaluator": "openai",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {"base_url": "http://127.0.0.1:4141/v1", "api_key_env": "OPENAI_API_KEY", "model": "gemini-3.6-flash", "reasoning_effort": "minimal", "concurrency": 8, "checkpoint_size": 128, "max_attempts": 6, "retry_failed_on_resume": true, "request_timeout_seconds": 120, "max_tokens": 128, "temperature": 0.7, "top_p": 0.8, "preflight": true, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "qwen35_behavior_uniform",
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {"model_name": "Qwen/Qwen3.5-9B", "adapter_path": null, "run_name": "static-candidate-qwen35-behavior-uniform", "wandb_project": "cross-interest-generative-sft", "wandb_mode": "disabled", "batch_size": 4, "checkpoint_size": 128, "max_new_tokens": 64, "enable_thinking": false, "do_sample": false, "temperature": null, "top_p": null, "top_k": null, "min_p": null, "presence_penalty": null, "seed": 20260815}
+    },
+    {
+      "id": "qwen35_interest_uniform",
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {"model_name": "Qwen/Qwen3.5-9B", "adapter_path": null, "run_name": "static-candidate-qwen35-interest-uniform", "wandb_project": "cross-interest-generative-sft", "wandb_mode": "disabled", "batch_size": 4, "checkpoint_size": 128, "max_new_tokens": 64, "enable_thinking": false, "do_sample": false, "temperature": null, "top_p": null, "top_k": null, "min_p": null, "presence_penalty": null, "seed": 20260815}
+    },
+    {
+      "id": "llama31_behavior_uniform",
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {"model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct", "adapter_path": null, "run_name": "static-candidate-llama31-behavior-uniform", "wandb_project": "cross-interest-generative-sft", "wandb_mode": "disabled", "batch_size": 4, "checkpoint_size": 128, "max_new_tokens": 64, "enable_thinking": false, "do_sample": false, "temperature": null, "top_p": null, "top_k": null, "min_p": null, "seed": 20260815}
+    },
+    {
+      "id": "llama31_interest_uniform",
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {"model_name": "meta-llama/Meta-Llama-3.1-8B-Instruct", "adapter_path": null, "run_name": "static-candidate-llama31-interest-uniform", "wandb_project": "cross-interest-generative-sft", "wandb_mode": "disabled", "batch_size": 4, "checkpoint_size": 128, "max_new_tokens": 64, "enable_thinking": false, "do_sample": false, "temperature": null, "top_p": null, "top_k": null, "min_p": null, "seed": 20260815}
+    },
+    {
+      "id": "gpt56_medium_behavior_frequency_matched",
+      "evaluator": "trapi",
+      "strategy": "train_frequency_matched",
+      "task_type": "behavior_only",
+      "parameters": {"instance": "redmond/interactive", "deployment": "gpt-5.6-sol_2026-07-09", "api_version": "2024-10-21", "reasoning_effort": "medium", "concurrency": 4, "checkpoint_size": 64, "max_attempts": 10, "max_completion_tokens": 512, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "gpt56_medium_interest_frequency_matched",
+      "evaluator": "trapi",
+      "strategy": "train_frequency_matched",
+      "task_type": "interest_only",
+      "parameters": {"instance": "redmond/interactive", "deployment": "gpt-5.6-sol_2026-07-09", "api_version": "2024-10-21", "reasoning_effort": "medium", "concurrency": 4, "checkpoint_size": 64, "max_attempts": 10, "max_completion_tokens": 512, "minimum_success_rate": 0.99}
+    },
+    {
+      "id": "qwen35_behavior_frequency_matched",
+      "evaluator": "hf",
+      "strategy": "train_frequency_matched",
+      "task_type": "behavior_only",
+      "parameters": {"model_name": "Qwen/Qwen3.5-9B", "adapter_path": null, "run_name": "static-candidate-qwen35-behavior-frequency-matched", "wandb_project": "cross-interest-generative-sft", "wandb_mode": "disabled", "batch_size": 4, "checkpoint_size": 128, "max_new_tokens": 64, "enable_thinking": false, "do_sample": false, "temperature": null, "top_p": null, "top_k": null, "min_p": null, "presence_penalty": null, "seed": 20260815}
+    },
+    {
+      "id": "qwen35_interest_frequency_matched",
+      "evaluator": "hf",
+      "strategy": "train_frequency_matched",
+      "task_type": "interest_only",
+      "parameters": {"model_name": "Qwen/Qwen3.5-9B", "adapter_path": null, "run_name": "static-candidate-qwen35-interest-frequency-matched", "wandb_project": "cross-interest-generative-sft", "wandb_mode": "disabled", "batch_size": 4, "checkpoint_size": 128, "max_new_tokens": 64, "enable_thinking": false, "do_sample": false, "temperature": null, "top_p": null, "top_k": null, "min_p": null, "presence_penalty": null, "seed": 20260815}
+    }
+  ]
+}

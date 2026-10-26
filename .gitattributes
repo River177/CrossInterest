@@ -1,0 +1,5 @@
+# Metric receipts use csv.writer CRLF; preserve their exact bytes and hashes.
+*.csv -text whitespace=cr-at-eol
+
+# Two trailing spaces are intentional Markdown hard line breaks.
+*.md whitespace=-blank-at-eol

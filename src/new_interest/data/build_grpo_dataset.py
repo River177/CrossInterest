@@ -7,6 +7,7 @@ import os
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Literal
 
 import pyarrow as pa
 import pyarrow.parquet as pq
@@ -15,8 +16,19 @@ from new_interest.infrastructure.paths import portable_path
 
 RULE_VERSION = "grpo-cot-acceptable-targets-v5"
 DEFAULT_SIZES = (1_000, 5_000)
+PromptMode = Literal["explicit_cot", "native_thinking"]
+TargetPolicy = Literal["acceptable_set", "fixed_target"]
+PROMPT_MODES: tuple[PromptMode, ...] = (
+    "explicit_cot",
+    "native_thinking",
+)
 
 COT_INSTRUCTION = """Reason about the user's history inside <think> and </think>. The reasoning must be non-empty, and you must close </think> before answering. Then, on a new line, provide the final answer in exactly this format:
+New topic: <category name>
+
+Output only the think block and the final answer. Do not include any other text."""
+
+LEGACY_COT_INSTRUCTION = """Reason about the user's history using exactly one short sentence of at most 30 words inside <think> and </think>. Do not compare multiple candidate topics. You must close </think> before answering. Then, on a new line, provide the final answer in exactly this format:
 New topic: <category name>
 
 Output only the think block and the final answer. Do not include any other text."""
@@ -83,11 +95,23 @@ def _sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def append_cot_instruction(prompt: str) -> str:
+def append_cot_instruction(
+    prompt: str,
+    *,
+    instruction: str = COT_INSTRUCTION,
+) -> str:
     prompt = prompt.rstrip()
     if "<think>" in prompt or "</think>" in prompt:
         raise ValueError("Source prompt already contains think tags")
-    return f"{prompt}\n\n{COT_INSTRUCTION}"
+    return f"{prompt}\n\n{instruction}"
+
+
+def format_grpo_prompt(prompt: str, *, prompt_mode: PromptMode) -> str:
+    if prompt_mode == "explicit_cot":
+        return append_cot_instruction(prompt)
+    if prompt_mode == "native_thinking":
+        return prompt
+    raise ValueError(f"Unsupported prompt mode: {prompt_mode!r}")
 
 
 def _extract_interest_history(prompt: str) -> list[str]:
@@ -112,6 +136,8 @@ def _convert_row(
     history_subcategories: list[str],
     acceptable_subcategories: list[str],
     retained_subcategories: list[str],
+    *,
+    prompt_mode: PromptMode,
 ) -> dict[str, object]:
     prompt = str(row["prompt"])
     response = str(row["response"])
@@ -125,7 +151,10 @@ def _convert_row(
         "prompt": [
             {
                 "role": "user",
-                "content": append_cot_instruction(prompt),
+                "content": format_grpo_prompt(
+                    prompt,
+                    prompt_mode=prompt_mode,
+                ),
             }
         ],
         "ability": "new_topic_prediction",
@@ -152,6 +181,8 @@ def build_grpo_datasets(
     *,
     acceptable_target_manifest: Path | str,
     sizes: tuple[int, ...] = DEFAULT_SIZES,
+    prompt_mode: PromptMode = "explicit_cot",
+    target_policy: TargetPolicy = "acceptable_set",
     overwrite: bool = False,
 ) -> Path:
     sft_dir = Path(sft_dir)
@@ -159,6 +190,10 @@ def build_grpo_datasets(
     acceptable_target_manifest = Path(acceptable_target_manifest)
     if not sizes or tuple(sorted(set(sizes))) != sizes:
         raise ValueError("sizes must be unique and increasing")
+    if prompt_mode not in PROMPT_MODES:
+        raise ValueError(f"Unsupported prompt mode: {prompt_mode!r}")
+    if target_policy not in ("acceptable_set", "fixed_target"):
+        raise ValueError(f"Unsupported target policy: {target_policy!r}")
     if not acceptable_target_manifest.is_file():
         raise FileNotFoundError(acceptable_target_manifest)
     acceptable_metadata_path = (
@@ -323,12 +358,23 @@ def build_grpo_datasets(
                         row,
                         history_maps[name][str(row["source_sample_id"])],
                         [
+                            str(row["target_subcategory"])
+                        ],
+                        retained_subcategories,
+                        prompt_mode=prompt_mode,
+                    )
+                    if target_policy == "fixed_target"
+                    else _convert_row(
+                        row,
+                        history_maps[name][str(row["source_sample_id"])],
+                        [
                             str(value)
                             for value in acceptable_by_source[
                                 str(row["source_sample_id"])
                             ]["acceptable_subcategories"]
                         ],
                         retained_subcategories,
+                        prompt_mode=prompt_mode,
                     )
                     for row in source_rows
                 ]
@@ -374,10 +420,15 @@ def build_grpo_datasets(
             "rule_version": RULE_VERSION,
             "sizes": list(sizes),
             "branching": "independent_from_sft22k",
-            "target_policy": "all_retained_targets_for_impression",
+            "target_policy": target_policy,
             "reasoning_mode": "cot",
             "qwen_enable_thinking": True,
-            "cot_instruction": COT_INSTRUCTION,
+            "prompt_mode": prompt_mode,
+            "cot_instruction": (
+                COT_INSTRUCTION
+                if prompt_mode == "explicit_cot"
+                else None
+            ),
             "reward": {
                 "type": "correctness_gated_answer_and_format",
                 "correct_malformed": 0.8,
@@ -440,6 +491,16 @@ def _build_parser() -> argparse.ArgumentParser:
         nargs="+",
         default=list(DEFAULT_SIZES),
     )
+    parser.add_argument(
+        "--prompt-mode",
+        choices=PROMPT_MODES,
+        default="explicit_cot",
+    )
+    parser.add_argument(
+        "--target-policy",
+        choices=("acceptable_set", "fixed_target"),
+        default="acceptable_set",
+    )
     parser.add_argument("--overwrite", action="store_true")
     return parser
 
@@ -451,6 +512,8 @@ def main() -> None:
         args.output_dir,
         acceptable_target_manifest=args.acceptable_target_manifest,
         sizes=tuple(args.sizes),
+        prompt_mode=args.prompt_mode,
+        target_policy=args.target_policy,
         overwrite=args.overwrite,
     )
     print(output)

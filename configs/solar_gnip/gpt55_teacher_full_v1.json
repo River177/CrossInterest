@@ -1,0 +1,20 @@
+{
+  "rule_version": "solar-gnip-gpt55-profile-rerank-v1",
+  "candidate_file": "artifacts/solar_gnip/sasrec_gnip_v1/candidates/train.parquet",
+  "icl_candidate_file": "artifacts/solar_gnip/sasrec_gnip_v1/candidates/train.parquet",
+  "output_dir": "artifacts/solar_gnip/gpt55_teacher_train_v1",
+  "instance": "redmond/interactive",
+  "deployment": "gpt-5.5_2026-04-24",
+  "api_version": "2024-10-21",
+  "scope": "api://trapi/.default",
+  "reasoning_effort": "none",
+  "concurrency": 4,
+  "checkpoint_size": 64,
+  "max_attempts": 3,
+  "icl_examples": 4,
+  "seed": 42,
+  "max_samples": null,
+  "retry_failed_on_resume": true,
+  "minimum_success_rate": 1.0,
+  "request_timeout_seconds": 180.0
+}

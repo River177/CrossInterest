@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "experiment_id": "static-user-disjoint-candidate-k10-v1-gpu-only-interim",
+  "seed": 20260815,
+  "data": {
+    "full_root": "data/training/candidate_selection_static_user_disjoint_k10_v1",
+    "pilot_root": "data/training/candidate_selection_static_user_disjoint_k10_v1_pilot1000",
+    "full_filename": "dev_expanded.parquet",
+    "pilot_filename": "dev_pilot_1000.parquet",
+    "full_samples": 37817,
+    "pilot_samples": 1000,
+    "supported_categories": 111
+  },
+  "artifact_root": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models",
+  "report_scope": {
+    "status": "exploratory_dev_gpu_only_interim",
+    "canonical_manifest": "configs/candidate/static_user_disjoint_v1.json",
+    "excluded_api_conditions": 12,
+    "exclusion_reason": "API full runs were stopped after Copilot rate limiting; partial shards are not evaluated."
+  },
+  "conditions": [
+    {
+      "id": "qwen35_behavior_uniform",
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {}
+    },
+    {
+      "id": "qwen35_interest_uniform",
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {}
+    },
+    {
+      "id": "llama31_behavior_uniform",
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "parameters": {}
+    },
+    {
+      "id": "llama31_interest_uniform",
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "parameters": {}
+    },
+    {
+      "id": "qwen35_behavior_frequency_matched",
+      "evaluator": "hf",
+      "strategy": "train_frequency_matched",
+      "task_type": "behavior_only",
+      "parameters": {}
+    },
+    {
+      "id": "qwen35_interest_frequency_matched",
+      "evaluator": "hf",
+      "strategy": "train_frequency_matched",
+      "task_type": "interest_only",
+      "parameters": {}
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "name": "Randomized-exposure, impression-slate, and explicit serendipity datasets: Yahoo! R6, Open Bandit Dataset, Coat, KuaiRand, FINN.no Slates, ContentWise Impressions, and Taobao Serendipity",
+  "kind": "Comparative audit of causal and subjective auxiliary datasets",
+  "venue_year": "Yahoo! R6: Yahoo! Webscope logged-bandit release associated with 2010 contextual-bandit evaluation; Open Bandit Dataset: NeurIPS 2020 workshop/arXiv 2020; Coat: ICML 2016; KuaiRand: CIKM 2022, current Zenodo record 10439422; FINN.no Slates: arXiv 2021 and Data Mining and Knowledge Discovery 2022; ContentWise Impressions: CIKM 2020; Taobao Serendipity: WWW 2019 and UMAP 2020.",
+  "official_sources": {
+    "Yahoo_R6": ["https://webscope.sandbox.yahoo.com/catalog.php?datatype=r", "https://arxiv.org/abs/1003.0146"],
+    "Open_Bandit_Dataset": ["https://github.com/st-tech/zr-obp/tree/master/obd", "https://research.zozo.com/data.html", "https://arxiv.org/abs/2008.07146"],
+    "Coat": ["https://arxiv.org/abs/1602.05352"],
+    "KuaiRand": ["https://github.com/chongminggao/KuaiRand", "https://zenodo.org/records/10439422", "https://doi.org/10.1145/3511808.3557624"],
+    "FINN_no_Slates": ["https://github.com/finn-no/recsys-slates-dataset", "https://arxiv.org/abs/2104.15046"],
+    "ContentWise_Impressions": ["https://github.com/ContentWise/contentwise-impressions", "https://arxiv.org/abs/2008.01212"],
+    "Taobao_Serendipity": ["https://github.com/greenblue96/Taobao-Serendipity-Dataset", "https://www.comp.hkbu.edu.hk/~lichen/download/TaoBao_Serendipity_Dataset.html", "https://doi.org/10.1145/3308558.3313469"]
+  },
+  "release_and_license": {
+    "Yahoo_R6": "The historical Yahoo! Webscope catalog URL is the authoritative access point, but its current DNS/download workflow, exact terms, and archive availability were not reachable in this audit [uncertain].",
+    "Open_Bandit_Dataset": "A 10,000-row-per-campaign-policy sample is in the official repository and the README points to ZOZO Research for the full data. The repository is Apache-2.0; whether identical terms cover every full-data artifact should be checked at download [uncertain].",
+    "Coat": "The paper states that the Coat shopping experiment data are released for research, but a current author-controlled download endpoint and explicit dataset license were not release-level verified [uncertain].",
+    "KuaiRand": "Three downloadable versions (27K, 1K, and Pure) are hosted in Zenodo record 10439422 with file checksums; the official repository labels the release CC BY-SA 4.0 and also publishes category and caption supplements.",
+    "FINN_no_Slates": "The official repository provides a downloader and versioned data files; its LICENSE is Apache License 2.0. The README warns that the paper code is compatible with the v1.0 data rather than every newer representation.",
+    "ContentWise_Impressions": "The official repository links a form-mediated dataset download and code. The dataset is released under CC BY-NC-SA 4.0 according to the official project/paper; current form completion was not exercised [uncertain].",
+    "Taobao_Serendipity": "The author repository publishes one CSV and custom research-only, non-commercial, acknowledgement and no-redistribution conditions; the README wording contains an apparent double negative about redistribution, so users should follow the authors' page and request clarification before redistribution [uncertain].",
+    "newer_user_studies": "No newer downloadable serendipity/novelty user-study package was verified from an author-controlled release in this audit; paper-only studies should not be treated as available datasets."
+  },
+  "input_history": {
+    "KuaiRand": "Stable user_id sequences: standard-policy interactions from 2022-04-08 through 2022-04-21 precede standard and random-intervention logs from 2022-04-22 through 2022-05-08. User features are available.",
+    "FINN_no_Slates": "Up to the first 20 chronologically recorded slate interactions per retained user, including prior clicked/no-clicked visible slates and whether each slate came from search or recommendation.",
+    "ContentWise_Impressions": "Timestamped account-level viewing/interactions plus recommendation-list impressions can be joined by user and recommendation identifiers over the collection window.",
+    "Open_Bandit_Dataset": "Per-event anonymized user features and a user-item affinity feature, but no stable user identifier or reconstructable longitudinal history.",
+    "Yahoo_R6": "Per-event contextual features and candidate articles rather than a stable longitudinal user history; exact currently downloadable fields are [uncertain].",
+    "Coat": "Twenty-four self-selected coat ratings per participant provide a static observational preference profile, followed by ratings on 16 randomly assigned coats; there is no ordered behavioral history.",
+    "Taobao_Serendipity": "The public CSV has one surveyed recommendation per user and no released click/purchase history. Survey text says prior behavior was consulted during collection, but that history is not in the public file."
+  },
+  "prediction_target": "The native outcomes are click under a logged action (Yahoo R6 and Open Bandit), multi-signal response to an intervened video (KuaiRand), click/no-click within a slate (FINN.no), media interaction after an impression (ContentWise), a 1-5 rating under random coat assignment (Coat), or one-shot perceived novelty/serendipity and same-day click/cart-or-purchase (Taobao). None natively labels sustained future new interest. CrossInterest must derive a semantic onset and a separate later-persistence outcome.",
+  "novel_interest_definition": "Only Taobao directly asks whether the recommendation is novel, unexpected, diverse relative to prior purchases/recommendations, and a pleasant surprise; those are perceptions, not longitudinal adoption. For KuaiRand, FINN.no, and ContentWise, define observed exploration as positive response to a category absent from the pre-cutoff observed history. Random assignment or exposure alone is opportunity, never evidence of interest. OBD, Yahoo R6, and Coat are primarily causal-calibration data rather than direct novel-interest corpora.",
+  "novelty_granularity_and_reference_window": {
+    "KuaiRand": "Prefer the released video category hierarchy, report novelty separately at leaf and ancestor levels, and use 2022-04-08 to 04-21 as the frozen reference history before 04-22 to 05-08 outcomes. Caption-embedding clusters are a sensitivity analysis.",
+    "FINN_no_Slates": "Item-group novelty among 290 category-plus-geography groups relative to earlier retained interactions; item novelty must not be called interest novelty.",
+    "ContentWise_Impressions": "Series or coarse item-type novelty relative to earlier interactions; the public semantic taxonomy is too coarse for strong topic-level claims.",
+    "Coat": "Novel item rating relative to the participant's 24 self-selected coats, not a temporal new category; only four item covariates support coarse grouping.",
+    "Taobao_Serendipity": "Self-reported item novelty and category difference relative to remembered prior purchases/recommendations in a single survey. No public reference-window events are available.",
+    "OBD_and_Yahoo": "No longitudinal reference window can be constructed without stable user identity."
+  },
+  "interest_onset_definition": {
+    "KuaiRand": "First positive response to a history-absent category under either standard or random exposure; pre-register a strong-positive rule such as long_view, like, follow, or sufficient play fraction rather than treating exposure as onset.",
+    "FINN_no_Slates": "First click on a visible item from a history-absent group. Search and recommendation onsets must be stratified because search expresses prior intent.",
+    "ContentWise_Impressions": "First post-cutoff interaction with a history-absent series/type after a logged recommendation impression; direct-link and non-direct-link impressions should remain separate.",
+    "Coat": "A favorable rating on a randomly assigned coat is preference evidence, not longitudinal onset.",
+    "Taobao_Serendipity": "Clicked or same-day cart/purchase is an immediate outcome; perceived novelty or purchase intention alone is not behavioral onset.",
+    "OBD_and_Yahoo": "A click is an immediate contextual response and cannot be tied to a user's prior semantic history."
+  },
+  "is_direct_match": {
+    "KuaiRand": "Closest dataset-only match: stable sequences, a pre-period, randomized interventions, timestamps, semantic supplements, and later rich feedback make a derived H-to-F benchmark feasible.",
+    "FINN_no_Slates": "Adjacent exposure-aware sequence dataset. It has complete visible slates and stable short histories but production exposure is not randomized and the public reduction keeps only up to 20 interactions.",
+    "ContentWise_Impressions": "Adjacent impression-aware sequence dataset with account history and full recommendation lists, but non-random exposure and coarse semantics limit causal novelty claims.",
+    "Open_Bandit_Dataset": "Method-only match for off-policy and propensity validation; no persistent user histories.",
+    "Yahoo_R6": "Method-only logged-bandit match; no stable longitudinal user identity.",
+    "Coat": "Method-only selection-bias calibration with randomized ratings, not a sequential future-interest task.",
+    "Taobao_Serendipity": "Auxiliary subjective validation only; no public history, exposure slate, or repeated outcome.",
+    "newer_user_studies": "No release-level verified downloadable direct match was found."
+  },
+  "persistence_signal": {
+    "KuaiRand": "Yes: later timestamped clicks, long views, likes, follows, comments, or repeated category consumption can be measured after onset within the remaining future window.",
+    "FINN_no_Slates": "Limited: later clicks in the same item group among the remaining maximum 20 interactions; no dwell or long-term follow-up.",
+    "ContentWise_Impressions": "Possible as later interaction with the same newly entered series/type during roughly three months, but account sharing weakens person-level interpretation.",
+    "Yahoo_R6_Open_Bandit_Coat_Taobao": "No defensible longitudinal persistence signal in the public unit of observation."
+  },
+  "method": "For CrossInterest, use KuaiRand as a two-stage benchmark: estimate exposure/opportunity with the intervention flag and predict engagement-qualified semantic onset from frozen history, then predict later same-category adoption. Use inverse-propensity or doubly robust estimators only when propensities are actually known; do not manufacture propensities for KuaiRand, FINN.no, or ContentWise. Use Open Bandit and Yahoo R6 to unit-test OPE code, Coat to test MNAR-rating corrections, and Taobao to test whether model novelty scores align with explicit perceptions.",
+  "evaluation_protocol": "Primary KuaiRand protocol: H is 2022-04-08 to 04-21 standard history; 04-22 to 05-08 is split chronologically into onset and persistence subwindows. Report full-taxonomy and exposed-opportunity ranking, random-versus-standard strata, strong-positive thresholds, macro category recall, calibration, and user-clustered uncertainty. FINN.no and ContentWise are temporal exposure-conditioned robustness tests with search/recommendation or direct/non-direct strata. OBD/Yahoo use replay/OPE metrics, Coat uses random-test rating error or ranking, and Taobao uses correlation/calibration against nine Likert variables plus click and purchase/cart, never as primary predictive accuracy.",
+  "generalization_axis": "KuaiRand supports seen-user temporal future, randomized-versus-standard policy shift, item/category onset, and scenario-policy shift. FINN.no and ContentWise support seen-identity temporal evolution under production exposure. OBD/Yahoo test policy generalization without user-history personalization. Coat tests observational-to-random assignment shift. Taobao tests cross-user agreement with explicit subjective judgments.",
+  "exposure_handling": {
+    "Open_Bandit_Dataset": "Every row has item/action, position, click, and true action_prob under uniform random or Bernoulli Thompson Sampling; this is the strongest explicit-propensity OPE source here.",
+    "Yahoo_R6": "Today Module articles were served from a randomized bucket with shown action, click, context, and candidate pool according to the associated logged-bandit literature; exact current archive schema is [uncertain].",
+    "KuaiRand": "Each normal recommendation had equal probability of replacement by a random-pool video and is_rand marks interventions; about 0.37% of final interactions were replaced. The release does not document a numeric event-level propensity or the complete original slate, so do not claim known propensity.",
+    "FINN_no_Slates": "Records the full visible slate up to scroll length and click/no-click, but slates come from search or production recommendation rather than a documented randomized logging policy. Only 10% of no-click slates were retained uniformly.",
+    "ContentWise_Impressions": "Provides ordered recommendation lists and position/list-length information, split into impressions with and without a direct linked interaction. Exposure is observational and has no published propensity.",
+    "Coat": "Sixteen coats per user were uniformly randomly selected for the test-rating phase, while 24 shop-selected coats form the MNAR phase; the randomized design supports unbiased preference evaluation but not temporal adoption.",
+    "Taobao_Serendipity": "One algorithm-selected recommendation is observed per user; no randomization, propensity, or complete candidate slate is released."
+  },
+  "main_findings_and_limits": "KuaiRand is the only audited release that jointly supplies persistent IDs, a clean pre-period, timestamped future responses, randomized interventions, and usable semantic metadata. Its intervention is sparse, event propensities and complete slates are absent, and a random long view still only proves response to an opportunity, not durable interest. FINN.no and ContentWise add valuable real impression context but cannot identify causal exposure effects without stronger assumptions. OBD and Yahoo are excellent OPE checks but structurally cannot model history-driven new interest. Coat separates MNAR from randomized ratings but is static. Taobao supplies unusually direct subjective novelty and serendipity labels, yet its public CSV is one-shot and has only a tiny purchased/cart-positive subset.",
+  "scale": {
+    "Open_Bandit_Dataset": "About 26 million impression rows over a seven-day A/B test, with three campaigns and two policies; campaign action counts are 80 (all), 34 (men), and 46 (women), with three positions.",
+    "KuaiRand": "27,285 users; 32,038,725 videos and 322,278,385 standard-policy interactions in 27K; 1,186,059 random-policy interactions over 7,583 pool videos; dates 2022-04-08 to 05-08.",
+    "FINN_no_Slates": "Original log: 37.4 million slate interactions, about 2.3 million users, 1.3 million items, 290 groups, 30 days; release reduction keeps first 20 interactions for users with at least 10 and caps visible slates at 25.",
+    "ContentWise_Impressions": "42,153 users/accounts, 145,074 items, 28,881 series, 10,457,810 interactions, 307,453 direct-link impressions, and 23,342,617 no-direct-link impressions from 2019-01-07 to 2019-04-15.",
+    "Coat": "290 Mechanical Turk participants and 300 coats; 24 self-selected plus 16 random ratings per participant.",
+    "Taobao_Serendipity": "11,383 released user rows, 9,985 recommended items, 1,581 categories, 202 clicked positives, and 10 same-day purchased-or-cart positives.",
+    "Yahoo_R6": "R6A/R6B exact event counts and dates were not re-verified from a currently downloadable first-party archive [uncertain]."
+  },
+  "stable_user_identity": {
+    "KuaiRand": "Yes, explicit re-indexed user_id joins all pre-period, standard-future, random-future, and user-feature files.",
+    "FINN_no_Slates": "Yes within the released first 20 interactions, via anonymized userId.",
+    "ContentWise_Impressions": "Yes within the collection, but the paper states users are accounts and may represent multiple household members.",
+    "Coat": "Participant identity joins the two static rating matrices, but there is no behavioral timeline.",
+    "Taobao_Serendipity": "One stable row identifier per surveyed user, but no repeated public events.",
+    "Open_Bandit_and_Yahoo_R6": "No stable user identifier suitable for longitudinal history."
+  },
+  "timestamps_and_order": {
+    "KuaiRand": "Millisecond time_ms plus date and hour/minute fields; separate filenames establish pre-period and future periods.",
+    "FINN_no_Slates": "Ordered interaction steps are retained, but the public data.npz schema does not expose original wall-clock timestamps [uncertain].",
+    "ContentWise_Impressions": "Timestamped interactions and impressions over 2019-01-07 to 2019-04-15.",
+    "Open_Bandit_and_Yahoo_R6": "Per-event timestamps exist, but events cannot be linked into user histories.",
+    "Coat_and_Taobao": "No reusable event timeline beyond collection phase or same-day outcome."
+  },
+  "left_censoring_and_history_coverage": "KuaiRand observes only two pre-period weeks and seventeen future days, so an apparently new category may be rediscovery of an older/off-platform interest. FINN.no keeps only first 20 logged interactions and drops users with fewer than 10, while 90% of no-click slates are removed. ContentWise begins at a fixed date and uses accounts, so prior consumption and person identity are incomplete. Coat's 24 self-selected coats are a tiny preference sample. Taobao withholds the histories used during survey selection. OBD/Yahoo have no longitudinal coverage at all.",
+  "item_semantics": {
+    "KuaiRand": "Basic video/author features plus separately released captions and a hierarchy with up to four category levels; freeze the supplemental mapping version before splitting.",
+    "FINN_no_Slates": "An item belongs to one of 290 groups constructed from categorical information and geography; ind2val maps group codes to labels.",
+    "ContentWise_Impressions": "Item, series, and four coarse item types; no rich public genre/topic taxonomy.",
+    "Coat": "Gender target, coat type, color, and promotion covariates.",
+    "Taobao_Serendipity": "Anonymized item and fine category IDs, but no public title, description, hierarchy, or historical profile.",
+    "OBD_and_Yahoo": "OBD provides anonymized item features; Yahoo provides candidate article features in historical schema [uncertain], neither supports stable semantic user history."
+  },
+  "feedback_and_exposure": "KuaiRand has is_click, is_like, is_follow, is_comment, is_forward, is_hate, long_view, play time, duration, profile/comment dwell, profile entry, and is_rand. FINN.no has visible slate, scroll length, clicked item/index, no-click, and interaction type. ContentWise has ordered recommended series lists, row position/list length, and timestamped item/series interactions with recommendation_id. OBD has click, position, and action_prob. Yahoo has shown article and click [uncertain current archive]. Coat has 1-5 ratings. Taobao has nine 1-5 perception variables, click, and same-day purchase/cart.",
+  "candidate_space": {
+    "KuaiRand": "The 7,583-video random pool is known at release level, but the complete candidate slate and exact time-varying eligibility of standard recommendations cannot be reconstructed.",
+    "FINN_no_Slates": "The actually visible slate up to scroll length is known; the full contemporaneous marketplace inventory and pre-scroll slate tail beyond 25 are not.",
+    "ContentWise_Impressions": "Actual recommendation lists are recorded, but not a complete time-varying OTT catalog with all eligibility rules.",
+    "Open_Bandit_and_Yahoo": "Logged action sets/candidate pools support bandit replay, but not longitudinal semantic candidates.",
+    "Coat": "All 300 coats define the experiment universe; each user randomly rates 16 in the unbiased phase.",
+    "Taobao": "Only the selected recommendation is public; the candidate set is absent."
+  },
+  "taxonomy_and_opportunity_drift": "KuaiRand's caption/category supplements may postdate the logs and must be version-frozen; video availability and random-pool membership are only partially represented. FINN.no groups combine category and geography, while classifieds inventory expires rapidly and the 25-item cap changes opportunity. ContentWise content availability, account entitlement, placement, and catalog changes are incompletely observed. Coat has a fixed 300-item experiment. Taobao's anonymous categories have no version or inventory timeline. OBD/Yahoo action sets vary by campaign/event but have no longitudinal semantic taxonomy.",
+  "construct_h_f_ynew": {
+    "KuaiRand": "Feasible. Define H(u) from all standard interactions on 04-08 to 04-21 that satisfy a frozen positive rule; define F(u) from engagement-qualified interactions on 04-22 to 05-08; compute Y_new(u)=semantic_units(F)-semantic_units(H). Preserve is_rand, scenario, exposure time, and feedback strength. Reserve later days after first onset for persistence.",
+    "FINN_no_Slates": "Partially feasible. Use early ordered slate clicks for H and later clicks for F, then group set difference. Condition evaluation on actual visible opportunities and separate search from recommendation; lack of timestamps, sparse 20-step histories, and observational policy make this a robustness task, not a causal benchmark.",
+    "ContentWise_Impressions": "Partially feasible. Sort account interactions, use an early burn-in H and later F, and define new series/type units. Link to preceding recommendation impressions where possible; keep unknown exposure positive-unlabeled and avoid person-level claims.",
+    "Coat": "Not a strict temporal construction. The 24 chosen ratings can proxy H and favorable random ratings can proxy unseen-item response, but F-H is neither future nor category adoption.",
+    "Taobao_Serendipity": "Not feasible from the public CSV because H, a future sequence F, and repeated outcomes are missing.",
+    "Open_Bandit_and_Yahoo_R6": "Not feasible because stable user identity and longitudinal H/F are absent."
+  },
+  "leakage_and_missingness_risks": "Major risks are treating randomized exposure as interest, treating a one-off click as adoption, using future aggregate video features, leaking post-period captions/categories, ignoring sparse intervention, reconstructing false propensities, and labeling unexposed items negative. KuaiRand also has two weeks of left censoring and policy/scenario confounding. FINN.no has no-click downsampling, search-intent confounding, a 20-step cap, and fast inventory turnover. ContentWise has household accounts, observational placement, and coarse semantics. Coat has small static rating matrices. Taobao has selection by an undisclosed recommender, no released history, and only 10 purchase/cart positives.",
+  "recommended_role": {
+    "KuaiRand": "Primary causal/exposure-aware auxiliary benchmark and the only high-priority candidate for a derived future novel-interest task.",
+    "FINN_no_Slates": "Exposure-aware sequential robustness benchmark, especially for repeat-versus-explore under visible slates.",
+    "ContentWise_Impressions": "Secondary impression-aware temporal robustness benchmark at series/type level.",
+    "Open_Bandit_and_Yahoo_R6": "OPE implementation validation only.",
+    "Coat": "MNAR and randomized-preference calibration only.",
+    "Taobao_Serendipity": "Auxiliary subjective novelty/serendipity validation only.",
+    "newer_user_studies": "Reject until a downloadable, schema-verifiable release is identified."
+  },
+  "priority": "1) KuaiRand: high. 2) FINN.no Slates: medium-high for exposure-aware robustness, not causal novelty. 3) ContentWise Impressions: medium. 4) Open Bandit Dataset: high only for OPE code validation. 5) Coat: medium only for selection-bias calibration. 6) Taobao Serendipity: medium only for subjective validation. 7) Yahoo R6: low until current access is re-verified, and method-only even if obtained.",
+  "verification_status": "Verified from primary repository/readme or paper: OBD scale, fields, policies and propensities; KuaiRand versions, dates, IDs, intervention mechanism, feedback, scale, license and supplemental semantics; FINN.no scale, reductions, visible-slate schema and non-random production origin; ContentWise scale, schemas and collection interval; Coat two-phase assignment; Taobao release schema, survey design and outcome counts. Yahoo R6 current Webscope access, exact R6A/R6B counts/dates/terms, Coat's current download/license, and any newer public user-study package remain [uncertain]. Large archives were not downloaded in full.",
+  "repeat_explore_and_persistence_audit": "Report three disjoint classes at each future event: repeat semantic unit already in H, first observed explore unit absent from H, and new item within an old unit. An exposure with no positive response is opportunity, not explore; the first positive is onset, not persistence. For KuaiRand, require a later disjoint-window positive in the same semantic unit and stratify onset by random versus standard exposure and by click-only versus strong engagement. For FINN.no, count persistence only on later slates and separate search from recommendation. For ContentWise, require later series/type interaction and report account-level limitations. OBD, Yahoo, Coat, and Taobao cannot support this audit longitudinally and should be reported as such.",
+  "evidence_quotes_or_schema_facts": [
+    "OBD official README: about 26M rows; each row contains a user impression, selected action, true propensity score, and click; policies are random and Bernoulli Thompson Sampling across all/men/women campaigns.",
+    "KuaiRand official README: each recommended video had equal probability of replacement by a random-pool video; about 0.37% of final interactions were replaced; explicit user IDs, timestamps, 12 feedback signals, and thousands of interactions per user are provided.",
+    "KuaiRand files separate standard logs for 2022-04-08 to 04-21 from random and standard logs for 04-22 to 05-08 for the same users.",
+    "FINN.no paper/repository: 37.4M interactions, approximately 2.3M users, 1.3M items, 290 groups, and all visible items up to scroll length; approximately 80% of slates are search and 20% recommendation.",
+    "FINN.no reduction: retain 10% of no-click slates, first 20 interactions per user, users with at least 10 interactions, and at most 25 visible items.",
+    "ContentWise release separates 307,453 impressions linked directly to interactions from 23,342,617 impressions without a direct link, alongside 10,457,810 interactions.",
+    "Coat experiment: each of 290 users rated 24 self-selected coats and then 16 uniformly random coats from a 300-coat universe.",
+    "Taobao author CSV: 11,383 one-row users and 34 columns, including nine perception ratings, Clicked, Purchased, CEI-II, and TIPI; Purchased includes same-day purchase or cart addition."
+  ],
+  "sources": [
+    "https://github.com/st-tech/zr-obp/tree/master/obd — OBD scale, policies, fields, true action probability, and full-data pointer.",
+    "https://arxiv.org/abs/2008.07146 — OBD collection and OPE design.",
+    "https://github.com/chongminggao/KuaiRand — versions, dates, intervention, fields, statistics, license, categories, and captions.",
+    "https://zenodo.org/records/10439422 — current KuaiRand downloadable artifacts and checksums.",
+    "https://github.com/finn-no/recsys-slates-dataset — public FINN.no schema, downloader, categories, version warning, and Apache-2.0 license.",
+    "https://arxiv.org/abs/2104.15046 — FINN.no logging, scale, reductions, temporal split, and distinction between released production logs and Thompson-sampling methods/online experiments.",
+    "https://github.com/ContentWise/contentwise-impressions — ContentWise download workflow, schema, code, and license context.",
+    "https://arxiv.org/abs/2008.01212 — ContentWise collection dates, counts, user/account semantics, and impression types.",
+    "https://arxiv.org/abs/1602.05352 — Coat self-selected versus uniformly random rating design.",
+    "https://github.com/greenblue96/Taobao-Serendipity-Dataset — Taobao survey protocol, CSV schema, custom terms, and definitions.",
+    "https://doi.org/10.1145/3308558.3313469 — original Taobao serendipity user-evaluation paper.",
+    "https://webscope.sandbox.yahoo.com/catalog.php?datatype=r — historical authoritative Yahoo Webscope catalog; current access was not verified [uncertain].",
+    "https://arxiv.org/abs/1003.0146 — randomized contextual-bandit replay design associated with Yahoo! Front Page Today Module logs."
+  ],
+  "uncertain": [
+    "release_and_license",
+    "input_history",
+    "exposure_handling",
+    "scale",
+    "timestamps_and_order",
+    "item_semantics",
+    "verification_status",
+    "sources"
+  ]
+}

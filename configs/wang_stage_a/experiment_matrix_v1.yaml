@@ -1,0 +1,159 @@
+config_version: wang-stage-a-matrix-v1
+method:
+  paper: LLMs for User Interest Exploration in Large-scale Recommendation Systems
+  doi: 10.1145/3640457.3688161
+  arxiv: "2405.16363"
+  scope: high-level language policy only
+  response_prefix: "New cluster: "
+  context_clusters: 2
+  pairs_per_label: 10
+
+data_root: data/training/wang_stage_a_balanced_transition_v1
+
+models:
+  qwen35:
+    name: Qwen/Qwen3.5-9B
+    revision: c202236235762e1c871ad0ccb60c8ee5ba337b9a
+    requirements: requirements-qwen35-worker.txt
+    dependency_installer: scripts/amlt/evaluation/install_qwen35_worker_deps.sh
+    learning_rate: 0.00002
+    generation_batch_size: 16
+    label_batch_size: 16
+  qwen2:
+    name: Qwen/Qwen2-1.5B
+    revision: 8a16abf2848eda07cc5253dec660bf1ce007ad7a
+    requirements: requirements-training-worker.txt
+    dependency_installer: scripts/amlt/evaluation/install_training_worker_deps.sh
+    learning_rate: 0.0001
+    generation_batch_size: 32
+    label_batch_size: 32
+
+training:
+  seed: 42
+  enable_thinking: false
+  loss_reduction: token_mean
+  max_seq_length: 512
+  epochs: 7
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 4
+  effective_global_batch_size: 16
+  weight_decay: 0.01
+  warmup_ratio: 0.03
+  lr_scheduler_type: cosine
+  max_grad_norm: 1.0
+  gradient_checkpointing_use_reentrant: false
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  target_modules: all-linear
+  optim: adamw_torch_fused
+  logging_steps: 5
+  save_strategy: steps
+  save_steps: 100
+  save_total_limit: 3
+  persistent_checkpoint_limit: 3
+  dataloader_num_workers: 2
+  wandb_mode: disabled
+
+evaluation:
+  enable_thinking: false
+  max_seq_length: 512
+  max_new_tokens: 32
+  decode: greedy
+  scoring_backend: prefix_cache
+  top_k: 10
+  cutoffs: [1, 5, 10]
+  checkpoint_size: 64
+
+datasets:
+  arts:
+    train_rows: 890
+    supported_labels: 89
+    full_labels: 143
+    train:
+      balanced:
+        path: arts/train/balanced.parquet
+        sha256: 94e673265623140153fb5cda4d4977f52f27a92f0d53668846c819c9c61ec16e
+      random:
+        path: arts/train/random.parquet
+        sha256: 916a4ec50918475459a4f28aff035d2e6ce567173e6e1c0ccdd452018408e3ba
+    labels_supported:
+      path: arts/labels_supported.parquet
+      sha256: d95faaa99f0b54c587742e7a97e0d75e48970df570c1ca8a0374ba149783fe39
+    labels_full:
+      path: arts/labels_full.parquet
+      sha256: 2e898188f5c255aa76e0ee845af154223d7bf2b8cc7facd1e1faeef0ed62d5d3
+    validation_supported:
+      path: arts/eval/validation_supported.parquet
+      sha256: 0369418bc63d76a3d17a68c006e753b4c4cae57dcbe023e05ac87ea679ee1609
+      rows: 2155
+    validation_full:
+      path: arts/eval/validation_full.parquet
+      sha256: a4289c0c3f2b7bd4219e80448fb8272f60c87c63a383a1d6b99327178f44cfc3
+      rows: 2167
+    test_supported:
+      path: arts/eval/test_supported.parquet
+      sha256: 9aed887a7694949b3e77873820dca5e154b9d8f52fc0553f3371084dd456784d
+      rows: 2087
+    test_full:
+      path: arts/eval/test_full.parquet
+      sha256: 11fbe6303f854e85c80bf0474a6f0cc0d90afc58f7e2c5e6f790767b672cd2d0
+      rows: 2092
+  grocery:
+    train_rows: 1110
+    supported_labels: 111
+    full_labels: 172
+    train:
+      balanced:
+        path: grocery/train/balanced.parquet
+        sha256: 2cc63d574615aed73ff380afd2f6114cb3d189945290e3af4106fbba56c99cd3
+      random:
+        path: grocery/train/random.parquet
+        sha256: f0847c4e81bd266940308773849364ca0afc5cb71ff52a09c1f17678067af39b
+    labels_supported:
+      path: grocery/labels_supported.parquet
+      sha256: 0440e348d66a7ac749248ef4e0950c5877baefb9e6d4626f2f7628d14b899f63
+    labels_full:
+      path: grocery/labels_full.parquet
+      sha256: b5de7fa6ba5344cf45fc0825fe9a87def2a29bf77de29aaf7c7ac5e520786431
+    validation_supported:
+      path: grocery/eval/validation_supported.parquet
+      sha256: 3fcf761eec9da1e0c3ea5de2e0e7142925263b244353493e9571d4ea8d97802c
+      rows: 4033
+    validation_full:
+      path: grocery/eval/validation_full.parquet
+      sha256: bf11d0a2728e912ff1239e9d1938edaea20768d5f1a33a55a9fb89112459679e
+      rows: 4050
+    test_supported:
+      path: grocery/eval/test_supported.parquet
+      sha256: 4098feab15b01b3ce83631e9cb26de4156ff3a2e1c38b037bd099c47a6d4fee2
+      rows: 3901
+    test_full:
+      path: grocery/eval/test_full.parquet
+      sha256: ec5ada90ef8e9414d874635440ece2a9847728e51b25538eade3e3f05443ceeb
+      rows: 3906
+  mind:
+    train_rows: 1080
+    supported_labels: 108
+    full_labels: 108
+    train:
+      balanced:
+        path: mind/train/balanced.parquet
+        sha256: cd83c50f2dd9595e7832ee0cabb0b7b812bfddd32c6d9e55bf797fe72d889804
+      random:
+        path: mind/train/random.parquet
+        sha256: b6d4fe243bc5d6567cb82a340976839add7ef2c197a843a335b2ae6889f72bbe
+    labels_supported:
+      path: mind/labels_supported.parquet
+      sha256: ca71062ca76a8bf4fc49b3d0e3e3f16a16356370f9e673c69d116fd6e6dc0a39
+    labels_full:
+      path: mind/labels_full.parquet
+      sha256: dd64573a1de3bb62110731711b652db4569da60ea2f9eca34eabdd0d6794e188
+    validation_supported:
+      path: mind/eval/dev_supported.parquet
+      sha256: 32e0594f0bf1854f9e2e50b070ed30905c56231fd01b195804830120a2ba6143
+      rows: 30266
+    validation_full:
+      path: mind/eval/dev_full.parquet
+      sha256: 32e0594f0bf1854f9e2e50b070ed30905c56231fd01b195804830120a2ba6143
+      rows: 30266

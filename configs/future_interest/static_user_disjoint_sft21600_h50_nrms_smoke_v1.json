@@ -1,0 +1,59 @@
+{
+  "rule_version": "static-user-disjoint-sft21600-h50-frozen-minilm-nrms-smoke-v1",
+  "dataset_dir": "data/processed/new_interest_static_user_disjoint_sft21600_h50_v1",
+  "title_embedding_dir": "artifacts/future-novel-interest/static-user-disjoint-nrms-title-embeddings-v1",
+  "output_dir": "artifacts/future-novel-interest/static-user-disjoint-sft21600-h50-nrms-smoke-v1",
+  "seed": 20260815,
+  "k": 10,
+  "expected_counts": {
+    "train_users": 21600,
+    "model_fit_users": 17291,
+    "tune_users": 2093,
+    "holdout_users": 2216,
+    "labels": 108,
+    "dev_evaluation_units": 31392,
+    "dev_users": 27082,
+    "dev_target_occurrences": 37728,
+    "dev_supported_interests": 104
+  },
+  "data": {
+    "loader": "dataset_rows",
+    "history_policy": "last 50 raw static History items; no impression replay; no runner-side truncation",
+    "bucket_boundaries": [4, 8, 16, 32, 64],
+    "batch_size_by_boundary": {
+      "4": 8192,
+      "8": 8192,
+      "16": 4096,
+      "32": 2048,
+      "64": 1024
+    }
+  },
+  "training": {
+    "device": "auto",
+    "precision": "auto",
+    "gradient_clip_norm": 5.0
+  },
+  "architecture_stage": {
+    "architectures": [
+      {"hidden_dimension": 128, "attention_heads": 4, "dropout": 0.1}
+    ],
+    "class_balance_beta": 0.0,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "epochs": 1,
+    "evaluation_epochs": [1]
+  },
+  "optimization_stage": {
+    "class_balance_betas": [0.0],
+    "learning_rates": [0.001],
+    "weight_decays": [0.0],
+    "epochs": 1,
+    "evaluation_epochs": [1]
+  },
+  "selection": {
+    "best_recall_tolerance_absolute": 0.002,
+    "user_recall_floor": null,
+    "objective": "real-data one-architecture one-epoch smoke",
+    "dev_usage": "smoke only; never report as the full result"
+  }
+}

@@ -39,7 +39,7 @@ def test_cot_sft_map_resolves_behavior_inputs(
     fake_python.chmod(0o755)
     script = (
         Path(__file__).parents[1]
-        / "scripts/amlt/sft/run_qwen_cot_sft_map.sh"
+        / "scripts/archive/amlt/2026-10-26/sft/run_qwen_cot_sft_map.sh"
     )
     subprocess.run(
         ["bash", str(script), "1k", "smoke"],

@@ -1,0 +1,37 @@
+description: Static user-disjoint Qwen unique-label Beam v2 4-GPU mapped recovery
+
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+    - python -c "import torch; print(torch.__version__, torch.version.cuda)"
+    - nvidia-smi
+
+code:
+  local_dir: $CONFIG_DIR/../../../..
+
+target:
+  service: sing
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+
+jobs:
+  - name: qwen35-beam-recovery-v3-g4
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        PIP_CACHE_DIR: /scratch/pip_cache
+        STATIC_SUD_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p /scratch/pip_cache
+      - python -m pip install --user --upgrade pip
+      - export STATIC_SUD_SFT_DIR=$$AMLT_MAP_INPUT_DIR/sft
+      - >-
+        bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh &&
+        bash scripts/archive/amlt/2026-10-26/sft/run_static_user_disjoint_balanced_sft.sh
+        qwen35 eval-only

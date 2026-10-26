@@ -1,0 +1,70 @@
+description: Static user-disjoint Behavior+Interest K10 v3 full evaluation for Qwen3.5 and Llama-3.1
+
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+    - python -c "import torch; print(torch.__version__, torch.version.cuda)"
+    - nvidia-smi
+
+code:
+  local_dir: $CONFIG_DIR/../../../..
+
+target:
+  service: sing
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+
+jobs:
+  - name: qwen35-behavior-interest-uniform-full
+    sku: 80G1-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /scratch/pip_cache
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - python -m pip install --user --no-warn-script-location -r requirements-qwen35-worker.txt
+      - export PYTHONPATH=$$AMLT_CODE_DIR/src$${PYTHONPATH:+:$$PYTHONPATH}
+      - export TOKENIZERS_PARALLELISM=false
+      - export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+      - >-
+        python -m new_interest.experiments.run_static_candidate_condition
+        --manifest configs/candidate/static_user_disjoint_behavior_interest_v3.json
+        --condition qwen35_behavior_interest_uniform --phase full
+        --pilot-gate configs/candidate/static_user_disjoint_behavior_interest_v3_gpu_pilot_gate.json
+        --output-dir $$AMLT_OUTPUT_DIR/evaluation
+
+  - name: llama31-behavior-interest-uniform-full
+    sku: 80G1-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        HF_HUB_OFFLINE: "1"
+        PIP_CACHE_DIR: /scratch/pip_cache
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - python -m pip install --user --no-warn-script-location -r requirements-training-worker.txt
+      - export PYTHONPATH=$$AMLT_CODE_DIR/src$${PYTHONPATH:+:$$PYTHONPATH}
+      - export TOKENIZERS_PARALLELISM=false
+      - export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+      - >-
+        python -m new_interest.experiments.run_static_candidate_condition
+        --manifest configs/candidate/static_user_disjoint_behavior_interest_v3.json
+        --condition llama31_behavior_interest_uniform --phase full
+        --pilot-gate configs/candidate/static_user_disjoint_behavior_interest_v3_gpu_pilot_gate.json
+        --output-dir $$AMLT_OUTPUT_DIR/evaluation

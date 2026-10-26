@@ -1,0 +1,512 @@
+{
+  "status": "accepted",
+  "experiment": "mind-cir-param-transfer-108-0923-v2",
+  "artifact_root": "artifacts/mind-cir-parameter-20260923",
+  "bundle": "artifacts/mind-cir-parameter-20260923/bundle-v2",
+  "bundle_sha256": "4af6c06788ae2b3365ec49319cc314d83dc1a50a3f44e827cb0e5c6fa4b93b05",
+  "source": {
+    "source_results_prefix": "projects/sft4safety/amlt-results/7210244599.48462-16575cc7-74a3",
+    "source_backend": "teal_rail_56hhgsgcnp",
+    "source_bundle_sha256": "66b6c9f13013ef2dbfe73e294dd4763b51716e4185454651bc3342d1e370dc80",
+    "cir5_adapter_sha256": "1201a6e750cf65ca57940613df177a8caab14b594827f4496f84c7643f283df9",
+    "cir5_state_sha256": "dc57ec586aef1bf6fcc573ffbbc5fc5e441e551b69e7ce3b4685b7ea828e6e17",
+    "cold_state_sha256": "f924e8c76d9d28be55b8795920ca18811345dfde3b81ded85d5c039615a0510e"
+  },
+  "jobs": {
+    "keep_lora": {
+      "job": "qwen35-2b-keep-lora-ni3",
+      "initialization": {
+        "LoRA": "CIR5",
+        "SID": "original"
+      },
+      "status": "accepted",
+      "backend_id": "elated_gas_w63m65bclg",
+      "results_prefix": "projects/sft4safety/amlt-results/7209875533.62677-7997be68-62f4",
+      "code_prefix": "projects/sft4safety/amlt-code/a6fff30edd0c6fac104e26040096d12a9505e7b91c861df2072c17f0619fc0d2",
+      "url": "https://aka.ms/amlt?q=k3x7r",
+      "expected_initial_state_sha256": "913008ea5875ab7ee638058443f7fd51a62fce65e6b66b0a7c136416c79ef026",
+      "phase": "complete",
+      "initialization_verified": true,
+      "exact_reload_verified": true,
+      "formal_training_started": true,
+      "latest_verified_formal_step": 2025,
+      "initialization_readback": "artifacts/mind-cir-parameter-20260923/progress/v2-gates/keep_lora/compact_receipt.json",
+      "native_status": "Completed",
+      "observed_at_utc": "2026-09-23T21:01:49.955923+00:00",
+      "latest_observation": "artifacts/mind-cir-parameter-20260923/progress/20260923T210122Z/keep_lora/verified_observation.json",
+      "latest_logged_step": 2025,
+      "last_committed_checkpoint_step": 2025,
+      "latest_loss": 1.465,
+      "pre_NI_diagnostics_verified": true,
+      "previous_attempt_high_water_step": 800,
+      "previous_attempt_latest_loss": 1.445,
+      "requires_resume_verification": false,
+      "resume_restore_verified": true,
+      "post_resume_checkpoint_verification_pending": false,
+      "platform_recovery": {
+        "reason": "eviction by higher SLA tier",
+        "evicted_at_utc": "2026-09-23T12:48:49Z",
+        "automatic_requeue_at_utc": "2026-09-23T12:48:54Z",
+        "current_attempt_started_at_utc": "2026-09-23T12:57:46Z",
+        "checkpoint_resume": "CHECKPOINT_AUTO_RESUME_READY",
+        "verified_recovery_checkpoint_step": 800,
+        "checkpoint_restore_observed": true,
+        "restore_audit_verified": true,
+        "explanation": "Restored from800 and persisted CP900. All100 intervening ordered updates and3200 added exposures independently match the frozen permutation.",
+        "expected_completed_epochs": 1,
+        "expected_epoch_optimizer_step": 125,
+        "expected_consumed_in_current_epoch": 4000,
+        "nonzero_epoch_and_skip_verification_required": false,
+        "active_stdout": "user_logs/retry_001/std_log.txt",
+        "nonzero_epoch_and_skip_restore_start_verified": true,
+        "post_resume_persisted_checkpoint_verified": true,
+        "post_resume_checkpoint_step": 900,
+        "post_resume_verification": "artifacts/mind-cir-parameter-20260923/progress/20260923T140105Z/keep_lora/resume_verification.json",
+        "nonzero_epoch_and_skip_sequence_verified": true
+      },
+      "latest_resume_verification": "artifacts/mind-cir-parameter-20260923/progress/20260923T140105Z/keep_lora/resume_verification.json",
+      "training_stage_accepted": true,
+      "training_stage_acceptance": {
+        "path": "artifacts/mind-cir-parameter-20260923/progress/20260923T190121Z/keep_lora/training_stage_verification.json",
+        "sha256": "8bf649373f8945fb1a7d68431644d207b30554c53825bbb8c23e1b4c8bb7cee6",
+        "adapter_sha256": "15e23cf1d48f9c904be23204490fa04e647d97d1216402b412637291a0804a7d",
+        "steps": 2025,
+        "presentations": 64800
+      },
+      "final_readback": "artifacts/mind-cir-parameter-20260923/final-readback/mind-cir-param-transfer-108-0923-v2/qwen35-2b-keep-lora-ni3",
+      "eval_published_range_endpoints": {
+        "0": 7848,
+        "1": 7848,
+        "2": 7848,
+        "3": 7848
+      },
+      "full_dev_accepted": true,
+      "eval_latest_file_times": {
+        "0": "2026-09-23T19:30:38+00:00",
+        "1": "2026-09-23T19:30:37+00:00",
+        "2": "2026-09-23T19:27:19+00:00",
+        "3": "2026-09-23T19:30:38+00:00"
+      },
+      "full_dev_metrics": {
+        "interest_macro_recall_at_1": 0.03432687061788247,
+        "interest_macro_ndcg_at_1": 0.03432687061788247,
+        "interest_macro_recall_at_5": 0.12784687136381964,
+        "interest_macro_ndcg_at_5": 0.08072861296056646,
+        "interest_macro_recall_at_10": 0.20832480106372203,
+        "interest_macro_ndcg_at_10": 0.10632959024863563,
+        "interest_macro_recall_at_20": 0.34939235342907643,
+        "interest_macro_ndcg_at_20": 0.1419282016109485
+      },
+      "evaluation_acceptance": {
+        "path": "artifacts/mind-cir-parameter-20260923/progress/20260923T200121Z/keep_lora/evaluation_verification.json",
+        "sha256": "cf097f0ac3c8267a571d16b5b3f8322ec2d56db1f7d2c0d5a370b97ee5a0341d",
+        "prediction_sha256": "b870a30c4d15985e6caf81184a2aaad368c243a45991397168b2221691825e44",
+        "adapter_directory_sha256": "7b8445f87ef9c72afbe41759919dc46120df72aebad9f6120bc6ce384ea2dda2"
+      },
+      "probe_acceptance": {
+        "path": "artifacts/mind-cir-parameter-20260923/progress/20260923T210122Z/keep_lora/probe_verification.json",
+        "sha256": "869c6c7dab663a3268c3499fe3093ffb4d81dea54c209f6b247163d7d4b1d645",
+        "verified": [
+          [
+            "pre",
+            "sid_name"
+          ],
+          [
+            "pre",
+            "heldout_cir"
+          ],
+          [
+            "post",
+            "sid_name"
+          ],
+          [
+            "post",
+            "heldout_cir"
+          ],
+          [
+            "reference_full/pre",
+            "sid_name"
+          ],
+          [
+            "reference_full/pre",
+            "heldout_cir"
+          ],
+          [
+            "reference_full/post",
+            "sid_name"
+          ],
+          [
+            "reference_full/post",
+            "heldout_cir"
+          ]
+        ]
+      },
+      "whole_arm_accepted": true,
+      "acceptance": "artifacts/mind-cir-parameter-20260923/acceptance/keep_lora.json",
+      "acceptance_sha256": "c157038169d0fb85f1c490a08b563d0aec0bf29ef9c851a34b50e10068e92e89",
+      "completion_verification": {
+        "path": "artifacts/mind-cir-parameter-20260923/progress/20260923T210122Z/keep_lora/final_completion_verification.json",
+        "sha256": "cffb982fe2be4805a11c8f3796995cbe8a817ee1e79ec8a2566e3f88c8d396bc"
+      },
+      "native_completed_utc": "2026-09-23T20:45:20Z",
+      "monitoring_required": false
+    },
+    "keep_sid": {
+      "job": "qwen35-2b-keep-sid-ni3",
+      "initialization": {
+        "LoRA": "original",
+        "SID": "CIR5"
+      },
+      "status": "accepted",
+      "backend_id": "amusing_cumin_p4r9y8d73h",
+      "results_prefix": "projects/sft4safety/amlt-results/7209875533.62651-b3ae217f-0140",
+      "code_prefix": "projects/sft4safety/amlt-code/a6fff30edd0c6fac104e26040096d12a9505e7b91c861df2072c17f0619fc0d2",
+      "url": "https://aka.ms/amlt?q=k3x7s",
+      "expected_initial_state_sha256": "5c58b50d0d729964d2590ac7bb15c30857910447af5a0a28d58a940870f534c1",
+      "phase": "complete",
+      "initialization_verified": true,
+      "exact_reload_verified": true,
+      "formal_training_started": true,
+      "latest_verified_formal_step": 2025,
+      "initialization_readback": "artifacts/mind-cir-parameter-20260923/progress/v2-gates/keep_sid/compact_receipt.json",
+      "native_status": "Completed",
+      "observed_at_utc": "2026-09-23T21:31:52.137345+00:00",
+      "latest_observation": "artifacts/mind-cir-parameter-20260923/progress/20260923T213122Z/keep_sid/final_completion_verification.json",
+      "latest_logged_step": 2025,
+      "last_committed_checkpoint_step": 2025,
+      "latest_loss": 1.494,
+      "pre_NI_diagnostics_verified": true,
+      "previous_attempt_high_water_step": 455,
+      "platform_recovery": {
+        "reason": "eviction by higher SLA tier",
+        "evicted_at_utc": "2026-09-23T12:48:39Z",
+        "automatic_requeue_at_utc": "2026-09-23T12:48:43Z",
+        "current_attempt_started_at_utc": "2026-09-23T12:54:05Z",
+        "checkpoint_resume": "CHECKPOINT_AUTO_RESUME_READY",
+        "verified_recovery_checkpoint_step": 400,
+        "checkpoint_restore_observed": true,
+        "restore_audit_verified": true,
+        "explanation": "Restored from400 and persisted CP500. All100 intervening ordered updates and3200 added exposures independently match the frozen permutation.",
+        "active_stdout": "user_logs/retry_003/std_log.txt",
+        "post_resume_persisted_checkpoint_verified": true,
+        "post_resume_checkpoint_step": 500,
+        "post_resume_verification": "artifacts/mind-cir-parameter-20260923/progress/20260923T140105Z/keep_sid/resume_verification.json"
+      },
+      "platform_recovery_history": [
+        {
+          "reason": "eviction by higher SLA tier",
+          "evicted_at_utc": "2026-09-23T09:31:51Z",
+          "automatic_requeue_at_utc": "2026-09-23T09:31:54Z",
+          "current_attempt_started_at_utc": "2026-09-23T09:36:57Z",
+          "checkpoint_resume": "CHECKPOINT_AUTO_RESUME_NONE",
+          "explanation": "No checkpoint committed before first save interval100; restarted same composite initialization. Old20 steps are discarded attempt work, not current progress."
+        },
+        {
+          "reason": "eviction by higher SLA tier",
+          "evicted_at_utc": "2026-09-23T11:32:47Z",
+          "automatic_requeue_at_utc": "2026-09-23T11:32:56Z",
+          "current_attempt_started_at_utc": "2026-09-23T11:35:39Z",
+          "active_stdout": "user_logs/retry_002/std_log.txt",
+          "checkpoint_resume": "CHECKPOINT_AUTO_RESUME_READY",
+          "verified_recovery_checkpoint_step": 300,
+          "checkpoint_restore_observed": true,
+          "explanation": "Retry_002 successfully restored CP300 and persisted CP400 with exact continuation before the subsequent platform restart.",
+          "restore_audit_verified": true,
+          "post_resume_persisted_checkpoint_verified": true,
+          "post_resume_checkpoint_step": 400,
+          "post_resume_verification": "artifacts/mind-cir-parameter-20260923/progress/20260923T124605Z/keep_sid/post_resume_checkpoint_verification.json"
+        }
+      ],
+      "requires_resume_verification": false,
+      "resume_restore_verified": true,
+      "post_resume_checkpoint_verification_pending": false,
+      "latest_resume_verification": "artifacts/mind-cir-parameter-20260923/progress/20260923T140105Z/keep_sid/resume_verification.json",
+      "previous_attempt_latest_loss": 1.57,
+      "previous_resume_checkpoint_verification": "artifacts/mind-cir-parameter-20260923/progress/20260923T124605Z/keep_sid/post_resume_checkpoint_verification.json",
+      "training_stage_accepted": true,
+      "training_stage_acceptance": {
+        "path": "artifacts/mind-cir-parameter-20260923/progress/20260923T210122Z/keep_sid/training_stage_verification.json",
+        "sha256": "74a667706bd02fd3e3d08b38884da418c78021a643fab0fd3e5a5ab27771ecc1",
+        "adapter_sha256": "cd57394dc7d335c9623179e18a43da9f85fd71680a62db9f2a7eee0cb1a16dad",
+        "steps": 2025,
+        "presentations": 64800
+      },
+      "final_readback": "artifacts/mind-cir-parameter-20260923/final-readback/mind-cir-param-transfer-108-0923-v2/qwen35-2b-keep-sid-ni3",
+      "eval_published_range_endpoints": {
+        "0": 7848,
+        "1": 7848,
+        "2": 7848,
+        "3": 7848
+      },
+      "full_dev_accepted": true,
+      "monitoring_required": false,
+      "whole_arm_accepted": true,
+      "acceptance": "artifacts/mind-cir-parameter-20260923/acceptance/keep_sid.json",
+      "acceptance_sha256": "7f42d6922515683fb2cd00f40ed962f2cb4eae2436e988b063f17e7027fbe946",
+      "completion_verification": {
+        "path": "artifacts/mind-cir-parameter-20260923/progress/20260923T213122Z/keep_sid/final_completion_verification.json",
+        "sha256": "7e2388095517d8297206d5cb9699e4fbb77e4bf7b3250fece4075375841500e9"
+      },
+      "native_completed_utc": "2026-09-23T21:29:18Z",
+      "full_dev_metrics": {
+        "interest_macro_recall_at_1": 0.032243875047044804,
+        "interest_macro_ndcg_at_1": 0.032243875047044804,
+        "interest_macro_recall_at_5": 0.12500262312370097,
+        "interest_macro_ndcg_at_5": 0.07833864677710034,
+        "interest_macro_recall_at_10": 0.21246673921573342,
+        "interest_macro_ndcg_at_10": 0.106176649218419,
+        "interest_macro_recall_at_20": 0.33930101761021325,
+        "interest_macro_ndcg_at_20": 0.13797290031483583
+      },
+      "evaluation_acceptance": {
+        "path": "artifacts/mind-cir-parameter-20260923/progress/20260923T213122Z/keep_sid/evaluation_verification.json",
+        "sha256": "5df754c2f2fb9e6412c6be21c6953d8ac7886bda077da771ca3f88cefa4dea0f",
+        "prediction_sha256": "48d2b1844cf2d48c0738574671de8761e1d6acfe97077f229cc775cdc65f2fbd",
+        "adapter_directory_sha256": "858e4bec5904ed93b4faf13917229a2bb1f2a6725ca10154cefc1ea92c16dbaf"
+      },
+      "probe_acceptance": {
+        "path": "artifacts/mind-cir-parameter-20260923/progress/20260923T213122Z/keep_sid/probe_verification.json",
+        "sha256": "d3409add81c3a4c5772ff84a61f0c7f58d019340c869a150041d1fe015492125",
+        "verified": [
+          [
+            "pre",
+            "sid_name"
+          ],
+          [
+            "pre",
+            "heldout_cir"
+          ],
+          [
+            "post",
+            "sid_name"
+          ],
+          [
+            "post",
+            "heldout_cir"
+          ]
+        ]
+      }
+    }
+  },
+  "protocol": {
+    "NI_epochs": 3,
+    "NI_steps": 2025,
+    "NI_samples": 21600,
+    "NI_presentations": 64800,
+    "seed": 42,
+    "learning_rate": 2e-05,
+    "both_groups_trainable": true,
+    "fresh_optimizer_scheduler": true,
+    "no_CIR_retraining": true,
+    "no_extra_training_arms": true,
+    "microbatch": 2,
+    "accumulation": 4,
+    "global_batch": 32,
+    "gpus_per_job": 4,
+    "maximum_concurrent_gpus": 8,
+    "target": "Recall",
+    "sla": "Standard",
+    "loss": "native full-vocabulary completion-only token-mean SFT"
+  },
+  "diagnostics": {
+    "version": "cir-parameter-transfer-probes-v1",
+    "seed": 42,
+    "training_use": false,
+    "future_targets_used": false,
+    "train_user_overlap": 0,
+    "unique_dev_users": 27082,
+    "eligible_reconstruction_users": 16158,
+    "reconstruction_users": 512,
+    "reconstruction_class_counts": {
+      "Accidents & Emergency Response": 24,
+      "Aging & Longevity": 2,
+      "Air & Rail Travel": 7,
+      "American Football": 16,
+      "Architecture & Residential Design": 2,
+      "Astrology & Divination": 1,
+      "Baking & Desserts": 2,
+      "Baseball & Softball": 14,
+      "Basketball": 4,
+      "Beauty & Grooming": 3,
+      "Boating & Watercraft": 1,
+      "Cars & Driving": 9,
+      "Celebrity & Creator Culture": 27,
+      "Charity & Volunteering": 3,
+      "Civic Life & Public Commemorations": 6,
+      "Civil Rights & Social Justice": 6,
+      "Climate Change": 5,
+      "Combat Sports": 5,
+      "Companies & Corporate Strategy": 15,
+      "Consumer Technology": 1,
+      "Cooking & Recipes": 7,
+      "Courts & Legal Cases": 24,
+      "Crime & Public Safety": 39,
+      "Cruises": 1,
+      "Cybersecurity & Digital Privacy": 1,
+      "Destinations & Trip Ideas": 5,
+      "Diplomacy & Geopolitics": 4,
+      "Economy & Economic Policy": 6,
+      "Elections & Political Campaigns": 13,
+      "Electric & Alternative Vehicles": 1,
+      "Energy & Sustainability": 1,
+      "Fashion & Personal Style": 12,
+      "Film": 6,
+      "Fitness & Exercise": 7,
+      "Floods, Droughts & Wildfires": 4,
+      "Food Culture & Trends": 1,
+      "Gambling & Lotteries": 4,
+      "Golf": 2,
+      "Government & Public Policy": 15,
+      "Higher Education": 1,
+      "Historical Events & Eras": 3,
+      "Home Improvement & Repair": 3,
+      "Hotels & Accommodation": 3,
+      "Household Cleaning & Laundry": 1,
+      "Immigration & Citizenship": 3,
+      "Interior Design & Decorating": 1,
+      "Internet & Social Platforms": 2,
+      "Journalism & News Media": 1,
+      "Labor & Employment": 7,
+      "Medicine & Medical Research": 14,
+      "Mental Health": 1,
+      "Motorcycles": 1,
+      "Motorsports": 2,
+      "Music": 8,
+      "Nutrition & Healthy Eating": 13,
+      "Olympic & Athletics Sports": 1,
+      "Parenting & Family Life": 5,
+      "Personal Finance": 6,
+      "Personal Growth": 2,
+      "Pets & Animal Companions": 6,
+      "Policing & Corrections": 15,
+      "Population & Demographic Change": 1,
+      "Public Health": 5,
+      "Public Services & Social Welfare": 1,
+      "Real Estate": 5,
+      "Relationships & Dating": 8,
+      "Religion in Public Life": 4,
+      "Restaurants & Dining": 4,
+      "Schools & Childhood Education": 3,
+      "Severe Storms": 6,
+      "Sexual & Reproductive Health": 1,
+      "Shopping & Gift Ideas": 10,
+      "Sleep Health": 1,
+      "Soccer": 1,
+      "Space & Astronomy": 3,
+      "Sports Business & Administration": 2,
+      "Telecommunications": 1,
+      "Television & Streaming": 15,
+      "Travel Planning & Deals": 2,
+      "Trivia & Puzzles": 5,
+      "Vehicle Buying & Ownership": 6,
+      "Visual Arts & Design": 1,
+      "War & Armed Conflict": 2,
+      "Weather Forecasts & Seasonal Conditions": 2,
+      "Wildlife & Conservation": 12,
+      "Wine, Beer & Spirits": 2,
+      "Workplace Life": 4
+    },
+    "sid_name_rows": 108,
+    "class_balancing": false,
+    "source_sha256": {
+      "data/training/mind_cir_108_v1/ni.parquet": "e76acd152ed6e0e92f8b8015dfbc599603267a480d9321b41b5acb95d10487f0",
+      "data/training/mind_cir_108_v1/dev_full_grouped.parquet": "c05b20033ce0d1a0c2d4b7bb97ca0cd6b7cffb7f198a7265cce9e54046b665fd",
+      "data/training/mind_cir_108_v1/interest_token_mapping.parquet": "45397451ac2ae2e64d8156b2b47be3f454cc309a8d30a83bc23c2d3267653a0a"
+    },
+    "files": {
+      "heldout_cir.parquet": "919beec7e3b039edd900575c2f36aa7e7e84ee01900a49460d57b00427bc73f5",
+      "sid_name.parquet": "d5bbaa0a03933655cf071e0ef7b4254bd22a42015b1fd8bc572929e2595879a1"
+    },
+    "selection": "one deterministic visible history per independent Dev user; category selection uses only history; fixed hash selection of 512 eligible users"
+  },
+  "monitoring": {
+    "status": "DELETED_AFTER_COMPLETION",
+    "automation_created": true,
+    "automation_id": "cir",
+    "interval_minutes": 30,
+    "target_thread_id": "01a0aa4a-7c14-7e21-bd77-eb63815685c5",
+    "enabled_at_utc": "2026-09-23T09:23:15.586468+00:00",
+    "scope": [
+      "keep_lora",
+      "keep_sid"
+    ],
+    "autonomous_repair_authorized": true,
+    "notification_policy": "quiet_while_healthy_notify_material_failure_user_action_or_both_accepted",
+    "completion_action": "delete_monitor_after_both_arms_accepted",
+    "last_check_at_utc": "2026-09-23T21:40:48.113699+00:00",
+    "last_snapshot": "artifacts/mind-cir-parameter-20260923/progress/20260923T213122Z",
+    "active_arms": [],
+    "accepted_arms": [
+      "keep_lora",
+      "keep_sid"
+    ],
+    "completion_stop_pending": false,
+    "automation_deleted": true,
+    "stopped_at_utc": "2026-09-23T21:42:37.749010+00:00",
+    "stop_receipt": "artifacts/mind-cir-parameter-20260923/final-report/monitoring_stop_receipt.json"
+  },
+  "preflight": {
+    "status": "passed",
+    "unchanged_original_payload_files": 103,
+    "source_bundle_sha256": "66b6c9f13013ef2dbfe73e294dd4763b51716e4185454651bc3342d1e370dc80",
+    "transfer_bundle_sha256": "4af6c06788ae2b3365ec49319cc314d83dc1a50a3f44e827cb0e5c6fa4b93b05",
+    "probe_rows": {
+      "sid_name": 108,
+      "heldout_cir": 512
+    },
+    "probe_user_overlap": 0,
+    "formal_updates_per_arm": 2025,
+    "no_CIR_training": true,
+    "focused_tests": "35 passed",
+    "full_suite": "Blocked at existing tests/test_compare_rho_students.py collection: scipy unavailable"
+  },
+  "plan": "docs/research/2026-09-23_cir_parameter_transfer_plan.md",
+  "final_reader": "scripts/analysis/accept_cir_parameter_transfer.py",
+  "submission_log": "artifacts/mind-cir-parameter-20260923/submission_v2.log",
+  "previous_experiments": [
+    {
+      "experiment": "mind-cir-param-transfer-108-0923-v1",
+      "bundle": "artifacts/mind-cir-parameter-20260923/bundle-v1",
+      "bundle_sha256": "50efc6ae50c4d62d95403d30e583196673f70d5cc3cd0880e5127637721047b5",
+      "jobs": {
+        "keep_lora": {
+          "job": "qwen35-2b-keep-lora-ni3",
+          "status": "failed_before_training",
+          "initialization": {
+            "LoRA": "CIR5",
+            "SID": "original"
+          },
+          "backend_id": "cyan_spinach_3sv36vjf74",
+          "results_prefix": "projects/sft4safety/amlt-results/7209876808.79951-6b633b18-1a8b",
+          "code_prefix": "projects/sft4safety/amlt-code/fe24ce5257cb2d4f57c8f0a3753a98f8968ebc4ca8fc9b3080af2566c341b7f6",
+          "url": "https://aka.ms/amlt?q=k3x39"
+        },
+        "keep_sid": {
+          "job": "qwen35-2b-keep-sid-ni3",
+          "status": "killed_after_platform_requeue_before_training",
+          "initialization": {
+            "LoRA": "original",
+            "SID": "CIR5"
+          },
+          "backend_id": "musing_bridge_ctpp317qs4",
+          "results_prefix": "projects/sft4safety/amlt-results/7209876808.79907-1bc5c71c-fa08",
+          "code_prefix": "projects/sft4safety/amlt-code/fe24ce5257cb2d4f57c8f0a3753a98f8968ebc4ca8fc9b3080af2566c341b7f6",
+          "url": "https://aka.ms/amlt?q=k3x38"
+        }
+      },
+      "reason": "PEFT in-place state-dict key rewrite broke composition provenance before any NI update"
+    }
+  ],
+  "report": "docs/experiments/2026-09-23/mind_cir_parameter_transfer.md",
+  "recovery_preflight": "artifacts/mind-cir-parameter-20260923/recovery_v2_preflight.json",
+  "uploaded_source_readback": "artifacts/mind-cir-parameter-20260923/uploaded_source_readback_v2.json",
+  "observed_at_utc": "2026-09-23T21:01:49.999864+00:00",
+  "all_conditions_accepted": true,
+  "accepted_at_utc": "2026-09-23T21:40:48.113699+00:00",
+  "final_report": "docs/experiments/2026-09-23/mind_cir_parameter_transfer_results.md",
+  "final_acceptance": {
+    "path": "artifacts/mind-cir-parameter-20260923/final_acceptance.json",
+    "sha256": "19684058b5f022961c0f85aaa64e3cf998c2c55f4fba29c196068ba145c4a1ad"
+  },
+  "final_comparison": "artifacts/mind-cir-parameter-20260923/final-report/comparison.json"
+}

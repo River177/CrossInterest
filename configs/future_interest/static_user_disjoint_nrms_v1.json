@@ -1,0 +1,58 @@
+{
+  "rule_version": "static-user-disjoint-frozen-minilm-nrms-v1",
+  "dataset_dir": "data/processed/new_interest_static_user_disjoint_v1",
+  "semantic_benchmark_dir": "data/processed/new_interest_static_user_disjoint_semantic_users_v1",
+  "title_embedding_dir": "artifacts/future-novel-interest/static-user-disjoint-nrms-title-embeddings-v1",
+  "linear_ranker_output_dir": "artifacts/future-novel-interest/static-user-disjoint-balanced-semantic-linear-ranker-v1",
+  "balanced_ridge_output_dir": "artifacts/future-novel-interest/static-user-disjoint-balanced-semantic-history-ridge-v1",
+  "output_dir": "artifacts/future-novel-interest/static-user-disjoint-nrms-v1",
+  "seed": 20260815,
+  "k": 10,
+  "data": {
+    "bucket_boundaries": [4, 8, 16, 32, 64, 128, 256, 512, 1024],
+    "batch_size_by_boundary": {
+      "4": 8192,
+      "8": 8192,
+      "16": 4096,
+      "32": 2048,
+      "64": 1024,
+      "128": 256,
+      "256": 64,
+      "512": 8,
+      "1024": 1
+    }
+  },
+  "training": {
+    "device": "auto",
+    "precision": "auto",
+    "gradient_clip_norm": 5.0
+  },
+  "architecture_stage": {
+    "architectures": [
+      {"hidden_dimension": 128, "attention_heads": 4, "dropout": 0.1},
+      {"hidden_dimension": 192, "attention_heads": 4, "dropout": 0.1},
+      {"hidden_dimension": 256, "attention_heads": 4, "dropout": 0.1},
+      {"hidden_dimension": 256, "attention_heads": 8, "dropout": 0.1},
+      {"hidden_dimension": 256, "attention_heads": 8, "dropout": 0.2},
+      {"hidden_dimension": 384, "attention_heads": 8, "dropout": 0.1}
+    ],
+    "class_balance_beta": 0.9,
+    "learning_rate": 0.001,
+    "weight_decay": 0.00001,
+    "epochs": 4,
+    "evaluation_epochs": [2, 4]
+  },
+  "optimization_stage": {
+    "class_balance_betas": [0.0, 0.25, 0.5, 0.65, 0.75, 0.85, 0.9, 0.95, 1.0],
+    "learning_rates": [0.001, 0.003],
+    "weight_decays": [0.0, 0.00001],
+    "epochs": 8,
+    "evaluation_epochs": [2, 4, 6, 8]
+  },
+  "selection": {
+    "best_recall_tolerance_absolute": 0.002,
+    "user_recall_floor": "selected Linear Ranker Tune User-Macro Recall@10",
+    "objective": "among eligible Tune Pareto points, maximize Interest-Macro NDCG@10",
+    "dev_usage": "single exploratory evaluation after Train-only selection and full-Train refit"
+  }
+}

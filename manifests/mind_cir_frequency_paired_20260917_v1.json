@@ -1,0 +1,14 @@
+{
+  "status": "accepted",
+  "paired_users": 9883,
+  "arms": {
+    "singleton": "manifests/mind_cir_frequency_singleton_20260917_v1.json",
+    "repeated": "manifests/mind_cir_frequency_repeated_20260917_v1.json"
+  },
+  "report": "docs/experiments/2026-09-17/mind_cir_frequency_paired.md",
+  "protocol": "CIR1->NI3; seed42; same paired users; random target within frequency pool; no class balancing",
+  "data_audit_sha256": "5c1024ded72f2d721c1486702dc6208a3ad353b1bf20759500a0ce08b8d77b51",
+  "accepted_at_utc": "2026-09-18T00:50:14.186405+00:00",
+  "final_acceptance": "artifacts/mind-cir-frequency-20260917/paired_final_acceptance.json",
+  "final_acceptance_sha256": "840e850105136f09b7dc1d6a6d041043dee99d565a6d4133f2b02ea3fdfdce66"
+}

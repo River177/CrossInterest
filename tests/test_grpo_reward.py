@@ -77,6 +77,15 @@ def test_correct_malformed_output_gets_point_eight(output: str) -> None:
     assert _score(output) == 0.8
 
 
+def test_bare_correct_label_gets_malformed_reward() -> None:
+    assert extract_final_answer("Cars & Driving") is None
+    assert extract_final_answer(
+        "Cars & Driving",
+        allow_bare_label=True,
+    ) == TARGET
+    assert _score("Cars & Driving") == 0.8
+
+
 def test_strict_correct_output_gets_one() -> None:
     output = (
         "<think>History suggests vehicle interest.</think>\n"

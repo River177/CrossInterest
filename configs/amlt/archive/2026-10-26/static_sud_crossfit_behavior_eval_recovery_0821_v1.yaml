@@ -1,0 +1,62 @@
+description: Eval-only recovery for two completed Qwen3.5 Behavior crossfit adapters
+
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+    - python -c "import torch; print(torch.__version__, torch.version.cuda)"
+    - nvidia-smi
+
+code:
+  local_dir: $CONFIG_DIR/../../../..
+
+target:
+  service: sing
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+
+jobs:
+  - name: behavior-vanilla-eval-recovery
+    sku: 80G8-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /scratch/pip_cache
+        NEW_INTEREST_PARQUET_STAGE_DIR: /scratch/new-interest-parquet-stage
+        STATIC_SUD_CROSSFIT_NUM_GPUS: "8"
+        CROSSFIT_SOURCE_ROOT: /mnt/output/projects/sft4safety/amlt-results/7212788530.09261-77e8fede-8ba2
+        CROSSFIT_SOURCE_RESULT_ID: 7212788530.09261-77e8fede-8ba2
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR $$NEW_INTEREST_PARQUET_STAGE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh &&
+        bash scripts/archive/amlt/2026-10-26/evaluation/run_static_user_disjoint_crossfit_behavior_eval_recovery.sh
+  - name: behavior-weighted-eval-recovery
+    sku: 80G8-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /scratch/pip_cache
+        NEW_INTEREST_PARQUET_STAGE_DIR: /scratch/new-interest-parquet-stage
+        STATIC_SUD_CROSSFIT_NUM_GPUS: "8"
+        CROSSFIT_SOURCE_ROOT: /mnt/output/projects/sft4safety/amlt-results/7212788530.09227-18411bb2-ac34
+        CROSSFIT_SOURCE_RESULT_ID: 7212788530.09227-18411bb2-ac34
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR $$NEW_INTEREST_PARQUET_STAGE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh &&
+        bash scripts/archive/amlt/2026-10-26/evaluation/run_static_user_disjoint_crossfit_behavior_eval_recovery.sh

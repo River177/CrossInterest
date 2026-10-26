@@ -1,0 +1,79 @@
+{
+  "rule_version": "static-candidate-pilot-gate-v1",
+  "created_at": "2026-08-29T16:56:04.655352+00:00",
+  "passed": true,
+  "scope": "all_conditions",
+  "selected_condition_ids": [
+    "gpt55_medium_behavior_interest_uniform",
+    "gpt55_none_behavior_interest_uniform"
+  ],
+  "manifest_path": "configs/candidate/static_user_disjoint_behavior_interest_gpt55_v1.json",
+  "manifest_sha256": "fea6469c7e9ff2c42f1f91f680720d6cf9bad8fa4e2de7d2307323a1dacc2dd8",
+  "condition_count": 2,
+  "conditions": {
+    "gpt55_medium_behavior_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_interest",
+      "samples": 1000,
+      "macro_category_accuracy": 0.1912225409511044,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt55/models/pilot/gpt55_medium_behavior_interest_uniform/acceptance.json",
+          "sha256": "2a0b59e2ff9c468a3a450f570c634b2433a83bf5067788ae534b0f2420209e9e"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt55/models/pilot/gpt55_medium_behavior_interest_uniform/experiment_identity.json",
+          "sha256": "b40a3a84fc2faf5777bd3a2a2ad65cecb9ac7d376ad9ef91514f1b93bbd9c513"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt55/models/pilot/gpt55_medium_behavior_interest_uniform/metrics.json",
+          "sha256": "cf0c153d2d40e57798c755e520a35bb15b09082cc0c3759c9617e1ba07687797"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt55/models/pilot/gpt55_medium_behavior_interest_uniform/predictions.parquet",
+          "sha256": "b871e61620b6a57559ed771db7d6cbae190aa21208559e84a5515c90cbe13fb7"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt55/models/pilot/gpt55_medium_behavior_interest_uniform/resolved_config.json",
+          "sha256": "b629a9cd0c815ed16ed76bddd44993ca23118f8e86a47d148eb42d73157ce687"
+        }
+      }
+    },
+    "gpt55_none_behavior_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_interest",
+      "samples": 1000,
+      "macro_category_accuracy": 0.18461413515962316,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt55/models/pilot/gpt55_none_behavior_interest_uniform/acceptance.json",
+          "sha256": "fcfe381af7ffe3b5ffcc802725c743353c395d2fee2618bf3a40d53312015d18"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt55/models/pilot/gpt55_none_behavior_interest_uniform/experiment_identity.json",
+          "sha256": "a8737e348dbc0b1f476eee4586b657dff991adf3bb0ae956adb8761c262ef2fb"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt55/models/pilot/gpt55_none_behavior_interest_uniform/metrics.json",
+          "sha256": "1e3d674a01b34eb20feb9a795e1cad1598d02396c8577da1a0554895aadee1b0"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt55/models/pilot/gpt55_none_behavior_interest_uniform/predictions.parquet",
+          "sha256": "8ead3555a620579b27b2c4ce6ab4888343fe1bb9d2af45bc651d3231ebc29003"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-behavior-interest-v3/gpt55/models/pilot/gpt55_none_behavior_interest_uniform/resolved_config.json",
+          "sha256": "38a43cb8a459bda3b8883c61c804f48012ce1eb5f2b3a45fbaedf53b743ca34c"
+        }
+      }
+    }
+  }
+}

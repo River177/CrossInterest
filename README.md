@@ -5,6 +5,13 @@ reclassified MINDlarge histories. The repository covers deterministic dataset
 construction, LoRA SFT, constrained-beam and candidate-selection evaluation,
 and veRL GRPO experiments.
 
+The current research line is CIR→NI, followed by the matched Text125/Token125
+and bidirectional alignment studies. Start with the
+[repository and experiment guide](docs/repository.md) and the
+[CIR/NI overview](docs/experiments/2026-09-30/cir_ni_experiment_overview.md).
+The October 2026 integration restores the accepted runtime modules to `src/`;
+historical frozen bundles retain their original hashes and dependencies.
+
 ## Quick Start
 
 Python 3.10+ is required. The editable install supports local data builders and
@@ -45,3 +52,7 @@ Builders do not replace existing outputs unless `--overwrite` is explicit.
 
 Experiment results are indexed in
 [docs/experiments/README.md](docs/experiments/README.md).
+
+Before a local commit, run `python scripts/check_repository.py` and the tests
+appropriate to the change. The checker reports large data/model files,
+credential patterns, and inconsistent archive paths without staging files.

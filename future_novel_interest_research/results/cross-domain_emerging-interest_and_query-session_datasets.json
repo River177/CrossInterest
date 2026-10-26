@@ -1,0 +1,184 @@
+{
+  "name": "Cross-domain, reading, mobility, and query-session datasets for emerging-interest prediction",
+  "kind": "Comparative dataset audit and alternative task formulation",
+  "venue_year": "Goodreads Book Graph: UCSD public release collected in 2017; Foursquare NYC/Tokyo and global check-ins: UbiComp/IEEE TSMC 2013-2015 and WWW 2019 variants; Gowalla: KDD 2011/SNAP release; Amazon Reviews 2023: SIGIR 2024; TripClick: SIGIR 2021; TREC Session Track: 2010-2014; historical commercial query logs such as AOL and Yandex are access- or ethics-constrained [uncertain].",
+  "official_sources": {
+    "Goodreads": ["https://cseweb.ucsd.edu/~jmcauley/datasets/goodreads.html", "https://github.com/MengtingWan/goodreads"],
+    "Foursquare": ["https://sites.google.com/site/yangdingqi/home/foursquare-dataset"],
+    "Gowalla": ["https://snap.stanford.edu/data/loc-gowalla.html", "https://snap.stanford.edu/data/loc-gowalla_totalCheckins.txt.gz"],
+    "Amazon_Reviews_2023": ["https://amazon-reviews-2023.github.io/", "https://arxiv.org/abs/2403.03952"],
+    "TripClick": ["https://tripdatabase.github.io/tripclick/", "https://github.com/tripdatabase/tripclick", "https://arxiv.org/abs/2103.07901"],
+    "TREC_Session_Track": ["https://trec.nist.gov/data/session.html"],
+    "historical_query_logs": ["https://www.kaggle.com/c/yandex-personalized-web-search-challenge", "https://www.nytimes.com/2006/08/09/technology/09aol.html"]
+  },
+  "release_and_license": {
+    "Goodreads": "Direct UCSD download links are live. The owner page restricts the data to academic use, prohibits redistribution, and prohibits commercial use; user and review IDs are anonymized.",
+    "Foursquare": "The author's Google Sites page still presents download and README links for NYC restaurant, NYC/Tokyo, global-scale, profile, and social-network variants. A standalone open-data license is not stated on the landing page [uncertain].",
+    "Gowalla": "SNAP provides direct downloads for the friendship graph and total check-ins. SNAP dataset terms should be checked before redistribution because the dataset page itself does not state a per-dataset license [uncertain].",
+    "Amazon_Reviews_2023": "The official project provides category-level review and metadata downloads and Hugging Face access. A dataset-wide open-source license is not stated on the landing page [uncertain].",
+    "TripClick": "Access requires a signed request form specifying packages and intended use. Terms allow free non-commercial research but prohibit publicly sharing or hosting dataset parts.",
+    "TREC_Session_Track": "NIST hosts yearly data pages, but some components may inherit ClueWeb or participant agreements; exact reusable access for every year must be checked [uncertain].",
+    "historical_query_logs": "The AOL log was withdrawn after a serious privacy failure and should not be used or redistributed. Current official access and terms for the 2014 Yandex challenge logs were not verified [uncertain]."
+  },
+  "input_history": {
+    "Goodreads": "Chronologically ordered public-shelf interactions or detailed reviews for an anonymized user, with rating/read/review flags and date_added, date_updated, started_at, and read_at where present.",
+    "Foursquare": "A user's timestamped check-ins with coordinates, venue ID, and, in the NYC/Tokyo semantic release, fine-grained venue category. Global variants provide longer mobility histories and optional social-network snapshots.",
+    "Gowalla": "Timestamped latitude/longitude/location-ID check-ins for a stable user plus an undirected friendship graph; venue categories are absent.",
+    "Amazon_Reviews_2023": "Timestamped ratings/reviews across 33 product domains joined to rich product metadata. Cross-domain use requires verifying that anonymized user IDs are globally consistent across category files [uncertain].",
+    "TripClick": "Queries and clicks inside a health-search session. The release documents about 1.6 million sessions, not a durable cross-session person identifier.",
+    "TREC_and_historical_query_logs": "TREC provides short multi-query sessions around a topic; historical Yandex/AOL logs may contain longer pseudonymous traces but present access, semantic, or ethics blockers [uncertain]."
+  },
+  "prediction_target": "The proposed targets are the next first-observed book genre, venue category, geographic region, product domain, or query-intent cluster absent from a frozen history. Goodreads, Foursquare, Gowalla, and Amazon offer natural behavioral transitions but no explicit new-interest label. TripClick and TREC support next-query or session-subtopic prediction only; that is intent reformulation inside a task, not durable user-interest emergence.",
+  "novel_interest_definition": "Define novelty relative to the observed pre-cutoff semantic history: first positive event in a previously unseen book genre, venue category, product domain, or frozen query-intent cluster. New location, new book, or new URL alone is item novelty. A geographic move may reflect travel or opportunity rather than preference change, while a query reformulation may reflect task progress rather than a new personal interest.",
+  "novelty_granularity_and_reference_window": {
+    "Goodreads": "Book, fuzzy genre, author, series, or text-derived topic novelty relative to all pre-cutoff shelves/reviews. Genres are overlapping tags extracted from popular shelves, not a clean hierarchy.",
+    "Foursquare": "Venue, fine-grained venue category, city, or region novelty relative to earlier check-ins. Use the 10-month NYC/Tokyo release for semantic-category transitions and the 18/22-month global variants for longer geographic migration.",
+    "Gowalla": "Location-ID or frozen spatial-cluster novelty over February 2009 to October 2010; without venue semantics this is mobility novelty, not semantic interest novelty.",
+    "Amazon": "Product-domain and hierarchical category novelty over a long user timeline, conditional on cross-file user-ID continuity [uncertain].",
+    "Query_sessions": "Intent-cluster novelty relative to earlier queries in the same session; cross-session lifetime novelty is not supported by TripClick or TREC."
+  },
+  "interest_onset_definition": {
+    "Goodreads": "First read/rated/reviewed book in a history-absent genre; adding a book to a shelf without reading should be a weaker onset tier.",
+    "Foursquare": "First check-in to a venue category absent from prior check-ins, preferably followed by another check-in in that category after a time gap.",
+    "Gowalla": "First check-in to a new spatial cluster, explicitly labeled geographic exploration rather than interest onset.",
+    "Amazon": "First dated review/rating in a previously unseen product domain or category; review is only a proxy for consumption.",
+    "TripClick_and_TREC": "First query or clicked document assigned to a new within-session intent cluster; this is search-intent transition, not a persistent interest onset."
+  },
+  "is_direct_match": {
+    "Goodreads": "Strong adjacent dataset-only match for natural cross-genre emergence, with stable users, long histories, text, and repeated later reading; missing exposure and fuzzy genres prevent a direct causal interpretation.",
+    "Foursquare": "Strong alternative formulation for natural category and geographic exploration. Identity and chronology are strong, but travel, local availability, and missing impressions dominate interpretation.",
+    "Gowalla": "Mobility-only robustness dataset; long stable trajectories but no semantic venue taxonomy.",
+    "Amazon_Reviews_2023": "Potential cross-domain benchmark with natural multi-category behavior, but it duplicates the commerce formulation and global cross-category identity should be file-level verified [uncertain].",
+    "TripClick": "Method inspiration and session-intent robustness only. It cannot model known-user long-term interest migration.",
+    "TREC_Session_Track": "Controlled session-reformulation benchmark only; topics and short sessions are task-oriented rather than natural sustained adoption.",
+    "AOL_Yandex": "Reject or blocked: AOL on privacy/withdrawal grounds; Yandex until owner access and terms are re-verified [uncertain]."
+  },
+  "persistence_signal": {
+    "Goodreads": "Yes: later reads/ratings/reviews in the same newly entered genre, author, series, or topic can separate one-off exploration from repeated adoption.",
+    "Foursquare": "Yes within the capture window: later check-ins to the same new venue category or region, though repeated presence may reflect residence/travel opportunity.",
+    "Gowalla": "Yes for repeated spatial-cluster visits, but not semantic preference persistence.",
+    "Amazon": "Possible through later reviews in the same new domain/category; unreviewed repeat purchases are missing.",
+    "TripClick_and_TREC": "Only repeated intent within a short search session; no durable cross-session persistence signal."
+  },
+  "method": "Build domain-specific semantic events, freeze mappings before the test period, and use a temporal sequence model or hierarchical classifier to rank unseen semantic units. Add explicit transition features: recency, dwell time between events, semantic distance, geography, and prior cross-domain bridge concepts. Compare global transition matrices, user-conditioned co-occurrence, popularity, content similarity, recurrent/Transformer sequence models, and an LLM ranker. For query sessions, model reformulation and subtask transition separately rather than pooling them with user-interest forecasting.",
+  "evaluation_protocol": "For Goodreads, Foursquare, Gowalla, and Amazon, create non-overlapping burn-in/history, onset, and persistence windows per stable identity. Evaluate full semantic-vocabulary Recall/NDCG, macro target recall, semantic distance, calibration, and repeated-adoption accuracy; cluster uncertainty by user. Use same-user temporal prediction as the main axis and user-disjoint transfer as secondary. For query sessions, use official session/topic splits and next-intent metrics, report them separately, and do not claim durable-interest performance. Include global popularity, last-semantic-unit, transition-frequency, and shuffled-history controls.",
+  "generalization_axis": "Natural seen-user temporal generalization is available in Goodreads, Foursquare, Gowalla, and likely Amazon. Additional axes are unseen users, unseen items inside known semantic units, new semantic units for a user, cross-city mobility, and cross-product-domain transition. TripClick/TREC test within-session intent and query-frequency shift rather than long-term user generalization.",
+  "exposure_handling": {
+    "Goodreads_and_Amazon": "Only positive shelf/review/rating actions are observed; no impression slate or propensity. Unobserved books/products are positive-unlabeled.",
+    "Foursquare_and_Gowalla": "Only check-ins are observed; venue visibility, physical distance, opening hours, travel, and recommendation exposure are missing.",
+    "TripClick": "Clicked results and query logs provide partial search exposure; the public benchmark derives relevance from clicks, but exact displayed ranks/slates in requested raw logs should be confirmed before opportunity-conditioned evaluation [uncertain].",
+    "TREC": "Controlled retrieval results and judged documents may define a candidate set, but it is an experimental IR opportunity set rather than natural recommender exposure.",
+    "historical_query_logs": "Logging policies and result exposures vary and cannot be assumed randomized [uncertain]."
+  },
+  "main_findings_and_limits": "Goodreads is the best low-cost semantic alternative: it has 876K stable users, 229M shelf interactions, 15M detailed reviews, rich book graphs, and later repeat signals, but genre labels are fuzzy and exposure is absent. Foursquare is the best natural transition stress test: it provides months of semantic check-ins and longer global mobility variants, but opportunity and travel confounding are severe. Gowalla offers much longer dense mobility but no venue taxonomy. Amazon can test genuine cross-product-domain transitions at scale after user-ID continuity is confirmed, but is already covered by commerce benchmarking. TripClick and TREC are valuable for representing intent evolution and reformulation; they do not answer the user-history-to-new-interest question. No release-verified dataset in this group directly labels sustained emerging interest or randomizes cross-domain opportunity.",
+  "scale": {
+    "Goodreads": "2,360,655 books, 876,145 users, 228,648,342 user-book shelf interactions including 112,131,203 reads and 104,551,549 ratings; about 15 million detailed reviews over about 2 million books and 465,000 users.",
+    "Foursquare_NYC_Tokyo": "227,428 NYC and 573,703 Tokyo check-ins from 2012-04-12 to 2013-02-16, with timestamps, coordinates, and fine-grained venue categories. Exact user/venue counts should be recomputed from the downloaded README/files [uncertain].",
+    "Foursquare_global": "33,278,683 check-ins by 266,909 users at 3,680,126 venues in 415 cities/77 countries over about 18 months; the social-network variant has 22,809,624 check-ins by 114,324 users at 3,820,891 venues over about 22 months and also offers a much larger raw table.",
+    "Gowalla": "196,591 users/nodes, 950,327 friendship edges, and 6,442,890 check-ins from February 2009 through October 2010.",
+    "Amazon_Reviews_2023": "571.54 million reviews, 54.51 million users, 48.19 million reviewed items, and 33 domains from May 1996 through September 2023.",
+    "TripClick": "Approximately 5.2 million click-log entries from around 1.6 million search sessions, January 2013 through October 2020; the IR benchmark uses about 4 million entries, 1.5 million documents, and 692,000 queries.",
+    "TREC_and_historical_logs": "Year-specific TREC topic/session counts and current Yandex archive counts were not re-verified in this audit [uncertain]."
+  },
+  "stable_user_identity": {
+    "Goodreads": "Yes within the late-2017 public-shelf snapshot; anonymized user IDs join interactions, reviews, and books.",
+    "Foursquare": "Yes within each release; anonymized user IDs join long check-in sequences, and some variants join profile or social-network snapshots.",
+    "Gowalla": "Yes; user IDs join check-ins and the friendship network during the 2009-2010 collection.",
+    "Amazon": "Users repeat over time; global cross-category consistency should be verified across downloaded category files before a cross-domain claim [uncertain].",
+    "TripClick_and_TREC": "Session identity exists, but no durable person identity suitable for longitudinal personalization is documented.",
+    "AOL_Yandex": "Historical pseudonymous identifiers may persist, but AOL is ethically unusable and Yandex continuity/current access are [uncertain]."
+  },
+  "timestamps_and_order": {
+    "Goodreads": "Detailed interaction/review records expose dates such as date_added, date_updated, started_at, and read_at, but missing and user-entered dates require an ordering-quality audit [uncertain].",
+    "Foursquare": "Check-ins have timestamps and coordinates; NYC/Tokyo spans about ten months and global variants span 18-22 months.",
+    "Gowalla": "UTC check-in timestamps are provided with latitude, longitude, and location ID.",
+    "Amazon": "Second-or-finer review timestamps over 1996-2023.",
+    "TripClick": "Raw logs are partitioned by date from 2013-2020 and organized into sessions; event-level ordering fields should be checked in the acquired raw package [uncertain].",
+    "TREC": "Queries are ordered within each short session; wall-clock realism varies by track year [uncertain]."
+  },
+  "left_censoring_and_history_coverage": "Goodreads is a late-2017 snapshot of public shelves and cannot observe private/off-platform reading; user-entered dates can backfill older books. Foursquare/Gowalla begin after account and mobility histories already exist and observe only check-ins, so unseen categories may be rediscovery. Amazon observes only reviewed purchases. TripClick sessions omit cross-session identity, and TREC sessions are bounded experimental tasks. All targets must be called first observed in the released history, never lifetime-new.",
+  "item_semantics": {
+    "Goodreads": "Book title/description, authors, works, series, popular shelves, and fuzzy genres. The official page warns that fuzzy genres are extracted by keyword matching popular shelves and overlap.",
+    "Foursquare": "Venue ID, coordinates, and fine-grained venue categories in NYC/Tokyo; category availability in each global variant should be verified from its README [uncertain].",
+    "Gowalla": "Location ID and coordinates only; semantic venue enrichment would require an external, time-aligned source and may be impossible.",
+    "Amazon": "Titles, descriptions, features, brand/store, images, and hierarchical category paths with missingness.",
+    "TripClick": "Queries plus article titles/URLs and a MEDLINE-backed document collection, suitable for text-derived medical intent clusters.",
+    "TREC": "Topic descriptions, queries, clicked/viewed documents, and ClueWeb content depending on year and license."
+  },
+  "feedback_and_exposure": {
+    "Goodreads": "Shelf membership, read flag, rating, review flag/text, and reading/review dates; no impressions.",
+    "Foursquare_and_Gowalla": "Positive check-ins and optional friendship/profile data; no shown-but-not-visited venues.",
+    "Amazon": "Ratings, review text, helpfulness and timestamps; no product impressions.",
+    "TripClick": "Query-session click logs and clicked documents; the benchmark derives RAW and click-through-rate relevance labels.",
+    "TREC": "Multi-query session interactions and relevance judgments varying by year; not repeated natural consumption.",
+    "AOL_Yandex": "Historical query/click signals exist, but use/access is rejected or uncertain."
+  },
+  "candidate_space": {
+    "Goodreads": "The collected book graph approximates a catalog snapshot, but historical availability and recommendation exposure are unknown.",
+    "Foursquare": "Observed venues approximate a location catalog, but actual nearby/open/reachable venues at each time cannot be reconstructed from check-ins alone.",
+    "Gowalla": "Only observed location IDs and coordinates; no venue availability or type.",
+    "Amazon": "Metadata approximates a catalog but not historical inventory, geography, price eligibility, or exposure.",
+    "TripClick_and_TREC": "Search result pools or judged document sets provide query-conditioned candidates, but raw TripClick display slates and rank completeness require package inspection [uncertain]."
+  },
+  "taxonomy_and_opportunity_drift": "Goodreads genres are overlapping, user-generated, and extracted at a snapshot; books and series accumulate over time. Foursquare category systems and venue availability may change, while geography, travel, opening hours, and city coverage strongly constrain opportunity. Gowalla has no taxonomy. Amazon categories and inventory drift across 27 years. TripClick's medical vocabulary, document index, and search system change over 2013-2020. Freeze semantic mappings, use only items first observed before scoring when possible, and report calendar/geography slices.",
+  "construct_h_f_ynew": {
+    "Goodreads": "Sort each user's dated read/rated/reviewed records. H(u) is the set and sequence of fuzzy genres, authors, series, or frozen text topics before cutoff; F(u) is a future window; Y_new(u)=semantic_units(F)-semantic_units(H). Reserve a later window for repeat adoption and keep shelf-only versus read/review-qualified targets separate.",
+    "Foursquare": "Sort user check-ins. Build H from early venue categories/regions and F from later check-ins; compute category and geography set differences. Require minimum active days, separate home-city from travel, and label opportunity as unknown.",
+    "Gowalla": "Build H/F from frozen spatial clusters and call Y_new geographic exploration. Do not merge this label with semantic-interest targets.",
+    "Amazon": "Join verified global user IDs across domains, sort reviews, and derive domain/category H/F set differences. This remains secondary because review events are MNAR and cross-file continuity is [uncertain].",
+    "TripClick_and_TREC": "Construct H and F only within a session using earlier and later intent clusters. Name the target next-session-intent transition, not future user interest.",
+    "AOL_Yandex": "Do not construct from AOL; defer Yandex until legitimate owner access and file-level verification."
+  },
+  "leakage_and_missingness_risks": "Shared risks are left censoring, positive-unlabeled exposure, active-user selection, repeated users across random splits, future metadata/taxonomy leakage, popularity, seasonality, and treating first observed behavior as first lifetime interest. Goodreads adds user-entered/backfilled dates and fuzzy genre leakage. Foursquare/Gowalla add travel, residence, distance, city sampling, venue closure, and friend effects. Amazon adds reviewer selection and inventory drift. Query logs add privacy, session-boundary errors, result-position bias, clicked-document leakage, and task progress masquerading as interest change.",
+  "recommended_role": {
+    "Goodreads": "Primary semantic robustness benchmark for natural cross-genre onset and persistence after a local timestamp/genre quality preflight.",
+    "Foursquare": "Primary alternative formulation for semantic and geographic exploration, with travel/opportunity strata.",
+    "Gowalla": "Geographic exploration robustness only.",
+    "Amazon": "Cross-product-domain robustness after cross-file identity verification; otherwise rely on the main commerce benchmark.",
+    "TripClick": "Method inspiration and within-session intent-transition benchmark only.",
+    "TREC": "Small controlled intent-reformulation benchmark only.",
+    "AOL_Yandex": "Reject AOL; block Yandex until current owner-authorized access is verified."
+  },
+  "priority": "High: Goodreads for semantic persistence and Foursquare NYC/Tokyo plus global variants for natural exploration. Medium: Amazon cross-domain after identity audit, and Gowalla for geography-only stress testing. Low/method-only: TripClick and TREC Session Track. Reject/blocked: AOL and unverified Yandex or third-party Douban-style cross-domain mirrors. None should replace an exposure-aware primary benchmark.",
+  "verification_status": "Primary-source verified: Goodreads release scope, counts, joins, fuzzy genres, restrictions, and live links; Foursquare collection periods, check-in counts, semantic NYC/Tokyo labels, global scale, and joinable profile/social variants; Gowalla scale, dates, schema, and files; Amazon 2023 official scale/timespan; TripClick access process, terms, dates, sessions, queries, documents, and benchmark size; NIST's existence of 2010-2014 Session Track pages. Not file-level verified: Goodreads missing-date rates, Foursquare exact NYC/Tokyo user/venue counts and global category fields, Amazon global user-ID continuity, raw TripClick displayed-result schema, year-specific TREC fields, and current Yandex access [uncertain].",
+  "repeat_explore_and_persistence_audit": "For every longitudinal dataset, separate repeat item/location, new item/location inside a known semantic unit, first observed semantic unit, and first observed ancestor/domain. Define persistence only from a later disjoint event in the new unit. Goodreads should stratify shelf-only, read, rating, and review-qualified onset. Foursquare should stratify home-city, travel, and new-city events and report return visits separately. Gowalla should use geographic terminology. Amazon should report reviewed-event missingness. TripClick/TREC cannot pass a long-term persistence gate and must remain in a separate within-session table.",
+  "evidence_quotes_or_schema_facts": [
+    "UCSD Goodreads page: late-2017 public-shelf collection; anonymized user/review IDs; 2,360,655 books, 876,145 users, and 228,648,342 user-book interactions; datasets join on book/user/review IDs.",
+    "Goodreads page: fuzzy genres are extracted from popular shelves by simple keyword matching, and books may overlap across genre subsets.",
+    "Foursquare author page: NYC/Tokyo contains 227,428 and 573,703 check-ins over about ten months, each with timestamp, GPS coordinates, and fine-grained venue-category semantics.",
+    "Foursquare author page: the 18-month global release has 33,278,683 check-ins by 266,909 users at 3,680,126 venues in 415 cities across 77 countries.",
+    "SNAP Gowalla page: 196,591 nodes, 950,327 friendship edges, and 6,442,890 check-ins from February 2009 to October 2010; each row has user, UTC time, latitude, longitude, and location ID.",
+    "Amazon Reviews 2023 official page: 571.54M reviews, 54.51M users, 48.19M items, 33 domains, May 1996 to September 2023.",
+    "TripClick official page: about 5.2M click-log entries from around 1.6M sessions between January 2013 and October 2020; access is request-based and redistribution is prohibited.",
+    "NIST Session Track page lists separate 2010, 2011, 2012, 2013, and 2014 session datasets."
+  ],
+  "sources": [
+    "https://cseweb.ucsd.edu/~jmcauley/datasets/goodreads.html — authoritative Goodreads counts, fields, restrictions, genres, and downloads.",
+    "https://github.com/MengtingWan/goodreads — official sample/loading notebooks and field examples.",
+    "https://sites.google.com/site/yangdingqi/home/foursquare-dataset — author release page for semantic NYC/Tokyo, global, profile, and social-network check-ins.",
+    "https://snap.stanford.edu/data/loc-gowalla.html — authoritative Gowalla scale, dates, schema, downloads, and citation.",
+    "https://amazon-reviews-2023.github.io/ — official Amazon Reviews 2023 scale, dates, metadata, and download routes.",
+    "https://arxiv.org/abs/2403.03952 — original Amazon Reviews 2023/BLaIR paper.",
+    "https://tripdatabase.github.io/tripclick/ — official TripClick access, terms, log and benchmark schemas, and counts.",
+    "https://arxiv.org/abs/2103.07901 — original TripClick paper.",
+    "https://trec.nist.gov/data/session.html — official TREC Session Track yearly data index.",
+    "https://www.nytimes.com/2006/08/09/technology/09aol.html — contemporaneous report of AOL withdrawal and privacy harm; used only to justify rejection.",
+    "https://www.kaggle.com/c/yandex-personalized-web-search-challenge — historical Yandex challenge page; current reusable access not verified [uncertain]."
+  ],
+  "uncertain": [
+    "venue_year",
+    "release_and_license",
+    "input_history",
+    "novelty_granularity_and_reference_window",
+    "is_direct_match",
+    "exposure_handling",
+    "scale",
+    "stable_user_identity",
+    "timestamps_and_order",
+    "item_semantics",
+    "candidate_space",
+    "construct_h_f_ynew",
+    "verification_status",
+    "sources"
+  ]
+}

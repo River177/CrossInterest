@@ -1,0 +1,39 @@
+{
+  "version": "history-length-launch-v1",
+  "observed_at_utc": "2026-09-16T06:14:37.762885+00:00",
+  "experiment": "mind-history-length-0915-v1",
+  "status": "all_requested_conditions_accepted",
+  "target": "Recall",
+  "sku": "80G4-A100",
+  "sla": "Standard",
+  "bundle_sha256": "06b5bccfaa67351a04c323fda91dee34d353f6c92f30a51b1320ff20f1517b95",
+  "jobs": {
+    "h30": {
+      "job_name": "qwen35-2b-ni-only-h30",
+      "backend_id": "hungry_tail_m89gx37wd9",
+      "results_prefix": "projects/sft4safety/amlt-results/7210551062.55596-946e2ec3-6bf2",
+      "url": "https://aka.ms/amlt?q=k18om"
+    },
+    "h10": {
+      "job_name": "qwen35-2b-ni-only-h10",
+      "backend_id": "nifty_office_mbm68kyy9k",
+      "results_prefix": "projects/sft4safety/amlt-results/7210551062.55540-a1e3f7b6-f425",
+      "url": "https://aka.ms/amlt?q=k18on"
+    },
+    "h5": {
+      "job_name": "qwen35-2b-ni-only-h5",
+      "backend_id": "sharp_farm_jq3ftfk9m5",
+      "results_prefix": "projects/sft4safety/amlt-results/7210551062.55495-3b46c238-52c4",
+      "url": "https://aka.ms/amlt?q=k18oo",
+      "original_results_prefix": "projects/sft4safety/amlt-results/7210551062.55495-3b46c238-52c4",
+      "accepted_evaluation_prefix": "projects/sft4safety/manual-results/history-h5-original-profile-20260916-v1",
+      "accepted_archive": "publication.tar.gz",
+      "accepted_archive_sha256": "21fad6125021a56a90b62cc5e9cdab59ce2301965dc1241f839685c854e1595f",
+      "local_acceptance": "/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/mind-history-length-ablation-20260915/readback/h5/azure_archive_acceptance.json"
+    }
+  },
+  "remote_complete_file": "complete.json",
+  "large_artifacts_policy": "retain remotely; no local weights/checkpoint/prediction downloads",
+  "comparison": "/Users/river/Documents/MSRA/Rec/CrossInterest/artifacts/mind-history-length-ablation-20260915/comparison.json",
+  "report": "/Users/river/Documents/MSRA/Rec/CrossInterest/docs/experiments/2026-09-15/mind_history_length_ablation.md"
+}

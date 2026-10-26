@@ -1,0 +1,203 @@
+input,class,support,hits_at_10,recall_at_10,ndcg_at_10
+behavior_only,Accidents & Emergency Response,51,3,0.058823529411764705,0.024974619891550653
+behavior_only,Aging & Longevity,140,26,0.18571428571428572,0.06838132744292562
+behavior_only,Agriculture & Food Production,3,2,0.6666666666666666,0.2630216087726293
+behavior_only,Air & Rail Travel,69,11,0.15942028985507245,0.065109790574472
+behavior_only,American Football,1361,1,0.0007347538574577516,0.00022118295052460043
+behavior_only,Archaeology & Human Origins,162,5,0.030864197530864196,0.011315770471138475
+behavior_only,Architecture & Residential Design,154,35,0.22727272727272727,0.07660996115715014
+behavior_only,Astrology & Divination,1,0,0.0,0.0
+behavior_only,Baking & Desserts,53,3,0.05660377358490566,0.020879135691053256
+behavior_only,Baseball & Softball,56,25,0.44642857142857145,0.20820271012744013
+behavior_only,Basketball,129,0,0.0,0.0
+behavior_only,Beauty & Grooming,3,0,0.0,0.0
+behavior_only,Biology & Genetics,17,1,0.058823529411764705,0.025333915180787828
+behavior_only,Boating & Watercraft,1,0,0.0,0.0
+behavior_only,Books & Literature,4,0,0.0,0.0
+behavior_only,Careers & Professional Development,133,42,0.3157894736842105,0.1452752103105164
+behavior_only,Cars & Driving,150,4,0.02666666666666667,0.010506323809995353
+behavior_only,Celebrity & Creator Culture,426,250,0.5868544600938967,0.3895541057421165
+behavior_only,Charity & Volunteering,48,1,0.020833333333333332,0.006022183881622664
+behavior_only,Civic Life & Public Commemorations,52,0,0.0,0.0
+behavior_only,Civil Rights & Social Justice,31,0,0.0,0.0
+behavior_only,Climate Change,10,0,0.0,0.0
+behavior_only,Combat Sports,9,1,0.1111111111111111,0.03344777729599791
+behavior_only,Comics & Graphic Narratives,18,0,0.0,0.0
+behavior_only,Companies & Corporate Strategy,67,18,0.26865671641791045,0.09456628993894158
+behavior_only,Constitutional & Civil Law,3,3,1.0,1.0
+behavior_only,Consumer Technology,28,2,0.07142857142857142,0.026647908387825776
+behavior_only,Cooking & Recipes,256,7,0.02734375,0.008433154734337018
+behavior_only,Courts & Legal Cases,217,98,0.45161290322580644,0.2181549224040153
+behavior_only,Crafts & Collecting,8,3,0.375,0.23202589838850277
+behavior_only,Crime & Public Safety,442,218,0.49321266968325794,0.2521611002448376
+behavior_only,Cruises,37,0,0.0,0.0
+behavior_only,Culture & Heritage Travel,13,4,0.3076923076923077,0.12760069265947926
+behavior_only,Cybersecurity & Digital Privacy,2,0,0.0,0.0
+behavior_only,Destinations & Trip Ideas,85,1,0.011764705882352941,0.005066783036157566
+behavior_only,Diplomacy & Geopolitics,27,0,0.0,0.0
+behavior_only,Earthquakes & Geological Hazards,1,0,0.0,0.0
+behavior_only,Economy & Economic Policy,67,31,0.4626865671641791,0.2351024413646401
+behavior_only,Elections & Political Campaigns,29,0,0.0,0.0
+behavior_only,Electric & Alternative Vehicles,24,12,0.5,0.4330328858630989
+behavior_only,Energy & Sustainability,47,7,0.14893617021276595,0.0456997086445614
+behavior_only,Faith Communities & Practice,10,4,0.4,0.2731706553737374
+behavior_only,Fashion & Personal Style,106,41,0.3867924528301887,0.2423716103024103
+behavior_only,Film,391,0,0.0,0.0
+behavior_only,Fitness & Exercise,34,1,0.029411764705882353,0.009278378728992023
+behavior_only,"Floods, Droughts & Wildfires",115,0,0.0,0.0
+behavior_only,Food Culture & Trends,592,156,0.2635135135135135,0.12606689652220415
+behavior_only,Gambling & Lotteries,7,0,0.0,0.0
+behavior_only,Gardening & Landscaping,1,0,0.0,0.0
+behavior_only,General & Multi-Sport Coverage,37,0,0.0,0.0
+behavior_only,Golf,217,0,0.0,0.0
+behavior_only,Government & Public Policy,496,234,0.4717741935483871,0.20735586760297428
+behavior_only,Higher Education,93,0,0.0,0.0
+behavior_only,Historical Events & Eras,77,15,0.19480519480519481,0.0667125933190133
+behavior_only,Home Appliances & Technology,8,2,0.25,0.11829932879464829
+behavior_only,Home Improvement & Repair,39,17,0.4358974358974359,0.2432970482446636
+behavior_only,Hotels & Accommodation,42,9,0.21428571428571427,0.09734856760325268
+behavior_only,Household Cleaning & Laundry,3,1,0.3333333333333333,0.11873572903600739
+behavior_only,Ice Hockey,4,0,0.0,0.0
+behavior_only,Immigration & Citizenship,35,1,0.02857142857142857,0.009013282193877965
+behavior_only,Infrastructure & Transportation Policy,18,5,0.2777777777777778,0.09239192079066164
+behavior_only,Interior Design & Decorating,26,3,0.11538461538461539,0.057395494989163215
+behavior_only,Internet & Social Platforms,43,15,0.3488372093023256,0.1752408350634985
+behavior_only,Journalism & News Media,75,27,0.36,0.16064077363459525
+behavior_only,Labor & Employment,59,1,0.01694915254237288,0.005102203316338664
+behavior_only,Markets & Investing,113,9,0.07964601769911504,0.033797231621760286
+behavior_only,Medicine & Medical Research,188,46,0.24468085106382978,0.08576528205998556
+behavior_only,Mental Health,35,2,0.05714285714285714,0.021318326710260623
+behavior_only,Motorcycles,32,2,0.0625,0.02098975199667972
+behavior_only,Music,485,0,0.0,0.0
+behavior_only,Nutrition & Healthy Eating,116,32,0.27586206896551724,0.12263222183980543
+behavior_only,Olympic & Athletics Sports,9,1,0.1111111111111111,0.03344777729599791
+behavior_only,Outdoor & Endurance Sports,8,0,0.0,0.0
+behavior_only,Parenting & Family Life,142,0,0.0,0.0
+behavior_only,Personal Finance,114,0,0.0,0.0
+behavior_only,Personal Growth,52,0,0.0,0.0
+behavior_only,Pets & Animal Companions,128,3,0.0234375,0.008516365796733353
+behavior_only,Policing & Corrections,850,116,0.13647058823529412,0.04381731940409578
+behavior_only,Population & Demographic Change,11,0,0.0,0.0
+behavior_only,Public Health,144,0,0.0,0.0
+behavior_only,Public Services & Social Welfare,118,2,0.01694915254237288,0.005498289916263239
+behavior_only,Real Estate,71,0,0.0,0.0
+behavior_only,Relationships & Dating,187,2,0.0106951871657754,0.0031555872833255033
+behavior_only,Restaurants & Dining,55,1,0.01818181818181818,0.007830482874061693
+behavior_only,Schools & Childhood Education,6,2,0.3333333333333333,0.10373302660853685
+behavior_only,Severe Storms,20,2,0.1,0.0322636006712955
+behavior_only,Sexual & Reproductive Health,103,0,0.0,0.0
+behavior_only,Shopping & Gift Ideas,1011,408,0.4035608308605341,0.18531901559217437
+behavior_only,Sleep Health,44,4,0.09090909090909091,0.046670897134118365
+behavior_only,Soccer,6,0,0.0,0.0
+behavior_only,Space & Astronomy,66,1,0.015151515151515152,0.004561060540363352
+behavior_only,Sports Business & Administration,12,2,0.16666666666666666,0.16666666666666666
+behavior_only,Television & Streaming,240,3,0.0125,0.004437666196127949
+behavior_only,Theater & Performing Arts,4,1,0.25,0.09671320180863541
+behavior_only,Travel Planning & Deals,43,12,0.27906976744186046,0.11611312047157556
+behavior_only,Trivia & Puzzles,25,0,0.0,0.0
+behavior_only,Vehicle Buying & Ownership,68,12,0.17647058823529413,0.07081303470260042
+behavior_only,War & Armed Conflict,224,76,0.3392857142857143,0.12749107293251047
+behavior_only,Weather Forecasts & Seasonal Conditions,210,0,0.0,0.0
+behavior_only,Wildlife & Conservation,259,7,0.02702702702702703,0.008131612011793802
+behavior_only,"Wine, Beer & Spirits",3,0,0.0,0.0
+interest_only,Accidents & Emergency Response,51,1,0.0196078431372549,0.0065359477124183
+interest_only,Aging & Longevity,140,32,0.22857142857142856,0.09414538880976364
+interest_only,Agriculture & Food Production,3,1,0.3333333333333333,0.2103099178571525
+interest_only,Air & Rail Travel,69,19,0.2753623188405797,0.10817548967803718
+interest_only,American Football,1361,61,0.04481998530492285,0.014251903204498423
+interest_only,Archaeology & Human Origins,162,5,0.030864197530864196,0.01564942136529018
+interest_only,Architecture & Residential Design,154,38,0.24675324675324675,0.09736854016882633
+interest_only,Astrology & Divination,1,0,0.0,0.0
+interest_only,Baking & Desserts,53,1,0.018867924528301886,0.006289308176100628
+interest_only,Baseball & Softball,56,31,0.5535714285714286,0.2638933666082751
+interest_only,Basketball,129,0,0.0,0.0
+interest_only,Beauty & Grooming,3,0,0.0,0.0
+interest_only,Biology & Genetics,17,0,0.0,0.0
+interest_only,Boating & Watercraft,1,0,0.0,0.0
+interest_only,Books & Literature,4,0,0.0,0.0
+interest_only,Careers & Professional Development,133,45,0.3383458646616541,0.13792157699374127
+interest_only,Cars & Driving,150,19,0.12666666666666668,0.06359668326317995
+interest_only,Celebrity & Creator Culture,426,348,0.8169014084507042,0.5757115127143951
+interest_only,Charity & Volunteering,48,0,0.0,0.0
+interest_only,Civic Life & Public Commemorations,52,0,0.0,0.0
+interest_only,Civil Rights & Social Justice,31,1,0.03225806451612903,0.010176286347926734
+interest_only,Climate Change,10,2,0.2,0.0719741384391281
+interest_only,Combat Sports,9,0,0.0,0.0
+interest_only,Comics & Graphic Narratives,18,0,0.0,0.0
+interest_only,Companies & Corporate Strategy,67,27,0.40298507462686567,0.16112884022640656
+interest_only,Constitutional & Civil Law,3,3,1.0,0.8769765845238192
+interest_only,Consumer Technology,28,1,0.03571428571428571,0.011904761904761904
+interest_only,Cooking & Recipes,256,37,0.14453125,0.05768639780944034
+interest_only,Courts & Legal Cases,217,169,0.7788018433179723,0.46182753969965473
+interest_only,Crafts & Collecting,8,4,0.5,0.24553288586309885
+interest_only,Crime & Public Safety,442,362,0.8190045248868778,0.5394361703833018
+interest_only,Cruises,37,1,0.02702702702702703,0.007812562873456429
+interest_only,Culture & Heritage Travel,13,4,0.3076923076923077,0.12132552020471914
+interest_only,Cybersecurity & Digital Privacy,2,0,0.0,0.0
+interest_only,Destinations & Trip Ideas,85,1,0.011764705882352941,0.003400762662563387
+interest_only,Diplomacy & Geopolitics,27,0,0.0,0.0
+interest_only,Earthquakes & Geological Hazards,1,0,0.0,0.0
+interest_only,Economy & Economic Policy,67,39,0.582089552238806,0.2560300982982831
+interest_only,Elections & Political Campaigns,29,0,0.0,0.0
+interest_only,Electric & Alternative Vehicles,24,8,0.3333333333333333,0.2663662191964322
+interest_only,Energy & Sustainability,47,11,0.23404255319148937,0.09918536017193379
+interest_only,Faith Communities & Practice,10,1,0.1,0.03010299956639812
+interest_only,Fashion & Personal Style,106,50,0.4716981132075472,0.28967789434621904
+interest_only,Film,391,0,0.0,0.0
+interest_only,Fitness & Exercise,34,3,0.08823529411764706,0.030447242975794406
+interest_only,"Floods, Droughts & Wildfires",115,0,0.0,0.0
+interest_only,Food Culture & Trends,592,182,0.30743243243243246,0.17231455218602168
+interest_only,Gambling & Lotteries,7,0,0.0,0.0
+interest_only,Gardening & Landscaping,1,0,0.0,0.0
+interest_only,General & Multi-Sport Coverage,37,0,0.0,0.0
+interest_only,Golf,217,0,0.0,0.0
+interest_only,Government & Public Policy,496,335,0.6754032258064516,0.3919674860910031
+interest_only,Higher Education,93,0,0.0,0.0
+interest_only,Historical Events & Eras,77,30,0.38961038961038963,0.14695462100519005
+interest_only,Home Appliances & Technology,8,1,0.125,0.07886621919643219
+interest_only,Home Improvement & Repair,39,19,0.48717948717948717,0.2305220702416642
+interest_only,Hotels & Accommodation,42,18,0.42857142857142855,0.20083299710818792
+interest_only,Household Cleaning & Laundry,3,0,0.0,0.0
+interest_only,Ice Hockey,4,0,0.0,0.0
+interest_only,Immigration & Citizenship,35,10,0.2857142857142857,0.10438928829534988
+interest_only,Infrastructure & Transportation Policy,18,3,0.16666666666666666,0.05030887215375543
+interest_only,Interior Design & Decorating,26,6,0.23076923076923078,0.11197934561419651
+interest_only,Internet & Social Platforms,43,16,0.37209302325581395,0.17637711052718683
+interest_only,Journalism & News Media,75,27,0.36,0.16929875087668322
+interest_only,Labor & Employment,59,3,0.05084745762711865,0.021423896464520784
+interest_only,Markets & Investing,113,13,0.11504424778761062,0.0444209694195326
+interest_only,Medicine & Medical Research,188,82,0.43617021276595747,0.17760868621595655
+interest_only,Mental Health,35,2,0.05714285714285714,0.022544709323368224
+interest_only,Motorcycles,32,2,0.0625,0.02027494406622069
+interest_only,Music,485,0,0.0,0.0
+interest_only,Nutrition & Healthy Eating,116,51,0.4396551724137931,0.19906759546918829
+interest_only,Olympic & Athletics Sports,9,1,0.1111111111111111,0.03344777729599791
+interest_only,Outdoor & Endurance Sports,8,0,0.0,0.0
+interest_only,Parenting & Family Life,142,4,0.028169014084507043,0.01420973634370422
+interest_only,Personal Finance,114,0,0.0,0.0
+interest_only,Personal Growth,52,0,0.0,0.0
+interest_only,Pets & Animal Companions,128,3,0.0234375,0.00971140620580128
+interest_only,Policing & Corrections,850,322,0.3788235294117647,0.14769669152854156
+interest_only,Population & Demographic Change,11,0,0.0,0.0
+interest_only,Public Health,144,1,0.006944444444444444,0.0023148148148148147
+interest_only,Public Services & Social Welfare,118,0,0.0,0.0
+interest_only,Real Estate,71,1,0.014084507042253521,0.004694835680751174
+interest_only,Relationships & Dating,187,29,0.15508021390374332,0.063091060382695
+interest_only,Restaurants & Dining,55,4,0.07272727272727272,0.030030929702303998
+interest_only,Schools & Childhood Education,6,2,0.3333333333333333,0.10813303501984368
+interest_only,Severe Storms,20,6,0.3,0.09115422834406446
+interest_only,Sexual & Reproductive Health,103,0,0.0,0.0
+interest_only,Shopping & Gift Ideas,1011,516,0.5103857566765578,0.21246692964038305
+interest_only,Sleep Health,44,2,0.045454545454545456,0.03409090909090909
+interest_only,Soccer,6,0,0.0,0.0
+interest_only,Space & Astronomy,66,4,0.06060606060606061,0.01973639117371528
+interest_only,Sports Business & Administration,12,4,0.3333333333333333,0.17072860436036086
+interest_only,Television & Streaming,240,18,0.075,0.024252112161682788
+interest_only,Theater & Performing Arts,4,1,0.25,0.08333333333333333
+interest_only,Travel Planning & Deals,43,15,0.3488372093023256,0.13544001811634385
+interest_only,Trivia & Puzzles,25,0,0.0,0.0
+interest_only,Vehicle Buying & Ownership,68,18,0.2647058823529412,0.1454799259057963
+interest_only,War & Armed Conflict,224,101,0.45089285714285715,0.17229222993780394
+interest_only,Weather Forecasts & Seasonal Conditions,210,0,0.0,0.0
+interest_only,Wildlife & Conservation,259,17,0.06563706563706563,0.02622671926281618
+interest_only,"Wine, Beer & Spirits",3,0,0.0,0.0

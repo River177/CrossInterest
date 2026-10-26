@@ -1,0 +1,17 @@
+{
+  "status": "accepted",
+  "artifact_root": "artifacts/mind-token-joint-alignment-20261001/analysis",
+  "active_run": {
+    "experiment": "mind-token125-joint-analysis-1002-v1",
+    "job": "token125-joint-paired-analysis",
+    "yaml": "configs/amlt/mind_token_joint_analysis_1002_v1.yaml",
+    "bundle": "artifacts/mind-token-joint-alignment-20261001/analysis-bundle-v1",
+    "payload_sha256": "eaa43995060caf2795a67acf3f3dcae547f984ca848537ca982e82376e9919f1",
+    "backend_id": "frank_diamond_qgqmggjsjy",
+    "results_prefix": "projects/sft4safety/amlt-results/7209118737.00693-efa2f3a6-1f37"
+  },
+  "latest_receipt": "artifacts/mind-token-joint-alignment-20261001/analysis/progress/20261002T052138Z/receipt.json",
+  "acceptance_command": "python scripts/analysis/accept_joint_alignment_comparison.py --receipt <receipt>",
+  "observed_utc": "2026-10-02T03:04:51.815563+00:00",
+  "paired_final_acceptance": "artifacts/mind-token-joint-alignment-20261001/paired_final_acceptance.json"
+}

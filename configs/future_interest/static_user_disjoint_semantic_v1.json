@@ -1,0 +1,35 @@
+{
+  "rule_version": "static-user-disjoint-semantic-history-signal-v1",
+  "benchmark_dir": "data/processed/new_interest_static_user_disjoint_semantic_users_v1",
+  "artifact_dir": "artifacts/future-novel-interest/static-user-disjoint-semantic-v1",
+  "cutoffs": [1, 5, 10, 20],
+  "embedding": {
+    "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "device": "mps",
+    "batch_size": 256
+  },
+  "model": {
+    "prior_alpha": 1.0,
+    "ridge_alphas": [1.0, 10.0, 100.0, 1000.0, 10000.0],
+    "lambda_grid": [0.0, 0.25, 0.5, 1.0, 2.0, 4.0, 8.0, 16.0]
+  },
+  "shuffle": {
+    "seeds": [20260815, 20260816, 20260817],
+    "match_on": ["history_length_bucket", "history_unique_subcategory_count_bucket"],
+    "fixed_candidate_mask": "actual_history"
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20260815,
+    "confidence": 0.95,
+    "unit": "user"
+  },
+  "acceptance": {
+    "minimum_absolute_delta": 0.01,
+    "required_metrics": ["ndcg_at_10", "recall_at_10"],
+    "require_ci_excludes_zero": true,
+    "require_all_shuffle_seeds": true,
+    "require_macro_and_tail_no_collapse": true
+  }
+}

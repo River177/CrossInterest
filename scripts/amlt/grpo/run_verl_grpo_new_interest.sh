@@ -28,6 +28,8 @@ set -euo pipefail
 : "${MAX_ACTOR_CKPT_TO_KEEP:=2}"
 : "${TEST_FREQ:=-1}"
 : "${AGENT_LOOP_WORKERS:=8}"
+: "${REWARD_FUNCTION_PATH:=$PROJECT_DIR/src/new_interest/training/grpo_reward.py}"
+: "${TRAINER_LOGGER:=wandb}"
 
 python -m verl.trainer.main_ppo \
   algorithm.adv_estimator=grpo \
@@ -81,7 +83,7 @@ python -m verl.trainer.main_ppo \
   actor_rollout_ref.rollout.free_cache_engine=True \
   actor_rollout_ref.rollout.load_format=safetensors \
   actor_rollout_ref.rollout.layered_summon=False \
-  "custom_reward_function.path=$PROJECT_DIR/src/new_interest/training/grpo_reward.py" \
+  "custom_reward_function.path=$REWARD_FUNCTION_PATH" \
   custom_reward_function.name=compute_score \
   reward_model.reward_manager=naive \
   "+ray_kwargs.ray_init.num_gpus=$N_GPUS" \
@@ -92,7 +94,7 @@ python -m verl.trainer.main_ppo \
   trainer.val_before_train=False \
   "trainer.save_freq=$SAVE_FREQ" \
   "trainer.test_freq=$TEST_FREQ" \
-  trainer.logger=wandb \
+  "trainer.logger=$TRAINER_LOGGER" \
   trainer.project_name=cross-interest-generative-grpo \
   "trainer.experiment_name=$EXPERIMENT_NAME" \
   "trainer.default_local_dir=$CHECKPOINT_DIR" \

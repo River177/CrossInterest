@@ -1,0 +1,193 @@
+{
+  "status": "complete",
+  "arms": {
+    "text": {
+      "manifest": "manifests/mind_history_token_text_20260930_v1.json",
+      "experiment": "mind-ni-history-text125-0930-v1",
+      "job": "qwen35-2b-ni-text125",
+      "yaml": "configs/amlt/mind_history_token_text_0930_v1.yaml",
+      "bundle": "artifacts/mind-history-token-20260930/bundles-v1/text",
+      "bundle_sha256": "a8865a3142e0eddc293d84172afbe75a6caf3d2d7687f147c84e68ba2bd5ddb6",
+      "backend_id": "upbeat_lettuce_k6my50hhvb",
+      "results_prefix": "projects/sft4safety/amlt-results/7209271490.37957-7cccf28c-9256"
+    },
+    "token": {
+      "manifest": "manifests/mind_history_token_token_20260930_v1.json",
+      "experiment": "mind-ni-history-token125-0930-v1",
+      "job": "qwen35-2b-ni-token125",
+      "yaml": "configs/amlt/mind_history_token_token_0930_v1.yaml",
+      "bundle": "artifacts/mind-history-token-20260930/bundles-v1/token",
+      "bundle_sha256": "c91f6d37fa58f9d0a43cc127a6b6306aeef18772f4ef66cdc466ee1f5dd10d04",
+      "backend_id": "salmon_plane_m3qq5sx0fm",
+      "results_prefix": "projects/sft4safety/amlt-results/7209271563.63494-5f26c7ff-1961"
+    }
+  },
+  "model": "Qwen/Qwen3.5-2B",
+  "seed": 42,
+  "gpu_per_job": 4,
+  "maximum_concurrent_gpus": 8,
+  "train_rows": 21600,
+  "epochs": 3,
+  "updates_each": 2025,
+  "dev_rows": 31392,
+  "data": "data/training/mind_history_token_20260930_v1",
+  "historical_baseline": "Original NI-only Text108, reference only",
+  "automation": {
+    "id": "ni-token",
+    "kind": "heartbeat",
+    "interval_minutes": 30,
+    "status": "PAUSED",
+    "stop_reason": "Both arms and final paired analysis independently accepted; final report complete"
+  },
+  "local_tests": {
+    "focused_passed": 16,
+    "full_suite": "collection blocked: missing peft",
+    "upload_files_per_arm": 121,
+    "train_dev_overlength": 0
+  },
+  "latest_observation": {
+    "utc": "2026-09-30T17:05:16Z",
+    "text": {
+      "observed_utc": "2026-09-30T17:05:16.595466+00:00",
+      "stage": "accepted",
+      "final_accepted": true,
+      "logged_step": 2025,
+      "checkpoint_step": 2025,
+      "checkpoint_presentations": 64800,
+      "latest_loss": 1.491,
+      "finite_log_count": 114,
+      "cross_arm_cold_state_equal": true,
+      "receipt": "artifacts/mind-history-token-20260930/text/progress/20260930T170516Z/receipt.json",
+      "independent_readback": "artifacts/mind-history-token-20260930/text/progress/20260930T170516Z/independent_readback.json",
+      "evaluation": {
+        "records": 31392,
+        "supported_classes": 104,
+        "target_occurrences": 37728,
+        "metrics": {
+          "interest_macro_recall_at_1": 0.028645645590237467,
+          "interest_macro_ndcg_at_1": 0.028645645590237467,
+          "interest_macro_recall_at_5": 0.12250158814263559,
+          "interest_macro_ndcg_at_5": 0.07535705666338349,
+          "interest_macro_recall_at_10": 0.2025346210853163,
+          "interest_macro_ndcg_at_10": 0.10098753583600742,
+          "interest_macro_recall_at_20": 0.3337403579307648,
+          "interest_macro_ndcg_at_20": 0.13400366712489664
+        }
+      }
+    },
+    "token": {
+      "stage": "accepted",
+      "final_accepted": true,
+      "observed_utc": "2026-09-30T19:41:22.860616+00:00",
+      "receipt": "artifacts/mind-history-token-20260930/token/progress/20260930T194122Z/receipt.json",
+      "evaluation": {
+        "records": 31392,
+        "supported_classes": 104,
+        "target_occurrences": 37728,
+        "metrics": {
+          "interest_macro_recall_at_1": 0.029324845040791418,
+          "interest_macro_ndcg_at_1": 0.029324845040791418,
+          "interest_macro_recall_at_5": 0.12265817848847936,
+          "interest_macro_ndcg_at_5": 0.07558709617445115,
+          "interest_macro_recall_at_10": 0.19873016413306607,
+          "interest_macro_ndcg_at_10": 0.10007434126863263,
+          "interest_macro_recall_at_20": 0.3346785339597168,
+          "interest_macro_ndcg_at_20": 0.1342790877231237
+        }
+      }
+    }
+  },
+  "paired_analysis_manifest": "manifests/mind_history_token_analysis_20261001_v1.json",
+  "paired_analysis": {
+    "experiment": "mind-history-token-analysis-1001-v2",
+    "job": "history-token-paired-analysis-v2",
+    "backend_id": "cool_panda_h84tqwcqpb",
+    "results_prefix": "projects/sft4safety/amlt-results/7209231189.73245-29d6a772-8097",
+    "yaml": "configs/amlt/mind_history_token_analysis_1001_v2.yaml",
+    "bundle": "artifacts/mind-history-token-20260930/analysis-bundle-v2",
+    "payload_sha256": "a845e5bd9d0c80b179a0d10ee45a1fcc3c2cd8f5f9fdecaa474ecff3316d186e"
+  },
+  "paired_analysis_observation": {
+    "native_status": "Completed",
+    "receipt": "artifacts/mind-history-token-20260930/analysis/progress/20260930T202333Z/receipt.json",
+    "analysis_complete": true
+  },
+  "completed_utc": "2026-09-30T20:25:59.758287+00:00",
+  "paired_final_acceptance": "artifacts/mind-history-token-20260930/paired_final_acceptance.json",
+  "comparison_sha256": "d43d8ab86f7f4de0e2f941b7cf6e10ac7261fc1f6ed782eb04cafffdc8a64ec4",
+  "final_metrics": {
+    "text": {
+      "interest_macro_recall_at_1": 0.028645645590237467,
+      "interest_macro_ndcg_at_1": 0.028645645590237467,
+      "interest_macro_recall_at_5": 0.12250158814263559,
+      "interest_macro_ndcg_at_5": 0.07535705666338352,
+      "interest_macro_recall_at_10": 0.2025346210853163,
+      "interest_macro_ndcg_at_10": 0.10098753583600745,
+      "interest_macro_recall_at_20": 0.33374035793076473,
+      "interest_macro_ndcg_at_20": 0.1340036671248967
+    },
+    "token": {
+      "interest_macro_recall_at_1": 0.029324845040791418,
+      "interest_macro_ndcg_at_1": 0.029324845040791418,
+      "interest_macro_recall_at_5": 0.12265817848847936,
+      "interest_macro_ndcg_at_5": 0.07558709617445117,
+      "interest_macro_recall_at_10": 0.19873016413306607,
+      "interest_macro_ndcg_at_10": 0.10007434126863265,
+      "interest_macro_recall_at_20": 0.33467853395971675,
+      "interest_macro_ndcg_at_20": 0.13427908772312372
+    }
+  },
+  "paired_differences": {
+    "interest_macro_recall_at_10": {
+      "difference_pp": -0.3804456952250235,
+      "paired_user_bayesian_95_interval_pp": [
+        -1.167756822693309,
+        0.35370783621477264
+      ]
+    },
+    "interest_macro_ndcg_at_10": {
+      "difference_pp": -0.09131945673747921,
+      "paired_user_bayesian_95_interval_pp": [
+        -0.46057380436989975,
+        0.2562233600552774
+      ]
+    },
+    "interest_macro_recall_at_20": {
+      "difference_pp": 0.09381760289520202,
+      "paired_user_bayesian_95_interval_pp": [
+        -0.8240590038671289,
+        1.079694939807799
+      ]
+    },
+    "interest_macro_ndcg_at_20": {
+      "difference_pp": 0.027542059822702192,
+      "paired_user_bayesian_95_interval_pp": [
+        -0.3213642188866959,
+        0.3925707215234616
+      ]
+    }
+  },
+  "historical_differences_pp": {
+    "text": {
+      "interest_macro_recall_at_1": -0.011584130223700473,
+      "interest_macro_ndcg_at_1": -0.011584130223700473,
+      "interest_macro_recall_at_5": -0.06793468273252473,
+      "interest_macro_ndcg_at_5": -0.032249116383309406,
+      "interest_macro_recall_at_10": -0.07399048144920706,
+      "interest_macro_ndcg_at_10": -0.03370652827504733,
+      "interest_macro_recall_at_20": -0.28126608362498695,
+      "interest_macro_ndcg_at_20": -0.06590277242264353
+    },
+    "token": {
+      "interest_macro_recall_at_1": 0.056335814831694545,
+      "interest_macro_ndcg_at_1": 0.056335814831694545,
+      "interest_macro_recall_at_5": -0.05227564814814789,
+      "interest_macro_ndcg_at_5": -0.00924516527654462,
+      "interest_macro_recall_at_10": -0.45443617667423053,
+      "interest_macro_ndcg_at_10": -0.12502598501252654,
+      "interest_macro_recall_at_20": -0.18744848072978493,
+      "interest_macro_ndcg_at_20": -0.03836071259994134
+    }
+  },
+  "conclusion": "No clear gain from input tokenization in this single-seed matched comparison; all four paired intervals include zero."
+}

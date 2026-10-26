@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import math
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -94,15 +95,28 @@ class ParquetSFTDataset:
         max_seq_length: int,
         enable_thinking: bool,
         max_samples: int | None = None,
+        sample_weight_file: Path | str | None = None,
     ) -> None:
         path = Path(path)
-        rows = pq.read_table(path, columns=["messages"]).to_pylist()
+        columns = ["messages"]
+        if sample_weight_file is not None:
+            columns.append("source_sample_id")
+        rows = pq.read_table(path, columns=columns).to_pylist()
+        weights: dict[str, float] | None = None
+        if sample_weight_file is not None:
+            weights = load_sample_weights(
+                sample_weight_file,
+                expected_source_sample_ids=[
+                    str(row["source_sample_id"]) for row in rows
+                ],
+            )
         if max_samples is not None:
             if max_samples <= 0:
                 raise ValueError("max_samples must be positive")
             rows = rows[:max_samples]
-        self.examples = [
-            tokenize_training_example(
+        self.examples = []
+        for row in rows:
+            example = tokenize_training_example(
                 tokenizer,
                 [
                     {
@@ -114,14 +128,62 @@ class ParquetSFTDataset:
                 max_seq_length=max_seq_length,
                 enable_thinking=enable_thinking,
             )
-            for row in rows
-        ]
+            if weights is not None:
+                example["sample_weight"] = weights[
+                    str(row["source_sample_id"])
+                ]
+            self.examples.append(example)
 
     def __len__(self) -> int:
         return len(self.examples)
 
-    def __getitem__(self, index: int) -> dict[str, list[int]]:
+    def __getitem__(self, index: int) -> dict[str, Any]:
         return self.examples[index]
+
+
+def load_sample_weights(
+    path: Path | str,
+    *,
+    expected_source_sample_ids: list[str],
+) -> dict[str, float]:
+    """Load a strict one-to-one source-sample weight mapping."""
+    path = Path(path)
+    if not path.is_file():
+        raise FileNotFoundError(path)
+    required = {"source_sample_id", "sample_weight"}
+    missing = required.difference(pq.ParquetFile(path).schema_arrow.names)
+    if missing:
+        raise ValueError(f"{path}: missing columns {sorted(missing)}")
+
+    expected = set(expected_source_sample_ids)
+    if len(expected) != len(expected_source_sample_ids):
+        raise ValueError("Train data contains duplicate source_sample_id")
+    weights: dict[str, float] = {}
+    for row in pq.read_table(
+        path,
+        columns=["source_sample_id", "sample_weight"],
+    ).to_pylist():
+        source_id = str(row["source_sample_id"])
+        if source_id in weights:
+            raise ValueError(
+                f"{path}: duplicate source_sample_id {source_id}"
+            )
+        weight = float(row["sample_weight"])
+        if not math.isfinite(weight) or weight <= 0.0:
+            raise ValueError(
+                f"{path}: sample_weight must be positive and finite for "
+                f"{source_id}; got {weight}"
+            )
+        weights[source_id] = weight
+
+    missing_ids = expected.difference(weights)
+    extra_ids = set(weights).difference(expected)
+    if missing_ids or extra_ids:
+        raise ValueError(
+            f"{path}: sample-weight identity mismatch; "
+            f"missing={len(missing_ids)}, extra={len(extra_ids)}"
+        )
+    return weights
 
 
 @dataclass
@@ -130,7 +192,7 @@ class CompletionOnlyCollator:
 
     def __call__(
         self,
-        features: list[dict[str, list[int]]],
+        features: list[dict[str, Any]],
     ) -> dict[str, Any]:
         import torch
 
@@ -142,6 +204,11 @@ class CompletionOnlyCollator:
         input_ids = []
         attention_masks = []
         labels = []
+        has_weights = ["sample_weight" in feature for feature in features]
+        if any(has_weights) and not all(has_weights):
+            raise ValueError(
+                "A collated batch cannot mix weighted and unweighted samples"
+            )
         for feature in features:
             padding = max_length - len(feature["input_ids"])
             input_ids.append(
@@ -151,7 +218,7 @@ class CompletionOnlyCollator:
                 feature["attention_mask"] + [0] * padding
             )
             labels.append(feature["labels"] + [-100] * padding)
-        return {
+        batch = {
             "input_ids": torch.tensor(input_ids, dtype=torch.long),
             "attention_mask": torch.tensor(
                 attention_masks,
@@ -159,6 +226,12 @@ class CompletionOnlyCollator:
             ),
             "labels": torch.tensor(labels, dtype=torch.long),
         }
+        if all(has_weights):
+            batch["sample_weight"] = torch.tensor(
+                [float(feature["sample_weight"]) for feature in features],
+                dtype=torch.float32,
+            )
+        return batch
 
 
 def audit_token_lengths(
@@ -208,6 +281,10 @@ def audit_token_lengths(
         "p99_tokens": percentile(0.99),
         "max_tokens": max(lengths),
         "mean_tokens": sum(lengths) / len(lengths),
+        "min_assistant_tokens": min(assistant_lengths),
+        "mean_assistant_tokens": (
+            sum(assistant_lengths) / len(assistant_lengths)
+        ),
         "max_assistant_tokens": max(assistant_lengths),
         "over_max_seq_length": sum(
             length > max_seq_length for length in lengths

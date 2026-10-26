@@ -1,0 +1,162 @@
+description: Matched Qwen3.5-9B and Llama-3.1-8B-Instruct Behavior+Interest to Text-label Vanilla scaling sweep v2 on frozen nested 5.4k, 10.8k, 16.2k, and 21.6k Train sets with Beam Top-20 full real-Dev evaluation
+
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+    - python -c "import torch; print(torch.__version__, torch.version.cuda)"
+    - nvidia-smi
+
+code:
+  local_dir: $CONFIG_DIR/../../../../amlt_inputs/static_sud_text_label_vanilla_scaling_0830_v2
+
+target:
+  service: sing
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+
+jobs:
+  - name: qwen35-bi-text-label-vanilla-5400
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35
+        TEXT_LABEL_SCALING_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh &&
+        bash scripts/amlt/sft/run_static_sud_text_label_vanilla_scaling.sh qwen35 full 5400
+  - name: qwen35-bi-text-label-vanilla-10800
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35
+        TEXT_LABEL_SCALING_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh &&
+        bash scripts/amlt/sft/run_static_sud_text_label_vanilla_scaling.sh qwen35 full 10800
+  - name: qwen35-bi-text-label-vanilla-16200
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35
+        TEXT_LABEL_SCALING_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh &&
+        bash scripts/amlt/sft/run_static_sud_text_label_vanilla_scaling.sh qwen35 full 16200
+  - name: qwen35-bi-text-label-vanilla-21600
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-qwen35
+        TEXT_LABEL_SCALING_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_qwen35_worker_deps.sh &&
+        bash scripts/amlt/sft/run_static_sud_text_label_vanilla_scaling.sh qwen35 full 21600
+  - name: llama31-bi-text-label-vanilla-5400
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-semantic-id-llama31
+        TEXT_LABEL_SCALING_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_semantic_id_token_llama_worker_deps.sh &&
+        bash scripts/amlt/sft/run_static_sud_text_label_vanilla_scaling.sh llama31 full 5400
+  - name: llama31-bi-text-label-vanilla-10800
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-semantic-id-llama31
+        TEXT_LABEL_SCALING_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_semantic_id_token_llama_worker_deps.sh &&
+        bash scripts/amlt/sft/run_static_sud_text_label_vanilla_scaling.sh llama31 full 10800
+  - name: llama31-bi-text-label-vanilla-16200
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-semantic-id-llama31
+        TEXT_LABEL_SCALING_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_semantic_id_token_llama_worker_deps.sh &&
+        bash scripts/amlt/sft/run_static_sud_text_label_vanilla_scaling.sh llama31 full 16200
+  - name: llama31-bi-text-label-vanilla-21600
+    sku: 80G4-A100
+    sla_tier: Standard
+    submit_args:
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        PIP_CACHE_DIR: /mnt/default/pip-cache-semantic-id-llama31
+        TEXT_LABEL_SCALING_NUM_GPUS: "4"
+    command:
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p $$HF_HOME $$PIP_CACHE_DIR
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_semantic_id_token_llama_worker_deps.sh &&
+        bash scripts/amlt/sft/run_static_sud_text_label_vanilla_scaling.sh llama31 full 21600

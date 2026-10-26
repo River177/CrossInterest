@@ -1,0 +1,36 @@
+{
+  "rule_version": "solar-gnip-sasrec-full-softmax-v1",
+  "dataset_dir": "data/training/sft_static_user_disjoint_balanced_200_h50_behavior_interest_v1",
+  "candidate_k": 20,
+  "architecture": {
+    "hidden_dimension": 256,
+    "blocks": 2,
+    "attention_heads": 2,
+    "dropout": 0.2,
+    "maximum_history_length": 50
+  },
+  "training": {
+    "seed": 42,
+    "learning_rate": 0.0001,
+    "batch_size": 128,
+    "evaluation_batch_size": 512,
+    "validation_fraction": 0.1,
+    "maximum_epochs": 200,
+    "validation_interval": 5,
+    "patience_validations": 10
+  },
+  "expected_counts": {
+    "train_rows": 21600,
+    "train_users": 21600,
+    "labels": 108,
+    "target_count_min": 200,
+    "target_count_max": 200,
+    "maximum_history_length": 50,
+    "dev_1k_impressions": 1000,
+    "dev_full_impressions": 31392,
+    "dev_full_users": 27082,
+    "dev_target_occurrences": 37728,
+    "dev_supported_interests": 104,
+    "train_dev_user_overlap": 0
+  }
+}

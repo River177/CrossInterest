@@ -1,0 +1,16 @@
+{
+  "model_name": "meta-llama/Llama-3.1-8B-Instruct",
+  "adapter_path": "artifacts/static-sud-sft/llama31-behavior-interest/final_adapter",
+  "eval_file": "data/training/sft_static_user_disjoint_balanced_200_h50_behavior_interest_v1/eval/behavior_interest/dev_full_grouped.parquet",
+  "retained_interests_file": "data/training/generative_new_interest_static_user_disjoint_balanced_200_h50_v1/retained_interests.parquet",
+  "output_dir": "artifacts/static-sud-beam/llama31-behavior-interest",
+  "run_name": "static-sud-llama31-behavior-interest-21600-seed42-beam-full",
+  "wandb_mode": "disabled",
+  "enable_thinking": false,
+  "batch_size": 2,
+  "checkpoint_size": 64,
+  "num_beams": 32,
+  "top_k": 20,
+  "max_new_tokens": 32,
+  "cutoffs": [1, 5, 10, 20]
+}

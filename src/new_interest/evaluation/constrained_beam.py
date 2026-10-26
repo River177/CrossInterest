@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any, Callable
+from typing import Any, Callable, Sequence
 
 from new_interest.evaluation.metrics import RESPONSE_PREFIX
 
@@ -11,6 +11,78 @@ class RankedPrediction:
     label: str
     response: str
     score: float
+
+
+@dataclass(frozen=True)
+class UniquePredictionFill:
+    predictions: list[RankedPrediction]
+    retry_rounds: int
+    initial_unique_count: int
+
+
+def fill_unique_predictions(
+    initial_predictions: Sequence[RankedPrediction],
+    labels: Sequence[str],
+    *,
+    top_k: int,
+    generate_remaining: Callable[
+        [list[str]], Sequence[RankedPrediction]
+    ],
+) -> UniquePredictionFill:
+    """Fill a unique Top-K when beam hypotheses map to duplicate labels."""
+    ordered_labels = [str(label) for label in labels]
+    if len(set(ordered_labels)) != len(ordered_labels):
+        raise ValueError("Label vocabulary must be unique")
+    if top_k <= 0 or top_k > len(ordered_labels):
+        raise ValueError("top_k must be within the label vocabulary")
+    label_set = set(ordered_labels)
+    best_by_label: dict[str, RankedPrediction] = {}
+    for prediction in initial_predictions:
+        if prediction.label not in label_set:
+            raise ValueError(
+                f"Initial prediction has unknown label {prediction.label!r}"
+            )
+        previous = best_by_label.get(prediction.label)
+        if previous is None or prediction.score > previous.score:
+            best_by_label[prediction.label] = prediction
+    initial_unique_count = len(best_by_label)
+    retry_rounds = 0
+    while len(best_by_label) < top_k:
+        remaining = [
+            label for label in ordered_labels if label not in best_by_label
+        ]
+        if not remaining:
+            break
+        retry_predictions = list(generate_remaining(remaining))
+        retry_rounds += 1
+        before = len(best_by_label)
+        remaining_set = set(remaining)
+        for prediction in retry_predictions:
+            if prediction.label not in remaining_set:
+                raise ValueError(
+                    "Retry prediction was not drawn from the remaining "
+                    f"labels: {prediction.label!r}"
+                )
+            previous = best_by_label.get(prediction.label)
+            if previous is None or prediction.score > previous.score:
+                best_by_label[prediction.label] = prediction
+        if len(best_by_label) == before:
+            raise ValueError(
+                "Constrained beam retry produced no additional unique labels"
+            )
+    if len(best_by_label) < top_k:
+        raise ValueError(
+            f"Unable to fill Top-{top_k}; got {len(best_by_label)} labels"
+        )
+    ranked = sorted(
+        best_by_label.values(),
+        key=lambda prediction: (-prediction.score, prediction.label),
+    )[:top_k]
+    return UniquePredictionFill(
+        predictions=ranked,
+        retry_rounds=retry_rounds,
+        initial_unique_count=initial_unique_count,
+    )
 
 
 class TokenTrie:

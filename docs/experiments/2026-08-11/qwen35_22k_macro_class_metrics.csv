@@ -1,0 +1,3 @@
+input,supported_classes,retained_label_space,target_occurrences,macro_class_recall_at_10,macro_class_ndcg_at_10,min_class_support,max_class_support,prediction_path
+behavior_only,101,110,12164,0.14286066538462722,0.07306387333284875,1,1361,artifacts/beam/qwen35-9b-behavior-22k/qwen35-22k-beam-20260811-v1/qwen35-beam-dev10k-qwen35-behavior-22k/beam/beam_predictions.parquet
+interest_only,101,110,12164,0.17743769634069967,0.08893589232278354,1,1361,artifacts/beam/qwen35-9b-interest-22k/qwen35-22k-beam-20260811-v1/qwen35-beam-dev10k-qwen35-interest-22k/beam/beam_predictions.parquet

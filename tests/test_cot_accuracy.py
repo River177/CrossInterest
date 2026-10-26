@@ -7,7 +7,10 @@ import pyarrow.parquet as pq
 import pytest
 import torch
 
-from new_interest.data.build_grpo_dataset import append_cot_instruction
+from new_interest.data.build_grpo_dataset import (
+    LEGACY_COT_INSTRUCTION,
+    append_cot_instruction,
+)
 from new_interest.evaluation.aggregate_accuracy_results import (
     aggregate_accuracy_predictions,
 )
@@ -127,13 +130,16 @@ class _Model:
             temperature=1.0,
             top_p=1.0,
             top_k=20,
+            min_p=0.0,
         )
+        self.generate_calls: list[dict[str, object]] = []
 
     def eval(self):
         return self
 
     def generate(self, input_ids, attention_mask, **kwargs):
-        del attention_mask, kwargs
+        del attention_mask
+        self.generate_calls.append(kwargs)
         suffix = torch.tensor([[7, 2] for _ in input_ids])
         return torch.cat([input_ids, suffix], dim=1)
 
@@ -169,6 +175,67 @@ def test_cot_mode_appends_instruction_and_enables_thinking() -> None:
     rendered_prompt, enable_thinking = tokenizer.calls[0]
     assert rendered_prompt == append_cot_instruction("prompt 1")
     assert enable_thinking is True
+
+
+def test_cot_native_mode_keeps_original_prompt_and_enables_thinking() -> None:
+    tokenizer = _Tokenizer()
+    generate_greedy_outputs(
+        _Model(),
+        tokenizer,
+        [_record("1", ["Music"])],
+        mode="cot",
+        batch_size=1,
+        max_new_tokens=8,
+        cot_instruction=None,
+    )
+
+    assert tokenizer.calls == [("prompt 1", True)]
+
+
+def test_cot_native_sampling_uses_qwen_parameters() -> None:
+    tokenizer = _Tokenizer()
+    model = _Model()
+    generate_greedy_outputs(
+        model,
+        tokenizer,
+        [_record("1", ["Music"])],
+        mode="cot",
+        batch_size=1,
+        max_new_tokens=256,
+        cot_instruction=None,
+        do_sample=True,
+        temperature=0.6,
+        top_p=0.95,
+        top_k=20,
+        min_p=0.0,
+        seed=20260810,
+    )
+
+    call = model.generate_calls[0]
+    assert call["do_sample"] is True
+    assert call["temperature"] == 0.6
+    assert call["top_p"] == 0.95
+    assert call["top_k"] == 20
+    assert call["min_p"] == 0.0
+    assert call["max_new_tokens"] == 256
+
+
+def test_cot_mode_can_use_legacy_training_instruction() -> None:
+    tokenizer = _Tokenizer()
+    generate_greedy_outputs(
+        _Model(),
+        tokenizer,
+        [_record("1", ["Music"])],
+        mode="cot",
+        batch_size=1,
+        max_new_tokens=8,
+        cot_instruction=LEGACY_COT_INSTRUCTION,
+    )
+    rendered_prompt, _ = tokenizer.calls[0]
+    assert rendered_prompt == append_cot_instruction(
+        "prompt 1",
+        instruction=LEGACY_COT_INSTRUCTION,
+    )
 
 
 def test_aggregate_accuracy_requires_exact_dev_coverage(

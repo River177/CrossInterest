@@ -171,3 +171,67 @@ def test_builds_nested_verl_records(tmp_path: Path) -> None:
         )
         for row in interest
     ]
+
+
+def test_native_thinking_keeps_sft_prompt_unchanged(
+    tmp_path: Path,
+) -> None:
+    source = tmp_path / "sft"
+    output = tmp_path / "grpo"
+    _write_source(source)
+    manifest = _write_acceptable_manifest(tmp_path / "acceptable")
+
+    build_grpo_datasets(
+        source,
+        output,
+        acceptable_target_manifest=manifest,
+        sizes=(2,),
+        prompt_mode="native_thinking",
+    )
+
+    source_rows = pq.read_table(
+        source / "train" / "behavior_only" / "2.parquet"
+    ).to_pylist()
+    grpo_rows = pq.read_table(
+        output / "behavior_only" / "2.parquet"
+    ).to_pylist()
+    assert [
+        row["prompt"][0]["content"] for row in grpo_rows
+    ] == [row["prompt"] for row in source_rows]
+    metadata = json.loads(
+        (output / "metadata.json").read_text(encoding="utf-8")
+    )
+    assert metadata["prompt_mode"] == "native_thinking"
+    assert metadata["cot_instruction"] is None
+
+
+def test_fixed_target_policy_uses_only_selected_target(
+    tmp_path: Path,
+) -> None:
+    source = tmp_path / "sft"
+    output = tmp_path / "grpo"
+    _write_source(source)
+    manifest = _write_acceptable_manifest(tmp_path / "acceptable")
+
+    build_grpo_datasets(
+        source,
+        output,
+        acceptable_target_manifest=manifest,
+        sizes=(2,),
+        prompt_mode="native_thinking",
+        target_policy="fixed_target",
+    )
+
+    rows = pq.read_table(
+        output / "behavior_only" / "2.parquet"
+    ).to_pylist()
+    assert rows[0]["extra_info"]["acceptable_subcategories"] == [
+        "Target 1"
+    ]
+    assert rows[1]["extra_info"]["acceptable_subcategories"] == [
+        "Target 2"
+    ]
+    metadata = json.loads(
+        (output / "metadata.json").read_text(encoding="utf-8")
+    )
+    assert metadata["target_policy"] == "fixed_target"

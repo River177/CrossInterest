@@ -1,0 +1,54 @@
+description: Four Llama-3.1 vanilla versus model-specific cross-fitted weighted final runs with real-only evaluation
+
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+    - python --version
+    - python -c "import torch; print(torch.__version__, torch.version.cuda)"
+    - nvidia-smi
+
+code:
+  local_dir: $CONFIG_DIR/../../../..
+
+target:
+  service: singularity
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+
+jobs:
+  - name: llama31-behavior-vanilla-final
+    sku: 80G8-A100
+    sla_tier: Standard
+    submit_args: &submit_args
+      env:
+        AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+        _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+        HF_HOME: /mnt/default/huggingface-cache
+        HF_HUB_DISABLE_XET: "1"
+        PIP_CACHE_DIR: /scratch/pip_cache
+        STATIC_SUD_CROSSFIT_NUM_GPUS: "8"
+        CROSSFIT_CHECKPOINT_SAVE_STEPS: "100"
+        CROSSFIT_EVAL_NAMES: real
+    command: &command
+      - set -euo pipefail
+      - cd $$AMLT_CODE_DIR
+      - mkdir -p /scratch/pip_cache
+      - python -m pip install --user --upgrade pip
+      - >-
+        bash scripts/amlt/evaluation/install_training_worker_deps.sh &&
+        bash scripts/archive/amlt/2026-10-26/sft/run_static_user_disjoint_crossfit_reweighting.sh final llama31
+  - name: llama31-behavior-weighted-final
+    sku: 80G8-A100
+    sla_tier: Standard
+    submit_args: *submit_args
+    command: *command
+  - name: llama31-interest-vanilla-final
+    sku: 80G8-A100
+    sla_tier: Standard
+    submit_args: *submit_args
+    command: *command
+  - name: llama31-interest-weighted-final
+    sku: 80G8-A100
+    sla_tier: Standard
+    submit_args: *submit_args
+    command: *command

@@ -9,9 +9,15 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from new_interest.training.grpo_reward import (
-    compute_score,
+    compute_score as compute_correctness_score,
     extract_final_answer,
     parse_structured_output,
+)
+from new_interest.training.grpo_format_bootstrap_reward import (
+    IDEAL_MAX_WORDS,
+    IDEAL_MIN_WORDS,
+    compute_score as compute_format_bootstrap_score,
+    score_format_bootstrap,
 )
 from new_interest.training.sft_data import apply_chat_template
 
@@ -27,13 +33,24 @@ def run_preflight(
     batch_size: int,
     temperature: float,
     top_p: float,
+    top_k: int,
+    min_p: float,
+    seed: int,
     max_new_tokens: int,
+    reward_mode: str,
 ) -> dict[str, object]:
     import torch
     from peft import PeftModel
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
     output_dir.mkdir(parents=True, exist_ok=True)
+    reward_functions = {
+        "correctness": compute_correctness_score,
+        "format_bootstrap": compute_format_bootstrap_score,
+    }
+    if reward_mode not in reward_functions:
+        raise ValueError(f"Unknown reward mode: {reward_mode!r}")
+    reward_function = reward_functions[reward_mode]
     rows = pq.read_table(data_path).slice(0, max_prompts).to_pylist()
     tokenizer = AutoTokenizer.from_pretrained(adapter_path)
     if tokenizer.pad_token_id is None:
@@ -60,9 +77,14 @@ def run_preflight(
     total_structured = 0
     constant_partial_groups = 0
     response_lengths = []
+    reasoning_word_counts = []
+    ideal_length_completions = 0
     started_at = time.time()
 
     for start in range(0, len(rows), batch_size):
+        batch_seed = seed + start
+        torch.manual_seed(batch_seed)
+        torch.cuda.manual_seed_all(batch_seed)
         batch = rows[start : start + batch_size]
         texts = [
             apply_chat_template(
@@ -96,6 +118,8 @@ def run_preflight(
                 do_sample=True,
                 temperature=temperature,
                 top_p=top_p,
+                top_k=top_k,
+                min_p=min_p,
                 num_return_sequences=num_generations,
                 max_new_tokens=max_new_tokens,
                 pad_token_id=tokenizer.pad_token_id,
@@ -113,7 +137,7 @@ def run_preflight(
             ]
             ground_truth = str(row["reward_model"]["ground_truth"])
             rewards = [
-                compute_score(
+                reward_function(
                     row["data_source"],
                     completion,
                     ground_truth,
@@ -123,6 +147,13 @@ def run_preflight(
             ]
             structured = [
                 parse_structured_output(completion) is not None
+                for completion in group
+            ]
+            bootstrap_details = [
+                score_format_bootstrap(
+                    completion,
+                    row["extra_info"],
+                )
                 for completion in group
             ]
             acceptable = {
@@ -141,7 +172,10 @@ def run_preflight(
             }
             labels = []
             for completion in group:
-                answer = extract_final_answer(completion)
+                answer = extract_final_answer(
+                    completion,
+                    allow_bare_label=True,
+                )
                 labels.append(
                     answer.removeprefix("New topic: ")
                     if answer is not None
@@ -167,6 +201,16 @@ def run_preflight(
             )
             total_reward += sum(rewards)
             total_structured += sum(structured)
+            for details in bootstrap_details:
+                if details.reasoning_words is not None:
+                    reasoning_word_counts.append(
+                        details.reasoning_words
+                    )
+                    ideal_length_completions += int(
+                        IDEAL_MIN_WORDS
+                        <= details.reasoning_words
+                        <= IDEAL_MAX_WORDS
+                    )
             distinct_rewards = set(rewards)
             if len(distinct_rewards) > 1:
                 mixed_groups += 1
@@ -198,6 +242,17 @@ def run_preflight(
                     "correct": correct,
                     "rewards": rewards,
                     "structured": structured,
+                    "bootstrap_rewards": [
+                        details.reward for details in bootstrap_details
+                    ],
+                    "reasoning_word_counts": [
+                        details.reasoning_words
+                        for details in bootstrap_details
+                    ],
+                    "length_scores": [
+                        details.length_score
+                        for details in bootstrap_details
+                    ],
                     "response_token_lengths": token_lengths,
                 }
             )
@@ -229,6 +284,17 @@ def run_preflight(
         "mean_reward": total_reward / total_completions,
         "structured_completions": total_structured,
         "structured_cot_rate": total_structured / total_completions,
+        "ideal_reasoning_length_completions": (
+            ideal_length_completions
+        ),
+        "ideal_reasoning_length_rate": (
+            ideal_length_completions / total_completions
+        ),
+        "mean_reasoning_words": (
+            sum(reasoning_word_counts) / len(reasoning_word_counts)
+            if reasoning_word_counts
+            else None
+        ),
         "mixed_reward_groups": mixed_groups,
         "mixed_reward_group_rate": mixed_groups / len(rows),
         "all_zero_groups": all_zero_groups,
@@ -255,7 +321,11 @@ def run_preflight(
         "data_path": str(data_path),
         "temperature": temperature,
         "top_p": top_p,
+        "top_k": top_k,
+        "min_p": min_p,
+        "seed": seed,
         "max_new_tokens": max_new_tokens,
+        "reward_mode": reward_mode,
     }
     pq.write_table(
         pa.Table.from_pylist(output_rows),
@@ -283,7 +353,15 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--batch-size", type=int, default=2)
     parser.add_argument("--temperature", type=float, default=1.0)
     parser.add_argument("--top-p", type=float, default=0.95)
+    parser.add_argument("--top-k", type=int, default=20)
+    parser.add_argument("--min-p", type=float, default=0.0)
+    parser.add_argument("--seed", type=int, default=20260810)
     parser.add_argument("--max-new-tokens", type=int, default=256)
+    parser.add_argument(
+        "--reward-mode",
+        choices=("correctness", "format_bootstrap"),
+        default="correctness",
+    )
     return parser
 
 
@@ -299,7 +377,11 @@ def main() -> None:
         batch_size=args.batch_size,
         temperature=args.temperature,
         top_p=args.top_p,
+        top_k=args.top_k,
+        min_p=args.min_p,
+        seed=args.seed,
         max_new_tokens=args.max_new_tokens,
+        reward_mode=args.reward_mode,
     )
     print(json.dumps(metrics, indent=2))
 

@@ -1,0 +1,41 @@
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+  - nvidia-smi
+target:
+  service: singularity
+  name: Recall
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+description: 'Full-vocabulary completion SFT: Mixed and exact OI-to-NI Meta only.
+  Original38698 training rows, three complete epochs/3630 updates, seed42, four Premium
+  A10080GB per job on Recall. SID + im_end + newline supervised; identical full-data
+  batches; final outer model evaluated on full Dev. No ablations or extra compute
+  control. Native-forward repair after v1 parity failure at step0; same two conditions
+  and unchanged scientific settings.'
+code:
+  local_dir: $CONFIG_DIR/../../../../artifacts/mind-oi-ni-full-sft-20260914/bundle-v2-native
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+  - .pytest_cache/
+jobs:
+- name: qwen35-2b-mixed-full-sft
+  sku: 80G4-A100
+  sla_tier: Premium
+  submit_args: &id001
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash scripts/amlt/sft/run_oi_ni_full_sft.sh mixed
+- name: qwen35-2b-meta-full-sft
+  sku: 80G4-A100
+  sla_tier: Premium
+  submit_args: *id001
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash scripts/amlt/sft/run_oi_ni_full_sft.sh meta

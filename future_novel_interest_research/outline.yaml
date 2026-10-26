@@ -1,0 +1,84 @@
+topic: "Forecasting future observed novel interests from user history and reusable public datasets"
+
+items:
+  - name: "Direct novel-interest exploration and forecasting"
+    category: "Closest prior work"
+    description: >-
+      Verify work that explicitly generates, ranks, or predicts interests absent
+      from a user's observed history, including LLM user-interest exploration,
+      user-feedback alignment, interest expansion, treatment-effect methods,
+      and next-novel-basket recommendation. Separate new items from new categories.
+
+  - name: "Interest evolution shift and next-intent prediction"
+    category: "Adjacent task literature"
+    description: >-
+      Find temporal, lifelong, session, intent-transition, and interest-drift
+      research whose target is a future semantic interest rather than only the
+      next known item. Include repeat-versus-explore decomposition and temporal
+      distribution-shift stress tests, while separating true novel-interest
+      prediction from ordinary next-item and representation-learning work.
+
+  - name: "Multi-interest modeling and generative retrieval"
+    category: "Transferable methods"
+    description: >-
+      Audit multi-interest encoders, query generation, semantic-ID retrieval,
+      hierarchical category generation, and LLM recommenders for transferable
+      methods and determine whether their evaluations isolate history-absent
+      future interests.
+
+  - name: "Novelty serendipity unexpectedness and cross-domain recommendation"
+    category: "Adjacent objective literature"
+    description: >-
+      Audit definitions, labels, metrics, and datasets for user-relative
+      novelty, unexpectedness, serendipity, exploration, and domain transition.
+      Identify what can and cannot serve as evidence of future interest.
+
+  - name: "News and feed recommendation datasets"
+    category: "Candidate datasets"
+    description: >-
+      Verify MIND, Adressa, Globo/ClickRec, EB-NeRD, and other public news/feed
+      logs at schema and release level: stable users, histories, timestamps,
+      impressions, clicks, article text, categories, duration, license, and
+      exact feasibility of history-to-future novel-topic construction.
+
+  - name: "Commerce and general sequential recommendation datasets"
+    category: "Candidate datasets"
+    description: >-
+      Verify Amazon Reviews 2023, H&M, Instacart, dunnhumby Complete Journey,
+      Ta-Feng, Yelp, Retailrocket, Taobao UserBehavior/Tianchi, Ali-CCP, JD,
+      Tenrec, and session datasets. Distinguish stable histories and taxonomy
+      from session-only logs, household IDs, missing exposure, and dead links.
+
+  - name: "Media and social content datasets"
+    category: "Candidate datasets"
+    description: >-
+      Verify MovieLens/Tag Genome, Last.fm/LFM-1b, Spotify MPD, KuaiRec,
+      KuaiRand, MicroLens and related media logs for time sequence, semantic
+      labels, exposure, stable identity, text/content, and novel-interest labels.
+
+  - name: "Randomized exposure explicit novelty and serendipity datasets"
+    category: "Causal or subjective auxiliary datasets"
+    description: >-
+      Verify Yahoo R6A/R6B, Open Bandit Dataset, Coat, KuaiRand, FINN.no Slates,
+      ContentWise Impressions, Taobao Serendipity, and newer user-study data.
+      Determine whether each offers stable history plus future outcomes,
+      randomized or known-propensity exposure, complete slates, or only one-shot
+      novelty and serendipity judgments.
+
+  - name: "Cross-domain emerging-interest and query-session datasets"
+    category: "Alternative formulations"
+    description: >-
+      Find user-aligned cross-domain datasets, Goodreads, Foursquare POI, and
+      query/session intent-shift corpora that could operationalize interest
+      migration. Check identity continuity, chronology, opportunity constraints,
+      semantic taxonomy, and whether transitions are natural or synthetic.
+
+execution:
+  batch_size: 3
+  items_per_agent: 1
+  output_dir: "future_novel_interest_research/results"
+  time_range: "Unlimited; emphasize 2018-2026 and verify current release state as of 2026-08-19"
+  source_policy: >-
+    Prefer original papers, official proceedings, official dataset pages,
+    repositories owned by authors or dataset providers, and original schema or
+    README files. Treat survey tables and third-party mirrors as discovery only.

@@ -1,0 +1,211 @@
+{
+  "rule_version": "static-candidate-pilot-gate-v1",
+  "created_at": "2026-08-29T15:37:25.489345+00:00",
+  "passed": true,
+  "scope": "all_conditions",
+  "selected_condition_ids": [
+    "gpt55_none_behavior_uniform",
+    "gpt55_none_interest_uniform",
+    "gpt55_medium_behavior_uniform",
+    "gpt55_medium_interest_uniform",
+    "grok43_behavior_uniform",
+    "grok43_interest_uniform"
+  ],
+  "manifest_path": "configs/candidate/static_user_disjoint_compact_single_view_pilots_v4.json",
+  "manifest_sha256": "fa325cce66e86ee3197e657ff87caa9cf1551e20e0e9f389c11be1eb9dc1f08b",
+  "condition_count": 6,
+  "conditions": {
+    "gpt55_none_behavior_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.15309353242198792,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_none_behavior_uniform/acceptance.json",
+          "sha256": "fcfe381af7ffe3b5ffcc802725c743353c395d2fee2618bf3a40d53312015d18"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_none_behavior_uniform/experiment_identity.json",
+          "sha256": "e1c9bd181d1e8dffc75a7c4b4995974495458bfa7435848f92c9b14cff36579a"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_none_behavior_uniform/metrics.json",
+          "sha256": "78db64c5a44b69a518daf0810f4248df98e2c34f2d2da50ad470fa8779763a80"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_none_behavior_uniform/predictions.parquet",
+          "sha256": "950afeb513b7488612a21963d6ec7de5e024d9d0cba9757d37de2a8feed2b8af"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_none_behavior_uniform/resolved_config.json",
+          "sha256": "89bd6d891d755305d0587c92de07438d6e47e47ed0576196330aa4dd2664e99e"
+        }
+      }
+    },
+    "gpt55_none_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.1966145551366977,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_none_interest_uniform/acceptance.json",
+          "sha256": "fcfe381af7ffe3b5ffcc802725c743353c395d2fee2618bf3a40d53312015d18"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_none_interest_uniform/experiment_identity.json",
+          "sha256": "76a8f315f888d22e8e4efdfe0f7ec4124d5ca84755b4c3163748658e33dc1ba3"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_none_interest_uniform/metrics.json",
+          "sha256": "278c37b151a05099f3399d589114f6b85ed80180bf8f35ea58ad1a6fb1a0d4e8"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_none_interest_uniform/predictions.parquet",
+          "sha256": "f69ef318bfea57fbec279ebe31b30cdfb97e5daab012faaeef8826a20e65d4f4"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_none_interest_uniform/resolved_config.json",
+          "sha256": "f2160e1260d16cce4814c8af7e5de32a6d95cf428d84b2be4f38c12f9a50fe95"
+        }
+      }
+    },
+    "gpt55_medium_behavior_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.13620928550337016,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_medium_behavior_uniform/acceptance.json",
+          "sha256": "97f8ee5dc3beaa75eb716d27b8509de1e1e0d10bb69f1be8d81a05958d9b00ed"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_medium_behavior_uniform/experiment_identity.json",
+          "sha256": "740bf7bcd52557bb308f93756b4e3a51a95719d1c85309ccc9c2fd8fcaa8e3c7"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_medium_behavior_uniform/metrics.json",
+          "sha256": "c8f74cdec372bce39f0b49dd73f02c171c92ab212d9a1a5a4458596a4b9cd686"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_medium_behavior_uniform/predictions.parquet",
+          "sha256": "0e7afa94d4fe1c991cb0ba983e2bf99151866bd17887ea281df3f4d4011a60d2"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_medium_behavior_uniform/resolved_config.json",
+          "sha256": "b94c37d55989e79edf70e5408642c5540d7317641ea13431a7efa1fd336508da"
+        }
+      }
+    },
+    "gpt55_medium_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.2036088888963981,
+      "candidate_valid_rate": 0.996,
+      "prefix_compliance_rate": 0.996,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_medium_interest_uniform/acceptance.json",
+          "sha256": "0d25c64f7d6df8dae69df7e6d0e0af54db042e4050467d15aa2e815fed8239f1"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_medium_interest_uniform/experiment_identity.json",
+          "sha256": "8e514b2922b0b06802ea94b2b838c4b97d9dbfea28c1074f0158bea8de623003"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_medium_interest_uniform/metrics.json",
+          "sha256": "efcca194a21a27a6474ef48dce2fc286568df3fc85d4686d14e3f67cea5ce8a9"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_medium_interest_uniform/predictions.parquet",
+          "sha256": "771c9d154e3c6b8eef6d18aefad44a2eca09b5fbcd1dbaacaa2e75d8052b699b"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/gpt55_medium_interest_uniform/resolved_config.json",
+          "sha256": "d7bd9997c3267ec4d7fe834dbf0da865828dc54cb15fc6911a338b5901985e4c"
+        }
+      }
+    },
+    "grok43_behavior_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.10700555175687564,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/grok43_behavior_uniform/acceptance.json",
+          "sha256": "34a60cc0b5702964c7aad999b92a52964055d53e093a5f7c8fae5e63536f7e3d"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/grok43_behavior_uniform/experiment_identity.json",
+          "sha256": "e5fd0b956058a3b830747c7690d08a6cdccffa3c5b55da3c6ccc9153724b380a"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/grok43_behavior_uniform/metrics.json",
+          "sha256": "66f79e177e0b03d545e892a9975305a539271519fabcdbbb3b1f3ca543be443c"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/grok43_behavior_uniform/predictions.parquet",
+          "sha256": "16998c9ef9a9a9c0810070caecd3692307aadc620ca6349cf734197face6c55c"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/grok43_behavior_uniform/resolved_config.json",
+          "sha256": "b00ca51698a7c529bd75ac69a17c56e2e6f680fe08c15cc803d4b31f668ea863"
+        }
+      }
+    },
+    "grok43_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.21077959879757155,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/grok43_interest_uniform/acceptance.json",
+          "sha256": "2446f5a1ef72f4b9e81b62fb7e23c6ec6f9b6925c8ee6ee99a32f3d04636c478"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/grok43_interest_uniform/experiment_identity.json",
+          "sha256": "b31d46690daa2a861e197c6ee0f9d9852dac9985e953fc7b4cfe5e89396854dc"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/grok43_interest_uniform/metrics.json",
+          "sha256": "f8ac4c8c278d18ea23843d518ca2dcdcb46c7ee8243baa64d60ac12790e74686"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/grok43_interest_uniform/predictions.parquet",
+          "sha256": "36bb41e1c507ba17fbcb5fc4e3debe45b0cbeb3f5eba2d1598114de52f4b6209"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-compact-v4/trapi/models/pilot/grok43_interest_uniform/resolved_config.json",
+          "sha256": "0f8fb49e6a6047bf5990f6c16113ff000ee0acc8f2b417ab9610da1333b8c4cd"
+        }
+      }
+    }
+  }
+}

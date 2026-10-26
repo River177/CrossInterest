@@ -1,0 +1,30 @@
+description: Recover H5 from verified checkpoint2000 to2025 in a distinct attempt,
+  preserving original failed final. Require exact fresh-process reload with the newly
+  trained reference before Full Dev, independent remote prediction/metric readback
+  and manifest publication.
+environment:
+  image: amlt-sing/acpt-torch2.8.x-py3.10-cuda12.6-ubuntu22.04
+  setup:
+  - python --version
+  - nvidia-smi
+target:
+  service: singularity
+  name: Feeds
+  workspace_name: CS-NewsAndFeeds-Singularity@rg-cs-newsandfeeds-singularity
+code:
+  local_dir: $CONFIG_DIR/../../../../artifacts/mind-history-length-ablation-20260915/recovery-h5-v1/bundle
+  ignore:
+  - __pycache__/
+  - '*.pyc'
+jobs:
+- name: h5-final-recovery-and-dev
+  sku: 80G4-A100
+  sla_tier: Standard
+  submit_args:
+    env:
+      AMLT_DOCKERFILE_TEMPLATE: DEFAULT
+      _AZUREML_SINGULARITY_JOB_UAI: /subscriptions/b6dc87f3-c479-49c8-8cb5-7896da3ff895/resourceGroups/AMLStudio/providers/Microsoft.ManagedIdentity/userAssignedIdentities/rankfun_aml
+  command:
+  - set -euo pipefail
+  - cd $$AMLT_CODE_DIR
+  - bash run_h5_recovery.sh 5

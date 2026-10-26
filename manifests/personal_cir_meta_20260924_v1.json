@@ -1,0 +1,25 @@
+{
+  "status": "held_for_method_reconfirmation",
+  "experiment": "personal-cir-meta-0924-v1",
+  "job": "qwen35-2b-personal-cir-meta-three",
+  "config": "configs/amlt/personal_cir_meta_0924_v1.yaml",
+  "bundle": "artifacts/personal-cir-meta-20260924/bundle-v1",
+  "bundle_sha256": "c93eb0ad2bd965acecef4f36425f4086dd8f017d6e7700e8f1c5bd523d040ddf",
+  "conditions": [
+    "cir5_ni3",
+    "cir5_meta_ni3",
+    "cold_meta_ni3"
+  ],
+  "new_training_branches": 2,
+  "world_size": 4,
+  "max_gpus": 4,
+  "test_time_adaptation": false,
+  "automatic_monitoring": false,
+  "query_max_tokens": 1564,
+  "support_max_tokens": 1536,
+  "original_payload_files_preserved": 116,
+  "runtime_payload_files": 144,
+  "method_confirmed": false,
+  "jobs_submitted": 0,
+  "hold_reason": "User rejected the interpretation of meta training and requested reconfirmation before proceeding."
+}

@@ -1,0 +1,586 @@
+{
+  "rule_version": "static-candidate-pilot-gate-v1",
+  "created_at": "2026-08-15T11:33:59.242824+00:00",
+  "passed": true,
+  "manifest_path": "configs/candidate/static_user_disjoint_v1.json",
+  "manifest_sha256": "4d1da9fb51fd0bbd934ecb3c92c401b0f840fc9425ee67abc2579e000a3d3579",
+  "condition_count": 18,
+  "conditions": {
+    "gpt56_medium_behavior_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.1526603014907552,
+      "candidate_valid_rate": 0.999,
+      "prefix_compliance_rate": 0.999,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_behavior_uniform/acceptance.json",
+          "sha256": "32ebb3aa20c5f185afac2d987b80f78997b710cfd89f291a03b79955925b5b89"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_behavior_uniform/experiment_identity.json",
+          "sha256": "0308605097dcb0722c98e301bb2ecec96ace0f7fab725016e9a5d5aa750ea899"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_behavior_uniform/metrics.json",
+          "sha256": "a795c08975c375d30b3653f19fdfb3bfbdc511c3cc16897422a9cc820e240f9b"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_behavior_uniform/predictions.parquet",
+          "sha256": "6ed7e772ab2c8d309e683fdb3acb1b6b806c55e28cd24957a4587050fa092cf8"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_behavior_uniform/resolved_config.json",
+          "sha256": "8b130a7bb84b3fa24b3aaef094d094a0ca0d1f8e10ff623d266cac433b54e1f6"
+        }
+      }
+    },
+    "gpt56_medium_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.20889429354468206,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_interest_uniform/acceptance.json",
+          "sha256": "2d0b7c35697a427dac1f3de8c7f3a26e6a5c27c6415be1477e544ad1ac020d03"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_interest_uniform/experiment_identity.json",
+          "sha256": "b8e9f33f05c5fb0533132b607f63f8cf3091f1eefd86b4f442c9f0a1c44c5d0c"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_interest_uniform/metrics.json",
+          "sha256": "724ca0daccec673adde3b5c38b1464ba533474ad3459323ffcc66904498d9d44"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_interest_uniform/predictions.parquet",
+          "sha256": "2f44896bf24fc9a93d305ea20b9e7fe1c92cf316247878da21b153fc305bccf3"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_interest_uniform/resolved_config.json",
+          "sha256": "2a64bb35a3de47f381b346516a97c48219921fb1701da69c1da8f1abc6e8ea26"
+        }
+      }
+    },
+    "gpt56_none_behavior_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.2047260649322824,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_none_behavior_uniform/acceptance.json",
+          "sha256": "fcfe381af7ffe3b5ffcc802725c743353c395d2fee2618bf3a40d53312015d18"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_none_behavior_uniform/experiment_identity.json",
+          "sha256": "0caffddfe9c77fd37e00163c5ec5bbab04e7d25282a68b812c0d1cbc0410d191"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_none_behavior_uniform/metrics.json",
+          "sha256": "5a2c6fb823d5cf72f521aad86186e30e9e496bf43c6bb0c07d722313db25c55d"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_none_behavior_uniform/predictions.parquet",
+          "sha256": "ffd3d158b4b409c4c42d00c44eb38338d14a788212517530c81557e5480ab855"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_none_behavior_uniform/resolved_config.json",
+          "sha256": "281490055ae75b3610a1e0dced05c200487fe0834bacf062076f8c82e4214fac"
+        }
+      }
+    },
+    "gpt56_none_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.2100669991145053,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_none_interest_uniform/acceptance.json",
+          "sha256": "fcfe381af7ffe3b5ffcc802725c743353c395d2fee2618bf3a40d53312015d18"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_none_interest_uniform/experiment_identity.json",
+          "sha256": "927de5d89adafde5d3597794b16a61dd750d31840c362f7649e7828e44786d4f"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_none_interest_uniform/metrics.json",
+          "sha256": "d335ab51f6487e298b37288fae2deba32379bda2f79dfd798899064745d1a3bf"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_none_interest_uniform/predictions.parquet",
+          "sha256": "75f4aac0c7e5b18af6475faf13689d5a44364d7c955c130e1797e8a11b684165"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_none_interest_uniform/resolved_config.json",
+          "sha256": "9468d5b6cdf3eaaf86a9ed24ef7e4e4d7a76888f109b397e3e1fc80e5fa6492d"
+        }
+      }
+    },
+    "gpt5_medium_behavior_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.13822224884721196,
+      "candidate_valid_rate": 0.999,
+      "prefix_compliance_rate": 0.999,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_medium_behavior_uniform/acceptance.json",
+          "sha256": "a7716010a02f375e9b3ca1e2d1a264172cc3f250e1bbeb1bf5ee8725b19f3370"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_medium_behavior_uniform/experiment_identity.json",
+          "sha256": "5325bda641c95fadf4d87f60f589cabec506cf0fdbaf7ce5d46797c947a62d40"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_medium_behavior_uniform/metrics.json",
+          "sha256": "7257cd61bfffed96b14f6bde368979475ecd89e6bf56cf52489960a117314366"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_medium_behavior_uniform/predictions.parquet",
+          "sha256": "c97971695338d3cf4b7656b6ce57c18163f5b4d2080a299642867e455c191a32"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_medium_behavior_uniform/resolved_config.json",
+          "sha256": "556bfedefa0358347fafdcd1a9e2aa4e1a9f0725230d979931c7042333fe7fbf"
+        }
+      }
+    },
+    "gpt5_medium_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.21563737195776408,
+      "candidate_valid_rate": 0.999,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_medium_interest_uniform/acceptance.json",
+          "sha256": "2ba61457e5c9294b2e408f2a423fde77d03f79cf77746a07b2762aee47b5061d"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_medium_interest_uniform/experiment_identity.json",
+          "sha256": "b1699015bee36e3898a6db0d2ea87e4d6e4fce6b330a10ad86ae7fb2896ef1d1"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_medium_interest_uniform/metrics.json",
+          "sha256": "f1ff5ad2444fab64daa0bd8b9adbb6f70e004d521aa11472c70ed4e95aeaa28a"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_medium_interest_uniform/predictions.parquet",
+          "sha256": "251d3b3e35471370f11eff5e9d07c2137dd887584a3ecea4dd538ebc77b60e77"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_medium_interest_uniform/resolved_config.json",
+          "sha256": "8d05946e244b5fd46ffc75d8e8698fd7b47df3baba939da3fa3951e947a373b5"
+        }
+      }
+    },
+    "gpt5_none_behavior_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.09244928463241786,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_none_behavior_uniform/acceptance.json",
+          "sha256": "fcfe381af7ffe3b5ffcc802725c743353c395d2fee2618bf3a40d53312015d18"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_none_behavior_uniform/experiment_identity.json",
+          "sha256": "9a8cad72e806a9636d6c7a6428e2c6cb99623b18748f34cc78718c75efdb0abf"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_none_behavior_uniform/metrics.json",
+          "sha256": "db1010d346198bd13505c4062e193d4296289bc13c2abea635ad211b1f89a203"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_none_behavior_uniform/predictions.parquet",
+          "sha256": "f786fcac08bdbc78f4e2ccad78f5fdc860a4a0c9d033c89b69d40068b1afc856"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_none_behavior_uniform/resolved_config.json",
+          "sha256": "49b2daa48cb048e98219ab554b78adc8bbb7d59b1dd35db1342641949eb8cca6"
+        }
+      }
+    },
+    "gpt5_none_interest_uniform": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.17677645186996208,
+      "candidate_valid_rate": 0.992,
+      "prefix_compliance_rate": 0.998,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_none_interest_uniform/acceptance.json",
+          "sha256": "6ed08204c43c30e2dbb4507cd265c0ee109f54f4e00e7da69274cff01e0a3889"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_none_interest_uniform/experiment_identity.json",
+          "sha256": "e72752911ede92ce091f89ddc8f3e00d060c6e992272e568ceeacef466b1681d"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_none_interest_uniform/metrics.json",
+          "sha256": "7fe82e9f49b6790d9e90de282caad5d8595002539c7ff630fdab1a334666cac9"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_none_interest_uniform/predictions.parquet",
+          "sha256": "66bf2e971d1ba8350c897e5126b50051c7f69816d2ba91da32dd5dce2ba95f3a"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt5_none_interest_uniform/resolved_config.json",
+          "sha256": "3b72c2096aa8ccb104c3c65a5e7c8e6ed8270f73a5684b9a3612a1e8e3431a4c"
+        }
+      }
+    },
+    "gemini36_flash_behavior_uniform": {
+      "passed": true,
+      "evaluator": "openai",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.17141610264718804,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gemini36_flash_behavior_uniform/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gemini36_flash_behavior_uniform/experiment_identity.json",
+          "sha256": "8cd6d2521de66c2e6b37d0ff26a155378fdd67303f2398b79186c4f457bb1b94"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gemini36_flash_behavior_uniform/metrics.json",
+          "sha256": "84270b21eeefa2e84370318486ead9bd76328ab4809b979d40dd7be01285cb8c"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gemini36_flash_behavior_uniform/predictions.parquet",
+          "sha256": "9287e37b59d72781d38d42f510165a4e42cfc335c6d9f74c23f3b12b20d96bb1"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gemini36_flash_behavior_uniform/resolved_config.json",
+          "sha256": "1b79efc0098ae51571ddc56b3a2a735789e8948538e4307fd238e108bbb21b90"
+        }
+      }
+    },
+    "gemini36_flash_interest_uniform": {
+      "passed": true,
+      "evaluator": "openai",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.2059844019027225,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gemini36_flash_interest_uniform/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gemini36_flash_interest_uniform/experiment_identity.json",
+          "sha256": "0e445970aff35b2d82837f82c5ca56fb31cbb97c52d6d4e69b413887d5f468f9"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gemini36_flash_interest_uniform/metrics.json",
+          "sha256": "56dece01b116aa8878d9e2b75c83b59347e6c5daf47eb3adc4ea0e9fc6284665"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gemini36_flash_interest_uniform/predictions.parquet",
+          "sha256": "d1d9ccc0141b18f77ebb506c225d801afb16cd42537e7769bf6fa04aab999780"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gemini36_flash_interest_uniform/resolved_config.json",
+          "sha256": "0b2014564e994006cbbb4c269c5afb7015f521fc0c17ea7211a198286ca0c940"
+        }
+      }
+    },
+    "qwen35_behavior_uniform": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.1552785432273964,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_behavior_uniform/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_behavior_uniform/experiment_identity.json",
+          "sha256": "6a1622697f7e0f42d39d7a9f5d452de96a20aec5ec7481a4002097080a8abb3d"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_behavior_uniform/metrics.json",
+          "sha256": "7f44f847e26593a04e386093ce81c2ea0f6846d17decbc6e5a6859d5557127a9"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_behavior_uniform/predictions.parquet",
+          "sha256": "3bfad643b263a457086488dc25e80ec363e5762af3753e9331f202e081bbb0db"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_behavior_uniform/resolved_config.json",
+          "sha256": "a5ed1ac5746147879f455c579a3810b50ff72303404bfdb9b08e73a4ef30b2ea"
+        }
+      }
+    },
+    "qwen35_interest_uniform": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.1060260002715573,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_interest_uniform/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_interest_uniform/experiment_identity.json",
+          "sha256": "d493f196bb5ce632a0b97b95396ae4dc4628e2261b3a90755d0ea97f8024bd8f"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_interest_uniform/metrics.json",
+          "sha256": "3c710825d17ccb6306c4f3c09d57e410b49f9311589639ead51223aabe3a38b2"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_interest_uniform/predictions.parquet",
+          "sha256": "2621a2b6f9bc2e2730e7d6da4c137242847528b37446273853197d2112d6221d"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_interest_uniform/resolved_config.json",
+          "sha256": "39daa60b9367c590c34c655b2321543971de4c5ee89229bf73c36ac49e790d09"
+        }
+      }
+    },
+    "llama31_behavior_uniform": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.11009875425894962,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/llama31_behavior_uniform/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/llama31_behavior_uniform/experiment_identity.json",
+          "sha256": "b7eb53c6657707752fee011c7eeade3c0fc126840dfdb5ba636cfb64f21ebc72"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/llama31_behavior_uniform/metrics.json",
+          "sha256": "e07cee272b45d61fd3efeb7893c5b86f41e144807f6b1590c3f16843551ad7ec"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/llama31_behavior_uniform/predictions.parquet",
+          "sha256": "5632683ddfc6b2836575a1d01d6e8b1565662dbe8c1f59e53f50a78c82ecf903"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/llama31_behavior_uniform/resolved_config.json",
+          "sha256": "87fc06b27db28db94210f63da784646651726db18f5b113aabc5fc62a24dc4be"
+        }
+      }
+    },
+    "llama31_interest_uniform": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "uniform",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.14893237582765914,
+      "candidate_valid_rate": 0.999,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/llama31_interest_uniform/acceptance.json",
+          "sha256": "3b6cfcd4ab50fcfc86e4b6418704ec936c75aa0afa35e28d04571224a8f1a892"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/llama31_interest_uniform/experiment_identity.json",
+          "sha256": "1a8c967b026b2ca327b2c5c32c34de8ce5c246f6f6befe3fb1356e51f96577f1"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/llama31_interest_uniform/metrics.json",
+          "sha256": "bdd478a0eb66f81d0cc4e538568d4750870c9cf2eb8a5d21440b45793c637b28"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/llama31_interest_uniform/predictions.parquet",
+          "sha256": "ceb5b4f3f3056a0782b5c0c07a4235055fe6880b7446fb6dd88124656156236a"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/llama31_interest_uniform/resolved_config.json",
+          "sha256": "038db6a91b2412862c0f667adc9d444ddf9b1d43b8ebea6e394bbe298cf95220"
+        }
+      }
+    },
+    "gpt56_medium_behavior_frequency_matched": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "train_frequency_matched",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.14690020758388858,
+      "candidate_valid_rate": 0.999,
+      "prefix_compliance_rate": 0.999,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_behavior_frequency_matched/acceptance.json",
+          "sha256": "921b0a4bd659735511645cd13e364d3a8f796418ffde1a51d1cb4107aadd76e2"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_behavior_frequency_matched/experiment_identity.json",
+          "sha256": "71ed025c8e96653fe7893db4f9d595e3edd02d58a575dfcad77b8691504744ed"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_behavior_frequency_matched/metrics.json",
+          "sha256": "00bd75495ebb801f01861aaafa2ccf06bee7451f192e01b1bf0468990b0b4bcb"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_behavior_frequency_matched/predictions.parquet",
+          "sha256": "10ba7ebb63c5736e0dbb0ce6a84ee54cc2c629370f054d35442f14db623f5656"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_behavior_frequency_matched/resolved_config.json",
+          "sha256": "f49c386113d66892130a5ea68f9b74951260de9687e21df4716cf895a7c172da"
+        }
+      }
+    },
+    "gpt56_medium_interest_frequency_matched": {
+      "passed": true,
+      "evaluator": "trapi",
+      "strategy": "train_frequency_matched",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.13538352794486358,
+      "candidate_valid_rate": 0.999,
+      "prefix_compliance_rate": 0.999,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_interest_frequency_matched/acceptance.json",
+          "sha256": "0c02c0f4252ffa07270dfc0ccc124afb35649d34571ab62c5d36ab3cb51054dd"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_interest_frequency_matched/experiment_identity.json",
+          "sha256": "a27f3d0d76a22c8d8dff6553861a3205dbbab4716abf105cf1360a000090ac03"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_interest_frequency_matched/metrics.json",
+          "sha256": "3428670dd90e9dab663b4c57155da359170fa42abf79045d19019a607cbab916"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_interest_frequency_matched/predictions.parquet",
+          "sha256": "a844b0b6c092a1ef55929eecf60819085cbc0a2977a1daa0095455790353ff41"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/gpt56_medium_interest_frequency_matched/resolved_config.json",
+          "sha256": "a227ccd2ef68d5af1067675209d9a43085b6e52ca19cf65f4df5157126e3ce88"
+        }
+      }
+    },
+    "qwen35_behavior_frequency_matched": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "train_frequency_matched",
+      "task_type": "behavior_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.10713716486148227,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_behavior_frequency_matched/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_behavior_frequency_matched/experiment_identity.json",
+          "sha256": "2e6646619c18b535034ec80f81e249d47a617ce7152551ad2957ba7f95aa550b"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_behavior_frequency_matched/metrics.json",
+          "sha256": "1bb956f043e703b16d3e76ccc37420e4e3b5222acfdd732f1308c148bc17cf4a"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_behavior_frequency_matched/predictions.parquet",
+          "sha256": "48aa92195d1be431d8b460ac6bb191ab792e1290a69738bd640958993e073d57"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_behavior_frequency_matched/resolved_config.json",
+          "sha256": "b5d41110959dd428f56f10b7be8758997596fd043008e3fc77c3efc0992b12a0"
+        }
+      }
+    },
+    "qwen35_interest_frequency_matched": {
+      "passed": true,
+      "evaluator": "hf",
+      "strategy": "train_frequency_matched",
+      "task_type": "interest_only",
+      "samples": 1000,
+      "macro_category_accuracy": 0.16514503284020496,
+      "candidate_valid_rate": 1.0,
+      "prefix_compliance_rate": 1.0,
+      "artifacts": {
+        "acceptance.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_interest_frequency_matched/acceptance.json",
+          "sha256": "9c2950a0ba2d9867727c0771d277c4736a9f39305ccac6ae29ba73d358e041bb"
+        },
+        "experiment_identity.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_interest_frequency_matched/experiment_identity.json",
+          "sha256": "49a0bbb77c04d639f8b246bd2533968d90a2776ceee2dfc54b1f03e522f27f36"
+        },
+        "metrics.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_interest_frequency_matched/metrics.json",
+          "sha256": "4f72f68c78be821741e31f1338122ca99833827943a877b3da126765431f4517"
+        },
+        "predictions.parquet": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_interest_frequency_matched/predictions.parquet",
+          "sha256": "315715240099006dad7bfba6edd643a71ecb0f02f79bc829d53da7afac87fec3"
+        },
+        "resolved_config.json": {
+          "path": "artifacts/candidate-selection-static-user-disjoint-k10-v1/models/pilot_v1_2/qwen35_interest_frequency_matched/resolved_config.json",
+          "sha256": "b9eb20049611917988d1b8d9a2e5ab01af11be8cc7d986917880339707825ca3"
+        }
+      }
+    }
+  }
+}

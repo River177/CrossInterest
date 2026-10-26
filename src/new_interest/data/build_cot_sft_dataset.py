@@ -24,7 +24,7 @@ from new_interest.data.generate_cot_teacher import (
 from new_interest.infrastructure.paths import portable_path
 
 DEFAULT_SIZES = (1_000, 5_000)
-RULE_VERSION = "cot-sft-teacher-join-v1"
+RULE_VERSION = "cot-sft-teacher-join-v2-native-thinking"
 
 
 def _size_name(size: int) -> str:
@@ -186,6 +186,18 @@ def _convert_row(
     if str(teacher["original_prompt"]) != prompt:
         raise ValueError(
             f"{source_id}/{task_type}: original prompts do not match"
+        )
+    if (
+        "new_student_prompt" in teacher
+        and str(teacher["new_student_prompt"]) != prompt
+    ):
+        raise ValueError(
+            f"{source_id}/{task_type}: Student Prompt does not match "
+            "the original SFT22K Prompt"
+        )
+    if "strict_valid" in teacher and teacher["strict_valid"] is not True:
+        raise ValueError(
+            f"{source_id}/{task_type}: teacher record is not strict-valid"
         )
     if source["response"] != f"New topic: {target}":
         raise ValueError(
@@ -372,6 +384,8 @@ def build_cot_sft_datasets(
                 "New topic: {selected target}"
             ),
             "student_target_exposure": "assistant-only",
+            "student_prompt_policy": "unchanged_sft22k_prompt",
+            "qwen_enable_thinking": True,
             "source_sha256": source_hashes,
             "teacher_sha256": _sha256(teacher_records),
             "artifact_sha256": {
